@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 $this->table->set_template(['table_open' => '<table class="table table-striped table-bordered table-hover" id="tb_tickets">']);
 
-                $this->table->set_heading('Cod.Ticket', 'Tipo', 'Cliente ',' Validação ', 'ID.Evento', 'Dta.Criação', 'Dta.Atualização');
+                $this->table->set_heading('Cod.Ticket', 'Tipo', 'Cliente ', 'ID.Evento',' Validação ', 'Dta.Criação', 'Dta.Atualização');
 
                 foreach (@$tickets as $ticket) {
                     $created_at = date('d/m/Y H:i:s', strtotime(@$ticket["created_at"]));
