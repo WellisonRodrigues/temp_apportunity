@@ -1,0 +1,14 @@
+.link {
+    /*color: #337ab7;*/
+    /*text-decoration: none;*/
+    cursor: pointer;
+    cursor: hand;
+}
+
+.dataTables_length {
+    float: right;
+}
+
+.dt-buttons {
+    float: right !important;
+}
