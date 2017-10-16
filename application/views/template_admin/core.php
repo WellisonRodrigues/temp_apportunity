@@ -89,7 +89,7 @@ else { ?>
         <?php $this->load->view('template_admin/menu'); ?>
         <!-- Page Content -->
 <!--        <div class="container">-->
-            <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-10 col-xs-11 col-xs-offset-1 col-md-offset-1">
                 <br>
                 <?php
                 // p/ mesma pagina, sem redirect

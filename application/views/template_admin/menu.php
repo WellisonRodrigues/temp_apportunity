@@ -15,4 +15,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </button>
         <a class="navbar-brand" href="index.html"><img src="<?php echo base_url(IMAGES); ?>/pessoinha-50px.png"/></a>
     </div>
+    <div class="collapse navbar-collapse">
+        <div class="container">
+            <ul class="nav navbar-top-links navbar-right">
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+        </div>
+    </div><!-- /.navbar-collapse -->
 </nav>
+

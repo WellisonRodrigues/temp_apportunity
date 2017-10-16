@@ -3,8 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 ?>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<div class="container">
-    <div class="col-md-12">
+<!--<div class="container">-->
+    <div class="col-md-10 col-md-offset-1 col-lg-offset-1 col-lg-10">
 
         <div class="social-feed-box">
             <div class="social-avatar">
@@ -222,4 +222,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </div>
     </div>
-</div>
+<!--</div>-->
