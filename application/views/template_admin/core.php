@@ -88,7 +88,7 @@ else { ?>
         <!-- Navigation -->
         <?php $this->load->view('template_admin/menu'); ?>
         <!-- Page Content -->
-        <div class="container">
+<!--        <div class="container">-->
             <div class="col-md-10 col-md-offset-1">
                 <br>
                 <?php
@@ -102,7 +102,7 @@ else { ?>
                 }
                 //                ?>
             </div>
-            <div class="container-fluid">
+<!--            <div class="container-fluid">-->
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <?php
@@ -113,9 +113,9 @@ else { ?>
                     </div>
                 </div>
                 <!-- /.row -->
-            </div>
+<!--            </div>-->
             <!-- /.container-fluid -->
-        </div>
+<!--        </div>-->
         <!-- /#page-wrapper -->
 
     </div>

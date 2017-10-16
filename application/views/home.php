@@ -7,15 +7,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="col-md-12">
 
         <div class="social-feed-box">
-
-            <div class="pull-right social-action dropdown">
-                <button data-toggle="dropdown" class="dropdown-toggle btn-white">
-                    <i class="fa fa-angle-down"></i>
-                </button>
-                <ul class="dropdown-menu m-t-xs">
-                    <li><a href="#">Config</a></li>
-                </ul>
-            </div>
             <div class="social-avatar">
                 <a href="" class="pull-left">
                     <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a1.jpg">
@@ -36,9 +27,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </p>
 
                 <div class="btn-group">
-                    <button class="btn btn-white btn-xs"><i class="fa fa-thumbs-up"></i> Like this!</button>
-                    <button class="btn btn-white btn-xs"><i class="fa fa-comments"></i> Comment</button>
-                    <button class="btn btn-white btn-xs"><i class="fa fa-share"></i> Share</button>
+                    <button class="btn btn-white btn-xs"><i class="fa fa-thumbs-up"> Gostei desta publicação</i>
+                    </button>
+                    <button class="btn btn-white btn-xs"><i class="fa fa-comments"></i> Comentar</button>
+                    <!--                    <button class="btn btn-white btn-xs"><i class="fa fa-share"></i></button>-->
                 </div>
             </div>
             <div class="social-footer">
@@ -50,7 +42,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <a href="#">
                             Andrew Williams
                         </a>
-                        Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words.
+                        Internet tend to repeat predefined chunks as necessary, making this the first true generator on
+                        the Internet. It uses a dictionary of over 200 Latin words.
                         <br>
                         <a href="#" class="small"><i class="fa fa-thumbs-up"></i> 26 Like this!</a> -
                         <small class="text-muted">12.06.2014</small>
@@ -86,15 +79,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 
         <div class="social-feed-box">
-
-            <div class="pull-right social-action dropdown">
-                <button data-toggle="dropdown" class="dropdown-toggle btn-white">
-                    <i class="fa fa-angle-down"></i>
-                </button>
-                <ul class="dropdown-menu m-t-xs">
-                    <li><a href="#">Config</a></li>
-                </ul>
-            </div>
             <div class="social-avatar">
                 <a href="" class="pull-left">
                     <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a6.jpg">
@@ -135,7 +119,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <a href="#">
                             Andrew Williams
                         </a>
-                        Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words.
+                        Internet tend to repeat predefined chunks as necessary, making this the first true generator on
+                        the Internet. It uses a dictionary of over 200 Latin words.
                         <br>
                         <a href="#" class="small"><i class="fa fa-thumbs-up"></i> 26 Like this!</a> -
                         <small class="text-muted">12.06.2014</small>
@@ -184,17 +169,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
 
         </div>
-
         <div class="social-feed-box">
-
-            <div class="pull-right social-action dropdown">
-                <button data-toggle="dropdown" class="dropdown-toggle btn-white">
-                    <i class="fa fa-angle-down"></i>
-                </button>
-                <ul class="dropdown-menu m-t-xs">
-                    <li><a href="#">Config</a></li>
-                </ul>
-            </div>
             <div class="social-avatar">
                 <a href="" class="pull-left">
                     <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a4.jpg">
