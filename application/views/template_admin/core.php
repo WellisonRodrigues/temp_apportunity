@@ -10,17 +10,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="icon" type="image/png" href="<?php echo base_url(IMAGES); ?>/logos/logo.png"/>
 
     <title><?php
         if (isset($template_title)) {
             echo $template_title;
         } else {
-            echo 'Ingressos Caldas';
+            echo 'Apportunity';
         }
         ?></title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url(VENDOR); ?>/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(VENDOR); ?>/bootstrap-social/bootstrap-social.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
     <link href="<?php echo base_url(VENDOR); ?>/metisMenu/metisMenu.min.css" rel="stylesheet">
@@ -29,6 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           type="text/css">
     <!-- Custom CSS -->
     <link href="<?php echo base_url(CSS); ?>/sb-admin-2.css" rel="stylesheet">
+    <link href="<?php echo base_url(CSS); ?>/feed.css" rel="stylesheet">
     <link href="<?php echo base_url(CSS); ?>/custom.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
@@ -62,7 +65,7 @@ if (!$default_template) {
     ?>
     <div class="col-md-10 col-md-offset-1">
         <br>
-<!--        --><?php
+        <!--        --><?php
         // p/ mesma pagina, sem redirect
         if (isset($alert)) {
             div_alerta($alert);
@@ -72,7 +75,7 @@ if (!$default_template) {
         if (isset($v_temp)) {
             div_alerta($v_temp);
         }
-//        ?>
+        //        ?>
     </div>
     <?php
     if (isset($view)) {
@@ -85,7 +88,7 @@ else { ?>
         <!-- Navigation -->
         <?php $this->load->view('template_admin/menu'); ?>
         <!-- Page Content -->
-        <div id="page-wrapper">
+        <div class="container">
             <div class="col-md-10 col-md-offset-1">
                 <br>
                 <?php
@@ -97,7 +100,7 @@ else { ?>
                 if (isset($v_temp)) {
                     div_alerta($v_temp);
                 }
-//                ?>
+                //                ?>
             </div>
             <div class="container-fluid">
                 <div class="row">

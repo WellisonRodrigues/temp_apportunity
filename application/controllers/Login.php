@@ -16,72 +16,21 @@ class Login extends CI_Controller
 
     public function entrar()
     {
-        if ($this->input->post('login') == 'Acessar Conta') {
+        if ($this->input->post('login') == 'Entrar') {
 
-            $email = $this->input->post('email');
-            $password = $this->input->post('password');
-            //$retorno = $this->sign_in('ingressoscaldas@gmail.com','icnTDC');
+         redirect('painel_admin');
+        }
 
-            $retorno = $this->sign_in($email, $password);
-            /*
-             * Erro no curl
-             */
-            if (isset($retorno["err"]) && !empty($retorno["err"])) {
-                $data['alert'] =
-                    [
-                        'type' => 'erro',
-                        'message' => 'Problemas no servidor. Entrar contato com a equipe de ti.'
-                    ];
-                $this->session->set_flashdata('alert', $data['alert']);
-                redirect('Login');
-            }
+        $data['view'] = 'login_form';
+        $data['default_template'] = false;
+        $this->load->view('template_admin/core', $data);
+    }
 
-            /*
-             * erro de login e senha
-             */
-            if (isset(json_decode($retorno["response"])->errors[0])) {
-                $data['alert'] =
-                    [
-                        'type' => 'erro',
-                        'message' => 'Usuário/Senha inválidos.'
-                    ];
-                $this->session->set_flashdata('alert', $data['alert']);
-                redirect('Login');
+    public function cadastrar()
+    {
+        if ($this->input->post('login') == 'cadastrar') {
 
-            } else {
-
-                $data['alert'] =
-                    [
-                        'type' => 'sucesso',
-                        'message' => 'Usuário logado com sucesso.'
-                    ];
-
-                $var =  json_decode($retorno["response"]);
-                $userAPI = array();
-                foreach($var as $point){
-                    $userAPI['id'] = $point->id;
-                    $userAPI['email'] = $point->email;
-                    $userAPI['provider'] = $point->provider;
-                    $userAPI['uid'] = $point->uid;
-                    $userAPI['nickname'] = $point->nickname;
-                    $userAPI['name'] = $point->name;
-                    $userAPI['image'] = $point->image;
-                    $userAPI['client'] = $point->client;
-                    $userAPI['is_manager'] = $point->is_manager;
-                    $userAPI['ticket_type'] = $point->ticket_type;
-                    $userAPI['is_master'] = $point->is_master;
-                }
-
-                $userAPI['access-token'] = $retorno["headers"]["access-token"][0];
-                $userAPI['clientHeader'] = $retorno["headers"]["client"][0];
-                $userAPI['token-type'] = $retorno["headers"]["token-type"][0];
-                $userAPI['uidHeader'] = $retorno["headers"]["uid"][0];
-
-                $this->session->set_flashdata('alert', $data['alert']);
-                $this->session->set_userdata('logado',$userAPI);
-                
-                redirect('Painel_admin');
-            }
+            redirect('painel_admin');
         }
 
         $data['view'] = 'login_form';
