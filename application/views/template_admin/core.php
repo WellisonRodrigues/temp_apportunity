@@ -8,6 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" href="<?php echo base_url(IMAGES); ?>/logos/logo.png"/>
@@ -35,8 +36,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link href="<?php echo base_url(CSS); ?>/custom.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="<?php echo base_url(VENDOR); ?>/font-awesome/css/font-awesome.min.css" rel="stylesheet"
-          type="text/css">
+<!--    <link href="--><?php //echo base_url(VENDOR); ?><!--/font-awesome/css/font-awesome.min.css" rel="stylesheet"-->
+<!--          type="text/css">-->
     <!--    Data tables -->
     <link href="<?php echo base_url(VENDOR); ?>/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
     <link href="<?php echo base_url(VENDOR); ?>/datatables-plugins/buttons.dataTables.min.css" rel="stylesheet">
