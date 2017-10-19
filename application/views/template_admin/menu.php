@@ -7,63 +7,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Time: 20:23
  */
 ?>
-<nav class="navbar navbar-default navbar-static-top" role="navigation"">
-<div class="col-md-10 col-md-offset-1 col-lg-offset-1 col-lg-10">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <img src="<?php echo base_url(IMAGES); ?>/menu-50px.png"/>
-        </button>
-        <a class="navbar-brand" href="index.html"><img
-                    src="<?php echo base_url(IMAGES); ?>/pessoinha-50px.png"/></a>
-    </div>
-    <div class="collapse navbar-collapse">
-        <ul class="nav navbar-top-links navbar-right">
-            <li>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default"><i class="fa fa-home"> Feed</i>
-                    </button>
-                </div>
-            </li>
-            <li>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default"><i class="fa fa-comment-o"> Mensagens</i>
-                    </button>
-                </div>
-            </li>
-            <li>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default"><i class="fa fa-users"> Contatos</i>
-                    </button>
-                </div>
-            </li>
-            <li>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default"><i class="fa fa-hand-o-left"> Vagas</i>
-                    </button>
-                </div>
-            </li>
-            <li>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default"><i class="fa fa-user"> Contatos</i>
-                    </button>
-                </div>
-            </li>
-            <li>
-                <div class="btn-group">
-                    <button class="btn btn-default dropdown-toggle dropdown-toggle"
-                            data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false"><i class="fa fa-cog"></i></button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
-</nav>
 
+<header>
+    <div class="row">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="<?php echo base_url('painel_admin') ?>"><img rel="icon"
+                                                                                               src="<?php echo base_url(IMAGES); ?>/pessoinha-50px.png"/></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#""><h4><i class="fa fa-large fa-star"> Torne se Premium</i></h4></a></li>
+                        <li><a href="#"><h4><i class="fa fa-large fa-question-circle"> Ajuda</i></h4></a></li>
+                        <li><a href="#"><h4><i class="fa fa-large fa-file-text"> Termos de Uso</i></h4></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#""><h4><i class="fa fa-large fa-paper-plane"> Feed</i></h4></a></li>
+                        <li><a href="#"><h4><i class="fa fa-large fa-users"> Vagas</i></h4></a></li>
+                        <li><a href="#"><h4><i class="fa fa-large fa-user"> Perfil</i></h4></a></li>
+                        <li><a href="#"><h4><i class="fa fa-large fa-sign-out"> Sair</i></h4></a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+        </nav>
+    </div>
+</header>

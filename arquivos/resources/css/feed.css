@@ -12,7 +12,8 @@
 }
 .social-feed-separated .social-feed-box .social-avatar {
     padding: 15px 15px 0 15px;
-    float: none;
+    /*float: none;*/
+    position: static;
 }
 .social-feed-box {
     /*padding: 15px;*/

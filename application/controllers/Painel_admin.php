@@ -20,6 +20,7 @@ class Painel_admin extends CI_Controller
 
     public function index()
     {
+//        $data['menu'] = 'true';
         $data['view'] = 'home';
         $this->load->view('template_admin/core', $data);
     }
