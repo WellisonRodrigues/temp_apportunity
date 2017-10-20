@@ -260,7 +260,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         36 Inscritos
                         <hr>
 
-                        <button type="button" class="btn btn-primary">Editar Perfil</button>
+                        <?php echo anchor('perfil_user/editar', 'Editar Perfil', 'type="button" class="btn btn-primary"') ?>
                         <br>
                         <hr>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pulvinar nisi mi, a dictum nunc

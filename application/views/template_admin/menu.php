@@ -25,15 +25,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="#""><h4><i class="fa fa-large fa-star"> Torne se Premium</i></h4></a></li>
-                        <li><a href="#"><h4><i class="fa fa-large fa-question-circle"> Ajuda</i></h4></a></li>
-                        <li><a href="#"><h4><i class="fa fa-large fa-file-text"> Termos de Uso</i></h4></a></li>
+                        <li><a href="#""><h4><strong><i class="fa fa-large fa-star"> Torne se Premium</i></strong>
+                            </h4></a></li>
+                        <li><a href="#"><h4><strong><i class="fa fa-large fa-question-circle">
+                                            Ajuda</i></strong></h4></a></li>
+                        <li><a href="#"><h4><strong><i class="fa fa-large fa-file-text"> Termos de Uso</i></strong>
+                                </h4></a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#""><h4><i class="fa fa-large fa-paper-plane"> Feed</i></h4></a></li>
-                        <li><a href="#"><h4><i class="fa fa-large fa-users"> Vagas</i></h4></a></li>
-                        <li><a href="#"><h4><i class="fa fa-large fa-user"> Perfil</i></h4></a></li>
-                        <li><a href="#"><h4><i class="fa fa-large fa-sign-out"> Sair</i></h4></a></li>
+                        <li><a href="#"><h4><strong><i class="fa fa-large fa-paper-plane"> Feed</i></strong></h4></a></li>
+                        <li><a href="#"><h4><strong><i class="fa fa-large fa-users"> Vagas</i></strong></h4></a></li>
+                        <li><a href="#"><h4><strong><i class="fa fa-large fa-user"> Perfil</i></strong></h4></a></li>
+                        <li><a href="#"><h4><strong><i class="fa fa-large fa-sign-out"> Sair</i></strong></h4></a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div><!--/.container-fluid -->

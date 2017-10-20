@@ -47,6 +47,9 @@
 
 .social-avatar {
     padding: 15px 15px 0 15px;
+    background-color: lightgrey;
+    height: 60px;
+
 }
 
 .social-comment .social-comment {
