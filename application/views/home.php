@@ -246,7 +246,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <aside>
         <div class="col-md-3">
-            <div class="panel panel-default">
+            <div class="panel panel-primary">
                 <div class="panel panel-heading">
                     <div class="text-center center-block">
                         <img src="<?php echo base_url(IMAGES); ?>/profile.jpg" width="30%" height="30%"
