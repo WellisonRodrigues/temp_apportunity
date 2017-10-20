@@ -2,10 +2,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 ?>
-<article>
-    <div class="row">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-        <div class="col-md-6 col-md-offset-3 col-sm-offset-1 col-sm-10">
+
+<div class="row">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <div class="col-md-6 col-md-offset-3 col-sm-offset-1 col-sm-10">
+        <article>
             <div class="social-feed-box">
                 <div class="social-avatar">
                     <a href="" class="pull-left">
@@ -238,7 +239,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <!--                </div>-->
                 <!--            </div>-->
                 <!--        </div>-->
+
             </div>
-        </div>
+        </article>
     </div>
-</article>
+
+    <aside>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel panel-heading">
+                    <div class="text-center center-block">
+                        <img src="<?php echo base_url(IMAGES); ?>/profile.jpg" width="30%" height="30%"
+                             class="img-circle">
+                    </div>
+                </div>
+                <div class="panel panel-body">
+                    <div class="text-center">
+                        <strong>Paulo Henrique</strong><br>
+                        Tokyo, Japan<br>
+                        36 Inscritos
+                        <hr>
+
+                        <button type="button" class="btn btn-primary">Editar Perfil</button>
+                        <br>
+                        <hr>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pulvinar nisi mi, a dictum nunc
+                        tincidunt at. Cras nec ullamcorper enim. Quisque efficitur fermentum leo, ut sagittis eros
+                        volutpat vel. Donec ipsum augue, egestas semper ornare sed, blandit eu neque. Duis
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </aside>
+</div>
