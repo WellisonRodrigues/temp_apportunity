@@ -150,17 +150,17 @@ else { ?>
 $this->load->view('template_admin/custom.js.php');
 
 // CUSTOM JS FROM CONTROLLER
-if (isset($javascript)) {
-    echo "<script> $( document ).ready(function() {";
-    if (is_array($javascript)) {
-        foreach ($javascript as $temp_js) {
-            echo $temp_js;
-        }
-    } else {
-        echo $javascript;
-    }
-    echo "}); </script> ";
-}
+//if (isset($javascript)) {
+//    echo "<script> $( document ).ready(function() {";
+//    if (is_array($javascript)) {
+//        foreach ($javascript as $temp_js) {
+//            echo $temp_js;
+//        }
+//    } else {
+//        echo $javascript;
+//    }
+//    echo "}); </script> ";
+//}
 
 ?>
 </body>

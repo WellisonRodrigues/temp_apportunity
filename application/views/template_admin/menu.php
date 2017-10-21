@@ -34,8 +34,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#"><h4><strong><i class="fa fa-large fa-paper-plane"> Feed</i></strong></h4></a></li>
-                        <li><a href="#"><h4><strong><i class="fa fa-large fa-users"> Vagas</i></strong></h4></a></li>
+                        <li><a href="#"><h4><strong><i class="fa fa-large fa-edit"> Vagas</i></strong></h4></a></li>
                         <li><a href="#"><h4><strong><i class="fa fa-large fa-user"> Perfil</i></strong></h4></a></li>
+                        <li><a href="#"><h4><strong><i class="fa fa-large fa-users"> Conexões</i></strong></h4></a></li>
                         <li><a href="#"><h4><strong><i class="fa fa-large fa-sign-out"> Sair</i></strong></h4></a></li>
                     </ul>
                 </div><!--/.nav-collapse -->

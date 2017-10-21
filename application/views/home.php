@@ -5,6 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div class="row">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <div class="col-md-6 col-md-offset-3 col-sm-offset-1 col-sm-10">
         <article>
             <div class="social-feed-box">
@@ -43,58 +44,63 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <h4><i class="fa fa-heart-o"></i> Gostei desta publicação</h4>
                         </div>
                         <div class="col-md-5">
-                            <h4><i class="fa fa-comment-o"></i> Comentar</h4>
+                            <h4><i class="fa fa-comment-o" id="coment"></i> Comentar</h4>
                             <!--                    <button class="btn btn-white btn-xs"><i class="fa fa-share"></i></button>-->
                         </div>
                         <!--                </div>-->
                     </div>
                 </div>
+                <div class="social-footer" id="content">
+                    <div class="social-comment">
+                        <a href="" class="pull-left">
+                            <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a1.jpg">
+                        </a>
+                        <div class="media-body">
+                            <a href="#">
+                                Andrew Williams
+                            </a>
+                            Internet tend to repeat predefined chunks as necessary, making this the first true generator
+                            on
+                            the Internet. It uses a dictionary of over 200 Latin words.
+                            <br>
+                            <a href="#" class="small"><i class="fa fa-thumbs-up"></i> 26 Like this!</a> -
+                            <small class="text-muted">12.06.2014</small>
+                        </div>
+                    </div>
 
-                <!--        <div class="social-footer">-->
-                <!--            <div class="social-comment">-->
-                <!--                <a href="" class="pull-left">-->
-                <!--                    <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a1.jpg">-->
-                <!--                </a>-->
-                <!--                <div class="media-body">-->
-                <!--                    <a href="#">-->
-                <!--                        Andrew Williams-->
-                <!--                    </a>-->
-                <!--                    Internet tend to repeat predefined chunks as necessary, making this the first true generator on-->
-                <!--                    the Internet. It uses a dictionary of over 200 Latin words.-->
-                <!--                    <br>-->
-                <!--                    <a href="#" class="small"><i class="fa fa-thumbs-up"></i> 26 Like this!</a> --->
-                <!--                    <small class="text-muted">12.06.2014</small>-->
-                <!--                </div>-->
-                <!--            </div>-->
-                <!---->
-                <!--            <div class="social-comment">-->
-                <!--                <a href="" class="pull-left">-->
-                <!--                    <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a2.jpg">-->
-                <!--                </a>-->
-                <!--                <div class="media-body">-->
-                <!--                    <a href="#">-->
-                <!--                        Andrew Williams-->
-                <!--                    </a>-->
-                <!--                    Making this the first true generator on the Internet. It uses a dictionary of.-->
-                <!--                    <br>-->
-                <!--                    <a href="#" class="small"><i class="fa fa-thumbs-up"></i> 11 Like this!</a> --->
-                <!--                    <small class="text-muted">10.07.2014</small>-->
-                <!--                </div>-->
-                <!--            </div>-->
-                <!---->
-                <!--            <div class="social-comment">-->
-                <!--                <a href="" class="pull-left">-->
-                <!--                    <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a3.jpg">-->
-                <!--                </a>-->
-                <!--                <div class="media-body">-->
-                <!--                    <textarea class="form-control" placeholder="Write comment..."></textarea>-->
-                <!--                </div>-->
-                <!--            </div>-->
-                <!---->
-                <!--        </div>-->
+                    <div class="social-comment">
+                        <a href="" class="pull-left">
+                            <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a2.jpg">
+                        </a>
+                        <div class="media-body">
+                            <a href="#">
+                                Andrew Williams
+                            </a>
+                            Making this the first true generator on the Internet. It uses a dictionary of.
+                            <br>
+                            <a href="#" class="small"><i class="fa fa-thumbs-up"></i> 11 Like this!</a> -
+                            <small class="text-muted">10.07.2014</small>
+                        </div>
+                    </div>
+
+                    <div class="social-comment">
+                        <a href="" class="pull-left">
+                            <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a3.jpg">
+                        </a>
+                        <div class="media-body">
+                            <textarea class="form-control" placeholder="Write comment..."></textarea>
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
 
+            <script>
+                $( document ).ready(function() {
+                    $('#content').hide();
+                });
+            </script>
             <div class="social-feed-box">
                 <div class="social-avatar">
                     <a href="" class="pull-left">
@@ -263,9 +269,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <?php echo anchor('perfil_user/editar', 'Editar Perfil', 'type="button" class="btn btn-primary"') ?>
                         <br>
                         <hr>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pulvinar nisi mi, a dictum nunc
-                        tincidunt at. Cras nec ullamcorper enim. Quisque efficitur fermentum leo, ut sagittis eros
-                        volutpat vel. Donec ipsum augue, egestas semper ornare sed, blandit eu neque. Duis
+                        <div class="text-center">
+                            <div class="row"><strong>Sobre</strong></div>
+                            Email : welllison.244@gmail.com <br>
+                            Idade : 26 anos <br>
+                            Habilitação : AD <br>
+                            Vagas em Interesse : ......<br>
+                            <hr>
+                            <div class="row"><strong>Conheçimento do Idioma Japones</strong></div>
+                            Fala : 90%<br>
+                            Escrita : 70%<br>
+                            Entende : 100%<br>
+
+                        </div>
                     </div>
                 </div>
             </div>

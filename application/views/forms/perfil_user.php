@@ -13,10 +13,6 @@
                 <div class="text-center center-block">
                     <img src="<?php echo base_url(IMAGES); ?>/profile.jpg" width="15%" height="15%"
                          class="img-circle">
-                </div>
-            </div>
-            <div class="panel panel-body">
-                <div class="text-center">
                     <div class="row"><h4><strong>Paulo Henrique</strong></h4></div>
                     <br>
                     Tokyo, Japan<br>
@@ -25,32 +21,28 @@
                     <div class="row">
                         <?php echo anchor('perfil_user/editar', 'Tornar empresa', 'type="button" class="btn btn-primary"') ?>
                     </div>
-                    <hr>
+                </div>
+            </div>
+            <div class="panel panel-body">
+                <div class="text-center">
                     <div class="text-right">
                         <h4><i class="fa fa-pencil"></i></h4>
                     </div>
                     <div class="row"><h4><strong>Sobre</strong></h4></div>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pulvinar nisi mi, a dictum nunc
-                    tincidunt at. Cras nec ullamcorper enim. Quisque efficitur fermentum leo, ut sagittis eros
-                    volutpat vel. Donec ipsum augue, egestas semper ornare sed, blandit eu neque. Duis
+                    Email : welllison.244@gmail.com <br>
+                    Idade : 26 anos <br>
+                    Habilitação : AD <br>
+                    Vagas em Interesse : ......<br>
                     <br>
                     <hr>
                     <div class="text-right">
                         <h4><i class="fa fa-pencil"></i></h4>
                     </div>
-                    <div class="row"><h4><strong>Habilitação</strong></h4></div>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pulvinar nisi mi, a dictum nunc
-                    tincidunt at. Cras nec ullamcorper enim. Quisque efficitur fermentum leo, ut sagittis eros
-                    volutpat vel. Donec ipsum augue, egestas semper ornare sed, blandit eu neque. Duis
-                    <br>
-                    <hr>
-                    <div class="text-right">
-                        <h4><i class="fa fa-pencil"></i></h4>
-                    </div>
-                    <div class="row"><h4><strong>Idioma</strong></h4></div>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pulvinar nisi mi, a dictum nunc
-                    tincidunt at. Cras nec ullamcorper enim. Quisque efficitur fermentum leo, ut sagittis eros
-                    volutpat vel. Donec ipsum augue, egestas semper ornare sed, blandit eu neque. Duis
+                    <div class="row"><h4><strong>Conheçimento do Idioma Japones</strong></h4></div>
+                    Fala : 90%<br>
+                    Escrita : 70%<br>
+                    Entende : 100%<br>
+
                 </div>
             </div>
         </div>
