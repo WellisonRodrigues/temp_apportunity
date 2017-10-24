@@ -20,8 +20,9 @@ class Painel_admin extends CI_Controller
 
     public function index()
     {
-//        $data['menu'] = 'true';
+       $response = $this->session->userdata("logado");
         $data['view'] = 'home';
+        $data['response'] = $response;
         $this->load->view('template_admin/core', $data);
     }
 

@@ -7,6 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div align="center">
                 <img src="<?php echo base_url(IMAGES); ?>/logos/logo.png" width="90px" height="140px">
             </div>
+
             <div class="login-panel panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title" align="center">
