@@ -19,77 +19,73 @@ class Login extends CI_Controller
         if ($this->input->post('login') == 'Entrar') {
 
 
-                $email = $this->input->post('email');
-                $password = $this->input->post('password');
-                //$retorno = $this->sign_in('ingressoscaldas@gmail.com','icnTDC');
+            $email = $this->input->post('email');
+            $password = $this->input->post('password');
+            //$retorno = $this->sign_in('ingressoscaldas@gmail.com','icnTDC');
 
-                $retorno = $this->sign_in($email, $password);
-                /*
-                 * Erro no curl
-                 */
-                if (isset($retorno["err"]) && !empty($retorno["err"])) {
-                    $data['alert'] =
-                        [
-                            'type' => 'erro',
-                            'message' => 'Problemas no servidor. Entrar contato com a equipe de ti.'
-                        ];
-                    $this->session->set_flashdata('alert', $data['alert']);
-                    redirect('Login');
-                }
-
-                /*
-                 * erro de login e senha
-                 */
-                if (isset(json_decode($retorno["response"])->errors[0])) {
-                    $data['alert'] =
-                        [
-                            'type' => 'erro',
-                            'message' => 'Usuário/Senha inválidos.'
-                        ];
-                    $this->session->set_flashdata('alert', $data['alert']);
-                    redirect('Login');
-
-                } else {
-
-                    $data['alert'] =
-                        [
-                            'type' => 'sucesso',
-                            'message' => 'Usuário logado com sucesso.'
-                        ];
-
-                    $var =  json_decode($retorno["response"]);
-//                    print_r($var);
-//                    die;
-                    $userAPI = array();
-                    foreach($var as $point){
-                        $userAPI['id'] = $point->id;
-                        $userAPI['type'] = $point->type;
-//                        $userAPI['atributes'] = $point[]->atributes;
-//                        $userAPI['uid'] = $point->uid;
-//                        $userAPI['nickname'] = $point->nickname;
-//                        $userAPI['name'] = $point->name;
-//                        $userAPI['image'] = $point->image;
-//                        $userAPI['client'] = $point->client;
-//                        $userAPI['is_manager'] = $point->is_manager;
-//                        $userAPI['ticket_type'] = $point->ticket_type;
-//                        $userAPI['is_master'] = $point->is_master;
-                    }
-
-                    $userAPI['access-token'] = $retorno["headers"]["access-token"][0];
-                    $userAPI['clientHeader'] = $retorno["headers"]["client"][0];
-                    $userAPI['token-type'] = $retorno["headers"]["token-type"][0];
-                    $userAPI['uidHeader'] = $retorno["headers"]["uid"][0];
-
-                    $this->session->set_flashdata('alert', $data['alert']);
-                    $this->session->set_userdata('logado',$userAPI);
-
-                    redirect('Painel_admin');
-                }
+            $retorno = $this->sign_in($email, $password);
+            /*
+             * Erro no curl
+             */
+            if (isset($retorno["err"]) && !empty($retorno["err"])) {
+                $data['alert'] =
+                    [
+                        'type' => 'erro',
+                        'message' => 'Problemas no servidor. Entrar contato com a equipe de ti.'
+                    ];
+                $this->session->set_flashdata('alert', $data['alert']);
+                redirect('Login');
             }
 
-            $data['view'] = 'login_form';
-            $data['default_template'] = false;
-            $this->load->view('template_admin/core', $data);
+            /*
+             * erro de login e senha
+             */
+            if (isset(json_decode($retorno["response"])->errors[0])) {
+                $data['alert'] =
+                    [
+                        'type' => 'erro',
+                        'message' => 'Usuário/Senha inválidos.'
+                    ];
+                $this->session->set_flashdata('alert', $data['alert']);
+                redirect('Login');
+
+            } else {
+
+                $data['alert'] =
+                    [
+                        'type' => 'sucesso',
+                        'message' => 'Usuário logado com sucesso.'
+                    ];
+
+                $var = json_decode($retorno["response"]);
+                $arry_data = $var->data;
+                $attributes = $arry_data->attributes;
+                $meta = $arry_data->meta;
+//                die;
+                $userAPI = array();
+//                foreach ($var as $point) {
+                $userAPI['id'] = $arry_data->id;
+                $userAPI['type'] = $arry_data->type;
+                $userAPI['email'] = $attributes->email;
+                $userAPI['name'] = $attributes->name;
+                $userAPI['auth_token'] = $meta->auth_token;
+                //                }
+//
+//                $userAPI['access-token'] = $retorno["headers"]["access-token"][0];
+//                $userAPI['clientHeader'] = $retorno["headers"]["client"][0];
+//                $userAPI['token-type'] = $retorno["headers"]["token-type"][0];
+//                $userAPI['uidHeader'] = $retorno["headers"]["uid"][0];
+
+                $this->session->set_flashdata('alert', $data['alert']);
+                $this->session->set_userdata('logado', $userAPI);
+
+                redirect('Painel_admin');
+            }
+        }
+
+        $data['view'] = 'login_form';
+        $data['default_template'] = false;
+        $this->load->view('template_admin/core', $data);
 
     }
 
@@ -131,8 +127,7 @@ class Login extends CI_Controller
 
         $headers = [];
         curl_setopt($curl, CURLOPT_HEADERFUNCTION,
-            function($curl, $header) use (&$headers)
-            {
+            function ($curl, $header) use (&$headers) {
                 $len = strlen($header);
                 $header = explode(':', $header, 2);
                 if (count($header) < 2) // ignore invalid headers
@@ -156,22 +151,5 @@ class Login extends CI_Controller
         $resp['headers'] = $headers;
         $resp['err'] = $err;
         return $resp;
-    }
-    public function arrayCastRecursive($array)
-    {
-        if (is_array($array)) {
-            foreach ($array as $key => $value) {
-                if (is_array($value)) {
-                    $array[$key] = $this->arrayCastRecursive($value);
-                }
-                if ($value instanceof stdClass) {
-                    $array[$key] = $this->arrayCastRecursive((array)$value);
-                }
-            }
-        }
-        if ($array instanceof stdClass) {
-            return $this->arrayCastRecursive((array)$array);
-        }
-        return $array;
     }
 }
