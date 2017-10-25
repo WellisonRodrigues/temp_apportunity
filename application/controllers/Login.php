@@ -68,7 +68,7 @@ class Login extends CI_Controller
                 $userAPI['type'] = $arry_data->type;
                 $userAPI['email'] = $attributes->email;
                 $userAPI['name'] = $attributes->name;
-                $userAPI['auth_token'] = $meta->auth_token;
+                $verify['auth_token'] = $meta->auth_token;
                 //                }
 //
 //                $userAPI['access-token'] = $retorno["headers"]["access-token"][0];
@@ -78,6 +78,7 @@ class Login extends CI_Controller
 
                 $this->session->set_flashdata('alert', $data['alert']);
                 $this->session->set_userdata('logado', $userAPI);
+                $this->session->set_userdata('verify', $verify);
 
                 redirect('Painel_admin');
             }
