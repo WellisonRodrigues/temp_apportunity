@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <ul class="nav navbar-top-links navbar-right">
     <li>
         <?php
-        echo anchor('sair', '<b><i class="fa fa-sign-out fa-fw"></i> Sair do Sistema</b>')
+        echo anchor('Sair', '<b><i class="fa fa-sign-out fa-fw"></i> Sair do Sistema</b>')
         ?>
     </li>
 </ul>

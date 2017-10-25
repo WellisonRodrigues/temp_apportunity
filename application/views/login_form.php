@@ -68,9 +68,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 ?>
                                 <div class="form-group">
                                     <label for="sel1">Eu sou:</label>
-                                    <select class="form-control" id="sel1">
-                                        <option>Empresa</option>
-                                        <option>Pessoa Fisica</option>
+                                    <select class="form-control" id="sel1" name="type">
+                                        <option value="companies">Empresa</option>
+                                        <option value="users">Pessoa Fisica</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -85,14 +85,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                            required>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Repita sua Senha" name="password"
+                                    <input class="form-control" placeholder="Repita sua Senha" name="password_confirmation"
                                            type="password"
                                            value=""
                                            autocomplete="off"
                                            required>
                                 </div>
-                                <input type="submit" class="btn btn-lg btn-primary btn-block" name="login"
-                                       value="Continuar">
+                                <input type="submit" class="btn btn-lg btn-primary btn-block" name="cadastrar"
+                                       value="cadastrar">
                                 <br/>
                                 <?php
                                 echo form_close();

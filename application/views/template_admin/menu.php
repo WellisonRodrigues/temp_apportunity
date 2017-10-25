@@ -33,11 +33,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </h4></a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><h4><strong><i class="fa fa-large fa-paper-plane"> Feed</i></strong></h4></a></li>
+                        <li><a href="#"><h4><strong><i class="fa fa-large fa-paper-plane"> Feed</i></strong></h4></a>
+                        </li>
                         <li><a href="#"><h4><strong><i class="fa fa-large fa-edit"> Vagas</i></strong></h4></a></li>
                         <li><a href="#"><h4><strong><i class="fa fa-large fa-user"> Perfil</i></strong></h4></a></li>
                         <li><a href="#"><h4><strong><i class="fa fa-large fa-users"> Conexões</i></strong></h4></a></li>
-                        <li><a href="#"><h4><strong><i class="fa fa-large fa-sign-out"> Sair</i></strong></h4></a></li>
+                        <li>  <?php
+                            echo anchor('Sair', '<b><h4><strong><i class="fa fa-large fa-sign-out"> Sair</i></strong></h4></b>')
+
+                            ?></li>
+                        <!--                        <li><a href="#"><h4><strong><i class="fa fa-large fa-sign-out"> Sair</i></strong></h4></a></li>-->
                     </ul>
                 </div><!--/.nav-collapse -->
             </div><!--/.container-fluid -->
