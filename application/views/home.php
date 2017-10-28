@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 //print_r($response);
 //print_r($jobs);
-print_r($follows);
+//print_r($idiomas);
 
 ?>
 
@@ -13,7 +13,7 @@ print_r($follows);
     <article>
         <?php
 
-//        $cont = 0;
+        //        $cont = 0;
         //        print_r($jobs->data);
         foreach ($jobs as $job) {
             $cont++;
@@ -144,7 +144,7 @@ print_r($follows);
                 <div class="text-center">
                     <strong><?php echo $profile['attributes']['name'] ?></strong><br>
                     <?php echo $profile['attributes']['region'] ?><br>
-                    <?php echo $inscritos;?> Inscritos
+                    <?php echo $inscritos; ?> Inscritos
                     <hr>
 
                     <?php echo anchor('Perfil_user/get_profile', 'Editar Perfil', 'type="button" class="btn btn-primary"') ?>
@@ -155,13 +155,13 @@ print_r($follows);
                         Email : <?php echo $included[0]['attributes']['email'] ?> <br>
                         Idade : <?php echo $profile['attributes']['age'] ?> <br>
                         Habilitação : AD <br>
-                        Vagas em Interesse : ......<br>
+                        Vagas em Interesse : <?php echo $profile['attributes']['carrer'] ?><br>
                         <hr>
-                        <div class="row"><strong>Conheçimento do Idioma Japones</strong></div>
-                        Fala : 90%<br>
-                        Escrita : 70%<br>
-                        Entende : 100%<br>
+                        <?php foreach ($idiomas as $idioma) {?>
+                            <div class="row"><strong>Conheçimento do Idioma <?php echo $idioma['attributes']['name']?></strong></div>
+                            Level : <?php echo $idioma['attributes']['level']?><br>
 
+                        <?php } ?>
                     </div>
                 </div>
             </div>

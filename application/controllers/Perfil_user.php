@@ -6,7 +6,9 @@
  * Date: 19/10/2017
  * Time: 23:33
  */
-class Perfil_user extends CI_Controller
+require_once('Follows.php');
+
+class Perfil_user extends Follows
 {
     public function __construct()
     {
@@ -27,7 +29,8 @@ class Perfil_user extends CI_Controller
     public function get_profile()
     {
         $retorno = $this->get_profile_conect();
-
+        $language = $this->get_profile_language();
+        $follows = $this->get_follows();
 
         /*
          * Erro no curl
@@ -41,15 +44,18 @@ class Perfil_user extends CI_Controller
             $this->session->set_flashdata('alert', $data['alert']);
             redirect('Login');
         }
+        $count = 0;
+        foreach ($follows['response']['data'] as $follow) {
+            $inscritos = $follow['relationships']['followed'];
+            foreach ($inscritos as $inscrito) {
+                $count++;
+            }
+        }
 
-
-//        $response = $this->session->userdata("logado");
+        $data ['inscritos'] = $count;
         $profile = $retorno;
-//        print_r($jobs['data']['attributes']);
-//        print_r($response);
-//        print_r($jobs['response']['data']);
-//die;
-//
+        $language_user = $language['response'];
+        $data ['idiomas'] = $language_user['data'];
         $data ['profile'] = $profile['response']['data'];
         $data ['relationships'] = $profile['response']['relationships'];
         $data ['included'] = $profile['response']['included'];
@@ -343,6 +349,59 @@ class Perfil_user extends CI_Controller
         $resp['err'] = $err;
 //        print_r($response);
 //        die;
+        return $resp;
+    }
+
+    private function get_profile_language()
+    {
+        $aut_code = $this->session->userdata('verify')['auth_token'];
+//        $type = $this->session->userdata("logado")->type;
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/profile/languages",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET",
+            CURLOPT_HTTPHEADER => array(
+                "accept: application/vnd.api+json",
+                "cache-control: no-cache",
+                "postman-token: c8ded2be-172d-f095-775f-3cfda71520cf",
+                "x-auth-token: $aut_code"
+            ),
+        ));
+
+
+        $headers = [];
+        curl_setopt($curl, CURLOPT_HEADERFUNCTION,
+            function ($curl, $header) use (&$headers) {
+                $len = strlen($header);
+                $header = explode(':', $header, 2);
+                if (count($header) < 2) // ignore invalid headers
+                    return $len;
+
+                $name = strtolower(trim($header[0]));
+                if (!array_key_exists($name, $headers))
+                    $headers[$name] = [trim($header[1])];
+                else
+                    $headers[$name][] = trim($header[1]);
+
+                return $len;
+            }
+        );
+
+        $response = curl_exec($curl);
+        $resposta = json_decode($response);
+        $err = curl_error($curl);
+        curl_close($curl);
+        $array = $this->arrayCastRecursive($resposta);
+        $resp['response'] = $array;
+        $resp['headers'] = $headers;
+        $resp['err'] = $err;
         return $resp;
     }
 

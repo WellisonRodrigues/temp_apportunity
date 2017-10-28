@@ -5,8 +5,8 @@
  * Date: 19/10/2017
  * Time: 23:49
  */
-print_r($included[0]['attributes']['email']);
-print_r($profile['attributes']);
+//print_r($included[0]['attributes']['email']);
+//print_r($profile['attributes']);
 ?>
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
@@ -74,7 +74,7 @@ print_r($profile['attributes']);
                     </div>
                     <br>
                     <?php echo $profile['attributes']['region'] ?><br>
-                    <!--                    <div class="row">36 Inscritos</div>-->
+                                        <div class="row"><?php echo $inscritos; ?> Inscritos</div>
                     <br>
                     <div class="row">
                         <?php echo anchor('perfil_user/editar', 'Tornar empresa', 'type="button" class="btn btn-primary"') ?>
@@ -99,11 +99,12 @@ print_r($profile['attributes']);
                     <div class="text-right">
                         <h4><i class="fa fa-pencil"></i></h4>
                     </div>
-                    <div class="row"><h4><strong>Conheçimento do Idioma Japones</strong></h4></div>
-                    Fala : 90%<br>
-                    Escrita : 70%<br>
-                    Entende : 100%<br>
+                    <?php foreach ($idiomas as $idioma) { ?>
+                        <div class="row"><h4><strong>Conheçimento do
+                                    Idioma <?php echo $idioma['attributes']['name'] ?></strong></h4></div>
+                        Level : <?php echo $idioma['attributes']['level'] ?><br>
 
+                    <?php } ?>
                 </div>
             </div>
         </div>
