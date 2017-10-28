@@ -20,7 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?php echo base_url('painel_admin') ?>"><img rel="icon"
+                    <a class="navbar-brand" href="<?php echo base_url('Painel_admin') ?>"><img rel="icon"
                                                                                                src="<?php echo base_url(IMAGES); ?>/pessoinha-50px.png"/></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
@@ -33,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </h4></a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><h4><strong><i class="fa fa-large fa-paper-plane"> Feed</i></strong></h4></a>
+                        <li><a href="<?php echo base_url('Painel_admin') ?>"><h4><strong><i class="fa fa-large fa-paper-plane"> Feed</i></strong></h4></a>
                         </li>
                         <li><a href="#"><h4><strong><i class="fa fa-large fa-edit"> Vagas</i></strong></h4></a></li>
                         <li><a href="#"><h4><strong><i class="fa fa-large fa-user"> Perfil</i></strong></h4></a></li>

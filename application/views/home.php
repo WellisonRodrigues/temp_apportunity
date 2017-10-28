@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 print_r($response);
-print_r($jobs);
+//print_r($jobs);
 
 ?>
 
@@ -11,7 +11,15 @@ print_r($jobs);
 <div class="col-md-6 col-md-offset-3 col-sm-offset-1 col-sm-10">
     <article>
         <?php
+        //        print_r($jobs->data);
         foreach ($jobs as $job) {
+            ///                            print_r($job['relationships']['company']['data']['id']);
+            foreach ($includes as $include) {
+                if ($include['id'] == $job['relationships']['company']['data']['id']) {
+                    $name = $include['attributes']['name'];
+                    $url = $include['attributes']['img']['url'];
+                }
+            }
             ?>
             <div class="social-feed-box">
                 <div class="social-avatar">
@@ -20,24 +28,17 @@ print_r($jobs);
                     </a>
                     <div class="media-body">
                         <a href="#">
-                            Andrew Williams
+                            <?php
+                            echo $name;
+                            ?>
                         </a>
                         <small class="text-muted"></small>
                     </div>
                 </div>
                 <div class="social-body">
+                    <h4> <?php echo $job['attributes']['title'] ?></h4>
                     <p>
-                        Descrição da vaga
-                        Quer fazer parte do time?
-
-                        Precisamos de um(a) Tradutor(a) de Espanhol!
-                        Quem seria essa pessoa?
-
-                        Procuramos alguém para integrar o nosso time de Expansão Internacional, fortalecendo as
-                        demandas
-                        de
-                        tradução
-                        para LATAM.
+                        <?php echo $job['attributes']['description'] ?>
                         <br>
                     </p>
                     <div class="media">
@@ -56,7 +57,7 @@ print_r($jobs);
                         <!--                </div>-->
                     </div>
                 </div>
-                <div class="social-footer" id="content">
+                <div class="social-footer content">
                     <div class="social-comment">
                         <a href="" class="pull-left">
                             <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a1.jpg">
@@ -104,13 +105,14 @@ print_r($jobs);
             </div>
 
 
-            <script>
-                $(document).ready(function () {
-                    $('#content').hide();
-                });
-            </script>
+            <?php
+        } ?>
 
-        <?php } ?>
+        <script>
+            $(document).ready(function () {
+                $('.content').hide();
+            });
+        </script>
     </article>
 </div>
 
@@ -132,7 +134,7 @@ print_r($jobs);
                     36 Inscritos
                     <hr>
 
-                    <?php echo anchor('perfil_user/editar', 'Editar Perfil', 'type="button" class="btn btn-primary"') ?>
+                    <?php echo anchor('Perfil_user/get_profile', 'Editar Perfil', 'type="button" class="btn btn-primary"') ?>
                     <br>
                     <hr>
                     <div class="text-center">

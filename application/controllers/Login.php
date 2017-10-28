@@ -7,6 +7,9 @@ class Login extends CI_Controller
     {
         parent::__construct();
 
+
+        $this->output->enable_profiler(TRUE);
+
     }
 
     public function index()
@@ -21,9 +24,10 @@ class Login extends CI_Controller
 
             $email = $this->input->post('email');
             $password = $this->input->post('password');
+            $type = $this->input->post('type_login');
             //$retorno = $this->sign_in('ingressoscaldas@gmail.com','icnTDC');
 
-            $retorno = $this->sign_in($email, $password);
+            $retorno = $this->sign_in($email, $password, $type);
             /*
              * Erro no curl
              */
@@ -97,11 +101,16 @@ class Login extends CI_Controller
 
             $email = $this->input->post('email');
             $type = $this->input->post('type');
+            if ($this->input->post('nome')) {
+                $nome = $this->input->post('nome');
+            } else {
+                $nome = false;
+            }
             $password = $this->input->post('password');
             $password_confirmation = $this->input->post('password_confirmation');
             //$retorno = $this->sign_in('ingressoscaldas@gmail.com','icnTDC');
 
-            $retorno = $this->create_acc($type, $email, $password, $password_confirmation);
+            $retorno = $this->create_acc($type, $email, $password, $password_confirmation, $nome);
             /*
              * Erro no curl
              */
@@ -160,7 +169,7 @@ class Login extends CI_Controller
 //        $this->load->view('template_admin/core', $data);
 //    }
 
-    private function sign_in($email, $pass)
+    private function sign_in($email, $pass, $type)
     {
         $curl = curl_init();
 
@@ -173,7 +182,7 @@ class Login extends CI_Controller
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "POST",
-            CURLOPT_POSTFIELDS => "{\n      \"data\": {\n        \"type\": \"companies\",\n        \"attributes\": {\n          \"email\": \"$email\",\n          \"password\": \"$pass\"\n        }\n      }\n}",
+            CURLOPT_POSTFIELDS => "{\n      \"data\": {\n        \"type\": \"$type\",\n        \"attributes\": {\n          \"email\": \"$email\",\n          \"password\": \"$pass\"\n        }\n      }\n}",
             CURLOPT_HTTPHEADER => array(
                 "cache-control: no-cache",
                 "content-type: application/json",
@@ -207,10 +216,11 @@ class Login extends CI_Controller
         $resp['response'] = $response;
         $resp['headers'] = $headers;
         $resp['err'] = $err;
+
         return $resp;
     }
 
-    private function create_acc($type, $email, $pass, $pass_confirmation)
+    private function create_acc($type, $email, $pass, $pass_confirmation, $name)
     {
 //        print_r($type);
 //        print_r($email);
@@ -218,25 +228,43 @@ class Login extends CI_Controller
 //        print_r($pass_confirmation);
 //        die;
         $curl = curl_init();
-
-        curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/auth",
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => "",
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 30,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => "POST",
-            CURLOPT_POSTFIELDS => "{\n      \"data\": {\n        \"type\": \"$type\",\n        \"attributes\": {\n          \"email\": \"$email\",\n          \"password\": \"$pass\",\n          \"password_confirmation\": \"$pass_confirmation\",\n          \"name\": \"EmpresaX\",\n          \"status\": \"basic\"\n        }\n      }\n}",
-            CURLOPT_HTTPHEADER => array(
-                "accept: application/vnd.api+json",
-                "cache-control: no-cache",
-                "content-type: application/json",
-                "postman-token: a1551427-1f26-8093-801c-8b9ba28b12e0"
-            ),
-        ));
-
+        if ($name != false) {
+            curl_setopt_array($curl, array(
+                CURLOPT_PORT => "3000",
+                CURLOPT_URL => "http://34.229.150.76:3000/auth",
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => "",
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 30,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => "POST",
+                CURLOPT_POSTFIELDS => "{\n      \"data\": {\n        \"type\": \"$type\",\n        \"attributes\": {\n          \"email\": \"$email\",\n          \"password\": \"$pass\",\n          \"password_confirmation\": \"$pass_confirmation\",\n          \"name\": \"$name\",\n          \"status\": \"basic\"\n        }\n      }\n}",
+                CURLOPT_HTTPHEADER => array(
+                    "accept: application/vnd.api+json",
+                    "cache-control: no-cache",
+                    "content-type: application/json",
+                    "postman-token: a1551427-1f26-8093-801c-8b9ba28b12e0"
+                ),
+            ));
+        } else {
+            curl_setopt_array($curl, array(
+                CURLOPT_PORT => "3000",
+                CURLOPT_URL => "http://34.229.150.76:3000/auth",
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => "",
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 30,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => "POST",
+                CURLOPT_POSTFIELDS => "{\n      \"data\": {\n        \"type\": \"$type\",\n        \"attributes\": {\n          \"email\": \"$email\",\n          \"password\": \"$pass\",\n          \"password_confirmation\": \"$pass_confirmation\",\n          \"status\": \"basic\"\n        }\n      }\n}",
+                CURLOPT_HTTPHEADER => array(
+                    "accept: application/vnd.api+json",
+                    "cache-control: no-cache",
+                    "content-type: application/json",
+                    "postman-token: c16ed2bd-2746-f631-1b5e-7a8f395f3a63"
+                ),
+            ));
+        }
         $headers = [];
         curl_setopt($curl, CURLOPT_HEADERFUNCTION,
             function ($curl, $header) use (&$headers) {
@@ -262,6 +290,14 @@ class Login extends CI_Controller
         $resp['response'] = $response;
         $resp['headers'] = $headers;
         $resp['err'] = $err;
+//        print_r($response);
+//        die;
         return $resp;
+    }
+
+    public function recover_accout()
+    {
+
+
     }
 }

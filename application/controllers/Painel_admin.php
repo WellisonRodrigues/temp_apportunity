@@ -13,7 +13,7 @@ class Painel_admin extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        if(!$this->session->userdata("logado")){
+        if (!$this->session->userdata("logado")) {
             redirect('sair');
         }
     }
@@ -26,7 +26,7 @@ class Painel_admin extends CI_Controller
 
         $retorno = $this->get_jobs();
 
-        $var = json_decode($retorno["response"]);
+
         /*
          * Erro no curl
          */
@@ -67,10 +67,16 @@ class Painel_admin extends CI_Controller
 //        }
 
 
-
         $response = $this->session->userdata("logado");
-        $jobs = $var;
-        $data ['jobs'] = $jobs;
+        $jobs = $retorno;
+//        print_r();
+//        print_r($jobs['response']['data']);
+//die;
+
+        $data ['jobs'] = $jobs['response']['data'];
+        $data ['includes'] = $jobs['response']['included'];
+//        print_r($data['jobs']);
+//        die;
         $data['view'] = 'home';
         $data['response'] = $response;
         $this->load->view('template_admin/core', $data);
@@ -116,13 +122,31 @@ class Painel_admin extends CI_Controller
         );
 
         $response = curl_exec($curl);
+        $resposta = json_decode($response);
         $err = curl_error($curl);
         curl_close($curl);
-
-        $resp['response'] = $response;
+        $array = $this->arrayCastRecursive($resposta);
+        $resp['response'] = $array;
         $resp['headers'] = $headers;
         $resp['err'] = $err;
         return $resp;
+    }
+    public function arrayCastRecursive($array)
+    {
+        if (is_array($array)) {
+            foreach ($array as $key => $value) {
+                if (is_array($value)) {
+                    $array[$key] = $this->arrayCastRecursive($value);
+                }
+                if ($value instanceof stdClass) {
+                    $array[$key] = $this->arrayCastRecursive((array)$value);
+                }
+            }
+        }
+        if ($array instanceof stdClass) {
+            return $this->arrayCastRecursive((array)$array);
+        }
+        return $array;
     }
 
 }

@@ -33,6 +33,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 echo form_open('login/entrar', ['role' => 'form']);
                                 ?>
                                 <div class="form-group">
+                                    <label for="sel1">Eu sou:</label>
+                                    <select class="form-control" id="sel1" name="type_login" onchange="yesnoCheck(this);">
+                                        <option id="companies" value="companies">Empresa</option>
+                                        <option id="users" value="users">Pessoa Fisica</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
                                     <input class="form-control" placeholder="E-mail" type="email" name="email" autofocus
                                            value="" autocomplete="off"
                                            required>
@@ -44,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                            required>
                                 </div>
                                 <div class="text-right">
-                                    <?php echo anchor('login/cadastrar', ' Esqueci minha senha') ?>
+                                    <?php echo anchor('login/recover_accout', ' Esqueci minha senha') ?>
                                 </div>
                                 <br/>
                                 <!-- Change this to a button or input when using this as a form -->
@@ -68,13 +75,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 ?>
                                 <div class="form-group">
                                     <label for="sel1">Eu sou:</label>
-                                    <select class="form-control" id="sel1" name="type">
-                                        <option value="companies">Empresa</option>
-                                        <option value="users">Pessoa Fisica</option>
+                                    <select class="form-control" id="sel1" name="type" onchange="yesnoCheck(this);">
+                                        <option id="companies" value="companies">Empresa</option>
+                                        <option id="users" value="users">Pessoa Fisica</option>
                                     </select>
                                 </div>
+                                <div id="ifYes" style="display: block;">
+                                    <div class="form-group">
+                                        <input class="form-control" placeholder="Nome" type="text" name="nome"
+                                               autofocus
+                                               autocomplete="off"
+                                        >
+                                    </div>
+                                </div>
+                                <script>
+                                    function yesnoCheck(that) {
+                                        if (that.value == "companies") {
+
+                                            document.getElementById("ifYes").style.display = "block";
+                                        } else {
+                                            document.getElementById("ifYes").style.display = "none";
+                                        }
+                                    }
+                                </script>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" type="email" name="email" autofocus
+                                    <input class="form-control" placeholder="E-mail" type="email" name="email"
+                                           autofocus
                                            value="" autocomplete="off"
                                            required>
                                 </div>
@@ -85,7 +111,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                            required>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Repita sua Senha" name="password_confirmation"
+                                    <input class="form-control" placeholder="Repita sua Senha"
+                                           name="password_confirmation"
                                            type="password"
                                            value=""
                                            autocomplete="off"
