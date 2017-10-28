@@ -5,11 +5,59 @@
  * Date: 19/10/2017
  * Time: 23:49
  */
-print_r($included[0]['attributes']['email']);
-print_r($profile['attributes']);
+//print_r($included[0]['attributes']['email']);
+//print_r($profile['attributes']);
 ?>
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+<div class="modal fade" id="modal_dados_pessoais" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+     style="display: none;">
+    <div class="modal-dialog">
+        <?php
+        echo form_open('Perfil_user/editar', ['role' => 'form']);
+        ?>
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Dados Pessoais</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <input class="form-control" placeholder="Nome" type="text" name="name_user" autofocus
+                           value="" autocomplete="off"
+                           required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" placeholder="Idade" type="number" name="age" autofocus
+                           value="" autocomplete="off"
+                           required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" placeholder="Região" type="text" name="region" autofocus
+                           value="" autocomplete="off"
+                           required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" placeholder="Vagas de Interesse" type="text" name="carrer" autofocus
+                           value="" autocomplete="off"
+                           required>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <input type="submit" class="btn btn-primary" name="editar"
+                       value="Editar">
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <?php echo form_close() ?>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<div class="modal fade" id="modal_skills" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
      style="display: none;">
     <div class="modal-dialog">
         <?php
@@ -64,7 +112,7 @@ print_r($profile['attributes']);
             <div class="panel panel-heading">
                 <div class="text-right">
                     <h4><i
-                                class="fa fa-pencil" data-toggle="modal" data-target="#myModal"></i>
+                                class="fa fa-pencil" data-toggle="modal" data-target="#modal_dados_pessoais"></i>
                     </h4>
                 </div>
                 <div class=" text-center center-block">

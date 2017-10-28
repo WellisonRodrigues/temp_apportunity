@@ -64,55 +64,109 @@ class Perfil_user extends CI_Controller
     public function editar()
     {
 
-            $name = $this->input->post('name_user');
-            $age = $this->input->post('age');
-            $carrer = $this->input->post('carrer');
-            $region = $this->input->post('region');
-            //$retorno = $region->sign_in('ingressoscaldas@gmail.com','icnTDC');
+        $name = $this->input->post('name_user');
+        $age = $this->input->post('age');
+        $carrer = $this->input->post('carrer');
+        $region = $this->input->post('region');
+        //$retorno = $region->sign_in('ingressoscaldas@gmail.com','icnTDC');
 
-            $retorno = $this->update_user($name, $age, $carrer, $region);
-            /*
-             * Erro no curl
-             */
-            if (isset($retorno["err"]) && !empty($retorno["err"])) {
-                $data['alert'] =
-                    [
-                        'type' => 'erro',
-                        'message' => 'Problemas no servidor. Entrar contato com a equipe de ti.'
-                    ];
-                $this->session->set_flashdata('alert', $data['alert']);
-                redirect('Perfil_user');
-            }
+        $retorno = $this->update_user($name, $age, $carrer, $region);
+        /*
+         * Erro no curl
+         */
+        if (isset($retorno["err"]) && !empty($retorno["err"])) {
+            $data['alert'] =
+                [
+                    'type' => 'erro',
+                    'message' => 'Problemas no servidor. Entrar contato com a equipe de ti.'
+                ];
+            $this->session->set_flashdata('alert', $data['alert']);
+            redirect('Perfil_user');
+        }
 
-            /*
-             * erro de login e senha
-             */
-            if (isset(json_decode($retorno["response"])->errors[0])) {
-                $data['alert'] =
-                    [
-                        'type' => 'erro',
-                        'message' => 'Erro ao editar usuario'
-                    ];
-                $this->session->set_flashdata('alert', $data['alert']);
-                redirect('Perfil_user');
-            } else {
+        /*
+         * erro de login e senha
+         */
+        if (isset(json_decode($retorno["response"])->errors[0])) {
+            $data['alert'] =
+                [
+                    'type' => 'erro',
+                    'message' => 'Erro ao editar usuario'
+                ];
+            $this->session->set_flashdata('alert', $data['alert']);
+            redirect('Perfil_user');
+        } else {
 
-                $data['alert'] =
-                    [
-                        'type' => 'sucesso',
-                        'message' => 'Usuário editado com sucesso.'
-                    ];
+            $data['alert'] =
+                [
+                    'type' => 'sucesso',
+                    'message' => 'Usuário editado com sucesso.'
+                ];
 
-                $this->session->set_flashdata('alert', $data['alert']);
+            $this->session->set_flashdata('alert', $data['alert']);
 //                $this->session->set_userdata('logado', $userAPI);
-                redirect('Perfil_user');
+            redirect('Perfil_user');
 
 
-            }
-            $data['view'] = 'forms/perfil_user';
-            $this->load->view('template_admin/core', $data);
+        }
+        $data['view'] = 'forms/perfil_user';
+        $this->load->view('template_admin/core', $data);
 //        }
 
+
+    }
+
+    public function editar_skills()
+    {
+
+        $name = $this->input->post('name_user');
+        $age = $this->input->post('age');
+        $carrer = $this->input->post('carrer');
+        $region = $this->input->post('region');
+        //$retorno = $region->sign_in('ingressoscaldas@gmail.com','icnTDC');
+
+        $retorno = $this->update_user($name, $age, $carrer, $region);
+        /*
+         * Erro no curl
+         */
+        if (isset($retorno["err"]) && !empty($retorno["err"])) {
+            $data['alert'] =
+                [
+                    'type' => 'erro',
+                    'message' => 'Problemas no servidor. Entrar contato com a equipe de ti.'
+                ];
+            $this->session->set_flashdata('alert', $data['alert']);
+            redirect('Perfil_user');
+        }
+
+        /*
+         * erro de login e senha
+         */
+        if (isset(json_decode($retorno["response"])->errors[0])) {
+            $data['alert'] =
+                [
+                    'type' => 'erro',
+                    'message' => 'Erro ao editar usuario'
+                ];
+            $this->session->set_flashdata('alert', $data['alert']);
+            redirect('Perfil_user');
+        } else {
+
+            $data['alert'] =
+                [
+                    'type' => 'sucesso',
+                    'message' => 'Usuário editado com sucesso.'
+                ];
+
+            $this->session->set_flashdata('alert', $data['alert']);
+//                $this->session->set_userdata('logado', $userAPI);
+            redirect('Perfil_user');
+
+
+        }
+        $data['view'] = 'forms/perfil_user';
+        $this->load->view('template_admin/core', $data);
+//        }
 
 
     }
@@ -173,6 +227,66 @@ class Perfil_user extends CI_Controller
     }
 
     private function update_user($name, $age, $carrer, $region)
+    {
+        $aut_code = $this->session->userdata('verify')['auth_token'];
+        $id_user = $this->session->userdata('logado')['id'];
+
+//        print_r($id_user);
+//        die;
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/profile",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "PUT",
+            CURLOPT_POSTFIELDS => "{\n  \"data\": {\n   \"type\": \"profiles\",\n   \"id\" : \"$id_user\",
+            \n    \"attributes\": {\n      \"name\": \"$name\",\n      \"region\": \"$region\",
+            \n      \"age\": \"$age\",\n      \"carrer\": \"$carrer\"\n    }\n  }\n}",
+            CURLOPT_HTTPHEADER => array(
+                "accept: application/vnd.api+json",
+                "cache-control: no-cache",
+                "content-type: application/vnd.api+json",
+                "postman-token: e76d2ba7-3a09-53a2-46d3-fa4215dd792a",
+                "x-auth-token: $aut_code"
+            ),
+        ));
+        $headers = [];
+        curl_setopt($curl, CURLOPT_HEADERFUNCTION,
+            function ($curl, $header) use (&$headers) {
+                $len = strlen($header);
+                $header = explode(':', $header, 2);
+                if (count($header) < 2) // ignore invalid headers
+                    return $len;
+
+                $name = strtolower(trim($header[0]));
+                if (!array_key_exists($name, $headers))
+                    $headers[$name] = [trim($header[1])];
+                else
+                    $headers[$name][] = trim($header[1]);
+
+                return $len;
+            }
+        );
+
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+        curl_close($curl);
+
+        $resp['response'] = $response;
+        $resp['headers'] = $headers;
+        $resp['err'] = $err;
+//        print_r($response);
+//        die;
+        return $resp;
+    }
+
+    private function update_skills($name, $age, $carrer, $region)
     {
         $aut_code = $this->session->userdata('verify')['auth_token'];
         $id_user = $this->session->userdata('logado')['id'];

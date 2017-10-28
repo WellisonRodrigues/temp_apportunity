@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-print_r($response);
+//print_r($response);
 //print_r($jobs);
 
 ?>
@@ -11,8 +11,11 @@ print_r($response);
 <div class="col-md-6 col-md-offset-3 col-sm-offset-1 col-sm-10">
     <article>
         <?php
+
+//        $cont = 0;
         //        print_r($jobs->data);
         foreach ($jobs as $job) {
+            $cont++;
             ///                            print_r($job['relationships']['company']['data']['id']);
             foreach ($includes as $include) {
                 if ($include['id'] == $job['relationships']['company']['data']['id']) {
@@ -42,16 +45,18 @@ print_r($response);
                         <br>
                     </p>
                     <div class="media">
-                        <img class="img-responsive" src="<?php echo base_url(IMAGES); ?>/banner.jpg">
+                        <!--                        <img class="img-responsive" src="-->
+                        <?php //echo base_url(IMAGES); ?><!--/banner.jpg">-->
                     </div>
                     <!--            <div class="btn-group">-->
                     <div class="row">
 
                         <div class="col-md-offset-1 col-md-6">
-                            <h4><i class="fa fa-heart-o"></i> Gostei desta publicação</h4>
+                            <h4 id="curtir"><i class="fa fa-heart-o"></i> Gostei desta publicação
+                            </h4>
                         </div>
                         <div class="col-md-5">
-                            <h4><i class="fa fa-comment-o" id="coment"></i> Comentar</h4>
+                            <h4 id="coment"><i class="fa fa-comment-o" id="coment"></i> Comentar</h4>
                             <!--                    <button class="btn btn-white btn-xs"><i class="fa fa-share"></i></button>-->
                         </div>
                         <!--                </div>-->
@@ -109,6 +114,13 @@ print_r($response);
         } ?>
 
         <script>
+            $('#curtir').click(function () {
+                $(".fa-heart-o").css("color", "red");
+            });
+            $('#coment').click(function () {
+                $('.content').show();
+            });
+
             $(document).ready(function () {
                 $('.content').hide();
             });
@@ -129,8 +141,8 @@ print_r($response);
             </div>
             <div class="panel panel-body">
                 <div class="text-center">
-                    <strong>Paulo Henrique</strong><br>
-                    Tokyo, Japan<br>
+                    <strong><?php echo $profile['attributes']['name'] ?></strong><br>
+                    <?php echo $profile['attributes']['region'] ?><br>
                     36 Inscritos
                     <hr>
 
@@ -139,8 +151,8 @@ print_r($response);
                     <hr>
                     <div class="text-center">
                         <div class="row"><strong>Sobre</strong></div>
-                        Email : welllison.244@gmail.com <br>
-                        Idade : 26 anos <br>
+                        Email : <?php echo $included[0]['attributes']['email'] ?> <br>
+                        Idade : <?php echo $profile['attributes']['age'] ?> <br>
                         Habilitação : AD <br>
                         Vagas em Interesse : ......<br>
                         <hr>
