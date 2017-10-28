@@ -46,9 +46,11 @@ class User_Authentication extends CI_Controller
         }else{
             $fbuser = '';
 
-            // Get login URL
             $data['authUrl'] =  $this->facebook->login_url();
         }
+
+
+        var_dump($this->facebook->is_authenticated());
 
         // Load login & profile view
         $this->load->view('user_authentication/index',$data);
