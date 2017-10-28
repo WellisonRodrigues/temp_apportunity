@@ -2,6 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 //print_r($response);
 //print_r($jobs);
+print_r($follows);
 
 ?>
 
@@ -143,7 +144,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="text-center">
                     <strong><?php echo $profile['attributes']['name'] ?></strong><br>
                     <?php echo $profile['attributes']['region'] ?><br>
-                    36 Inscritos
+                    <?php echo $inscritos;?> Inscritos
                     <hr>
 
                     <?php echo anchor('Perfil_user/get_profile', 'Editar Perfil', 'type="button" class="btn btn-primary"') ?>

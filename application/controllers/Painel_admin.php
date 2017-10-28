@@ -8,7 +8,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Date: 30/09/2017
  * Time: 13:44
  */
-class Painel_admin extends CI_Controller
+require_once('Follows.php');
+
+class Painel_admin extends Follows
 {
     public function __construct()
     {
@@ -22,6 +24,7 @@ class Painel_admin extends CI_Controller
     {
         $retorno = $this->get_jobs();
         $retorno_profile = $this->get_profile_conect();
+        $retorno_follows = $this->get_follows();
         /*
          * Erro no curl
          */
@@ -37,7 +40,16 @@ class Painel_admin extends CI_Controller
         $jobs = $retorno;
         $response = $this->session->userdata("logado");
         $profile = $retorno_profile;
+        $follows = $retorno_follows;
+        $count = 0;
+        foreach ($follows['response']['data'] as $follow) {
+            $inscritos = $follow['relationships']['followed'];
+            foreach ($inscritos as $inscrito) {
+                $count++;
+            }
+        }
 
+        $data ['inscritos'] = $count;
         $data ['profile'] = $profile['response']['data'];
         $data ['relationships'] = $profile['response']['relationships'];
         $data ['included'] = $profile['response']['included'];
@@ -155,6 +167,7 @@ class Painel_admin extends CI_Controller
         $resp['err'] = $err;
         return $resp;
     }
+
     public function get_coments_conect()
     {
         $aut_code = $this->session->userdata('verify')['auth_token'];
@@ -209,6 +222,7 @@ class Painel_admin extends CI_Controller
         $resp['err'] = $err;
         return $resp;
     }
+
     public function arrayCastRecursive($array)
     {
         if (is_array($array)) {
