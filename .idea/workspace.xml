@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6315125-2236-4753-8b25-d0ed219b9684" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Painel_admin.php" afterPath="$PROJECT_DIR$/application/controllers/Painel_admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Perfil_user.php" afterPath="$PROJECT_DIR$/application/controllers/Perfil_user.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/forms/perfil_user.php" afterPath="$PROJECT_DIR$/application/views/forms/perfil_user.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/home.php" afterPath="$PROJECT_DIR$/application/views/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/template_admin/menu.php" afterPath="$PROJECT_DIR$/application/views/template_admin/menu.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session/ci_sessionja2jjks89mnb7jdqe2pbrqeofc0l1094" afterPath="$PROJECT_DIR$/session/ci_sessionja2jjks89mnb7jdqe2pbrqeofc0l1094" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -394,12 +390,12 @@
       <workItem from="1507993924063" duration="4533000" />
       <workItem from="1507999755420" duration="107000" />
       <workItem from="1508002280661" duration="62915000" />
-      <workItem from="1508881770379" duration="45157000" />
+      <workItem from="1508881770379" duration="45753000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125269000" />
+    <option name="totallyTimeSpent" value="125865000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
