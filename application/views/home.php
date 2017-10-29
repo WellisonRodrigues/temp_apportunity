@@ -133,8 +133,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     var idjob = $(this).data('idjob');
                     var type = $(this).data('type');
 
-                    alert(type);
-
                     if (type == 'curtir') {
                         $(".fa-heart-o." + idjob).css("color", "red");
                         $(this).data('type','dislike');
