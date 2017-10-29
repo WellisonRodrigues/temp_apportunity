@@ -84,8 +84,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <div class="form-group">
                                         <input class="form-control" placeholder="Nome" type="text" name="nome"
                                                autofocus
-                                               autocomplete="off"
-                                        >
+                                                autocomplete="off"
+                                               >
                                     </div>
                                 </div>
                                 <script>

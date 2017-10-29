@@ -70,6 +70,7 @@ class Login extends CI_Controller
 //                foreach ($var as $point) {
                 $userAPI['id'] = $arry_data->id;
                 $userAPI['type'] = $arry_data->type;
+                $userAPI['status'] = $attributes->status;
                 $userAPI['email'] = $attributes->email;
                 $userAPI['name'] = $attributes->name;
                 $verify['auth_token'] = $meta->auth_token;
