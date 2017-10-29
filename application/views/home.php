@@ -64,18 +64,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                         <div class="col-md-offset-1 col-md-6">
                             <h4 class="curtir" data-idjob="<?php echo $id_job; ?>" data-type="<?php echo $classJob; ?>">
-                                <i class="fa fa-heart-o <?php echo $id_job; ?>"
+                                <i class="fa fa-heart <?php echo $id_job; ?>"
                                    style="color:<?php echo $corJob; ?>"></i> Gostei desta publicação
                             </h4>
                         </div>
                         <div class="col-md-5">
-                            <h4 id="coment"><i class="fa fa-comment-o" id="coment"></i> Comentar</h4>
+                            <h4 class="coment" data-idjob="<?php echo $id_job; ?>" data-status="<?php echo $response["status"] ?>"><i class="fa fa-comment-o"></i> Comentar</h4>
                             <!--                    <button class="btn btn-white btn-xs"><i class="fa fa-share"></i></button>-->
                         </div>
                         <!--                </div>-->
                     </div>
                 </div>
-                <div class="social-footer content">
+                <div class="social-footer content <?php echo $id_job; ?>">
                     <div class="social-comment">
                         <a href="" class="pull-left">
                             <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a1.jpg">
@@ -96,33 +96,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                     <div class="social-comment">
                         <a href="" class="pull-left">
-                            <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a2.jpg">
-                        </a>
-                        <div class="media-body">
-                            <a href="#">
-                                Andrew Williams
-                            </a>
-                            Making this the first true generator on the Internet. It uses a dictionary of.
-                            <br>
-                            <a href="#" class="small"><i class="fa fa-thumbs-up"></i> 11 Like this!</a> -
-                            <small class="text-muted">10.07.2014</small>
-                        </div>
-                    </div>
-
-                    <div class="social-comment">
-                        <a href="" class="pull-left">
                             <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a3.jpg">
                         </a>
                         <div class="media-body">
-                            <textarea class="form-control" placeholder="Write comment..."></textarea>
+                            <textarea class="form-control comentario_<?php echo $id_job; ?>" name="insertComments" placeholder="Write comment..."></textarea>
+                            <input type="button" class="comentar" data-idjob="<?php echo $id_job; ?>" value="Comentar" />
                         </div>
                     </div>
-
                 </div>
-
             </div>
-
-
             <?php
         } ?>
 
@@ -146,9 +128,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     }
                 });
 
-                $('#coment').click(function () {
-                    $('.content').show();
+                $('.coment').click(function () {
+                    var idjob = $(this).data('idjob');
+                    var type = $(this).data('status');
+                    if(type == 'basic'){
+                        $('.content.'+ idjob).toggle( "slow" );
+                        //$('.content.'+ idjob).empty();
+                        $.post('Painel_admin/get_comments_job/'+idjob, function (data) {
+                            $('.content.'+ idjob).append("<div class='social-comment'>").append(data).append('</div>');
+                        });
+                    }else{
+                        alert('Para comentar e visulizar os comentários é necessário ser usuário premium.');
+                    }
                 });
+
+                $('.comentar').on('click',function(){
+                    var idjob = $(this).data('idjob');
+                    var texto = $('.comentario_'+idjob).val();
+                    alert(texto);
+                    if(texto != "" || texto != " "){
+                        $.post('Painel_admin/insert_comments_job/', {idjob:idjob,texto:texto} ,function (data) {
+
+                        });
+                    }
+                })
+
                 $('.content').hide();
             })
         </script>

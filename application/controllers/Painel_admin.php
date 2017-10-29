@@ -64,7 +64,7 @@ class Painel_admin extends Follows
         $data['view'] = 'home';
         $data['response'] = $response;
 //
-        print_r($response);
+       // print_r($response);
 //        die;
 
         $data['funcao']=$this;
@@ -478,4 +478,121 @@ class Painel_admin extends Follows
 
     }
 
+    public function get_comments_job($idjob){
+
+        if($idjob > 0 && !empty($idjob)) {
+            $aut_code = $this->session->userdata('verify')['auth_token'];
+            $usuario= $this->session->userdata('logado');
+            $iduser = $usuario["id"];
+            $curl = curl_init();
+
+
+            curl_setopt_array($curl, array(
+                CURLOPT_PORT => "3000",
+                CURLOPT_URL => "http://34.229.150.76:3000/api/v1/jobs/$idjob/comments",
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => "",
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 30,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => "GET",
+                CURLOPT_HTTPHEADER => array(
+                    "cache-control: no-cache",
+                    "postman-token: 73732512-b90b-161b-8fc4-14a91d1a8429",
+                    "x-auth-token: $aut_code"
+                ),
+            ));
+
+            $headers = [];
+            curl_setopt($curl, CURLOPT_HEADERFUNCTION,
+                function ($curl, $header) use (&$headers) {
+                    $len = strlen($header);
+                    $header = explode(':', $header, 2);
+                    if (count($header) < 2) // ignore invalid headers
+                        return $len;
+
+                    $name = strtolower(trim($header[0]));
+                    if (!array_key_exists($name, $headers))
+                        $headers[$name] = [trim($header[1])];
+                    else
+                        $headers[$name][] = trim($header[1]);
+
+                    return $len;
+                }
+            );
+
+            $response = curl_exec($curl);
+            $resposta = json_decode($response);
+            $err = curl_error($curl);
+            curl_close($curl);
+            $array = $this->arrayCastRecursive($resposta);
+            if(sizeof($array["data"]) > 0){
+               // echo 'Nenhum registro';
+            }else{
+               // echo 'Nenhum registro';
+            }
+        }else{
+            $resp['err'] = "Erro! Job não encontrado.";
+        }
+    }
+
+    public function insert_comments_job(){
+        $idjob = $this->input->post('idjob');
+        $texto = $this->input->post('texto');
+        if($idjob > 0 && !empty($idjob) && !empty($texto)) {
+
+            $aut_code = $this->session->userdata('verify')['auth_token'];
+            $usuario= $this->session->userdata('logado');
+            $iduser = $usuario["id"];
+            $curl = curl_init();
+
+            curl_setopt_array($curl, array(
+                CURLOPT_PORT => "3000",
+                CURLOPT_URL => "http://34.229.150.76:3000/api/v1/jobs/$idjob/comments",
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => "",
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 30,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => "POST",
+                CURLOPT_POSTFIELDS => "{\n  \"data\": {\n    \"type\": \"comments\",\n    \"attributes\": {\n      \"message\": \"$texto\"\n    },\n    \"relationships\": {\n      \"job\": {\n        \"data\": {\n          \"type\": \"jobs\",\n          \"id\": \"2\"\n        }\n      },\n      \"father\": {\n        \"data\": {\n          \"type\": \"comments\",\n          \"id\": \"1\"\n        }\n      }\n    }\n  }\n}",
+                CURLOPT_HTTPHEADER => array(
+                    "accept: application/vnd.api+json",
+                    "cache-control: no-cache",
+                    "content-type: application/vnd.api+json",
+                    "postman-token: 5bf1b1fa-4961-5432-0a9d-f1b9b917ec9d",
+                    "x-auth-token: $aut_code"
+                ),
+            ));
+
+
+            $headers = [];
+            curl_setopt($curl, CURLOPT_HEADERFUNCTION,
+                function ($curl, $header) use (&$headers) {
+                    $len = strlen($header);
+                    $header = explode(':', $header, 2);
+                    if (count($header) < 2) // ignore invalid headers
+                        return $len;
+
+                    $name = strtolower(trim($header[0]));
+                    if (!array_key_exists($name, $headers))
+                        $headers[$name] = [trim($header[1])];
+                    else
+                        $headers[$name][] = trim($header[1]);
+
+                    return $len;
+                }
+            );
+
+            $response = curl_exec($curl);
+            $resposta = json_decode($response);
+            $err = curl_error($curl);
+            curl_close($curl);
+            $array = $this->arrayCastRecursive($resposta);
+            var_dump($array);
+
+        }else{
+            $resp['err'] = "Erro! Job não encontrado.";
+        }
+    }
 }
