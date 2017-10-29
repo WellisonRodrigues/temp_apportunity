@@ -63,9 +63,8 @@ class Painel_admin extends Follows
 
         $data['view'] = 'home';
         $data['response'] = $response;
-//
-       // print_r($response);
-//        die;
+
+        print_r($response);
 
         $data['funcao']=$this;
 
