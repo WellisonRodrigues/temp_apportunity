@@ -35,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="<?php echo base_url('Painel_admin') ?>"><h4><strong><i class="fa fa-large fa-paper-plane"> Feed</i></strong></h4></a>
                         </li>
-                        <li><a href="#"><h4><strong><i class="fa fa-large fa-edit"> Vagas</i></strong></h4></a></li>
+                        <li><a href="<?php echo base_url('Vagas') ?>"><h4><strong><i class="fa fa-large fa-edit"> Vagas</i></strong></h4></a></li>
                         <li><a href="<?php echo base_url('Perfil_user') ?>"><h4><strong><i class="fa fa-large fa-user"> Perfil</i></strong></h4></a></li>
                         <li><a href="#"><h4><strong><i class="fa fa-large fa-users"> Conexões</i></strong></h4></a></li>
                         <li>  <?php
