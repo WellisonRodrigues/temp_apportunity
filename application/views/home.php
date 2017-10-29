@@ -12,11 +12,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="col-md-6 col-md-offset-3 col-sm-offset-1 col-sm-10">
     <article>
         <?php
-
         //        $cont = 0;
         //        print_r($jobs->data);
         foreach ($jobs as $job) {
             $cont++;
+            $id_job = $job["id"];
+            //$this->CI->like_list_job($id_job);
+            $curtiuJob = $funcao->like_list_job($id_job);
+
+            if ($curtiuJob == TRUE) {
+                $classJob = "dislike";
+                $corJob = "red";
+            } else {
+                $classJob = "curtir";
+                $corJob = "black";
+            }
             ///                            print_r($job['relationships']['company']['data']['id']);
             foreach ($includes as $include) {
                 if ($include['id'] == $job['relationships']['company']['data']['id']) {
@@ -53,7 +63,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="row">
 
                         <div class="col-md-offset-1 col-md-6">
-                            <h4 id="curtir"><i class="fa fa-heart-o"></i> Gostei desta publicação
+                            <h4 class="curtir" data-idjob="<?php echo $id_job; ?>" data-type="<?php echo $classJob; ?>">
+                                <i class="fa fa-heart-o <?php echo $id_job; ?>"
+                                   style="color:<?php echo $corJob; ?>"></i> Gostei desta publicação
                             </h4>
                         </div>
                         <div class="col-md-5">
@@ -115,16 +127,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         } ?>
 
         <script>
-            $('#curtir').click(function () {
-                $(".fa-heart-o").css("color", "red");
-            });
-            $('#coment').click(function () {
-                $('.content').show();
-            });
-
             $(document).ready(function () {
+                $('.curtir').bind('click', function () {
+                    //$(".fa-heart-o").css("color", "red");
+                    var idjob = $(this).data('idjob');
+                    var type = $(this).data('type');
+
+                    alert(type);
+
+                    if (type == 'curtir') {
+                        $(".fa-heart-o." + idjob).css("color", "red");
+                        $(this).data('type','dislike');
+                        $.post('Painel_admin/like_job', {idjob: idjob}, function (data) {
+                        });
+                    } else {
+                        $(".fa-heart-o." + idjob).css("color", "black");
+                        $(this).data('type','curtir');
+                        $.post('Painel_admin/dislike_job', {idjob: idjob}, function (data) {
+                        });
+                    }
+                });
+
+                $('#coment').click(function () {
+                    $('.content').show();
+                });
                 $('.content').hide();
-            });
+            })
         </script>
     </article>
 </div>
@@ -157,9 +185,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         Habilitação : AD <br>
                         Vagas em Interesse : <?php echo $profile['attributes']['carrer'] ?><br>
                         <hr>
-                        <?php foreach ($idiomas as $idioma) {?>
-                            <div class="row"><strong>Conheçimento do Idioma <?php echo $idioma['attributes']['name']?></strong></div>
-                            Level : <?php echo $idioma['attributes']['level']?><br>
+                        <?php foreach ($idiomas as $idioma) { ?>
+                            <div class="row"><strong>Conheçimento do
+                                    Idioma <?php echo $idioma['attributes']['name'] ?></strong></div>
+                            Level : <?php echo $idioma['attributes']['level'] ?><br>
 
                         <?php } ?>
                     </div>
