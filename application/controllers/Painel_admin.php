@@ -225,6 +225,7 @@ class Painel_admin extends Follows
         $resp['err'] = $err;
         return $resp;
     }
+
     private function get_profile_language()
     {
         $aut_code = $this->session->userdata('verify')['auth_token'];
