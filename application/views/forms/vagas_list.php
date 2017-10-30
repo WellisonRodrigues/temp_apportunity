@@ -5,17 +5,10 @@
  * Date: 29/10/2017
  * Time: 18:32
  */
-//print_r($jobs);
-
 foreach ($jobs as $job_salvo) {
-
-//    ($job_salvo['data']['attributes']['title']);
-
     ?>
-
     <div class="col-md-6 col-md-offset-3 col-sm-offset-1 col-sm-10">
         <article>
-
             <div class="social-feed-box">
                 <div class="social-avatar">
                     <a href="" class="pull-left">
@@ -39,9 +32,6 @@ foreach ($jobs as $job_salvo) {
 
                 </div>
             </div>
-
-
         </article>
     </div>
-
 <?php } ?>

@@ -46,6 +46,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             echo $name;
                             ?>
                         </a>
+                        <div class="text-right">
+                            <h6 class="salvar_vaga" data-idjob_save="<?php echo $id_job; ?>"> Salvar Vaga
+                                <i class="fa fa-edit <?php echo $id_job; ?>"></i>
+                            </h6>
+                        </div>
+                        <script>
+                            $(document).ready(function () {
+                                $(".salvar_vaga").bind('click', function () {
+                                    var idjob = $(this).data('idjob_save');
+                                    $.post('Vagas/save_vagas', {idjob: idjob}, function (data) {
+                                        alert('ok');
+                                    });
+
+                                });
+                            });
+                        </script>
                         <small class="text-muted"></small>
                     </div>
                 </div>
@@ -69,7 +85,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </h4>
                         </div>
                         <div class="col-md-5">
-                            <h4 class="coment" data-idjob="<?php echo $id_job; ?>" data-status="<?php echo $response["status"] ?>"><i class="fa fa-comment-o"></i> Comentar</h4>
+                            <h4 class="coment" data-idjob="<?php echo $id_job; ?>"
+                                data-status="<?php echo $response["status"] ?>"><i class="fa fa-comment-o"></i> Comentar
+                            </h4>
                             <!--                    <button class="btn btn-white btn-xs"><i class="fa fa-share"></i></button>-->
                         </div>
                         <!--                </div>-->
@@ -99,8 +117,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a3.jpg">
                         </a>
                         <div class="media-body">
-                            <textarea class="form-control comentario_<?php echo $id_job; ?>" name="insertComments" placeholder="Write comment..."></textarea>
-                            <input type="button" class="comentar" data-idjob="<?php echo $id_job; ?>" value="Comentar" />
+                            <textarea class="form-control comentario_<?php echo $id_job; ?>" name="insertComments"
+                                      placeholder="Write comment..."></textarea>
+                            <input type="button" class="comentar" data-idjob="<?php echo $id_job; ?>" value="Comentar"/>
                         </div>
                     </div>
                 </div>
@@ -117,12 +136,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                     if (type == 'curtir') {
                         $(".fa-heart-o." + idjob).css("color", "red");
-                        $(this).data('type','dislike');
+                        $(this).data('type', 'dislike');
                         $.post('Painel_admin/like_job', {idjob: idjob}, function (data) {
                         });
                     } else {
                         $(".fa-heart-o." + idjob).css("color", "black");
-                        $(this).data('type','curtir');
+                        $(this).data('type', 'curtir');
                         $.post('Painel_admin/dislike_job', {idjob: idjob}, function (data) {
                         });
                     }
@@ -131,27 +150,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 $('.coment').click(function () {
                     var idjob = $(this).data('idjob');
                     var type = $(this).data('status');
-                    if(type == 'basic'){
-                        $('.content.'+ idjob).toggle( "slow" );
+                    if (type == 'basic') {
+                        $('.content.' + idjob).toggle("slow");
                         //$('.content.'+ idjob).empty();
-                        $.post('Painel_admin/get_comments_job/'+idjob, function (data) {
-                            $('.content.'+ idjob).append("<div class='social-comment'>").append(data).append('</div>');
+                        $.post('Painel_admin/get_comments_job/' + idjob, function (data) {
+                            $('.content.' + idjob).append("<div class='social-comment'>").append(data).append('</div>');
                         });
-                    }else{
+                    } else {
                         alert('Para comentar e visulizar os comentários é necessário ser usuário premium.');
                     }
                 });
 
-                $('.comentar').on('click',function(){
+                $('.comentar').on('click', function () {
                     var idjob = $(this).data('idjob');
-                    var texto = $('.comentario_'+idjob).val();
+                    var texto = $('.comentario_' + idjob).val();
                     alert(texto);
-                    if(texto != "" || texto != " "){
-                        $.post('Painel_admin/insert_comments_job/', {idjob:idjob,texto:texto} ,function (data) {
+                    if (texto != "" || texto != " ") {
+                        $.post('Painel_admin/insert_comments_job/', {idjob: idjob, texto: texto}, function (data) {
 
                         });
                     }
-                })
+                });
 
                 $('.content').hide();
             })
