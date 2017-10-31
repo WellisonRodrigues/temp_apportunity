@@ -66,7 +66,7 @@ class Painel_admin extends Follows
 
 //        print_r($response);
 
-        $data['funcao']=$this;
+        $data['funcao'] = $this;
 
         $this->load->view('template_admin/core', $data);
     }
@@ -303,10 +303,11 @@ class Painel_admin extends Follows
         return $array;
     }
 
-    public function like_list_job($idjob){
-        if($idjob > 0 && !empty($idjob)) {
+    public function like_list_job($idjob)
+    {
+        if ($idjob > 0 && !empty($idjob)) {
             $aut_code = $this->session->userdata('verify')['auth_token'];
-            $usuario= $this->session->userdata('logado');
+            $usuario = $this->session->userdata('logado');
             $iduser = $usuario["id"];
             $curl = curl_init();
 
@@ -346,7 +347,7 @@ class Painel_admin extends Follows
             $array = $this->arrayCastRecursive($resposta);
 
             foreach ($array as $jobs) {
-                foreach($jobs as $job){
+                foreach ($jobs as $job) {
                     if ($job["type"] == "likes") {
                         if ($job["relationships"]["job"]["data"]["id"] == $idjob && $job["relationships"]["user"]["data"]["id"] == $iduser) {
                             return 1;
@@ -356,14 +357,76 @@ class Painel_admin extends Follows
                 }
             }
             return 0;
-        }else{
+        } else {
             $resp['err'] = "Erro! Job não encontrado.";
         }
     }
 
-    public function like_job(){
+    public function save_saved_jobs()
+    {
         $idjob = $this->input->post('idjob');
-        if($idjob > 0 && !empty($idjob)){
+        if ($idjob > 0 && !empty($idjob)) {
+            $aut_code = $this->session->userdata('verify')['auth_token'];
+            $curl = curl_init();
+
+            curl_setopt_array($curl, array(
+                CURLOPT_PORT => "3000",
+                CURLOPT_URL => "http://34.229.150.76:3000/api/v1/jobs/4/saved_jobs",
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => "",
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 30,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => "POST",
+                CURLOPT_POSTFIELDS => "{\n  \"data\": {\n    \"type\": \"saved_jobs\",\n    \"relationships\": {\n      \"job\": {\n        \"data\": {\n          \"type\": \"jobs\",\n          \"id\": \"$idjob\"\n        }\n      }\n    }\n  }\n}",
+                CURLOPT_HTTPHEADER => array(
+                    "accept: application/vnd.api+json",
+                    "cache-control: no-cache",
+                    "content-type: application/vnd.api+json",
+                    "postman-token: edfa54eb-1b43-24e9-f2f5-a59afc2e446d",
+                    "x-auth-token: $aut_code"
+                ),
+            ));
+
+            $headers = [];
+            curl_setopt($curl, CURLOPT_HEADERFUNCTION,
+                function ($curl, $header) use (&$headers) {
+                    $len = strlen($header);
+                    $header = explode(':', $header, 2);
+                    if (count($header) < 2) // ignore invalid headers
+                        return $len;
+
+                    $name = strtolower(trim($header[0]));
+                    if (!array_key_exists($name, $headers))
+                        $headers[$name] = [trim($header[1])];
+                    else
+                        $headers[$name][] = trim($header[1]);
+
+                    return $len;
+                }
+            );
+
+            $response = curl_exec($curl);
+            $resposta = json_decode($response);
+            $err = curl_error($curl);
+            curl_close($curl);
+            $array = $this->arrayCastRecursive($resposta);
+            $resp['response'] = $array;
+            $resp['headers'] = $headers;
+            $resp['err'] = $err;
+
+        } else {
+            $resp['err'] = "Erro! Job não encontrado.";
+        }
+
+//      var_dump($resp);
+    }
+
+
+    public function like_job()
+    {
+        $idjob = $this->input->post('idjob');
+        if ($idjob > 0 && !empty($idjob)) {
             $aut_code = $this->session->userdata('verify')['auth_token'];
             $curl = curl_init();
 
@@ -413,16 +476,17 @@ class Painel_admin extends Follows
             $resp['headers'] = $headers;
             $resp['err'] = $err;
 
-        }else{
+        } else {
             $resp['err'] = "Erro! Job não encontrado.";
         }
 
 //      var_dump($resp);
     }
 
-    public function dislike_job(){
+    public function dislike_job()
+    {
         $idjob = $this->input->post('idjob');
-        if($idjob > 0 && !empty($idjob)){
+        if ($idjob > 0 && !empty($idjob)) {
             $aut_code = $this->session->userdata('verify')['auth_token'];
             $curl = curl_init();
 
@@ -471,17 +535,18 @@ class Painel_admin extends Follows
             $resp['headers'] = $headers;
             $resp['err'] = $err;
 
-        }else{
+        } else {
             $resp['err'] = "Erro! Job não encontrado.";
         }
 
     }
 
-    public function get_comments_job($idjob){
+    public function get_comments_job($idjob)
+    {
 
-        if($idjob > 0 && !empty($idjob)) {
+        if ($idjob > 0 && !empty($idjob)) {
             $aut_code = $this->session->userdata('verify')['auth_token'];
-            $usuario= $this->session->userdata('logado');
+            $usuario = $this->session->userdata('logado');
             $iduser = $usuario["id"];
             $curl = curl_init();
 
@@ -525,23 +590,24 @@ class Painel_admin extends Follows
             $err = curl_error($curl);
             curl_close($curl);
             $array = $this->arrayCastRecursive($resposta);
-            if(sizeof($array["data"]) > 0){
-               // echo 'Nenhum registro';
-            }else{
-               // echo 'Nenhum registro';
+            if (sizeof($array["data"]) > 0) {
+                // echo 'Nenhum registro';
+            } else {
+                // echo 'Nenhum registro';
             }
-        }else{
+        } else {
             $resp['err'] = "Erro! Job não encontrado.";
         }
     }
 
-    public function insert_comments_job(){
+    public function insert_comments_job()
+    {
         $idjob = $this->input->post('idjob');
         $texto = $this->input->post('texto');
-        if($idjob > 0 && !empty($idjob) && !empty($texto)) {
+        if ($idjob > 0 && !empty($idjob) && !empty($texto)) {
 
             $aut_code = $this->session->userdata('verify')['auth_token'];
-            $usuario= $this->session->userdata('logado');
+            $usuario = $this->session->userdata('logado');
             $iduser = $usuario["id"];
             $curl = curl_init();
 
@@ -590,7 +656,7 @@ class Painel_admin extends Follows
             $array = $this->arrayCastRecursive($resposta);
             var_dump($array);
 
-        }else{
+        } else {
             $resp['err'] = "Erro! Job não encontrado.";
         }
     }

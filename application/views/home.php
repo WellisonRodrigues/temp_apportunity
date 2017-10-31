@@ -45,23 +45,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <?php
                             echo $name;
                             ?>
-                        </a>
-                        <div class="text-right">
-                            <h6 class="salvar_vaga" data-idjob_save="<?php echo $id_job; ?>"> Salvar Vaga
-                                <i class="fa fa-edit <?php echo $id_job; ?>"></i>
-                            </h6>
-                        </div>
-                        <script>
-                            $(document).ready(function () {
-                                $(".salvar_vaga").bind('click', function () {
-                                    var idjob = $(this).data('idjob_save');
-                                    $.post('Vagas/save_vagas', {idjob: idjob}, function (data) {
-                                        alert('ok');
-                                    });
 
-                                });
-                            });
-                        </script>
+                        </a>
+                        <a href="">
+                            <div class="pull-right">
+                                <h6 class="salvar_vaga" data-idjob="<?php echo $id_job; ?>"><b> Salvar Vaga
+                                        <i class="fa fa-edit <?php echo $id_job; ?>"></i></b>
+                                </h6>
+                            </div>
+                        </a>
                         <small class="text-muted"></small>
                     </div>
                 </div>
@@ -171,6 +163,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         });
                     }
                 });
+
+                $('.salvar_vaga').bind('click', function () {
+                    var idjob = $(this).data('idjob');
+                    $.post('Painel_admin/save_saved_jobs/', {idjob: idjob}, function (data) {
+                        alert('Vaga salva com sucesso');
+                    });
+
+                });
+
 
                 $('.content').hide();
             })
