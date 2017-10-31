@@ -82,24 +82,24 @@ class Vagas extends CI_Controller
         return $resp;
     }
 
-    public function save_vagas($idjob)
+    public function save_vagas()
     {
-        $var = $idjob;
-        $this->save_saved_jobs($var);
+        $idjob = $this->input->post('idjob');
+        $this->save_saved_jobs($idjob);
 
 
     }
 
     private function save_saved_jobs($idjob)
     {
-        if ($idjob > 0 && !empty($idjob)) {
 
+        if ($idjob > 0 && !empty($idjob)) {
             $aut_code = $this->session->userdata('verify')['auth_token'];
             $curl = curl_init();
 
             curl_setopt_array($curl, array(
                 CURLOPT_PORT => "3000",
-                CURLOPT_URL => "http://34.229.150.76:3000/api/v1/jobs/$idjob/saved_jobs",
+                CURLOPT_URL => "http://34.229.150.76:3000/api/v1/jobs/4/saved_jobs",
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => "",
                 CURLOPT_MAXREDIRS => 10,
@@ -111,11 +111,10 @@ class Vagas extends CI_Controller
                     "accept: application/vnd.api+json",
                     "cache-control: no-cache",
                     "content-type: application/vnd.api+json",
-                    "postman-token: 837ee8e4-78de-5dfd-0e1f-94ff885e7416",
+                    "postman-token: edfa54eb-1b43-24e9-f2f5-a59afc2e446d",
                     "x-auth-token: $aut_code"
                 ),
             ));
-
 
             $headers = [];
             curl_setopt($curl, CURLOPT_HEADERFUNCTION,
@@ -143,12 +142,14 @@ class Vagas extends CI_Controller
             $resp['response'] = $array;
             $resp['headers'] = $headers;
             $resp['err'] = $err;
-            return $resp;
+
         } else {
             $resp['err'] = "Erro! Job não encontrado.";
         }
 
+//      var_dump($resp);
     }
+
 
     public
     function arrayCastRecursive($array)

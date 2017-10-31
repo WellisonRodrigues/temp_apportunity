@@ -47,13 +47,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             ?>
 
                         </a>
-                        <a href="">
+<!--                        <a href="#">-->
                             <div class="pull-right">
                                 <h6 class="salvar_vaga" data-idjob="<?php echo $id_job; ?>"><b> Salvar Vaga
                                         <i class="fa fa-edit <?php echo $id_job; ?>"></i></b>
                                 </h6>
                             </div>
-                        </a>
+<!--                        </a>-->
                         <small class="text-muted"></small>
                     </div>
                 </div>
@@ -166,7 +166,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 $('.salvar_vaga').bind('click', function () {
                     var idjob = $(this).data('idjob');
-                    $.post('Painel_admin/save_saved_jobs/', {idjob: idjob}, function (data) {
+                    $.post('Vagas/save_vagas/', {idjob: idjob}, function (data) {
                         alert('Vaga salva com sucesso');
                     });
 
