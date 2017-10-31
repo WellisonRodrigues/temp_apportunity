@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                            required>
                                 </div>
                                 <div class="text-right">
-                                    <?php echo anchor('login/recover_accout', ' Esqueci minha senha') ?>
+                                    <?php echo anchor('Login/recover_accout', ' Esqueci minha senha') ?>
                                 </div>
                                 <br/>
                                 <!-- Change this to a button or input when using this as a form -->
