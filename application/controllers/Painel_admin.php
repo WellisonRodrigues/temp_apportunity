@@ -417,7 +417,7 @@ class Painel_admin extends Follows
             $resp['err'] = "Erro! Job não encontrado.";
         }
 
-      var_dump($resp);
+//      var_dump($resp);
     }
 
     public function dislike_job(){
