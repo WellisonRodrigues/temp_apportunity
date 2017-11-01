@@ -88,9 +88,8 @@
                     </a>
                     <div class="text-right">
                         <strong>
-                            <?php echo anchor('',
-                                '<i style="text-decoration: none;color: darkgreen" class="fa fa-edit"  data-toggle="modal"
-                                       data-target="#edit_job"/> </i>') ?> Editar
+                            <i style="text-decoration: none;color: darkgreen" class="fa fa-edit" data-toggle="modal"
+                               data-target=".edit_job<?php echo $job_salvo['id'] ?>"> </i> Editar
 
                             <?php echo anchor('Vagas_companies/delete_job/' . $job_salvo['id'],
                                 '<i style="text-decoration: none;color: darkred" class="fa fa-trash"/> </i>') ?> Excluir
@@ -124,7 +123,7 @@
             </div>
 
             <!-- Modal -->
-            <div class="modal fade" id="edit_job" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            <div class="modal fade edit_job<?php echo $job_salvo['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                  aria-hidden="true"
                  style="display: none;">
                 <?php echo form_open('Vagas_companies/edit_job', ['role' => 'form']);
