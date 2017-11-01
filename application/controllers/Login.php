@@ -305,11 +305,12 @@ class Login extends CI_Controller
 
     public function recover_accout()
     {
-        if ($this->input->post('login') == 'Entrar') {
+        if ($this->input->post('reset_password') == 'Resetar') {
 
 
             $email = $this->input->post('email');
-            $retorno = $this->recover_accout_wb($email);
+            $type = $this->input->post('type');
+            $retorno = $this->recover_accout_wb($email, $type);
             /*
              * Erro no curl
              */
@@ -352,24 +353,25 @@ class Login extends CI_Controller
 
     }
 
-    private function recover_accout_wb($email, $type,$pass)
+    private function recover_accout_wb($email, $type)
     {
         $curl = curl_init();
-
         curl_setopt_array($curl, array(
             CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/auth/sign_in",
+            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/auth/password",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "POST",
-            CURLOPT_POSTFIELDS => "{\n      \"data\": {\n        \"type\": \"$type\",\n        \"attributes\": {\n          \"email\": \"$email\",\n          \"password\": \"$pass\"\n        }\n      }\n}",
+            CURLOPT_POSTFIELDS => "{\r\n  \"data\": {\r\n    \"type\": \"$type\",
+            \r\n    \"attributes\": {\r\n      \"email\": \"$email\"\r\n    }\r\n  }\r\n}",
             CURLOPT_HTTPHEADER => array(
+                "accept: application/vnd.api+json",
                 "cache-control: no-cache",
-                "content-type: application/json",
-                "postman-token: 578a9b75-6bb2-3e68-5495-d8407420e2ac"
+                "content-type: application/vnd.api+json",
+                "postman-token: 58432865-df3d-e6fe-17dd-da7890fb973c"
             ),
         ));
 

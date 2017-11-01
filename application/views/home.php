@@ -70,8 +70,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <?php //echo base_url(IMAGES); ?><!--/banner.jpg">-->
                     </div>
                     <!--            <div class="btn-group">-->
+                    <hr>
                     <div class="row">
-
                         <div class="col-md-offset-1 col-md-6">
                             <h4 class="curtir <?php echo $id_job; ?>" data-idjob="<?php echo $id_job; ?>"
                                 data-idlike="<?php echo $curtiuJob ?>" data-type="<?php echo $classJob; ?>">

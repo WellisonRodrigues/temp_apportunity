@@ -18,13 +18,25 @@
                     <?php
                     echo form_open('Login/recover_accout', ['role' => 'form']);
                     ?>
-                    <input class="form-control" placeholder="E-mail" type="email" name="email" autofocus="" value=""
-                           autocomplete="off" required="">
+                    <div class="form-group">
+                        <input class="form-control" placeholder="E-mail" type="email" name="email" autofocus="" value=""
+                               autocomplete="off" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="sel1">Eu sou:</label>
+                        <select class="form-control" id="sel1" name="type">
+                            <option id="companies" value="companies">Empresa</option>
+                            <option id="users" value="users">Pessoa Fisica</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-default" name="reset_password"
+                               value="Resetar">
+                    </div>
                 </div>
             </div>
             <?php echo form_close(); ?>
         </div>
     </div>
-
 </div>
 

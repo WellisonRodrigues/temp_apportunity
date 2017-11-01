@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6315125-2236-4753-8b25-d0ed219b9684" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/forms/languages_users.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/controllers/Tickets.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/controllers/Usuarios.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session2b9c1nq0elm4dp3jau3v4c93ap0obaiv" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Login.php" afterPath="$PROJECT_DIR$/application/controllers/Login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Perfil_user.php" afterPath="$PROJECT_DIR$/application/controllers/Perfil_user.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Vagas_companies.php" afterPath="$PROJECT_DIR$/application/controllers/Vagas_companies.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/forms/companies_vagas_list.php" afterPath="$PROJECT_DIR$/application/views/forms/companies_vagas_list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/forms/perfil_user.php" afterPath="$PROJECT_DIR$/application/views/forms/perfil_user.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/home.php" afterPath="$PROJECT_DIR$/application/views/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/recover_acc_form.php" afterPath="$PROJECT_DIR$/application/views/recover_acc_form.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,18 +21,28 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Login.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="430">
+              <caret line="366" column="44" lean-forward="true" selection-start-line="366" selection-start-column="44" selection-end-line="366" selection-end-column="44" />
               <folding>
+                <element signature="n#__construct#0;n#Login#0;n#!!top" expanded="false" />
                 <element signature="n#index#0;n#Login#0;n#!!top" expanded="false" />
+                <element signature="n#entrar#0;n#Login#0;n#!!top" expanded="false" />
+                <element signature="e#345#3350#0#PHP" expanded="false" />
                 <element signature="e#711#757#0#PHP" expanded="false" />
+                <element signature="e#770#1164#0#PHP" expanded="false" />
                 <element signature="e#880#1042#0#PHP" expanded="false" />
                 <element signature="e#1178#1233#0#PHP" expanded="false" />
+                <element signature="e#1246#3340#0#PHP" expanded="false" />
+                <element signature="e#1358#1487#0#PHP" expanded="false" />
+                <element signature="e#1611#3340#0#PHP" expanded="false" />
                 <element signature="e#1672#1807#0#PHP" expanded="false" />
                 <element signature="e#2454#2473#0#PHP" expanded="false" />
+                <element signature="e#3016#3326#0#PHP" expanded="false" />
+                <element signature="e#3141#3326#0#PHP" expanded="false" />
+                <element signature="e#3169#3308#0#PHP" expanded="false" />
                 <element signature="n#cadastrar#0;n#Login#0;n#!!top" expanded="false" />
                 <element signature="e#3544#5494#0#PHP" expanded="false" />
                 <element signature="e#3710#3861#0#PHP" expanded="false" />
@@ -69,12 +74,32 @@
                 <element signature="e#9892#10147#1#PHP" expanded="false" />
                 <element signature="e#10206#10797#0#PHP" expanded="false" />
                 <element signature="e#10261#10787#1#PHP" expanded="false" />
-                <element signature="e#11298#11344#0#PHP" expanded="false" />
-                <element signature="e#11467#11629#0#PHP" expanded="false" />
-                <element signature="e#11765#11820#0#PHP" expanded="false" />
-                <element signature="e#13386#13569#1#PHP" expanded="false" />
-                <element signature="e#13671#14197#1#PHP" expanded="false" />
+                <element signature="e#11363#11409#0#PHP" expanded="false" />
+                <element signature="e#11532#11694#0#PHP" expanded="false" />
+                <element signature="e#11830#11885#0#PHP" expanded="false" />
+                <element signature="e#12010#12149#0#PHP" expanded="false" />
+                <element signature="e#13764#14290#1#PHP" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login_form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/login_form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="34" column="32" lean-forward="false" selection-start-line="34" selection-start-column="32" selection-end-line="40" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recover_acc_form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/recover_acc_form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="26" column="74" lean-forward="false" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -172,8 +197,8 @@
       <file leaf-file-name="menu.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/template_admin/menu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="668">
-              <caret line="50" column="24" lean-forward="false" selection-start-line="50" selection-start-column="24" selection-end-line="52" selection-end-column="30" />
+            <state relative-caret-position="141">
+              <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
               <folding>
                 <marker date="1509492610799" expanded="true" signature="212:228" ph="..." />
                 <marker date="1509492610799" expanded="true" signature="1972:2032" ph="..." />
@@ -344,44 +369,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="45" column="26" lean-forward="false" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+            <state relative-caret-position="222">
+              <caret line="72" column="24" lean-forward="false" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="languages_users.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/forms/languages_users.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="49" column="66" lean-forward="false" selection-start-line="49" selection-start-column="66" selection-end-line="49" selection-end-column="66" />
-              <folding>
-                <element signature="e#6#90#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="companies_vagas_list.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/forms/companies_vagas_list.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="87" column="24" lean-forward="true" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
-              <folding>
-                <element signature="e#6#90#0#PHP" expanded="true" />
-                <marker date="1509569829083" expanded="true" signature="3694:3732" ph="..." />
-                <marker date="1509569829083" expanded="true" signature="3773:3837" ph="..." />
-                <marker date="1509569829083" expanded="true" signature="3996:4032" ph="..." />
-                <marker date="1509569829083" expanded="true" signature="4180:4424" ph="..." />
-                <marker date="1509569829083" expanded="true" signature="4556:4604" ph="..." />
-                <marker date="1509569829083" expanded="true" signature="4658:4705" ph="..." />
-                <marker date="1509569829083" expanded="true" signature="4839:4920" ph="..." />
-                <marker date="1509569829083" expanded="true" signature="5222:5336" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -458,8 +451,6 @@
         <option value="$USER_HOME$/Downloads/caldasingressos/ingressoscaldas/application/controllers/Login.php" />
         <option value="$USER_HOME$/Downloads/caldasingressos/ingressoscaldas/application/config/config.php" />
         <option value="$PROJECT_DIR$/../ingressoscaldas/application/config/config.php" />
-        <option value="$PROJECT_DIR$/application/views/login_form.php" />
-        <option value="$PROJECT_DIR$/application/views/recover_acc_form.php" />
         <option value="$PROJECT_DIR$/application/controllers/Painel_admin.php" />
         <option value="$PROJECT_DIR$/application/controllers/Vagas.php" />
         <option value="$PROJECT_DIR$/application/controllers/Follows.php" />
@@ -469,9 +460,11 @@
         <option value="$PROJECT_DIR$/application/views/forms/perfil_user.php" />
         <option value="$PROJECT_DIR$/application/controllers/Perfil_user.php" />
         <option value="$PROJECT_DIR$/application/views/forms/companies_vagas_list.php" />
-        <option value="$PROJECT_DIR$/application/views/home.php" />
         <option value="$PROJECT_DIR$/application/controllers/Vagas_companies.php" />
+        <option value="$PROJECT_DIR$/application/views/login_form.php" />
+        <option value="$PROJECT_DIR$/application/views/recover_acc_form.php" />
         <option value="$PROJECT_DIR$/application/controllers/Login.php" />
+        <option value="$PROJECT_DIR$/application/views/home.php" />
       </list>
     </option>
   </component>
@@ -596,7 +589,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="men&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/menu.php&#10;cs&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/css/feed.css&#10;lo&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/login_form.php&#10;me&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/menu.php&#10;m&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/menus/menu_superior.php&#10;cor&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/core.php&#10;co&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/core.php&#10;fee&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/css/feed.css&#10;sb&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/css/sb-admin-2.css&#10;boots&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/vendor/bootstrap/css/bootstrap.css&#10;bootstrap.mi&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/vendor/bootstrap/css/bootstrap.min.css&#10;bootstrap.&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/vendor/bootstrap/css/bootstrap.css&#10;bo&#9;FILE&#9;file://C:/inetpub/wwwroot/ingressoscaldas/arquivos/resources/vendor/bootstrap-social/bootstrap-social.css&#10;sb-ad&#9;FILE&#9;file://C:/inetpub/wwwroot/ingressoscaldas/arquivos/resources/css/sb-admin-2.css&#10;log&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="hom&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/home.php&#10;men&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/menu.php&#10;cs&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/css/feed.css&#10;lo&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/login_form.php&#10;me&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/menu.php&#10;m&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/menus/menu_superior.php&#10;cor&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/core.php&#10;co&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/core.php&#10;fee&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/css/feed.css&#10;sb&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/css/sb-admin-2.css&#10;boots&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/vendor/bootstrap/css/bootstrap.css&#10;bootstrap.mi&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/vendor/bootstrap/css/bootstrap.min.css&#10;bootstrap.&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/vendor/bootstrap/css/bootstrap.css&#10;bo&#9;FILE&#9;file://C:/inetpub/wwwroot/ingressoscaldas/arquivos/resources/vendor/bootstrap-social/bootstrap-social.css&#10;sb-ad&#9;FILE&#9;file://C:/inetpub/wwwroot/ingressoscaldas/arquivos/resources/css/sb-admin-2.css&#10;log&#9;null&#9;null" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
@@ -729,12 +722,12 @@
       <workItem from="1507999755420" duration="107000" />
       <workItem from="1508002280661" duration="62915000" />
       <workItem from="1508881770379" duration="62402000" />
-      <workItem from="1509312601890" duration="42580000" />
+      <workItem from="1509312601890" duration="43444000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185094000" />
+    <option name="totallyTimeSpent" value="185958000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1053,24 +1046,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/recover_acc_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-          <folding>
-            <element signature="e#6#90#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/login_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="68" column="31" lean-forward="false" selection-start-line="68" selection-start-column="31" selection-end-line="70" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -1131,28 +1106,6 @@
             <marker date="1509569829083" expanded="true" signature="4839:4920" ph="..." />
             <marker date="1509569829083" expanded="true" signature="5222:5336" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/template_admin/menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="50" column="24" lean-forward="false" selection-start-line="50" selection-start-column="24" selection-end-line="52" selection-end-column="30" />
-          <folding>
-            <marker date="1509492610799" expanded="true" signature="212:228" ph="..." />
-            <marker date="1509492610799" expanded="true" signature="1972:2032" ph="..." />
-            <marker date="1509492610799" expanded="true" signature="1972:2053" ph="..." />
-            <marker date="1509492610799" expanded="true" signature="2872:2941" ph="..." />
-            <marker date="1509492610799" expanded="true" signature="3553:3601" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="45" column="26" lean-forward="false" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1395,17 +1348,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/login_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="34" column="32" lean-forward="false" selection-start-line="34" selection-start-column="32" selection-end-line="40" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/recover_acc_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="26" column="74" lean-forward="false" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="430">
+          <caret line="366" column="44" lean-forward="true" selection-start-line="366" selection-start-column="44" selection-end-line="366" selection-end-column="44" />
           <folding>
+            <element signature="n#__construct#0;n#Login#0;n#!!top" expanded="false" />
             <element signature="n#index#0;n#Login#0;n#!!top" expanded="false" />
+            <element signature="n#entrar#0;n#Login#0;n#!!top" expanded="false" />
+            <element signature="e#345#3350#0#PHP" expanded="false" />
             <element signature="e#711#757#0#PHP" expanded="false" />
+            <element signature="e#770#1164#0#PHP" expanded="false" />
             <element signature="e#880#1042#0#PHP" expanded="false" />
             <element signature="e#1178#1233#0#PHP" expanded="false" />
+            <element signature="e#1246#3340#0#PHP" expanded="false" />
+            <element signature="e#1358#1487#0#PHP" expanded="false" />
+            <element signature="e#1611#3340#0#PHP" expanded="false" />
             <element signature="e#1672#1807#0#PHP" expanded="false" />
             <element signature="e#2454#2473#0#PHP" expanded="false" />
+            <element signature="e#3016#3326#0#PHP" expanded="false" />
+            <element signature="e#3141#3326#0#PHP" expanded="false" />
+            <element signature="e#3169#3308#0#PHP" expanded="false" />
             <element signature="n#cadastrar#0;n#Login#0;n#!!top" expanded="false" />
             <element signature="e#3544#5494#0#PHP" expanded="false" />
             <element signature="e#3710#3861#0#PHP" expanded="false" />
@@ -1437,12 +1416,34 @@
             <element signature="e#9892#10147#1#PHP" expanded="false" />
             <element signature="e#10206#10797#0#PHP" expanded="false" />
             <element signature="e#10261#10787#1#PHP" expanded="false" />
-            <element signature="e#11298#11344#0#PHP" expanded="false" />
-            <element signature="e#11467#11629#0#PHP" expanded="false" />
-            <element signature="e#11765#11820#0#PHP" expanded="false" />
-            <element signature="e#13386#13569#1#PHP" expanded="false" />
-            <element signature="e#13671#14197#1#PHP" expanded="false" />
+            <element signature="e#11363#11409#0#PHP" expanded="false" />
+            <element signature="e#11532#11694#0#PHP" expanded="false" />
+            <element signature="e#11830#11885#0#PHP" expanded="false" />
+            <element signature="e#12010#12149#0#PHP" expanded="false" />
+            <element signature="e#13764#14290#1#PHP" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/template_admin/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+          <folding>
+            <marker date="1509492610799" expanded="true" signature="212:228" ph="..." />
+            <marker date="1509492610799" expanded="true" signature="1972:2032" ph="..." />
+            <marker date="1509492610799" expanded="true" signature="1972:2053" ph="..." />
+            <marker date="1509492610799" expanded="true" signature="2872:2941" ph="..." />
+            <marker date="1509492610799" expanded="true" signature="3553:3601" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="72" column="24" lean-forward="false" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
