@@ -350,7 +350,7 @@ class Painel_admin extends Follows
                 foreach ($jobs as $job) {
                     if ($job["type"] == "likes") {
                         if ($job["relationships"]["job"]["data"]["id"] == $idjob && $job["relationships"]["user"]["data"]["id"] == $iduser) {
-                            return 1;
+                            return $job["id"];
                             break;
                         }
                     }
@@ -420,19 +420,21 @@ class Painel_admin extends Follows
             $resp['err'] = "Erro! Job não encontrado.";
         }
 
+        echo json_encode($resp);
 //      var_dump($resp);
     }
 
     public function dislike_job()
     {
         $idjob = $this->input->post('idjob');
-        if ($idjob > 0 && !empty($idjob)) {
+        $idlike = $this->input->post('idlike');
+
+        if ($idlike > 0 && !empty($idlike)) {
             $aut_code = $this->session->userdata('verify')['auth_token'];
             $curl = curl_init();
-
             curl_setopt_array($curl, array(
                 CURLOPT_PORT => "3000",
-                CURLOPT_URL => "http://34.229.150.76:3000/api/v1/likes/$idjob",
+                CURLOPT_URL => "http://34.229.150.76:3000/api/v1/likes/$idlike",
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => "",
                 CURLOPT_MAXREDIRS => 10,
@@ -445,7 +447,6 @@ class Painel_admin extends Follows
                     "x-auth-token: $aut_code"
                 ),
             ));
-
 
             $headers = [];
             curl_setopt($curl, CURLOPT_HEADERFUNCTION,
@@ -467,7 +468,6 @@ class Painel_admin extends Follows
 
             $response = curl_exec($curl);
             $resposta = json_decode($response);
-            var_dump($resposta);
             $err = curl_error($curl);
             curl_close($curl);
             $array = $this->arrayCastRecursive($resposta);
@@ -479,6 +479,7 @@ class Painel_admin extends Follows
             $resp['err'] = "Erro! Job não encontrado.";
         }
 
+        //echo json_encode($resp);
     }
 
     public function get_comments_job($idjob)
