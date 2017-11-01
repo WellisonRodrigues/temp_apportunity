@@ -352,7 +352,7 @@ class Login extends CI_Controller
 
     }
 
-    private function recover_accout_wb($email, $type)
+    private function recover_accout_wb($email, $type,$pass)
     {
         $curl = curl_init();
 
