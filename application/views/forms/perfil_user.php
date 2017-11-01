@@ -6,7 +6,7 @@
  * Time: 23:49
  */
 //print_r($included[0]['attributes']['email']);
-//print_r($profile['attributes']);
+//print_r($profile);
 ?>
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
@@ -23,23 +23,35 @@
             <div class="modal-body">
 
                 <div class="form-group">
-                    <input class="form-control" placeholder="Nome" type="text" name="name_user" autofocus
+                    <label>Imagem de Perfil (JPG)</label>
+                    <input class="form-control" type="file" name="file" autofocus
                            value="" autocomplete="off"
+                           >
+                </div>
+                <div class="form-group">
+                    <label>Curriculum (PDF)</label>
+                    <input class="form-control" type="file" name="pdf" autofocus
+                           value="" autocomplete="off"
+                    >
+                </div>
+                <div class="form-group">
+                    <input class="form-control" placeholder="Nome" type="text" name="name_user" autofocus
+                           value="<?php echo $profile['attributes']['name'] ?>" autocomplete="off"
                            required>
                 </div>
                 <div class="form-group">
                     <input class="form-control" placeholder="Idade" type="number" name="age" autofocus
-                           value="" autocomplete="off"
+                           value="<?php echo $profile['attributes']['age'] ?>" autocomplete="off"
                            required>
                 </div>
                 <div class="form-group">
                     <input class="form-control" placeholder="Região" type="text" name="region" autofocus
-                           value="" autocomplete="off"
+                           value="<?php echo $profile['attributes']['region'] ?>" autocomplete="off"
                            required>
                 </div>
                 <div class="form-group">
                     <input class="form-control" placeholder="Vagas de Interesse" type="text" name="carrer" autofocus
-                           value="" autocomplete="off"
+                           value="<?php echo $profile['attributes']['carrer'] ?>" autocomplete="off"
                            required>
                 </div>
 
@@ -60,6 +72,38 @@
 
 <div class="row">
     <div class="col-md-8 col-md-offset-2 col-sm-offset-1 col-sm-10">
+        <?php
+        if ($this->session->userdata('logado')['type'] == 'users') {
+            ?>
+            <div class="panel panel-default">
+                <div class="panel panel-heading">
+                    <div class="text-right">
+                        <h4><i
+                                    class="fa fa-pencil" data-toggle="modal" data-target="#myModal"></i>
+                        </h4>
+                    </div>
+                    <div class=" text-center center-block">
+                        <img src="<?php echo base_url(IMAGES); ?>/profile.jpg" width="15%" height="15%"
+                             class="img-circle">
+                        <div class="row"><h4><strong><?php echo $profile['attributes']['name'] ?></strong></h4>
+                        </div>
+                        <br>
+                        <?php echo $profile['attributes']['region'] ?><br>
+                        <div class="row"><?php echo $inscritos; ?> Inscritos</div>
+                        <br>
+                        <div class="row">
+                            <?php echo anchor('perfil_user/editar', 'Tornar empresa', 'type="button" class="btn btn-primary"') ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-body">
+                    <?php $this->load->view('forms/languages_users') ?>
+                </div>
+            </div>
+        <?php }
+        if ($this->session->userdata('logado')['type'] == 'companies') {
+
+        ?>
         <div class="panel panel-default">
             <div class="panel panel-heading">
                 <div class="text-right">
@@ -73,40 +117,10 @@
                     <div class="row"><h4><strong><?php echo $profile['attributes']['name'] ?></strong></h4>
                     </div>
                     <br>
-                    <?php echo $profile['attributes']['region'] ?><br>
-                                        <div class="row"><?php echo $inscritos; ?> Inscritos</div>
+                    <div class="row"><?php echo $inscritos; ?> Inscritos</div>
                     <br>
-                    <div class="row">
-                        <?php echo anchor('perfil_user/editar', 'Tornar empresa', 'type="button" class="btn btn-primary"') ?>
-                    </div>
                 </div>
             </div>
-            <div class="panel panel-body">
-                <div class="text-center">
-                    <div class="text-right">
-                        <h4><i class="fa fa-pencil"></i></h4>
-                    </div>
-                    <div class="row"><h4><strong>Sobre</strong></h4></div>
-                    Email : <?php echo $included[0]['attributes']['email'] ?> <br>
-                    Idade : <?php echo $profile['attributes']['age'] ?> <br>
-
-                    <!--                    verificar habilitação pois a mesma não consta na api-->
-
-                    Habilitação : AD <br>
-                    Vagas em Interesse : <?php echo $profile['attributes']['carrer'] ?><br>
-                    <br>
-                    <hr>
-                    <div class="text-right">
-                        <h4><i class="fa fa-pencil"></i></h4>
-                    </div>
-                    <?php foreach ($idiomas as $idioma) { ?>
-                        <div class="row"><h4><strong>Conheçimento do
-                                    Idioma <?php echo $idioma['attributes']['name'] ?></strong></h4></div>
-                        Level : <?php echo $idioma['attributes']['level'] ?><br>
-
-                    <?php } ?>
-                </div>
-            </div>
+            <?php } ?>
         </div>
     </div>
-</div>

@@ -72,11 +72,13 @@ class Perfil_user extends Follows
 
         $name = $this->input->post('name_user');
         $age = $this->input->post('age');
+        $image = 'data:image/png;base64,' . base64_encode($this->input->post('file'));
         $carrer = $this->input->post('carrer');
         $region = $this->input->post('region');
+        $pdf = 'data:application/pdf;base64,' . base64_encode($this->input->post('pdf'));
         //$retorno = $region->sign_in('ingressoscaldas@gmail.com','icnTDC');
 
-        $retorno = $this->update_user($name, $age, $carrer, $region);
+        $retorno = $this->update_user($name, $age, $carrer, $region, $pdf, $image);
         /*
          * Erro no curl
          */
@@ -247,8 +249,8 @@ class Perfil_user extends Follows
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_POSTFIELDS => "{\n  \"data\": {\n    \"type\": \"$type\",\n  
-              \"attributes\": {\n      \"token\": \"DJWIDH8NSKANLASK\",\n   
-               \"provider\": \"facebook\"\n    }\n  }\n}",
+              \"attributes\": {\n      \"token\": \"$aut_code\",\n   
+               \"provider\": \"\"\n    }\n  }\n}",
             CURLOPT_HTTPHEADER => array(
                 "accept: application/vnd.api+json",
                 "cache-control: no-cache",
@@ -286,7 +288,7 @@ class Perfil_user extends Follows
         return $resp;
     }
 
-    private function update_user($name, $age, $carrer, $region)
+    private function update_user($name, $age, $carrer, $region, $pdf, $image)
     {
         $aut_code = $this->session->userdata('verify')['auth_token'];
         $id_user = $this->session->userdata('logado')['id'];
@@ -307,7 +309,9 @@ class Perfil_user extends Follows
             CURLOPT_CUSTOMREQUEST => "PUT",
             CURLOPT_POSTFIELDS => "{\n  \"data\": {\n   \"type\": \"profiles\",\n   \"id\" : \"$id_user\",
             \n    \"attributes\": {\n      \"name\": \"$name\",\n      \"region\": \"$region\",
-            \n      \"age\": \"$age\",\n      \"carrer\": \"$carrer\"\n    }\n  }\n}",
+            \n      \"age\": \"$age\",\n      \"carrer\": \"$carrer\",
+            \n      \"image\": \"$image\",
+            \n      \"document\": \"$pdf\"\n    }\n  }\n}",
             CURLOPT_HTTPHEADER => array(
                 "accept: application/vnd.api+json",
                 "cache-control: no-cache",
@@ -458,6 +462,7 @@ class Perfil_user extends Follows
         $resp['err'] = $err;
         return $resp;
     }
+
     private function create_languages($name, $level)
     {
 
@@ -515,6 +520,7 @@ class Perfil_user extends Follows
         return $resp;
 
     }
+
     public function arrayCastRecursive($array)
     {
         if (is_array($array)) {

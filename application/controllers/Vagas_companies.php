@@ -16,7 +16,7 @@ class Vagas_companies extends CI_Controller
         if (!$this->session->userdata("logado")) {
             redirect('sair');
         }
-        $this->output->enable_profiler(TRUE);
+//        $this->output->enable_profiler(TRUE);
     }
 
 

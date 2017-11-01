@@ -87,8 +87,15 @@
                         <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a1.jpg">
                     </a>
                     <div class="text-right">
-                        <?php echo anchor('Vagas_companies/delete_job/' . $job_salvo['id'], '<i class="fa fa-trash"/> </i>Excluir ') ?>
-                        <i class="fa fa-edit" data-toggle="modal" data-target="#edit_job"> Editar </i>
+                        <strong>
+                            <?php echo anchor('',
+                                '<i style="text-decoration: none;color: darkgreen" class="fa fa-edit"  data-toggle="modal"
+                                       data-target="#edit_job"/> </i>') ?> Editar
+
+                            <?php echo anchor('Vagas_companies/delete_job/' . $job_salvo['id'],
+                                '<i style="text-decoration: none;color: darkred" class="fa fa-trash"/> </i>') ?> Excluir
+
+                        </strong>
                     </div>
 
                     <div class="media-body">
@@ -166,19 +173,19 @@
                 <!-- /.modal-dialog -->
             </div>
         <?php } ?>
-<!--        <script>-->
-<!--            $(document).ready(function () {-->
-<!--                $('.delete_job').click(function () {-->
-<!--                    var idjob = $(this).data('idjob');-->
-<!---->
-<!--                    if (idjob != null) {-->
-<!--                        //$('.content.'+ idjob).empty();-->
-<!--//                        $.post('Vagas_companies/delete_job/' + idjob, function (data) {-->
-<!---->
-<!--                        alert('ok');-->
-<!--                    }-->
-<!--                });-->
-<!--            });-->
-<!--        </script>-->
+        <!--        <script>-->
+        <!--            $(document).ready(function () {-->
+        <!--                $('.delete_job').click(function () {-->
+        <!--                    var idjob = $(this).data('idjob');-->
+        <!---->
+        <!--                    if (idjob != null) {-->
+        <!--                        //$('.content.'+ idjob).empty();-->
+        <!--//                        $.post('Vagas_companies/delete_job/' + idjob, function (data) {-->
+        <!---->
+        <!--                        alert('ok');-->
+        <!--                    }-->
+        <!--                });-->
+        <!--            });-->
+        <!--        </script>-->
     </article>
 </div>

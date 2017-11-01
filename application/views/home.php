@@ -39,6 +39,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <a href="" class="pull-left">
                         <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a1.jpg">
                     </a>
+                    <div class="pull-right">
+                        <h6 class="salvar_vaga" data-idjob="<?php echo $id_job; ?>"><b> Salvar Vaga
+                                <i class="fa fa-edit <?php echo $id_job; ?>"></i></b>
+                        </h6>
+                    </div>
                     <div class="media-body">
                         <a href="#">
                             <?php
@@ -46,14 +51,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             ?>
 
                         </a>
-<!--                        <a href="#">-->
-                            <div class="pull-right">
-                                <h6 class="salvar_vaga" data-idjob="<?php echo $id_job; ?>"><b> Salvar Vaga
-                                        <i class="fa fa-edit <?php echo $id_job; ?>"></i></b>
-                                </h6>
-                            </div>
-<!--                        </a>-->
-                        <small class="text-muted"></small>
+                        <small class="text-muted">Data
+                            Publicação: <?php echo date('d/m/Y H:i:s', strtotime($job['attributes']['published-at'])) ?>
+                        </small>
                     </div>
                 </div>
                 <div class="social-body">
@@ -62,6 +62,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <?php echo $job['attributes']['description'] ?>
                         <br>
                     </p>
+                    <small class="text-muted">Vaga expira
+                        em: <?php echo date('d/m/Y H:i:s', strtotime($job['attributes']['exp-date'])) ?>
+                    </small>
                     <div class="media">
                         <!--                        <img class="img-responsive" src="-->
                         <?php //echo base_url(IMAGES); ?><!--/banner.jpg">-->
@@ -70,7 +73,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="row">
 
                         <div class="col-md-offset-1 col-md-6">
-                            <h4 class="curtir <?php echo $id_job; ?>" data-idjob="<?php echo $id_job; ?>" data-idlike="<?php echo $curtiuJob ?>" data-type="<?php echo $classJob; ?>">
+                            <h4 class="curtir <?php echo $id_job; ?>" data-idjob="<?php echo $id_job; ?>"
+                                data-idlike="<?php echo $curtiuJob ?>" data-type="<?php echo $classJob; ?>">
                                 <i class="fa fa-heart <?php echo $id_job; ?>"
                                    style="color:<?php echo $corJob; ?>"></i> Gostei desta publicação
                             </h4>
@@ -127,20 +131,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     var type = $(this).data('type');
 
                     if (type == 'curtir') {
-                        $(".fa-heart."+idjob).css("color", "red");
+                        $(".fa-heart." + idjob).css("color", "red");
                         $(this).data('type', 'dislike');
                         $.post('Painel_admin/like_job', {idjob: idjob}, function (data) {
-                           /* if(data.response.data.id){
-                                var idlikenew = data.response.data.id;
-                                $('.curtir.'+idjob).data('idlike', idlikenew)
-                            }*/
-                        },'json');
+                            /* if(data.response.data.id){
+                             var idlikenew = data.response.data.id;
+                             $('.curtir.'+idjob).data('idlike', idlikenew)
+                             }*/
+                        }, 'json');
                     } else {
-                        if(idlike > 0){
-                            $(".fa-heart."+idjob).css("color", "black");
+                        if (idlike > 0) {
+                            $(".fa-heart." + idjob).css("color", "black");
                             $(this).data('type', 'curtir');
                             $(this).data('idlike', '0');
-                            $.post('Painel_admin/dislike_job', {idjob: idjob,idlike: idlike}, function (data) {
+                            $.post('Painel_admin/dislike_job', {idjob: idjob, idlike: idlike}, function (data) {
 
                             });
                         }
