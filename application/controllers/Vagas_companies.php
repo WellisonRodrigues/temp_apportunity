@@ -34,6 +34,8 @@ class Vagas_companies extends CI_Controller
         $this->load->view('template_admin/core', $data);
     }
 
+
+
     private function get_vagas_salvas_company()
     {
         $aut_code = $this->session->userdata('verify')['auth_token'];
