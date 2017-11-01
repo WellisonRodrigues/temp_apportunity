@@ -19,8 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $id_job = $job["id"];
             //$this->CI->like_list_job($id_job);
             $curtiuJob = $funcao->like_list_job($id_job);
-
-            if ($curtiuJob == TRUE) {
+            if ($curtiuJob != 0) {
                 $classJob = "dislike";
                 $corJob = "red";
             } else {
@@ -71,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="row">
 
                         <div class="col-md-offset-1 col-md-6">
-                            <h4 class="curtir" data-idjob="<?php echo $id_job; ?>" data-type="<?php echo $classJob; ?>">
+                            <h4 class="curtir <?php echo $id_job; ?>" data-idjob="<?php echo $id_job; ?>" data-idlike="<?php echo $curtiuJob ?>" data-type="<?php echo $classJob; ?>">
                                 <i class="fa fa-heart <?php echo $id_job; ?>"
                                    style="color:<?php echo $corJob; ?>"></i> Gostei desta publicação
                             </h4>
@@ -124,18 +123,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 $('.curtir').bind('click', function () {
                     //$(".fa-heart-o").css("color", "red");
                     var idjob = $(this).data('idjob');
+                    var idlike = $(this).data('idlike');
                     var type = $(this).data('type');
 
                     if (type == 'curtir') {
-                        $(".fa-heart-o." + idjob).css("color", "red");
+                        $(".fa-heart."+idjob).css("color", "red");
                         $(this).data('type', 'dislike');
                         $.post('Painel_admin/like_job', {idjob: idjob}, function (data) {
-                        });
+                           /* if(data.response.data.id){
+                                var idlikenew = data.response.data.id;
+                                $('.curtir.'+idjob).data('idlike', idlikenew)
+                            }*/
+                        },'json');
                     } else {
-                        $(".fa-heart-o." + idjob).css("color", "black");
-                        $(this).data('type', 'curtir');
-                        $.post('Painel_admin/dislike_job', {idjob: idjob}, function (data) {
-                        });
+                        if(idlike > 0){
+                            $(".fa-heart."+idjob).css("color", "black");
+                            $(this).data('type', 'curtir');
+                            $(this).data('idlike', '0');
+                            $.post('Painel_admin/dislike_job', {idjob: idjob,idlike: idlike}, function (data) {
+
+                            });
+                        }
                     }
                 });
 
