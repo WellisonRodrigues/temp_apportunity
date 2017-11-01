@@ -85,7 +85,14 @@ class Login extends CI_Controller
                 $this->session->set_userdata('logado', $userAPI);
                 $this->session->set_userdata('verify', $verify);
 
-                redirect('Painel_admin');
+                if ($this->session->userdata("logado")['type'] == 'users') {
+                    redirect('Painel_admin');
+                } else {
+
+                    if ($this->session->userdata("logado")['type'] == 'companies') {
+                        redirect('Vagas_companies');
+                    }
+                }
             }
         }
 
@@ -344,7 +351,8 @@ class Login extends CI_Controller
         $this->load->view('template_admin/core', $data);
 
     }
-    private function recover_accout_wb($email)
+
+    private function recover_accout_wb($email, $type)
     {
         $curl = curl_init();
 
