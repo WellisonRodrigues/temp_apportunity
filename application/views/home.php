@@ -168,8 +168,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 $('.comentar').on('click', function () {
                     var idjob = $(this).data('idjob');
                     var texto = $('.comentario_' + idjob).val();
-                    alert(texto);
-                    if (texto != "" || texto != " ") {
+                    if (texto != "" && texto != " ") {
                         $.post('Painel_admin/insert_comments_job/', {idjob: idjob, texto: texto}, function (data) {
 
                         });
