@@ -81,7 +81,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         <div class="col-md-5">
                             <h4 class="coment" data-idjob="<?php echo $id_job; ?>"
-                                data-status="<?php echo $response["status"] ?>"><i class="fa fa-comment-o"></i> Comentar
+                                data-status="<?php echo $response['status']?>"><i class="fa fa-comment-o"></i> Comentar
                             </h4>
                             <!--                    <button class="btn btn-white btn-xs"><i class="fa fa-share"></i></button>-->
                         </div>
@@ -153,8 +153,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 $('.coment').click(function () {
                     var idjob = $(this).data('idjob');
-                    var type = $(this).data('status');
-                    if (type == 'basic') {
+                    var status = $(this).data('status');
+                    if (status == 'premium') {
                         $('.content.' + idjob).toggle("slow");
                         //$('.content.'+ idjob).empty();
                         $.post('Painel_admin/get_comments_job/' + idjob, function (data) {

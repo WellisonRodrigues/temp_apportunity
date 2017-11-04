@@ -190,7 +190,9 @@ class Login extends CI_Controller
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "POST",
-            CURLOPT_POSTFIELDS => "{\n      \"data\": {\n        \"type\": \"$type\",\n        \"attributes\": {\n          \"email\": \"$email\",\n          \"password\": \"$pass\"\n        }\n      }\n}",
+            CURLOPT_POSTFIELDS => "{\n      \"data\": {\n        \"type\": \"$type\",
+            \n        \"attributes\": {\n          \"email\": \"$email\",
+            \n          \"password\": \"$pass\"\n        }\n      }\n}",
             CURLOPT_HTTPHEADER => array(
                 "cache-control: no-cache",
                 "content-type: application/json",
