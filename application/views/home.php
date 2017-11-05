@@ -26,6 +26,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 $classJob = "curtir";
                 $corJob = "black";
             }
+
+            $comentarios = $funcao->get_comments_job($id_job);
+            //r_dump($comentarios);
             ///                            print_r($job['relationships']['company']['data']['id']);
             foreach ($includes as $include) {
                 if ($include['id'] == $job['relationships']['company']['data']['id']) {
@@ -89,23 +92,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                 </div>
                 <div class="social-footer content <?php echo $id_job; ?>">
-                    <div class="social-comment">
-                        <a href="" class="pull-left">
-                            <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a1.jpg">
-                        </a>
-                        <div class="media-body">
-                            <a href="#">
-                                Andrew Williams
+                    <?php
+                    foreach ($comentarios as $comentario) {
+                        ?>
+                        <div class="social-comment">
+                            <a href="" class="pull-left">
+                                <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a1.jpg">
                             </a>
-                            Internet tend to repeat predefined chunks as necessary, making this the first true
-                            generator
-                            on
-                            the Internet. It uses a dictionary of over 200 Latin words.
-                            <br>
-                            <a href="#" class="small"><i class="fa fa-thumbs-up"></i> 26 Like this!</a> -
-                            <small class="text-muted">12.06.2014</small>
+                            <div class="media-body">
+                                <a href="#">
+                                    Andrew Williams
+                                </a>
+                                <?php
+                                echo $comentario["attributes"]["message"];
+                                ?>
+                                <br>
+                                <a href="#" class="small"><i class="fa fa-thumbs-up"></i> 26 Like this!</a> -
+                                <small class="text-muted">  <?php echo date('d/m/Y H:i:s', strtotime($job['attributes']['created-at-at'])) ?></small>
+                            </div>
                         </div>
-                    </div>
+
+                        <?php
+                    }
+                    ?>
 
                     <div class="social-comment">
                         <a href="" class="pull-left">
@@ -157,9 +166,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     if (status == 'premium') {
                         $('.content.' + idjob).toggle("slow");
                         //$('.content.'+ idjob).empty();
-                        $.post('Painel_admin/get_comments_job/' + idjob, function (data) {
+                        /*$.post('Painel_admin/get_comments_job/' + idjob, function (data) {
                             $('.content.' + idjob).append("<div class='social-comment'>").append(data).append('</div>');
-                        });
+                        });*/
                     } else {
                         alert('Para comentar e visulizar os comentários é necessário ser usuário premium.');
                     }

@@ -431,11 +431,11 @@ class Painel_admin extends Follows
     {
 
         if ($idjob > 0 && !empty($idjob)) {
+
             $aut_code = $this->session->userdata('verify')['auth_token'];
             $usuario = $this->session->userdata('logado');
             $iduser = $usuario["id"];
             $curl = curl_init();
-
 
             curl_setopt_array($curl, array(
                 CURLOPT_PORT => "3000",
@@ -452,7 +452,6 @@ class Painel_admin extends Follows
                     "x-auth-token: $aut_code"
                 ),
             ));
-
             $headers = [];
             curl_setopt($curl, CURLOPT_HEADERFUNCTION,
                 function ($curl, $header) use (&$headers) {
@@ -476,14 +475,24 @@ class Painel_admin extends Follows
             $err = curl_error($curl);
             curl_close($curl);
             $array = $this->arrayCastRecursive($resposta);
-            if (sizeof($array["data"]) > 0) {
-                // echo 'Nenhum registro';
+            $array_comentarios = array();
+
+            if (sizeof($array["data"]) == 0) {
+                $resp['err'] = 'Nenhum registro';
             } else {
-                // echo 'Nenhum registro';
+                foreach ($array["data"] as $comments) {
+                    if ($comments["type"] == "comments" && $comments["relationships"]["job"]["data"]["id"] == $idjob) {
+                        //var_dump($comments);
+                        array_push($array_comentarios,$comments);
+                    }
+                }
+                return $array_comentarios;
             }
         } else {
             $resp['err'] = "Erro! Job não encontrado.";
         }
+
+        return $resp;
     }
 
     public function insert_comments_job()
@@ -543,8 +552,7 @@ class Painel_admin extends Follows
             $err = curl_error($curl);
             curl_close($curl);
             $array = $this->arrayCastRecursive($resposta);
-            var_dump($array);
-
+            //var_dump($array);
         } else {
             $resp['err'] = "Erro! Job não encontrado.";
         }
