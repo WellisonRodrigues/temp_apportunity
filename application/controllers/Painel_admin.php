@@ -483,10 +483,11 @@ class Painel_admin extends Follows
                 foreach ($array["data"] as $comments) {
                     if ($comments["type"] == "comments" && $comments["relationships"]["job"]["data"]["id"] == $idjob) {
                         //var_dump($comments);
-                        array_push($array_comentarios,$comments);
+                        array_push($array_comentarios, $comments);
                     }
                 }
-                return $array_comentarios;
+                $data['comentarios'] = $array_comentarios;
+                $this->load->view('forms/list_coments', $data);
             }
         } else {
             $resp['err'] = "Erro! Job não encontrado.";
