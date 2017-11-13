@@ -12,7 +12,7 @@
      style="display: none;">
     <div class="modal-dialog">
         <?php
-        echo form_open('Perfil_user/editar', ['role' => 'form']);
+        echo form_open('Perfil_user/create_idiomas', ['role' => 'form']);
         ?>
         <div class="modal-content">
             <div class="modal-header">
@@ -21,7 +21,7 @@
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <input class="form-control" placeholder="Idioma" type="text" name="idioma" autofocus
+                    <input class="form-control" placeholder="Idioma" type="text" name="name_idioma" autofocus
                            value="" autocomplete="off"
                            required>
                 </div>
@@ -35,8 +35,8 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                <input type="submit" class="btn btn-primary" name="editar"
-                       value="Editar">
+                <input type="submit" class="btn btn-primary" name="salvar"
+                       value="Salvar">
             </div>
         </div>
         <!-- /.modal-content -->
@@ -60,7 +60,9 @@
     <?php foreach ($idiomas as $idioma) { ?>
         <div class="row"><h4><strong>Conheçimento do
                     Idioma <?php echo $idioma['attributes']['name'] ?>
-                    <i class="fa fa-trash"></i>
+                    <?php echo anchor('Perfil_user/delete_idioma/' . $idioma['id'],
+                        '<i style="text-decoration: none;color: darkred" class="fa fa-trash"/> </i>') ?>
+
                     <i class="fa fa-edit" data-toggle="modal"
                        data-target=".edit_languages<?php echo $idioma['id'] ?>"></i>
                 </strong></h4></div>
@@ -72,7 +74,7 @@
              style="display: none;">
             <div class="modal-dialog">
                 <?php
-                echo form_open('Perfil_user/editar', ['role' => 'form']);
+                echo form_open('Perfil_user/edit_language', ['role' => 'form']);
                 ?>
                 <div class="modal-content">
                     <div class="modal-header">
@@ -81,13 +83,18 @@
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <input class="form-control" placeholder="Idioma" type="text" name="idioma" autofocus
+                            <input class="form-control" placeholder="Idioma" type="text" name="name" autofocus
                                    value="<?php echo $idioma['attributes']['name'] ?>" autocomplete="off"
                                    required readonly>
                         </div>
                         <div class="form-group">
                             <input class="form-control" placeholder="Level" type="text" name="level" autofocus
                                    value="<?php echo $idioma['attributes']['level'] ?>" autocomplete="off"
+                                   required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" placeholder="Level" type="hidden" name="id" autofocus
+                                   value="<?php echo $idioma['id'] ?>" autocomplete="off"
                                    required>
                         </div>
 
