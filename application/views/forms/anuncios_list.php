@@ -50,6 +50,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <input type="hidden" name="id_anuncio" value="<?php echo $anum['id']; ?>">
                     <input type="submit" class="btn btn-primary" name="cadastrar"
                            value="Cadastrar">
                 </div>
@@ -85,8 +86,8 @@
                         <td>
                             <a href="<?php echo $anuncio["id"] ?>" class="remover"><i class="fa fa-remove"
                                                                                       style="font-size:18px"></i></a>
-                            <i class="fa fa-edit" data-toggle="modal"
-                               data-target="#myModal" style="font-size:18px"></i>
+                            <i class="fa fa-edit editar2" data-toggle="modal" data-target="#myModal" data-codigo="<?php echo $anuncio["id"]?>"
+                                style="cursor: pointer;font-size:18px"></i>
                         </td>
                     </tr>
                 <?php } ?>
@@ -106,6 +107,14 @@
                 }, 'json');
                 return false;
             });
+            $(".editar2").bind('click',function(){
+                var id = $(this).data('codigo');
+                $.post('Anuncios/deletar', {idanuncio: idanuncio}, function (data) {
+
+                }, 'json');
+                return false;
+                $('#myModal').show();
+            })
         });
     </script>
 </div>
