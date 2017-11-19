@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6315125-2236-4753-8b25-d0ed219b9684" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Follows.php" afterPath="$PROJECT_DIR$/application/controllers/Follows.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/forms/conexoes_list.php" afterPath="$PROJECT_DIR$/application/views/forms/conexoes_list.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session/ci_sessionne8vr58crtkm4bird3904111ujlq1ei9" afterPath="$PROJECT_DIR$/session/ci_sessionne8vr58crtkm4bird3904111ujlq1ei9" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,8 +21,8 @@
       <file leaf-file-name="vagas_list.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/forms/vagas_list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="71" column="31" lean-forward="false" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+            <state relative-caret-position="194">
+              <caret line="12" column="87" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="87" />
               <folding>
                 <element signature="e#6#90#0#PHP" expanded="true" />
                 <marker date="1510626484398" expanded="true" signature="1803:1852" ph="..." />
@@ -154,8 +153,8 @@
       <file leaf-file-name="conexoes_list.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/forms/conexoes_list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+            <state relative-caret-position="490">
+              <caret line="53" column="36" lean-forward="false" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
               <folding>
                 <element signature="e#6#90#0#PHP" expanded="true" />
               </folding>
@@ -701,12 +700,12 @@
       <workItem from="1508002280661" duration="62915000" />
       <workItem from="1508881770379" duration="62402000" />
       <workItem from="1509312601890" duration="79676000" />
-      <workItem from="1510797898661" duration="12651000" />
+      <workItem from="1510797898661" duration="13710000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="234841000" />
+    <option name="totallyTimeSpent" value="235900000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1221,17 +1220,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/forms/vagas_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="71" column="31" lean-forward="false" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
-          <folding>
-            <element signature="e#6#90#0#PHP" expanded="true" />
-            <marker date="1510626484398" expanded="true" signature="1803:1852" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
@@ -1468,10 +1456,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/forms/vagas_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="12" column="87" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="87" />
+          <folding>
+            <element signature="e#6#90#0#PHP" expanded="true" />
+            <marker date="1510626484398" expanded="true" signature="1803:1852" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/forms/conexoes_list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+        <state relative-caret-position="490">
+          <caret line="53" column="36" lean-forward="false" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
           <folding>
             <element signature="e#6#90#0#PHP" expanded="true" />
           </folding>
