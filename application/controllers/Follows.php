@@ -73,7 +73,7 @@ class Follows extends CI_Controller
             $seguindo = $follow['relationships']['follower'];
             foreach ($seguindo as $seguindo_o) {
                 $count_follower++;
-                $seguindo_os[] = $inscrito['id'];
+                $seguindo_os[] = $seguindo_o['id'];
             }
         }
 

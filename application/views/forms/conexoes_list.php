@@ -33,6 +33,7 @@
                             </div>
                             <div class="row">
                                 <?php foreach ($followed as $follow_wed) {
+//        print_r($follow_wed);
                                     ?>
 
                                     <script>
@@ -43,7 +44,7 @@
                                                 $.get("<?php echo base_url('Follows/get_users_list/')?>" + iduser,
 
                                                     function (result) {
-                                                        $("#result" + iduser).html(result);
+                                                        $("#result_followed" + iduser).html(result);
 
                                                     }
                                                 )
@@ -53,7 +54,7 @@
                                             list_user();
                                         });
                                     </script>
-                                    <div id="result<?php echo $follow_wed; ?>">
+                                    <div id="result_followed<?php echo $follow_wed; ?>">
 
                                     </div>
 
@@ -66,23 +67,32 @@
                                 <h3>Seguindo</h3>
                             </div>
                             <div class="row">
-                                <?php foreach ($followers as $follow_as) { ?>
+                                <?php foreach ($followers as $follow_as) {
+//                                    print_r($followers);
+                                    ?>
 
-                                    <div class="col-md-4">
-                                        <div class="jumbotron">
-                                            <div class="text-center">
-                                                <img src="<?php echo base_url(IMAGES); ?>/profile.jpg"
-                                                     class="img-circle"
-                                                     width="50%"
-                                                     height="50%"><br>
-                                                <b> Wellison<br>
-                                                    26 anos</b><br>
-                                                <button type="button" class="btn btn-primary">
-                                                    Seguindo
-                                                </button>
-                                            </div>
-                                        </div>
+                                    <script>
+                                        $(document).ready(function () {
+                                            var iduser = "<?php echo $follow_as; ?>";
+
+                                            function list_user_f() {
+                                                $.get("<?php echo base_url('Follows/get_users_list/')?>" + iduser,
+
+                                                    function (result) {
+                                                        $("#result_follower" + iduser).html(result);
+
+                                                    }
+                                                )
+                                            }
+
+                                            //LISTAR
+                                            list_user_f();
+                                        });
+                                    </script>
+                                    <div id="result_follower<?php echo $follow_as; ?>">
+
                                     </div>
+
 
                                 <?php } ?>
                             </div>
