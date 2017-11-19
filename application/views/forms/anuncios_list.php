@@ -77,7 +77,7 @@
                 <?php
                 foreach ($anuncios as $anuncio) {
                     ?>
-                    <tr>
+                    <tr id="<?php echo $anuncio["id"] ?>">
                         <td><?php echo $anuncio["id"] ?></td>
                         <td><?php echo $anuncio["attributes"]["title"] ?></td>
                         <td><?php echo $anuncio["attributes"]["description"] ?></td>
@@ -85,7 +85,7 @@
                         <td>
                             <a href="<?php echo $anuncio["id"] ?>" class="remover"><i class="fa fa-remove"
                                                                                       style="font-size:18px"></i></a>
-                            <i class="fa fa-edit" data-id="<?php echo $anuncio["id"] ?>" data-toggle="modal"
+                            <i class="fa fa-edit" data-toggle="modal"
                                data-target="#myModal" style="font-size:18px"></i>
                         </td>
                     </tr>
@@ -101,12 +101,8 @@
             $('.remover').bind('click', function () {
                 //$(".fa-heart-o").css("color", "red");
                 var idanuncio = $(this).attr('href');
+                $('tr#'+idanuncio).remove();
                 $.post('Anuncios/deletar', {idanuncio: idanuncio}, function (data) {
-                    /* if(data.response.data.id){
-                     var idlikenew = data.response.data.id;
-                     $('.curtir.'+idjob).data('idlike', idlikenew)
-                     }*/
-                    return false;
                 }, 'json');
                 return false;
             });
