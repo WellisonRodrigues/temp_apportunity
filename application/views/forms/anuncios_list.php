@@ -66,9 +66,6 @@
 
     <div class="tab-content">
         <div class="tab-pane active">
-
-
-            
             <table class="table">
                 <thead>
                 <th>#</th>
