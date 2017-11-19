@@ -7,6 +7,7 @@
  */
 
 ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <div class="col-md-6 col-md-offset-3 col-sm-offset-1 col-sm-10">
     <h1>Lista de Anuncios</h1>
 
@@ -36,14 +37,14 @@
                     <div class="form-group">
                         <label>Titulo</label>
                         <input class="form-control" placeholder="Titulo" type="text" name="title" autofocus
-                               value="<?php echo $profile['attributes']['title'] ?>" autocomplete="off"
+                               value="<?php echo $anum['attributes']['title'] ?>" autocomplete="off"
                                required>
                     </div>
                     <div class="form-group">
                         <label>Descrição</label>
                         <textarea class="form-control" placeholder="Descricao" name="description" autofocus
                                   autocomplete="off"
-                                  required><?php echo $profile['attributes']['description'] ?></textarea>
+                                  required><?php echo $anum['attributes']['description'] ?></textarea>
                     </div>
 
                 </div>
@@ -74,19 +75,18 @@
                 </thead>
                 <tbody>
                 <?php
-               // var_dump($anuncios);
                 foreach ($anuncios as $anuncio) {
-
-                    var_dump($anuncio);
                     ?>
                     <tr>
-                        <td><?php echo $anuncio["id"]?></td>
-                        <td><?php echo $anuncio["attributes"]["title"]?></td>
-                        <td><?php echo $anuncio["attributes"]["description"]?></td>
+                        <td><?php echo $anuncio["id"] ?></td>
+                        <td><?php echo $anuncio["attributes"]["title"] ?></td>
+                        <td><?php echo $anuncio["attributes"]["description"] ?></td>
                         <td>Imagem</td>
                         <td>
-                            <i class="fa fa-remove" style="font-size:18px"></i>
-                            <i class="fa fa-edit" style="font-size:18px"></i>
+                            <a href="<?php echo $anuncio["id"] ?>" class="remover"><i class="fa fa-remove"
+                                                                                      style="font-size:18px"></i></a>
+                            <i class="fa fa-edit" data-id="<?php echo $anuncio["id"] ?>" data-toggle="modal"
+                               data-target="#myModal" style="font-size:18px"></i>
                         </td>
                     </tr>
                 <?php } ?>
@@ -95,4 +95,21 @@
         </div>
     </div>
     <div class="clearfix"></div>
+
+    <script>
+        $(document).ready(function () {
+            $('.remover').bind('click', function () {
+                //$(".fa-heart-o").css("color", "red");
+                var idanuncio = $(this).attr('href');
+                $.post('Anuncios/deletar', {idanuncio: idanuncio}, function (data) {
+                    /* if(data.response.data.id){
+                     var idlikenew = data.response.data.id;
+                     $('.curtir.'+idjob).data('idlike', idlikenew)
+                     }*/
+                    return false;
+                }, 'json');
+                return false;
+            });
+        });
+    </script>
 </div>
