@@ -42,6 +42,9 @@ print_r($this->session->userdata('logado')->id);
                         <?php if ($this->session->userdata('logado')['type'] == 'users') {
 
                             ?>
+                            <li><a href="<?php echo base_url('Mensagens') ?>"><h4><strong><i
+                                                    class="fa fa-large fa-paper-plane"> Mensagens</i></strong></h4></a>
+                            </li>
                             <li><a href="<?php echo base_url('Painel_admin') ?>"><h4><strong><i
                                                     class="fa fa-large fa-paper-plane"> Feed</i></strong></h4></a>
                             </li>
@@ -51,6 +54,10 @@ print_r($this->session->userdata('logado')->id);
                         <?php }
                         if ($this->session->userdata('logado')['type'] == 'companies') {
                             ?>
+                            <li><a href="<?php echo base_url('Mensagens') ?>"><h4><strong><i
+                                                    class="fa fa-large fa-paper-plane"> Mensagens</i></strong></h4></a>
+                            </li>
+
                             <li><a href="<?php echo base_url('Vagas_companies') ?>"><h4><strong><i
                                                     class="fa fa-large fa-edit">
                                                 Vagas publicadas</i></strong></h4></a></li>
