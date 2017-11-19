@@ -22,49 +22,35 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title" id="myModalLabel">Dados Pessoais</h4>
+                    <h4 class="modal-title" id="myModalLabel">Dados do Anuncio</h4>
                 </div>
                 <div class="modal-body">
 
                     <div class="form-group">
-                        <label>Imagem de Perfil (JPG)</label>
+                        <label>Imagem (JPG)</label>
                         <input class="form-control" type="file" name="file" autofocus
                                value="" autocomplete="off"
                         >
                     </div>
-                    <div class="form-group">
-                        <label>Curriculum (PDF)</label>
-                        <input class="form-control" type="file" name="pdf" autofocus
-                               value="" autocomplete="off"
-                        >
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" placeholder="Nome" type="text" name="name_user" autofocus
-                               value="<?php echo $profile['attributes']['name'] ?>" autocomplete="off"
-                               required>
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" placeholder="Idade" type="number" name="age" autofocus
-                               value="<?php echo $profile['attributes']['age'] ?>" autocomplete="off"
-                               required>
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" placeholder="Região" type="text" name="region" autofocus
-                               value="<?php echo $profile['attributes']['region'] ?>" autocomplete="off"
-                               required>
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" placeholder="Vagas de Interesse" type="text" name="carrer" autofocus
-                               value="<?php echo $profile['attributes']['carrer'] ?>" autocomplete="off"
-                               required>
-                    </div>
 
+                    <div class="form-group">
+                        <label>Titulo</label>
+                        <input class="form-control" placeholder="Titulo" type="text" name="titulo" autofocus
+                               value="<?php echo $profile['attributes']['title'] ?>" autocomplete="off"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <label>Descrição</label>
+                        <textarea class="form-control" placeholder="descricao"  name="descricao" autofocus autocomplete="off" required>
+                            <?php echo $profile['attributes']['description'] ?>
+                        </textarea>
+                    </div>
 
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                    <input type="submit" class="btn btn-primary" name="editar"
-                           value="Editar">
+                    <input type="submit" class="btn btn-primary" name="cadastrar"
+                           value="Cadastrar">
                 </div>
             </div>
             <!-- /.modal-content -->
