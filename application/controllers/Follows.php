@@ -166,7 +166,7 @@ class Follows extends CI_Controller
                 "accept: application/vnd.api+json",
                 "cache-control: no-cache",
                 "postman-token: 07656c20-984a-544b-0d7a-7a5f3bda92cf",
-                "x-auth-token: uRqx7-$aut_code"
+                "x-auth-token: $aut_code"
             ),
         ));
 
