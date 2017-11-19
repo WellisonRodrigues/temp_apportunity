@@ -25,18 +25,125 @@ class Anuncios extends CI_Controller
 
     public function anuncios_list()
     {
+        $aut_code = $this->session->userdata('verify')['auth_token'];
+        $type = $this->session->userdata("logado")->type;
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/ads",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET",
+            CURLOPT_POSTFIELDS => "{\n  \"data\": {\n    \"type\": \"$type\",\n  
+              \"attributes\": {\n      \"token\": \"$aut_code\",\n   
+               \"provider\": \"\"\n    }\n  }\n}",
+            CURLOPT_HTTPHEADER => array(
+                "accept: application/vnd.api+json",
+                "cache-control: no-cache",
+                "postman-token: ec5d0d8b-40a7-196c-256d-9acbcb7cca6c",
+                "x-auth-token: $aut_code"
+            ),
+        ));
+
+        $headers = [];
+        curl_setopt($curl, CURLOPT_HEADERFUNCTION,
+            function ($curl, $header) use (&$headers) {
+                $len = strlen($header);
+                $header = explode(':', $header, 2);
+                if (count($header) < 2) // ignore invalid headers
+                    return $len;
+
+                $name = strtolower(trim($header[0]));
+                if (!array_key_exists($name, $headers))
+                    $headers[$name] = [trim($header[1])];
+                else
+                    $headers[$name][] = trim($header[1]);
+
+                return $len;
+            }
+        );
+
+        $response = curl_exec($curl);
+        $resposta = json_decode($response);
+        $err = curl_error($curl);
+        curl_close($curl);
+        $array = $this->arrayCastRecursive($resposta);
+        $resp['response'] = $array;
+        $resp['headers'] = $headers;
+        $resp['err'] = $err;
+        $data["anuncios"] =  $array["data"];
 
         $data['view'] = 'forms/anuncios_list';
         $this->load->view('template_admin/core', $data);
 
     }
 
-    public function anuncios_cadastro()
+    public function cadastro()
     {
+        $title = $this->input->post('title');
+        $description = $this->input->post('description');
+        $image = 'data:image/png;base64,' . base64_encode($this->input->post('file'));
 
-        $data['view'] = 'forms/anuncios_cadastro';
-        $this->load->view('template_admin/core', $data);
+        $aut_code = $this->session->userdata('verify')['auth_token'];
+        $id_user = $this->session->userdata('logado')['id'];
 
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/ads",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "POST",
+            CURLOPT_POSTFIELDS => "{\n  \"data\": {\n   \"type\": \"ads\",
+            \n   \"attributes\": {
+            \n      \"title\": \"$title\",
+            \n      \"description\": \"$description\",
+            \n      \"image\": \"$image\"
+                }
+            \n  }\n}",
+
+            CURLOPT_HTTPHEADER => array(
+                "accept: application/vnd.api+json",
+                "cache-control: no-cache",
+                "content-type: application/vnd.api+json",
+                "postman-token: e76d2ba7-3a09-53a2-46d3-fa4215dd792a",
+                "x-auth-token: $aut_code"
+            ),
+        ));
+        $headers = [];
+        curl_setopt($curl, CURLOPT_HEADERFUNCTION,
+            function ($curl, $header) use (&$headers) {
+                $len = strlen($header);
+                $header = explode(':', $header, 2);
+                if (count($header) < 2) // ignore invalid headers
+                    return $len;
+
+                $name = strtolower(trim($header[0]));
+                if (!array_key_exists($name, $headers))
+                    $headers[$name] = [trim($header[1])];
+                else
+                    $headers[$name][] = trim($header[1]);
+
+                return $len;
+            }
+        );
+
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+        curl_close($curl);
+
+        $resp['response'] = $response;
+        $resp['headers'] = $headers;
+        $resp['err'] = $err;
+        var_dump($resp);
     }
     public function anuncios_edit()
     {

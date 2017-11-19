@@ -35,15 +35,15 @@
 
                     <div class="form-group">
                         <label>Titulo</label>
-                        <input class="form-control" placeholder="Titulo" type="text" name="titulo" autofocus
+                        <input class="form-control" placeholder="Titulo" type="text" name="title" autofocus
                                value="<?php echo $profile['attributes']['title'] ?>" autocomplete="off"
                                required>
                     </div>
                     <div class="form-group">
                         <label>Descrição</label>
-                        <textarea class="form-control" placeholder="descricao"  name="descricao" autofocus autocomplete="off" required>
-                            <?php echo $profile['attributes']['description'] ?>
-                        </textarea>
+                        <textarea class="form-control" placeholder="Descricao" name="description" autofocus
+                                  autocomplete="off"
+                                  required><?php echo $profile['attributes']['description'] ?></textarea>
                     </div>
 
                 </div>
@@ -66,18 +66,30 @@
         <div class="tab-pane active">
             <table class="table">
                 <thead>
-                    <th>#</th>
-                    <th>Titulo</th>
-                    <th>Descrição</th>
-                    <th>Imagem</th>
-                    <th>Ações</th>
+                <th>#</th>
+                <th>Titulo</th>
+                <th>Descrição</th>
+                <th>Imagem</th>
+                <th>Ações</th>
                 </thead>
                 <tbody>
-                <td>#</td>
-                <td>Titulo</td>
-                <td>Descrição</td>
-                <td>Imagem</td>
-                <td>Ações</td>
+                <?php
+               // var_dump($anuncios);
+                foreach ($anuncios as $anuncio) {
+
+                    var_dump($anuncio);
+                    ?>
+                    <tr>
+                        <td><?php echo $anuncio["id"]?></td>
+                        <td><?php echo $anuncio["attributes"]["title"]?></td>
+                        <td><?php echo $anuncio["attributes"]["description"]?></td>
+                        <td>Imagem</td>
+                        <td>
+                            <i class="fa fa-remove" style="font-size:18px"></i>
+                            <i class="fa fa-edit" style="font-size:18px"></i>
+                        </td>
+                    </tr>
+                <?php } ?>
                 </tbody>
             </table>
         </div>
