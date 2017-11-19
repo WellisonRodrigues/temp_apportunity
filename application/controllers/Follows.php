@@ -67,9 +67,10 @@ class Follows extends CI_Controller
             foreach ($inscritos as $inscrito) {
                 $count_followed++;
             }
-        } foreach ($follows['response']['data'] as $follow) {
-            $inscritos = $follow['relationships']['follower'];
-            foreach ($inscritos as $inscrito) {
+        }
+        foreach ($follows['response']['data'] as $follow) {
+            $seguindo = $follow['relationships']['follower'];
+            foreach ($seguindo as $seguindo_o) {
                 $count_follower++;
             }
         }
@@ -133,6 +134,7 @@ class Follows extends CI_Controller
         return $resp;
 
     }
+
     public function arrayCastRecursive($array)
     {
         if (is_array($array)) {
