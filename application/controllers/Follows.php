@@ -62,18 +62,26 @@ class Follows extends CI_Controller
         $follows = $retorno_follows;
         $count_followed = 0;
         $count_follower = 0;
-        foreach ($follows['response']['data'] as $follow) {
-            $inscritos = $follow['relationships']['followed'];
-            foreach ($inscritos as $inscrito) {
-                $count_followed++;
-                $seguidor[] = $inscrito['id'];
-            }
-        }
+
+//        print_r($this->session->userdata("logado"));
         foreach ($follows['response']['data'] as $follow) {
             $seguindo = $follow['relationships']['follower'];
+            $seguindo_list = $follow['relationships']['followed'];
             foreach ($seguindo as $seguindo_o) {
-                $count_follower++;
-                $seguindo_os[] = $seguindo_o['id'];
+                if ($seguindo_o['id'] == $this->session->userdata("logado")['id']) {
+                    foreach ($seguindo_list as $seguindo_list_o) {
+                        $count_follower++;
+                        $seguindo_os[] = $seguindo_list_o['id'];
+                    }
+                } else {
+                    $inscritos = $follow['relationships']['followed'];
+                    foreach ($inscritos as $inscrito) {
+
+                        $count_followed++;
+                        $seguidor[] = $inscrito['id'];
+
+                    }
+                }
             }
         }
 
