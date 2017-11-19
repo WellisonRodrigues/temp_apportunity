@@ -20,7 +20,27 @@
                     </div>
                 </div>
                 <div class="panel panel-body">
+                    <div class="row">
+                        <?php foreach ($followed as $follow_wed) { ?>
 
+                            <div class="col-md-6">
+                                <img src="<?php echo base_url(IMAGES); ?>/profile.jpg" class="img-rounded" width="15%"
+                                     height="15%">
+                            </div>
+
+                        <?php } ?>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <?php foreach ($followers as $follow_as) { ?>
+
+                            <div class="col-md-6">
+                                <img src="<?php echo base_url(IMAGES); ?>/profile.jpg" class="img-rounded" width="15%"
+                                     height="15%">
+                            </div>
+
+                        <?php } ?>
+                    </div>
                 </div>
             </div>
         </div>

@@ -66,15 +66,19 @@ class Follows extends CI_Controller
             $inscritos = $follow['relationships']['followed'];
             foreach ($inscritos as $inscrito) {
                 $count_followed++;
+                $seguidor[] = $inscrito['id'];
             }
         }
         foreach ($follows['response']['data'] as $follow) {
             $seguindo = $follow['relationships']['follower'];
             foreach ($seguindo as $seguindo_o) {
                 $count_follower++;
+                $seguindo_os[] = $inscrito['id'];
             }
         }
 
+        $data ['followers'] =  $seguindo_os;
+        $data ['followed'] =  $seguidor;
         $data ['inscritos'] = $count_followed;
         $data ['seguindo'] = $count_follower;
         $data['view'] = 'forms/conexoes_list';

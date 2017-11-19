@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6315125-2236-4753-8b25-d0ed219b9684" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionvqe3tngai52nfb9oh5ar2vtcs1qnst4e" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Follows.php" afterPath="$PROJECT_DIR$/application/controllers/Follows.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/forms/conexoes_list.php" afterPath="$PROJECT_DIR$/application/views/forms/conexoes_list.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,27 +32,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Follows.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Follows.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Follows.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="74" column="13" lean-forward="true" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
+            <state relative-caret-position="406">
+              <caret line="80" column="24" lean-forward="false" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="24" />
               <folding>
                 <element signature="e#7#91#0#PHP" expanded="false" />
                 <element signature="n#__construct#0;n#Follows#0;n#!!top" expanded="false" />
                 <element signature="e#210#292#0#PHP" expanded="false" />
                 <element signature="e#412#461#0#PHP" expanded="false" />
-                <element signature="e#2703#3377#0#PHP" expanded="false" />
-                <element signature="e#2728#3376#0#PHP" expanded="false" />
-                <element signature="e#3137#3365#1#PHP" expanded="false" />
-                <element signature="e#3411#4002#0#PHP" expanded="false" />
-                <element signature="e#3466#3992#1#PHP" expanded="false" />
+                <element signature="e#2886#3560#0#PHP" expanded="false" />
+                <element signature="e#2911#3559#0#PHP" expanded="false" />
+                <element signature="e#3320#3548#1#PHP" expanded="false" />
+                <element signature="e#3594#4185#0#PHP" expanded="false" />
+                <element signature="e#3649#4175#1#PHP" expanded="false" />
                 <element signature="n#arrayCastRecursive#0;n#Follows#0;n#!!top" expanded="false" />
-                <element signature="e#4396#4765#0#PHP" expanded="false" />
-                <element signature="e#4432#4755#0#PHP" expanded="false" />
-                <element signature="e#4485#4596#0#PHP" expanded="false" />
-                <element signature="e#4613#4741#0#PHP" expanded="false" />
-                <element signature="e#4774#4878#0#PHP" expanded="false" />
+                <element signature="e#4579#4948#0#PHP" expanded="false" />
+                <element signature="e#4615#4938#0#PHP" expanded="false" />
+                <element signature="e#4668#4779#0#PHP" expanded="false" />
+                <element signature="e#4796#4924#0#PHP" expanded="false" />
+                <element signature="e#4957#5061#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -150,14 +151,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="conexoes_list.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="conexoes_list.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/forms/conexoes_list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="46" lean-forward="true" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+            <state relative-caret-position="394">
+              <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
               <folding>
                 <element signature="e#6#90#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="perfil_user.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/forms/perfil_user.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="85" column="102" lean-forward="true" selection-start-line="85" selection-start-column="80" selection-end-line="85" selection-end-column="102" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -408,8 +419,8 @@
         <option value="$PROJECT_DIR$/application/controllers/Vagas.php" />
         <option value="$PROJECT_DIR$/application/views/forms/vagas_list.php" />
         <option value="$PROJECT_DIR$/application/views/template_admin/menu.php" />
-        <option value="$PROJECT_DIR$/application/views/forms/conexoes_list.php" />
         <option value="$PROJECT_DIR$/application/controllers/Follows.php" />
+        <option value="$PROJECT_DIR$/application/views/forms/conexoes_list.php" />
       </list>
     </option>
   </component>
@@ -690,12 +701,12 @@
       <workItem from="1508002280661" duration="62915000" />
       <workItem from="1508881770379" duration="62402000" />
       <workItem from="1509312601890" duration="79676000" />
-      <workItem from="1510797898661" duration="10869000" />
+      <workItem from="1510797898661" duration="12651000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="233059000" />
+    <option name="totallyTimeSpent" value="234841000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1221,14 +1232,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/forms/perfil_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="77" column="10" lean-forward="true" selection-start-line="77" selection-start-column="10" selection-end-line="78" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
@@ -1433,36 +1436,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/forms/conexoes_list.php">
+    <entry file="file://$PROJECT_DIR$/application/views/forms/perfil_user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="46" lean-forward="true" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-          <folding>
-            <element signature="e#6#90#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="269">
+          <caret line="85" column="102" lean-forward="true" selection-start-line="85" selection-start-column="80" selection-end-line="85" selection-end-column="102" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Follows.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="74" column="13" lean-forward="true" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
+        <state relative-caret-position="406">
+          <caret line="80" column="24" lean-forward="false" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="24" />
           <folding>
             <element signature="e#7#91#0#PHP" expanded="false" />
             <element signature="n#__construct#0;n#Follows#0;n#!!top" expanded="false" />
             <element signature="e#210#292#0#PHP" expanded="false" />
             <element signature="e#412#461#0#PHP" expanded="false" />
-            <element signature="e#2703#3377#0#PHP" expanded="false" />
-            <element signature="e#2728#3376#0#PHP" expanded="false" />
-            <element signature="e#3137#3365#1#PHP" expanded="false" />
-            <element signature="e#3411#4002#0#PHP" expanded="false" />
-            <element signature="e#3466#3992#1#PHP" expanded="false" />
+            <element signature="e#2886#3560#0#PHP" expanded="false" />
+            <element signature="e#2911#3559#0#PHP" expanded="false" />
+            <element signature="e#3320#3548#1#PHP" expanded="false" />
+            <element signature="e#3594#4185#0#PHP" expanded="false" />
+            <element signature="e#3649#4175#1#PHP" expanded="false" />
             <element signature="n#arrayCastRecursive#0;n#Follows#0;n#!!top" expanded="false" />
-            <element signature="e#4396#4765#0#PHP" expanded="false" />
-            <element signature="e#4432#4755#0#PHP" expanded="false" />
-            <element signature="e#4485#4596#0#PHP" expanded="false" />
-            <element signature="e#4613#4741#0#PHP" expanded="false" />
-            <element signature="e#4774#4878#0#PHP" expanded="false" />
+            <element signature="e#4579#4948#0#PHP" expanded="false" />
+            <element signature="e#4615#4938#0#PHP" expanded="false" />
+            <element signature="e#4668#4779#0#PHP" expanded="false" />
+            <element signature="e#4796#4924#0#PHP" expanded="false" />
+            <element signature="e#4957#5061#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/forms/conexoes_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+          <folding>
+            <element signature="e#6#90#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
