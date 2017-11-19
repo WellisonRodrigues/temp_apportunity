@@ -77,8 +77,8 @@ class Follows extends CI_Controller
             }
         }
 
-        $data ['followers'] =  $seguindo_os;
-        $data ['followed'] =  $seguidor;
+        $data ['followers'] = $seguindo_os;
+        $data ['followed'] = $seguidor;
         $data ['inscritos'] = $count_followed;
         $data ['seguindo'] = $count_follower;
         $data['view'] = 'forms/conexoes_list';
@@ -106,6 +106,67 @@ class Follows extends CI_Controller
                 "cache-control: no-cache",
                 "postman-token: de96bd2e-2ecb-1bf6-1ab5-4b757b2e977b",
                 "x-auth-token: $aut_code"
+            ),
+        ));
+
+        $headers = [];
+        curl_setopt($curl, CURLOPT_HEADERFUNCTION,
+            function ($curl, $header) use (&$headers) {
+                $len = strlen($header);
+                $header = explode(':', $header, 2);
+                if (count($header) < 2) // ignore invalid headers
+                    return $len;
+
+                $name = strtolower(trim($header[0]));
+                if (!array_key_exists($name, $headers))
+                    $headers[$name] = [trim($header[1])];
+                else
+                    $headers[$name][] = trim($header[1]);
+
+                return $len;
+            }
+        );
+
+        $response = curl_exec($curl);
+        $resposta = json_decode($response);
+        $err = curl_error($curl);
+        curl_close($curl);
+        $array = $this->arrayCastRecursive($resposta);
+        $resp['response'] = $array;
+        $resp['headers'] = $headers;
+        $resp['err'] = $err;
+        return $resp;
+
+    }
+
+    public function get_users_list($id_user)
+    {
+        $retorno_follows = $this->get_follows_ws($id_user);
+        $data ['follows'] = $retorno_follows;
+        $this->load->view('forms/follow_users_list', $data);
+
+    }
+
+    public function get_follows_ws($id_user)
+    {
+
+        $aut_code = $this->session->userdata('verify')['auth_token'];
+//    $type = $this->session->userdata("logado")->type;
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/admin/users/$id_user",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET",
+            CURLOPT_HTTPHEADER => array(
+                "accept: application/vnd.api+json",
+                "cache-control: no-cache",
+                "postman-token: 07656c20-984a-544b-0d7a-7a5f3bda92cf",
+                "x-auth-token: uRqx7-$aut_code"
             ),
         ));
 
