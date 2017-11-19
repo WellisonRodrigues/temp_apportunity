@@ -32,24 +32,31 @@
                                 <h3>Seguidores</h3>
                             </div>
                             <div class="row">
-                                <?php foreach ($followed as $follow_wed) { ?>
+                                <?php foreach ($followed as $follow_wed) {
+                                    ?>
 
-                                    <div class="col-md-4">
-                                        <div class="jumbotron">
-                                            <div class="text-center">
-                                                <img src="<?php echo base_url(IMAGES); ?>/profile.jpg"
-                                                     class="img-circle"
-                                                     width="50%"
-                                                     height="50%"><br>
-                                                <b> Wellison<br>
-                                                    26 anos</b><br>
-                                                <button type="button" class="btn btn-primary">
-                                                    Seguindo
-                                                </button>
+                                    <script>
+                                        $(document).ready(function () {
+                                            var iduser = "<?php echo $follow_wed; ?>";
 
-                                            </div>
-                                        </div>
+                                            function list_user() {
+                                                $.get("<?php echo base_url('Follows/get_users_list/')?>" + iduser,
+
+                                                    function (result) {
+                                                        $("#result" + iduser).html(result);
+
+                                                    }
+                                                )
+                                            }
+
+                                            //LISTAR
+                                            list_user();
+                                        });
+                                    </script>
+                                    <div id="result<?php echo $follow_wed; ?>">
+
                                     </div>
+
 
                                 <?php } ?>
                             </div>
@@ -86,3 +93,6 @@
         </div>
     </div>
 </div>
+
+
+

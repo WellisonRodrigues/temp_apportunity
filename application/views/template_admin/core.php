@@ -20,7 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             echo 'Apportunity';
         }
         ?></title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url(VENDOR); ?>/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url(VENDOR); ?>/bootstrap-social/bootstrap-social.css" rel="stylesheet">
