@@ -25,33 +25,56 @@
                     </div>
                 </div>
 
-                <div class=" panel panel-body">
+                <div class="panel panel-body">
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab_seguidores">
+                            <div class="text-left">
+                                <h3>Seguidores</h3>
+                            </div>
                             <div class="row">
                                 <?php foreach ($followed as $follow_wed) { ?>
 
-                                    <div class="col-md-6">
-                                        <img src="<?php echo base_url(IMAGES); ?>/profile.jpg"
-                                             class="img-rounded"
-                                             width="15%"
-                                             height="15%">
+                                    <div class="col-md-4">
+                                        <div class="jumbotron">
+                                            <div class="text-center">
+                                                <img src="<?php echo base_url(IMAGES); ?>/profile.jpg"
+                                                     class="img-circle"
+                                                     width="50%"
+                                                     height="50%"><br>
+                                                <b> Wellison<br>
+                                                    26 anos</b><br>
+                                                <button type="button" class="btn btn-primary">
+                                                    Seguindo
+                                                </button>
+
+                                            </div>
+                                        </div>
                                     </div>
 
                                 <?php } ?>
                             </div>
                         </div>
-                        <br>
                         <div class="tab-pane" id="tab_seguindo">
+                            <div class="text-left">
+                                <h3>Seguindo</h3>
+                            </div>
                             <div class="row">
                                 <?php foreach ($followers as $follow_as) { ?>
 
-                                    <div class="col-md-6">
-                                        <img src="<?php echo base_url(IMAGES); ?>/profile.jpg"
-                                             class="img-rounded"
-                                             width="15%"
-                                             height="15%">
-                                    
+                                    <div class="col-md-4">
+                                        <div class="jumbotron">
+                                            <div class="text-center">
+                                                <img src="<?php echo base_url(IMAGES); ?>/profile.jpg"
+                                                     class="img-circle"
+                                                     width="50%"
+                                                     height="50%"><br>
+                                                <b> Wellison<br>
+                                                    26 anos</b><br>
+                                                <button type="button" class="btn btn-primary">
+                                                    Seguindo
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
 
                                 <?php } ?>
