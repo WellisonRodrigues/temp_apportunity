@@ -77,12 +77,13 @@
                 <tbody>
                 <?php
                 foreach ($anuncios as $anuncio) {
+                        //var_dump($anuncio);
                     ?>
                     <tr id="<?php echo $anuncio["id"] ?>">
                         <td><?php echo $anuncio["id"] ?></td>
                         <td><?php echo $anuncio["attributes"]["title"] ?></td>
                         <td><?php echo $anuncio["attributes"]["description"] ?></td>
-                        <td>Imagem</td>
+                        <td><img src="<?php echo $anuncio["attributes"]["image"]['url'] ?>" height="80px" alt="<?php echo $anuncio["attributes"]["title"] ?>"/> </td>
                         <td>
                             <a href="<?php echo $anuncio["id"] ?>" class="remover"><i class="fa fa-remove"
                                                                                       style="font-size:18px"></i></a>
