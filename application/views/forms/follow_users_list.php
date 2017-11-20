@@ -5,11 +5,13 @@
  * Date: 19/11/2017
  * Time: 16:58
  */
-//print_r($follows['response']['included']);
+
 foreach ($follows['response']['included'] as $follow) {
-//    print_r($follow['profiles']);
-//
-//
+    if ($status == 'seguir') {
+        $class = 'btn btn-default';
+    } else {
+        $class = 'btn btn-primary';
+    }
     ?>
     <div class="col-md-4">
         <div class="jumbotron">
@@ -20,8 +22,8 @@ foreach ($follows['response']['included'] as $follow) {
                      height="50%"><br>
                 <b> <?php echo $follow['attributes']['name'] ?><br>
                     <?php echo $follow['attributes']['age'] ?> Anos</b><br>
-                <button type="button" class="btn btn-primary segue">
-                    Seguindo
+                <button type="button" class="<?php echo $class ?>">
+                    <?php echo $status ?>
                 </button>
 
             </div>

@@ -40,9 +40,10 @@
                                     <script>
                                         $(document).ready(function () {
                                             var iduser = "<?php echo $follow_wed; ?>";
+                                            var status = "Seguindo";
 
                                             function list_user() {
-                                                $.get("<?php echo base_url('Follows/get_users_list/')?>" + iduser,
+                                                $.get("<?php echo base_url('Follows/get_users_list/')?>" + iduser + '/' + status,
 
                                                     function (result) {
                                                         $("#result_followed" + iduser).html(result);
@@ -83,14 +84,10 @@
                                     <script>
                                         $(document).ready(function () {
                                             var iduser = "<?php echo $follow_as; ?>";
-                                            var button = "<?php echo $status; ?>";
-                                            if (button == "seguindo") {
-                                                alert(button);
-                                                $(".segue").removeClass('btn-primary');
-                                                $(".segue").addClass('btn-default');
-                                            }
+                                            var status = "<?php echo $status; ?>";
+
                                             function list_user_f() {
-                                                $.get("<?php echo base_url('Follows/get_users_list/')?>" + iduser,
+                                                $.get("<?php echo base_url('Follows/get_users_list/')?>" + iduser + '/' + status,
 
                                                     function (result) {
                                                         $("#result_follower" + iduser).html(result);
@@ -106,8 +103,6 @@
                                     <div id="result_follower<?php echo $follow_as; ?>">
 
                                     </div>
-
-
                                 <?php } ?>
                             </div>
                         </div>

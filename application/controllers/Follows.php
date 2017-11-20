@@ -256,10 +256,11 @@ class Follows extends CI_Controller
 
     }
 
-    public function get_users_list($id_user)
+    public function get_users_list($id_user,$status)
     {
         $retorno_follows = $this->get_follows_ws($id_user);
         $data ['follows'] = $retorno_follows;
+        $data ['status'] = $status;
         $this->load->view('forms/follow_users_list', $data);
 
     }
