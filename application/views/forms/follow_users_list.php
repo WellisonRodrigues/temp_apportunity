@@ -20,7 +20,7 @@ foreach ($follows['response']['included'] as $follow) {
                      height="50%"><br>
                 <b> <?php echo $follow['attributes']['name'] ?><br>
                     <?php echo $follow['attributes']['age'] ?> Anos</b><br>
-                <button type="button" class="btn btn-primary">
+                <button type="button" class="btn btn-primary segue">
                     Seguindo
                 </button>
 

@@ -17,10 +17,10 @@
                     <div class="row">
                         <div class="col-md-6 text-center">
                             <h3><a href="#tab_seguindo" data-toggle="tab"
-                                   id="li_seguindo">Seguindo <br> <?php echo @$seguindo ?></a></h3></div>
+                                   id="li_seguindo">Seguindo <br> <?php echo @$inscritos ?></a></h3></div>
                         <div class=" col-md-6 text-center">
                             <h3><a href="#tab_seguidores" data-toggle="tab"
-                                   id="li_seguidores">Seguidores<br> <?php echo @$inscritos ?></a></h3>
+                                   id="li_seguidores">Seguidores<br> <?php echo @$seguindo ?></a></h3>
                         </div>
                     </div>
                 </div>
@@ -32,43 +32,9 @@
                                 <h3>Seguindo</h3>
                             </div>
                             <div class="row">
-                                <?php foreach ($followers as $follow_as) {
-//                                   <?php foreach ($followed as $follow_wed) {
-                                    ?>
-
-                                    <script>
-                                        $(document).ready(function () {
-                                            var iduser = "<?php echo $follow_as; ?>";
-
-                                            function list_user_f() {
-                                                $.get("<?php echo base_url('Follows/get_users_list/')?>" + iduser,
-
-                                                    function (result) {
-                                                        $("#result_follower" + iduser).html(result);
-
-                                                    }
-                                                )
-                                            }
-
-                                            //LISTAR
-                                            list_user_f();
-                                        });
-                                    </script>
-                                    <div id="result_follower<?php echo $follow_as; ?>">
-
-                                    </div>
-
-
-                                <?php } ?>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="tab_seguidores">
-                            <div class="text-left">
-                                <h3>Seguidores</h3>
-                            </div>
-                            <div class="row">
                                 <?php foreach ($followed as $follow_wed) {
-//        print_r($follow_wed);
+
+
                                     ?>
 
                                     <script>
@@ -90,6 +56,54 @@
                                         });
                                     </script>
                                     <div id="result_followed<?php echo $follow_wed; ?>">
+
+                                    </div>
+
+
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab_seguidores">
+                            <div class="text-left">
+                                <h3>Seguidores</h3>
+                            </div>
+                            <div class="row">
+                                <?php foreach ($followers as $follow_as) {
+                                    foreach ($followed as $follow_wed) {
+                                        if ($follow_as == $follow_wed) {
+
+                                            $status = 'seguindo';
+                                        } else {
+                                            $status = 'seguir';
+                                        }
+                                    }
+
+                                    ?>
+
+                                    <script>
+                                        $(document).ready(function () {
+                                            var iduser = "<?php echo $follow_as; ?>";
+                                            var button = "<?php echo $status; ?>";
+                                            if (button == "seguindo") {
+                                                alert(button);
+                                                $(".segue").removeClass('btn-primary');
+                                                $(".segue").addClass('btn-default');
+                                            }
+                                            function list_user_f() {
+                                                $.get("<?php echo base_url('Follows/get_users_list/')?>" + iduser,
+
+                                                    function (result) {
+                                                        $("#result_follower" + iduser).html(result);
+
+                                                    }
+                                                )
+                                            }
+
+                                            //LISTAR
+                                            list_user_f();
+                                        });
+                                    </script>
+                                    <div id="result_follower<?php echo $follow_as; ?>">
 
                                     </div>
 

@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6315125-2236-4753-8b25-d0ed219b9684" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Follows.php" afterPath="$PROJECT_DIR$/application/controllers/Follows.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/forms/conexoes_list.php" afterPath="$PROJECT_DIR$/application/views/forms/conexoes_list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session/ci_session0jcmahrkpov6knghkkcahm78ft34ro7r" afterPath="$PROJECT_DIR$/session/ci_session0jcmahrkpov6knghkkcahm78ft34ro7r" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/forms/follow_users_list.php" afterPath="$PROJECT_DIR$/application/views/forms/follow_users_list.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session/ci_sessionu7smcu7lq4rcaohgp9l8a3bu91atjbre" afterPath="$PROJECT_DIR$/session/ci_sessionu7smcu7lq4rcaohgp9l8a3bu91atjbre" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -115,8 +116,8 @@
       <file leaf-file-name="conexoes_list.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/forms/conexoes_list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="98" column="30" lean-forward="false" selection-start-line="98" selection-start-column="30" selection-end-line="98" selection-end-column="30" />
+            <state relative-caret-position="305">
+              <caret line="86" column="71" lean-forward="true" selection-start-line="86" selection-start-column="71" selection-end-line="86" selection-end-column="71" />
               <folding>
                 <element signature="e#6#90#0#PHP" expanded="true" />
               </folding>
@@ -127,8 +128,8 @@
       <file leaf-file-name="follow_users_list.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/forms/follow_users_list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="21" column="67" lean-forward="false" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
+            <state relative-caret-position="357">
+              <caret line="22" column="60" lean-forward="false" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="60" />
               <folding>
                 <element signature="e#6#90#0#PHP" expanded="true" />
               </folding>
@@ -204,7 +205,7 @@
       <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
+            <state relative-caret-position="735">
               <caret line="153" column="30" lean-forward="false" selection-start-line="153" selection-start-column="30" selection-end-line="153" selection-end-column="30" />
               <folding>
                 <marker date="1510028585763" expanded="true" signature="10159:10286" ph="..." />
@@ -348,8 +349,8 @@
         <option value="$PROJECT_DIR$/application/views/template_admin/menu.php" />
         <option value="$PROJECT_DIR$/application/views/forms/anuncios_list.php" />
         <option value="$PROJECT_DIR$/application/views/template_admin/core.php" />
-        <option value="$PROJECT_DIR$/application/views/forms/follow_users_list.php" />
         <option value="$PROJECT_DIR$/application/controllers/Follows.php" />
+        <option value="$PROJECT_DIR$/application/views/forms/follow_users_list.php" />
         <option value="$PROJECT_DIR$/application/views/forms/conexoes_list.php" />
       </list>
     </option>
@@ -645,12 +646,12 @@
       <workItem from="1508002280661" duration="62915000" />
       <workItem from="1508881770379" duration="62402000" />
       <workItem from="1509312601890" duration="79676000" />
-      <workItem from="1510797898661" duration="28817000" />
+      <workItem from="1510797898661" duration="30608000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="251007000" />
+    <option name="totallyTimeSpent" value="252798000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1092,11 +1093,11 @@
         <state relative-caret-position="415">
           <caret line="62" column="71" lean-forward="false" selection-start-line="62" selection-start-column="71" selection-end-line="62" selection-end-column="71" />
           <folding>
-            <marker date="1511024540588" expanded="true" signature="212:228" ph="..." />
-            <marker date="1511024540588" expanded="true" signature="1972:2032" ph="..." />
-            <marker date="1511024540588" expanded="true" signature="1972:2053" ph="..." />
-            <marker date="1511024540588" expanded="true" signature="2872:2941" ph="..." />
-            <marker date="1511024540588" expanded="true" signature="3591:3639" ph="..." />
+            <marker date="1511135803067" expanded="true" signature="212:228" ph="..." />
+            <marker date="1511135803067" expanded="true" signature="1972:2032" ph="..." />
+            <marker date="1511135803067" expanded="true" signature="1972:2053" ph="..." />
+            <marker date="1511135803067" expanded="true" signature="3367:3436" ph="..." />
+            <marker date="1511135803067" expanded="true" signature="4086:4134" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1226,26 +1227,6 @@
         <state relative-caret-position="374">
           <caret line="22" column="92" lean-forward="false" selection-start-line="22" selection-start-column="92" selection-end-line="22" selection-end-column="92" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="153" column="30" lean-forward="false" selection-start-line="153" selection-start-column="30" selection-end-line="153" selection-end-column="30" />
-          <folding>
-            <marker date="1510028585763" expanded="true" signature="10159:10286" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/forms/follow_users_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="21" column="67" lean-forward="false" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
-          <folding>
-            <element signature="e#6#90#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1438,10 +1419,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="153" column="30" lean-forward="false" selection-start-line="153" selection-start-column="30" selection-end-line="153" selection-end-column="30" />
+          <folding>
+            <marker date="1510028585763" expanded="true" signature="10159:10286" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/forms/follow_users_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="22" column="60" lean-forward="false" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="60" />
+          <folding>
+            <element signature="e#6#90#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/forms/conexoes_list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="98" column="30" lean-forward="false" selection-start-line="98" selection-start-column="30" selection-end-line="98" selection-end-column="30" />
+        <state relative-caret-position="305">
+          <caret line="86" column="71" lean-forward="true" selection-start-line="86" selection-start-column="71" selection-end-line="86" selection-end-column="71" />
           <folding>
             <element signature="e#6#90#0#PHP" expanded="true" />
           </folding>
