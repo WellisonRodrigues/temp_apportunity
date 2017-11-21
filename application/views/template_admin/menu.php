@@ -67,6 +67,8 @@ print_r($this->session->userdata('logado')->id);
                         <?php } ?>
                         <li><a href="<?php echo base_url('Perfil_user') ?>"><h4><strong><i class="fa fa-large fa-user">
                                             Perfil</i></strong></h4></a></li>
+                        <li><a href="<?php echo base_url('Pesquisar') ?>"><h4><strong><i class="fa fa-large fa-search">
+                                            Pesquisar</i></strong></h4></a></li>
                         <li><a href="<?php echo base_url('Follows/index') ?>"><h4><strong><i class="fa fa-large fa-users"> Conexões</i></strong></h4></a></li>
                         <li>  <?php
                             echo anchor('Sair', '<b><h4><strong><i class="fa fa-large fa-sign-out"> Sair</i></strong></h4></b>')
