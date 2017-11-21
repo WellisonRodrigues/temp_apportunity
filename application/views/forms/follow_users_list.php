@@ -22,7 +22,7 @@ foreach ($follows['response']['included'] as $follow) {
                      height="50%"><br>
                 <b> <?php echo $follow['attributes']['name'] ?><br>
                     <?php echo $follow['attributes']['age'] ?> Anos</b><br>
-                <button type="button" class="<?php echo $class ?>">
+                <button type="button"  onclick="<?php echo $status ?>(<?php echo $follow['id'] ?>)" class="<?php echo $class ?> <?php echo $status ?>">
                     <?php echo $status ?>
                 </button>
 
@@ -31,3 +31,14 @@ foreach ($follows['response']['included'] as $follow) {
     </div>
 
 <?php } ?>
+
+<script>
+        function seguir(id){
+          $.post('../Follows/seguir', {id:id},function(data){
+            })
+        }
+        function seguindo(id){
+            $.post('../Follows/seguindo', {id:id},function(data){
+            })
+        }
+</script>

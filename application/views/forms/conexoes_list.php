@@ -33,14 +33,11 @@
                             </div>
                             <div class="row">
                                 <?php foreach ($followed as $follow_wed) {
-
-
                                     ?>
-
                                     <script>
                                         $(document).ready(function () {
                                             var iduser = "<?php echo $follow_wed; ?>";
-                                            var status = "Seguindo";
+                                            var status = "seguindo";
 
                                             function list_user() {
                                                 $.get("<?php echo base_url('Follows/get_users_list/')?>" + iduser + '/' + status,
@@ -72,7 +69,6 @@
                                 <?php foreach ($followers as $follow_as) {
                                     foreach ($followed as $follow_wed) {
                                         if ($follow_as == $follow_wed) {
-
                                             $status = 'seguindo';
                                         } else {
                                             $status = 'seguir';
@@ -112,6 +108,3 @@
         </div>
     </div>
 </div>
-
-
-

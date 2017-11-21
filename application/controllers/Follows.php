@@ -318,6 +318,116 @@ class Follows extends CI_Controller
 
     }
 
+    function seguir(){
+
+        $aut_code = $this->session->userdata('verify')['auth_token'];
+        $id_seguir = $this->input->post('id');
+
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/users/follows",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "POST",
+            CURLOPT_POSTFIELDS => "{\r\n  \"data\": {\r\n    \"type\": \"follows\",\r\n    \"relationships\": {\r\n        \"followed\": {\r\n        \"data\": {\r\n          \"type\": \"users\",\r\n          \"id\": \"$id_seguir\"\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+            CURLOPT_HTTPHEADER => array(
+                "accept: application/vnd.api+json",
+                "cache-control: no-cache",
+                "content-type: application/vnd.api+json",
+                "postman-token: d9dcab3a-4a79-c78f-12e6-d6ab280fb5ca",
+                "x-auth-token: $aut_code"
+            ),
+        ));
+
+        $headers = [];
+        curl_setopt($curl, CURLOPT_HEADERFUNCTION,
+            function ($curl, $header) use (&$headers) {
+                $len = strlen($header);
+                $header = explode(':', $header, 2);
+                if (count($header) < 2) // ignore invalid headers
+                    return $len;
+
+                $name = strtolower(trim($header[0]));
+                if (!array_key_exists($name, $headers))
+                    $headers[$name] = [trim($header[1])];
+                else
+                    $headers[$name][] = trim($header[1]);
+
+                return $len;
+            }
+        );
+
+        $response = curl_exec($curl);
+        $resposta = json_decode($response);
+        $err = curl_error($curl);
+        curl_close($curl);
+        $array = $this->arrayCastRecursive($resposta);
+        $resp['response'] = $array;
+        $resp['headers'] = $headers;
+        $resp['err'] = $err;
+        var_dump($resp);
+
+
+
+    }
+
+    function seguindo(){
+
+        $aut_code = $this->session->userdata('verify')['auth_token'];
+        $id_seguir = $this->input->post('id');
+
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/users/follows/$id_seguir",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "DELETE",
+            CURLOPT_HTTPHEADER => array(
+                "cache-control: no-cache",
+                "postman-token: 1a0626b8-0433-1acb-b051-b470417d415e",
+                "x-auth-token: RpATNsy4-P1dfud59Btx"
+            ),
+        ));
+
+        $headers = [];
+        curl_setopt($curl, CURLOPT_HEADERFUNCTION,
+            function ($curl, $header) use (&$headers) {
+                $len = strlen($header);
+                $header = explode(':', $header, 2);
+                if (count($header) < 2) // ignore invalid headers
+                    return $len;
+
+                $name = strtolower(trim($header[0]));
+                if (!array_key_exists($name, $headers))
+                    $headers[$name] = [trim($header[1])];
+                else
+                    $headers[$name][] = trim($header[1]);
+
+                return $len;
+            }
+        );
+
+        $response = curl_exec($curl);
+        $resposta = json_decode($response);
+        $err = curl_error($curl);
+        curl_close($curl);
+        $array = $this->arrayCastRecursive($resposta);
+        $resp['response'] = $array;
+        $resp['headers'] = $headers;
+        $resp['err'] = $err;
+        var_dump($resp);
+
+
+
+    }
     public function arrayCastRecursive($array)
     {
         if (is_array($array)) {
