@@ -33,7 +33,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             foreach ($includes as $include) {
                 if ($include['id'] == $job['relationships']['company']['data']['id']) {
                     $name = $include['attributes']['name'];
+                    $type = $include['type'];
                     $url = $include['attributes']['img']['url'];
+                    $id = $include['id'];
                 }
             }
             ?>
@@ -48,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </h6>
                     </div>
                     <div class="media-body">
-                        <a href="#">
+                        <a href="<?php echo base_url('Profiles/index/'.$id.'/'.$type) ?>">
                             <?php
                             echo $name;
                             ?>
