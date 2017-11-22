@@ -16,11 +16,11 @@ print_r($this->session->userdata('logado')->id);
 
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle btn-default collapsed" data-toggle="collapse"
+                    <button type="button" class="navbar-toggle btn-default" data-toggle="collapse"
                             data-target="#navbar"
                             aria-expanded="false" aria-controls="navbar">
 
-                        <b class="sr-only">Toggle navigation</b>
+<!--                        <b class="sr-only">Toggle navigation</b>-->
                         <b class="icon-bar"></b>
                         <b class="icon-bar"></b>
                         <b class="icon-bar"></b>

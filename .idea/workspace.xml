@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6315125-2236-4753-8b25-d0ed219b9684" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/arquivos/resources/img/logos/logohome.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/arquivos/resources/img/pessoinha-75px.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arquivos/resources/img/pessoinha-50px.png" afterPath="$PROJECT_DIR$/arquivos/resources/img/pessoinha-50px.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/home.php" afterPath="$PROJECT_DIR$/application/views/home.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/template_admin/menu.php" afterPath="$PROJECT_DIR$/application/views/template_admin/menu.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arquivos/resources/vendor/bootstrap/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/arquivos/resources/vendor/bootstrap/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session/ci_sessionsl8sgllfi6qfn2t970mt9rjkicfbdj00" afterPath="$PROJECT_DIR$/session/ci_sessionsl8sgllfi6qfn2t970mt9rjkicfbdj00" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session/ci_sessionfj3vkj003ii5dfivemkvcv5fl04o7o8d" afterPath="$PROJECT_DIR$/session/ci_sessionfj3vkj003ii5dfivemkvcv5fl04o7o8d" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -71,17 +67,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="menu.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/template_admin/menu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="48" />
+            <state relative-caret-position="226">
+              <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
               <folding>
-                <marker date="1511320395956" expanded="true" signature="212:228" ph="..." />
-                <marker date="1511320395956" expanded="true" signature="2570:2630" ph="..." />
-                <marker date="1511320395956" expanded="true" signature="2570:2651" ph="..." />
-                <marker date="1511320395956" expanded="true" signature="4083:4152" ph="..." />
-                <marker date="1511320395956" expanded="true" signature="5199:5247" ph="..." />
+                <marker date="1511321361932" expanded="true" signature="212:228" ph="..." />
+                <marker date="1511321361932" expanded="true" signature="2567:2627" ph="..." />
+                <marker date="1511321361932" expanded="true" signature="2567:2648" ph="..." />
+                <marker date="1511321361932" expanded="true" signature="4080:4149" ph="..." />
+                <marker date="1511321361932" expanded="true" signature="5196:5244" ph="..." />
               </folding>
             </state>
           </provider>
@@ -139,11 +135,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.min.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bootstrap.min.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/arquivos/resources/vendor/bootstrap/css/bootstrap.min.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="166">
-              <caret line="4" column="47391" lean-forward="false" selection-start-line="4" selection-start-column="47391" selection-end-line="4" selection-end-column="47391" />
+              <caret line="4" column="99359" lean-forward="false" selection-start-line="4" selection-start-column="99355" selection-end-line="4" selection-end-column="99359" />
               <folding />
             </state>
           </provider>
@@ -282,7 +278,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>id</find>
       <find>var</find>
       <find>die</find>
       <find>esq</find>
@@ -312,6 +307,7 @@
       <find>navbar-de</find>
       <find>.panel-primary</find>
       <find>btn-prima</find>
+      <find>body</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -365,9 +361,9 @@
         <option value="$PROJECT_DIR$/application/views/forms/profiles.php" />
         <option value="$PROJECT_DIR$/arquivos/resources/css/sb-admin-2.css" />
         <option value="$PROJECT_DIR$/application/views/home.php" />
-        <option value="$PROJECT_DIR$/arquivos/resources/vendor/bootstrap/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/application/views/template_admin/core.php" />
         <option value="$PROJECT_DIR$/application/views/template_admin/menu.php" />
+        <option value="$PROJECT_DIR$/arquivos/resources/vendor/bootstrap/css/bootstrap.min.css" />
       </list>
     </option>
   </component>
@@ -714,12 +710,12 @@
       <workItem from="1508002280661" duration="62915000" />
       <workItem from="1508881770379" duration="62402000" />
       <workItem from="1509312601890" duration="79676000" />
-      <workItem from="1510797898661" duration="53214000" />
+      <workItem from="1510797898661" duration="54801000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="275404000" />
+    <option name="totallyTimeSpent" value="276991000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1560,14 +1556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/arquivos/resources/vendor/bootstrap/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="4" column="47391" lean-forward="false" selection-start-line="4" selection-start-column="47391" selection-end-line="4" selection-end-column="47391" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/template_admin/core.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -1578,15 +1566,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/template_admin/menu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="48" />
+        <state relative-caret-position="226">
+          <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
           <folding>
-            <marker date="1511320395956" expanded="true" signature="212:228" ph="..." />
-            <marker date="1511320395956" expanded="true" signature="2570:2630" ph="..." />
-            <marker date="1511320395956" expanded="true" signature="2570:2651" ph="..." />
-            <marker date="1511320395956" expanded="true" signature="4083:4152" ph="..." />
-            <marker date="1511320395956" expanded="true" signature="5199:5247" ph="..." />
+            <marker date="1511321361932" expanded="true" signature="212:228" ph="..." />
+            <marker date="1511321361932" expanded="true" signature="2567:2627" ph="..." />
+            <marker date="1511321361932" expanded="true" signature="2567:2648" ph="..." />
+            <marker date="1511321361932" expanded="true" signature="4080:4149" ph="..." />
+            <marker date="1511321361932" expanded="true" signature="5196:5244" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arquivos/resources/vendor/bootstrap/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="4" column="99359" lean-forward="false" selection-start-line="4" selection-start-column="99355" selection-end-line="4" selection-end-column="99359" />
+          <folding />
         </state>
       </provider>
     </entry>
