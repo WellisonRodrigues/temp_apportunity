@@ -9,7 +9,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<div class="col-md-6 col-md-offset-3 col-sm-offset-1 col-sm-10">
+<aside>
+    <div class="col-md-3">
+
+        <div class="panel panel-body">
+            <div class="text-center center-block">
+                <img src="<?php echo base_url(IMAGES); ?>/profile.jpg" width="30%" height="30%"
+                     class="img-circle">
+            </div>
+            <div class="text-center">
+                <strong><?php echo $profile['attributes']['name'] ?></strong><br>
+                <?php echo $profile['attributes']['region'] ?><br>
+                <?php echo $inscritos; ?> Inscritos<br>
+                <?php echo anchor('Perfil_user/get_profile', 'Editar Perfil', 'type="button" class="btn btn-primary"') ?>
+                <br>
+                <hr>
+                <div class="text-center">
+                    <div class="row"><strong>Sobre</strong></div>
+                    Email : <?php echo $included[0]['attributes']['email'] ?> <br>
+                    Idade : <?php echo $profile['attributes']['age'] ?> <br>
+                    Habilitação : AD <br>
+                    Vagas em Interesse : <?php echo $profile['attributes']['carrer'] ?><br>
+                    <hr>
+                    <?php foreach ($idiomas as $idioma) { ?>
+                        <div class="row"><strong>Conheçimento do
+                                Idioma <?php echo $idioma['attributes']['name'] ?></strong></div>
+                        Level : <?php echo $idioma['attributes']['level'] ?><br>
+
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</aside>
+<div class="col-md-6 col-sm-10">
     <article>
         <?php
         //        $cont = 0;
@@ -50,7 +84,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </h6>
                     </div>
                     <div class="media-body">
-                        <a href="<?php echo base_url('Profiles/index/'.$id.'/'.$type) ?>">
+                        <a href="<?php echo base_url('Profiles/index/' . $id . '/' . $type) ?>">
                             <?php
                             echo $name;
                             ?>
@@ -209,42 +243,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!--</div>-->
 
-<aside>
-    <div class="col-md-3">
-        <div class="panel panel-primary">
-            <div class="panel panel-heading">
-                <div class="text-center center-block">
-                    <img src="<?php echo base_url(IMAGES); ?>/profile.jpg" width="30%" height="30%"
-                         class="img-circle">
-                </div>
-            </div>
-            <div class="panel panel-body">
-                <div class="text-center">
-                    <strong><?php echo $profile['attributes']['name'] ?></strong><br>
-                    <?php echo $profile['attributes']['region'] ?><br>
-                    <?php echo $inscritos; ?> Inscritos
-                    <hr>
 
-                    <?php echo anchor('Perfil_user/get_profile', 'Editar Perfil', 'type="button" class="btn btn-primary"') ?>
-                    <br>
-                    <hr>
-                    <div class="text-center">
-                        <div class="row"><strong>Sobre</strong></div>
-                        Email : <?php echo $included[0]['attributes']['email'] ?> <br>
-                        Idade : <?php echo $profile['attributes']['age'] ?> <br>
-                        Habilitação : AD <br>
-                        Vagas em Interesse : <?php echo $profile['attributes']['carrer'] ?><br>
-                        <hr>
-                        <?php foreach ($idiomas as $idioma) { ?>
-                            <div class="row"><strong>Conheçimento do
-                                    Idioma <?php echo $idioma['attributes']['name'] ?></strong></div>
-                            Level : <?php echo $idioma['attributes']['level'] ?><br>
-
-                        <?php } ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</aside>
