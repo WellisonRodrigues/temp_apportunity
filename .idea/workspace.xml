@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6315125-2236-4753-8b25-d0ed219b9684" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/Profiles.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/forms/profiles.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/home.php" afterPath="$PROJECT_DIR$/application/views/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/forms/profiles.php" afterPath="$PROJECT_DIR$/application/views/forms/profiles.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session/ci_session3bvp7hej9mh35roa2fiq59bh6k22jc64" afterPath="$PROJECT_DIR$/session/ci_session3bvp7hej9mh35roa2fiq59bh6k22jc64" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -98,7 +96,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Profiles.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Profiles.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Profiles.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
@@ -117,13 +115,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profiles.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="profiles.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/forms/profiles.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="328">
+              <caret line="51" column="74" lean-forward="false" selection-start-line="51" selection-start-column="74" selection-end-line="51" selection-end-column="74" />
               <folding>
                 <element signature="e#6#90#0#PHP" expanded="true" />
+                <marker date="1511312013086" expanded="true" signature="862:884" ph="..." />
               </folding>
             </state>
           </provider>
@@ -237,6 +236,16 @@
                 <element signature="e#24347#24475#0#PHP" expanded="false" />
                 <element signature="e#24508#24612#0#PHP" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="perfil_user.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/forms/perfil_user.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="90" column="74" lean-forward="true" selection-start-line="89" selection-start-column="23" selection-end-line="90" selection-end-column="74" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -453,8 +462,8 @@
         <option value="$PROJECT_DIR$/application/controllers/Pesquisar.php" />
         <option value="$PROJECT_DIR$/application/views/forms/pesquisar_filtro.php" />
         <option value="$PROJECT_DIR$/application/views/home.php" />
-        <option value="$PROJECT_DIR$/application/views/forms/profiles.php" />
         <option value="$PROJECT_DIR$/application/controllers/Profiles.php" />
+        <option value="$PROJECT_DIR$/application/views/forms/profiles.php" />
       </list>
     </option>
   </component>
@@ -803,12 +812,12 @@
       <workItem from="1508002280661" duration="62915000" />
       <workItem from="1508881770379" duration="62402000" />
       <workItem from="1509312601890" duration="79676000" />
-      <workItem from="1510797898661" duration="44205000" />
+      <workItem from="1510797898661" duration="45509000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="266395000" />
+    <option name="totallyTimeSpent" value="267699000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1299,14 +1308,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/forms/perfil_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="73" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/login_form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
@@ -1460,16 +1461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/forms/profiles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="e#6#90#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1538,6 +1529,23 @@
             <element signature="e#13445#13688#1#PHP" expanded="false" />
             <element signature="e#13735#14326#0#PHP" expanded="false" />
             <element signature="e#13790#14316#1#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Profiles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="44" lean-forward="false" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+          <folding>
+            <element signature="e#1301#1892#0#PHP" expanded="false" />
+            <element signature="e#1356#1882#1#PHP" expanded="false" />
+            <element signature="n#arrayCastRecursive#0;n#Profiles#0;n#!!top" expanded="false" />
+            <element signature="e#2285#2654#0#PHP" expanded="false" />
+            <element signature="e#2321#2644#0#PHP" expanded="false" />
+            <element signature="e#2374#2485#0#PHP" expanded="false" />
+            <element signature="e#2502#2630#0#PHP" expanded="false" />
+            <element signature="e#2663#2767#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1652,19 +1660,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Profiles.php">
+    <entry file="file://$PROJECT_DIR$/application/views/forms/perfil_user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="44" lean-forward="false" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+        <state relative-caret-position="312">
+          <caret line="90" column="74" lean-forward="true" selection-start-line="89" selection-start-column="23" selection-end-line="90" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/forms/profiles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="51" column="74" lean-forward="false" selection-start-line="51" selection-start-column="74" selection-end-line="51" selection-end-column="74" />
           <folding>
-            <element signature="e#1301#1892#0#PHP" expanded="false" />
-            <element signature="e#1356#1882#1#PHP" expanded="false" />
-            <element signature="n#arrayCastRecursive#0;n#Profiles#0;n#!!top" expanded="false" />
-            <element signature="e#2285#2654#0#PHP" expanded="false" />
-            <element signature="e#2321#2644#0#PHP" expanded="false" />
-            <element signature="e#2374#2485#0#PHP" expanded="false" />
-            <element signature="e#2502#2630#0#PHP" expanded="false" />
-            <element signature="e#2663#2767#0#PHP" expanded="false" />
+            <element signature="e#6#90#0#PHP" expanded="true" />
+            <marker date="1511312013086" expanded="true" signature="862:884" ph="..." />
           </folding>
         </state>
       </provider>
