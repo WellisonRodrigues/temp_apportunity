@@ -21,7 +21,8 @@
 
 .social-feed-box {
     /*padding: 15px;*/
-    border: 1px solid #e7eaec;
+    border: 1px solid #E4E4E4;
+    border-radius: 1%;
     background: #fff;
     margin-bottom: 15px;
 }
@@ -47,7 +48,7 @@
 
 .social-avatar {
     padding: 15px 15px 0 15px;
-    background-color:whitesmoke;
+    background-color: white;
     height: 60px;
 
 }
@@ -169,6 +170,20 @@
     padding: 10px 15px;
 }
 
-/*.panel-default .painel_user {*/
- /*height: 50%   !*height: 70%;*!*/
-/*}*/
+.box-footer {
+    padding: 0;
+    margin: 0;
+
+}
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-top: 1px solid #E4E4E4;
+}
+
+h4 {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+

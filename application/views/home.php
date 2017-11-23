@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <aside>
-    <div class="col-md-3">
+    <div class="col-md-3 col-sm-4">
 
         <div class="panel panel-body">
             <div class="text-center center-block">
@@ -20,21 +20,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="text-center">
                 <strong><?php echo $profile['attributes']['name'] ?></strong><br>
                 <?php echo $profile['attributes']['region'] ?><br>
-                <?php echo $inscritos; ?> Inscritos<br>
-                <?php echo anchor('Perfil_user/get_profile', 'Editar Perfil', 'type="button" class="btn btn-primary"') ?>
-                <br>
+                <?php echo $inscritos; ?> Inscritos<br></div>
+            <div class="text-center">
+                <br> <?php echo anchor('Perfil_user/get_profile', 'EDITAR PERFIL', 'type="button" class="btn btn-primary"') ?>
                 <hr>
-                <div class="text-center">
-                    <div class="row"><strong>Sobre</strong></div>
-                    Email : <?php echo $included[0]['attributes']['email'] ?> <br>
-                    Idade : <?php echo $profile['attributes']['age'] ?> <br>
-                    Habilitação : AD <br>
-                    Vagas em Interesse : <?php echo $profile['attributes']['carrer'] ?><br>
+                <div class="text-left">
+                    <div class="row">Sobre</strong></div>
+                    <p class="text-muted">Email : <?php echo $included[0]['attributes']['email'] ?> <br>
+                        Idade : <?php echo $profile['attributes']['age'] ?></p>
+                    <hr>
+                    Habilitação <br>
+                    <p class="text-muted"> Motorista, Empilhadeira</p>
+                    <!--                    Vagas em Interesse<br>-->
+                    <!--                    <p class="text-muted">-->
+                    <?php //echo $profile['attributes']['carrer'] ?><!--</p><br>-->
                     <hr>
                     <?php foreach ($idiomas as $idioma) { ?>
-                        <div class="row"><strong>Conheçimento do
-                                Idioma <?php echo $idioma['attributes']['name'] ?></strong></div>
-                        Level : <?php echo $idioma['attributes']['level'] ?><br>
+                        Conheçimento do
+                        Idioma<p class="text-muted"> <?php echo $idioma['attributes']['name'] ?><br>
+                            <?php echo $idioma['attributes']['level'] ?></p><br>
 
                     <?php } ?>
                 </div>
@@ -55,10 +59,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $curtiuJob = $funcao->like_list_job($id_job);
             if ($curtiuJob != 0) {
                 $classJob = "dislike";
-                $corJob = "red";
+                $corJob = "#FF5209";
             } else {
                 $classJob = "curtir";
-                $corJob = "black";
+                $corJob = "#1A4266";
             }
 
 //            $comentarios = $funcao->get_comments_job($id_job);
@@ -104,18 +108,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <small class="text-muted">Vaga expira
                         em: <?php echo date('d/m/Y H:i:s', strtotime($job['attributes']['exp-date'])) ?>
                     </small>
-                    <div class="media">
-                        <!--                        <img class="img-responsive" src="-->
-                        <?php //echo base_url(IMAGES); ?><!--/banner.jpg">-->
-                    </div>
-                    <!--            <div class="btn-group">-->
                     <hr>
-                    <div class="row">
+                    <div class="row box-footer">
                         <div class="col-md-offset-1 col-md-6">
                             <h4 class="curtir <?php echo $id_job; ?>" data-idjob="<?php echo $id_job; ?>"
                                 data-idlike="<?php echo $curtiuJob ?>" data-type="<?php echo $classJob; ?>">
                                 <i class="fa fa-heart <?php echo $id_job; ?>"
-                                   style="color:<?php echo $corJob; ?>"></i> Gostei desta publicação
+                                   style="color:<?php echo $corJob; ?>"></i> Gostei
                             </h4>
                         </div>
                         <div class="col-md-5">
@@ -157,7 +156,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     var type = $(this).data('type');
 
                     if (type == 'curtir') {
-                        $(".fa-heart." + idjob).css("color", "red");
+                        $(".fa-heart." + idjob).css("color", "#FF5209");
                         $(this).data('type', 'dislike');
                         $.post('Painel_admin/like_job', {idjob: idjob}, function (data) {
                             /* if(data.response.data.id){
@@ -167,7 +166,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         }, 'json');
                     } else {
                         if (idlike > 0) {
-                            $(".fa-heart." + idjob).css("color", "black");
+                            $(".fa-heart." + idjob).css("color", "#1A4266");
                             $(this).data('type', 'curtir');
                             $(this).data('idlike', '0');
                             $.post('Painel_admin/dislike_job', {idjob: idjob, idlike: idlike}, function (data) {
