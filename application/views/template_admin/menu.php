@@ -16,14 +16,13 @@ print_r($this->session->userdata('logado')->id);
 
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle btn-default" data-toggle="collapse"
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                             data-target="#navbar"
                             aria-expanded="false" aria-controls="navbar">
-
-<!--                        <b class="sr-only">Toggle navigation</b>-->
-                        <b class="icon-bar"></b>
-                        <b class="icon-bar"></b>
-                        <b class="icon-bar"></b>
+<!--                        <span class="sr-only">Toggle navigation</span>-->
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
                     </button>
                     <div class="metade-collor">
                         <div class="col-md-offset-3">

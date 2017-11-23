@@ -47,7 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     </div>
 </aside>
-<div class="col-md-6 col-sm-10">
+<div class="col-md-5 col-sm-10">
     <article>
         <?php
         //        $cont = 0;
@@ -83,9 +83,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a1.jpg">
                     </a>
                     <div class="pull-right">
-                        <h6 class="salvar_vaga" data-idjob="<?php echo $id_job; ?>"><b> Salvar Vaga
-                                <i class="fa fa-edit <?php echo $id_job; ?>"></i></b>
-                        </h6>
+                        <button class="btn btn-primary small salvar_vaga" data-idjob="<?php echo $id_job; ?>">
+                            <i class="fa fa-edit <?php echo $id_job; ?>"></i> Salvar
+
+                        </button>
                     </div>
                     <div class="media-body">
                         <a href="<?php echo base_url('Profiles/index/' . $id . '/' . $type) ?>">
@@ -94,8 +95,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             ?>
 
                         </a>
-                        <small class="text-muted">Data
-                            Publicação: <?php echo date('d/m/Y H:i:s', strtotime($job['attributes']['published-at'])) ?>
+                        <small class="text-muted"><?php echo date('d \of M', strtotime($job['attributes']['published-at'])) ?>
                         </small>
                     </div>
                 </div>
@@ -105,9 +105,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <?php echo $job['attributes']['description'] ?>
                         <br>
                     </p>
-                    <small class="text-muted">Vaga expira
-                        em: <?php echo date('d/m/Y H:i:s', strtotime($job['attributes']['exp-date'])) ?>
-                    </small>
+<!--                    <small class="text-muted">Vaga expira-->
+<!--                        em: --><?php //echo date('d/m/Y H:i:s', strtotime($job['attributes']['exp-date'])) ?>
+<!--                    </small>-->
                     <hr>
                     <div class="row box-footer">
                         <div class="col-md-offset-1 col-md-6">
