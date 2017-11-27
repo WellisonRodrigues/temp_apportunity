@@ -19,7 +19,7 @@ print_r($this->session->userdata('logado')->id);
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                             data-target="#navbar"
                             aria-expanded="false" aria-controls="navbar">
-<!--                        <span class="sr-only">Toggle navigation</span>-->
+                        <!--                        <span class="sr-only">Toggle navigation</span>-->
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -85,12 +85,36 @@ print_r($this->session->userdata('logado')->id);
                                             Pesquisar</i></strong></h4></a></li>
                         <li><a href="<?php echo base_url('Follows/index') ?>"><h4><strong><i
                                                 class="fa fa-large fa-users"> Conexões</i></strong></h4></a></li>
-                        <li>  <?php
-                            echo anchor('Sair', '<b><h4><strong><i class="fa fa-large fa-sign-out"> Sair</i></strong></h4></b>')
 
-                            ?></li>
+                        <li>
+                            <div class="dropdown" style=" margin-top: 24px;">
+                                <a href="#" data-toggle="dropdown"><i class="fa fa-bars" aria-hidden="true" style="font-size: 20px;color: #fff;"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><?php
+                                        echo anchor('Ajuda', '<b><h4><strong><i class="fa fa-star-o" aria-hidden="true"> Se torne premium</i></strong></h4></b>')
+                                        ?></li>
+
+                                    <li><?php
+                                        echo anchor('Ajuda', '<b><h4><strong><i class="fa fa-book" aria-hidden="true"> Termos de uso</i></strong></h4></b>')
+                                        ?></li>
+
+                                    <li><?php
+                                        echo anchor('Ajuda', '<b><h4><strong><i class="fa fa-check" aria-hidden="true"> Avalie o app</i></strong></h4></b>')
+                                        ?></li>
+                                    <li><?php
+                                        echo anchor('Ajuda', '<b><h4><strong><i class="fa fa-question" aria-hidden="true"> Ajuda</i></strong></h4></b>')
+                                        ?></li>
+                                    <li>  <?php
+                                        echo anchor('Sair', '<b><h4><strong><i class="fa fa-large fa-sign-out"> Sair</i></strong></h4></b>')
+                                        ?></li>
+                                </ul>
+                            </div>
+                        </li>
+
+
                         <!--                        <li><a href="#"><h4><strong><i class="fa fa-large fa-sign-out"> Sair</i></strong></h4></a></li>-->
                     </ul>
+
                 </div><!--/.nav-collapse -->
             </div>
             <!--/.container-fluid -->
