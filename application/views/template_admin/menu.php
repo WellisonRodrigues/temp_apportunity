@@ -52,7 +52,7 @@ print_r($this->session->userdata('logado')->id);
                             ?>
 
                             <li><a href="<?php echo base_url('Painel_admin') ?>"><h4><strong><i
-                                                    class="fa fa-large fa-paper-plane"> Pagina Inicial</i></strong></h4>
+                                                    class="fa fa-large fa-home"> Pagina Inicial</i></strong></h4>
                                 </a>
                             </li>
                             <li><a href="<?php echo base_url('Vagas') ?>"><h4><strong><i
@@ -100,6 +100,7 @@ print_r($this->session->userdata('logado')->id);
                                 </ul>
                             </div>
                         </li>
+
 
 
                         <!--                        <li><a href="#"><h4><strong><i class="fa fa-large fa-sign-out"> Sair</i></strong></h4></a></li>-->
