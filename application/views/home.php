@@ -105,14 +105,111 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <?php echo $job['attributes']['description'] ?>
                         <br>
                     </p>
-<!--                    <small class="text-muted">Vaga expira-->
-<!--                        em: --><?php //echo date('d/m/Y H:i:s', strtotime($job['attributes']['exp-date'])) ?>
-<!--                    </small>-->
+                    <!--                    <small class="text-muted">Vaga expira-->
+                    <!--                        em: --><?php //echo date('d/m/Y H:i:s', strtotime($job['attributes']['exp-date'])) ?>
+                    <!--                    </small>-->
                     <hr>
                     <div class="row box-footer">
                         <div class="col-md-offset-1 col-md-6">
                             <h4 class="curtir <?php echo $id_job; ?>" data-idjob="<?php echo $id_job; ?>"
-                                data-idlike="<?php echo $curtiuJob ?>" data-type="<?php echo $classJob; ?>">
+                                data-idlike="<?php echo $curtiuJob ?>" data-type="<?php echo $classJob; ?>"
+                                data-tipo="<?php echo $job['type']; ?>">
+                                <i class="fa fa-heart <?php echo $id_job; ?>"
+                                   style="color:<?php echo $corJob; ?>"></i> Gostei
+                            </h4>
+                        </div>
+                        <div class="col-md-5">
+                            <h4 class="coment" data-idjob="<?php echo $id_job; ?>"
+                                data-status="<?php echo $response['status'] ?>"><i class="fa fa-comment-o"></i> Comentar
+                            </h4>
+                            <!--                    <button class="btn btn-white btn-xs"><i class="fa fa-share"></i></button>-->
+                        </div>
+                        <!--                </div>-->
+                    </div>
+                </div>
+                <div class="social-footer content <?php echo $id_job; ?>">
+                    <div id="resultado<?php echo $id_job; ?>">
+                    </div>
+
+                    <div class="social-comment">
+                        <a href="" class="pull-left">
+                            <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a3.jpg">
+                        </a>
+                        <div class="media-body">
+                            <textarea class="form-control comentario_<?php echo $id_job; ?>" name="insertComments"
+                                      placeholder="Write comment..."></textarea>
+                            <input type="button" class="comentar" data-idjob="<?php echo $id_job; ?>" value="Comentar"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php
+        } ?>
+        <?php
+        //        $cont = 0;
+        //        print_r($jobs->data);
+        foreach ($ads as $ads_row) {
+            $cont++;
+            $id_job = $ads_row["id"];
+            //$this->CI->like_list_job($id_job);
+            $curtiuJob = $funcao->like_list_job($id_job);
+            if ($curtiuJob != 0) {
+                $classJob = "dislike";
+                $corJob = "#FF5209";
+            } else {
+                $classJob = "curtir";
+                $corJob = "#1A4266";
+            }
+
+//            $comentarios = $funcao->get_comments_job($id_job);
+            //r_dump($comentarios);
+            ///                            print_r($job['relationships']['company']['data']['id']);
+            foreach ($includes as $include) {
+                if ($include['id'] == $ads_row['relationships']['company']['data']['id']) {
+                    $name = $include['attributes']['name'];
+                    $type = $include['type'];
+                    $url = $include['attributes']['img']['url'];
+                    $id = $include['id'];
+                }
+            }
+            ?>
+            <div class="social-feed-box">
+                <div class="social-avatar">
+                    <a href="" class="pull-left">
+                        <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a1.jpg">
+                    </a>
+                    <div class="pull-right">
+                        <button class="btn btn-primary small salvar_vaga" data-idjob="<?php echo $id_job; ?>">
+                            <i class="fa fa-edit <?php echo $id_job; ?>"></i> Salvar
+
+                        </button>
+                    </div>
+                    <div class="media-body">
+                        <a href="<?php echo base_url('Profiles/index/' . $id . '/' . $type) ?>">
+                            <?php
+                            echo $name;
+                            ?>
+
+                        </a>
+                        <small class="text-muted"><?php echo date('d \of M', strtotime($ads_row['attributes']['published-at'])) ?>
+                        </small>
+                    </div>
+                </div>
+                <div class="social-body">
+                    <h4> <?php echo $ads_row['attributes']['title'] ?></h4>
+                    <p>
+                        <?php echo $ads_row['attributes']['description'] ?>
+                        <br>
+                    </p>
+                    <!--                    <small class="text-muted">Vaga expira-->
+                    <!--                        em: --><?php //echo date('d/m/Y H:i:s', strtotime($job['attributes']['exp-date'])) ?>
+                    <!--                    </small>-->
+                    <hr>
+                    <div class="row box-footer">
+                        <div class="col-md-offset-1 col-md-6">
+                            <h4 class="curtir <?php echo $id_job; ?>" data-idjob="<?php echo $id_job; ?>"
+                                data-idlike="<?php echo $curtiuJob ?>" data-type="<?php echo $classJob; ?>"
+                                data-tipo="<?php echo $ads['type']; ?>">
                                 <i class="fa fa-heart <?php echo $id_job; ?>"
                                    style="color:<?php echo $corJob; ?>"></i> Gostei
                             </h4>
@@ -154,11 +251,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     var idjob = $(this).data('idjob');
                     var idlike = $(this).data('idlike');
                     var type = $(this).data('type');
+                    var tipo = $(this).data('tipo');
 
                     if (type == 'curtir') {
                         $(".fa-heart." + idjob).css("color", "#FF5209");
                         $(this).data('type', 'dislike');
-                        $.post('Painel_admin/like_job', {idjob: idjob}, function (data) {
+                        $.post('Painel_admin/like_job', {idjob: idjob, tipo: tipo}, function (data) {
                             /* if(data.response.data.id){
                              var idlikenew = data.response.data.id;
                              $('.curtir.'+idjob).data('idlike', idlikenew)
