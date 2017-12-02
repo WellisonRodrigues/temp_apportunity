@@ -83,7 +83,7 @@
                         </h4>
                     </div>
                     <div class=" text-center center-block">
-                        <img src="<?php echo base_url(IMAGES); ?>/profile.jpg" width="15%" height="15%"
+                        <img src="<?php echo base64_decode($profile['attributes']['image'])?>" width="15%" height="15%"
                              class="img-circle">
                         <div class="row"><h4><strong><?php echo $profile['attributes']['name'] ?></strong></h4>
                         </div>

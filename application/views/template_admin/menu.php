@@ -50,12 +50,10 @@ print_r($this->session->userdata('logado')->id);
                         <?php if ($this->session->userdata('logado')['type'] == 'users') {
 
                             ?>
-                            <li><a href="<?php echo base_url('Mensagens') ?>"><h4><strong><i
-                                                    class="fa fa-large fa-paper-plane"> Mensagens</i></strong></h4>
-                                </a>
-                            </li>
+
                             <li><a href="<?php echo base_url('Painel_admin') ?>"><h4><strong><i
-                                                    class="fa fa-large fa-paper-plane"> Feed</i></strong></h4></a>
+                                                    class="fa fa-large fa-paper-plane"> Pagina Inicial</i></strong></h4>
+                                </a>
                             </li>
                             <li><a href="<?php echo base_url('Vagas') ?>"><h4><strong><i
                                                     class="fa fa-large fa-edit">
@@ -77,33 +75,25 @@ print_r($this->session->userdata('logado')->id);
                                                 Anuncios</i></strong></h4></a></li>
 
                         <?php } ?>
-                        <li><a href="<?php echo base_url('Perfil_user') ?>"><h4><strong><i
-                                                class="fa fa-large fa-user">
-                                            Perfil</i></strong></h4></a></li>
-                        <li><a href="<?php echo base_url('Pesquisar') ?>"><h4><strong><i
-                                                class="fa fa-large fa-search">
-                                            Pesquisar</i></strong></h4></a></li>
                         <li><a href="<?php echo base_url('Follows/index') ?>"><h4><strong><i
                                                 class="fa fa-large fa-users"> Conexões</i></strong></h4></a></li>
 
                         <li>
                             <div class="dropdown" style=" margin-top: 24px;">
-                                <a href="#" data-toggle="dropdown"><i class="fa fa-bars" aria-hidden="true" style="font-size: 20px;color: #fff;"></i></a>
+                                <a href="#" data-toggle="dropdown"><i class="fa fa-bars" aria-hidden="true"
+                                                                      style="font-size: 20px;color: #fff;"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li><?php
-                                        echo anchor('Ajuda', '<b><h4><strong><i class="fa fa-star-o" aria-hidden="true"> Se torne premium</i></strong></h4></b>')
-                                        ?></li>
-
-                                    <li><?php
-                                        echo anchor('Ajuda', '<b><h4><strong><i class="fa fa-book" aria-hidden="true"> Termos de uso</i></strong></h4></b>')
-                                        ?></li>
-
-                                    <li><?php
-                                        echo anchor('Ajuda', '<b><h4><strong><i class="fa fa-check" aria-hidden="true"> Avalie o app</i></strong></h4></b>')
-                                        ?></li>
-                                    <li><?php
-                                        echo anchor('Ajuda', '<b><h4><strong><i class="fa fa-question" aria-hidden="true"> Ajuda</i></strong></h4></b>')
-                                        ?></li>
+                                    <li><a href="<?php echo base_url('Mensagens') ?>"><h4><strong><i
+                                                            class="fa fa-large fa-paper-plane"> Mensagens</i></strong>
+                                            </h4>
+                                        </a>
+                                    </li>
+                                    <li><a href="<?php echo base_url('Pesquisar') ?>"><h4><strong><i
+                                                            class="fa fa-large fa-search">
+                                                        Pesquisar</i></strong></h4></a></li>
+                                    <li><a href="<?php echo base_url('Perfil_user') ?>"><h4><strong><i
+                                                            class="fa fa-large fa-user">
+                                                        Perfil</i></strong></h4></a></li>
                                     <li>  <?php
                                         echo anchor('Sair', '<b><h4><strong><i class="fa fa-large fa-sign-out"> Sair</i></strong></h4></b>')
                                         ?></li>
