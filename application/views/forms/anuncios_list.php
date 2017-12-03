@@ -86,9 +86,9 @@
                         <td><img src="<?php echo $anuncio["attributes"]["image"]['url'] ?>" height="80px" alt="<?php echo $anuncio["attributes"]["title"] ?>"/> </td>
                         <td>
                             <a href="<?php echo $anuncio["id"] ?>" class="remover"><i class="fa fa-remove"
-                                                                                      style="font-size:18px"></i></a>
+                                                                                      style="font-size:18px">Excluir</i></a>
                             <i class="fa fa-edit editar2" data-toggle="modal" data-target="#myModal" data-codigo="<?php echo $anuncio["id"]?>"
-                                style="cursor: pointer;font-size:18px"></i>
+                                style="cursor: pointer;font-size:18px">Editar</i>
                         </td>
                     </tr>
                 <?php } ?>
