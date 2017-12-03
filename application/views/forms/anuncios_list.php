@@ -101,12 +101,15 @@
     <script>
         $(document).ready(function () {
             $('.remover').bind('click', function () {
-                //$(".fa-heart-o").css("color", "red");
-                var idanuncio = $(this).attr('href');
-                $('tr#'+idanuncio).remove();
-                $.post('Anuncios/deletar', {idanuncio: idanuncio}, function (data) {
-                }, 'json');
-                return false;
+				if(confirm("Deseja realmente exlcuir?")){
+					 //$(".fa-heart-o").css("color", "red");
+					var idanuncio = $(this).attr('href');
+					$('tr#'+idanuncio).remove();
+					$.post('Anuncios/deletar', {idanuncio: idanuncio}, function (data) {
+					}, 'json');
+					return false;
+				}
+              return false;
             });
             $(".editar2").bind('click',function(){
                 var id = $(this).data('codigo');
