@@ -89,10 +89,8 @@
                     <div class="text-right">
                         <strong>
                             <i style="text-decoration: none;color: darkgreen" class="fa fa-edit" data-toggle="modal"
-                               data-target=".edit_job<?php echo $job_salvo['id'] ?>"> </i> Editar
-
-                            <?php echo anchor('Vagas_companies/delete_job/' . $job_salvo['id'],
-                                '<i style="text-decoration: none;color: darkred" class="fa fa-trash"/> </i>') ?> Excluir
+                               data-target=".edit_job<?php echo $job_salvo['id'] ?>">Editar</i> 
+							<?php echo anchor('Vagas_companies/delete_job/' . $job_salvo['id'],'<i style="text-decoration: none;color: darkred" class="fa fa-trash"/>Excluir</i>',array('onclick' => "return confirm('Deseja realmente excluir ?')"))?>
 
                         </strong>
                     </div>
@@ -188,3 +186,13 @@
         <!--        </script>-->
     </article>
 </div>
+<script>
+function ConfirmDialog() {
+  var x=confirm("Are you sure to delete record?")
+  if (x) {
+    return true;
+  } else {
+    return false;
+  }
+}
+</script
