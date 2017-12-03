@@ -7,6 +7,7 @@
  */
 //print_r($included[0]['attributes']['email']);
 //print_r($profile);
+//var_dump($profile);
 ?>
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
@@ -70,6 +71,53 @@
 </div>
 <!-- /.modal -->
 
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+     style="display: none;">
+    <div class="modal-dialog">
+        <?php
+        echo form_open('Perfil_user/editarEmpresa', ['role' => 'form']);
+        ?>
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Dados da Empresa</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <label>Imagem de Perfil (JPG)</label>
+                    <input class="form-control" type="file" name="file" autofocus
+                           value="" autocomplete="off"
+                           >
+                </div>
+              
+                <div class="form-group">
+                    <input class="form-control" placeholder="Nome" type="text" name="name_user" autofocus
+                           value="<?php echo $profile['attributes']['name'] ?>" autocomplete="off"
+                           required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" placeholder="Email" type="text" name="email" autofocus
+                           value="<?php echo $profile['attributes']['email'] ?>" autocomplete="off"
+                           required>
+                </div>
+			</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <input type="submit" class="btn btn-primary" name="editar"
+                       value="Editar">
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <?php echo form_close() ?>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
 <div class="row">
     <div class="col-md-8 col-md-offset-2 col-sm-offset-1 col-sm-10">
         <?php
@@ -108,7 +156,7 @@
             <div class="panel panel-heading">
                 <div class="text-right">
                     <h4><i
-                                class="fa fa-pencil" data-toggle="modal" data-target="#myModal"></i>
+                                class="fa fa-pencil" data-toggle="modal" data-target="#myModal2"></i>
                     </h4>
                 </div>
                 <div class=" text-center center-block">

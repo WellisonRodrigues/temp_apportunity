@@ -27,11 +27,15 @@ class Perfil_user extends Follows
     }
 
     public function get_profile()
-    {
+    {	
+		$aut_code = $this->session->userdata('verify')['auth_token'];
         $retorno = $this->get_profile_conect();
         $language = $this->get_profile_language();
         $follows = $this->get_follows();
-
+		$dadosLogado = $this->session->userdata('logado');
+		$company_id = $dadosLogado["id"];
+		
+	
         /*
          * Erro no curl
          */
@@ -51,12 +55,64 @@ class Perfil_user extends Follows
                 $count++;
             }
         }
+		
+		
+		if($this->session->userdata('logado')['type'] == 'companies'){
+			
+			$curl = curl_init();
 
+			curl_setopt_array($curl, array(
+				CURLOPT_PORT => "3000",
+				CURLOPT_URL => "http://34.229.150.76:3000/api/v1/admin/companies/$company_id",
+				CURLOPT_RETURNTRANSFER => true,
+				CURLOPT_ENCODING => "",
+				CURLOPT_MAXREDIRS => 10,
+				CURLOPT_TIMEOUT => 30,
+				CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+				CURLOPT_HTTPHEADER => array(
+					"accept: application/vnd.api+json",
+					"cache-control: no-cache",
+					"content-type: application/vnd.api+json",
+					"postman-token: e76d2ba7-3a09-53a2-46d3-fa4215dd792a",
+					"x-auth-token: $aut_code"
+				),
+			));
+			$headers = [];
+			curl_setopt($curl, CURLOPT_HEADERFUNCTION,
+				function ($curl, $header) use (&$headers) {
+					$len = strlen($header);
+					$header = explode(':', $header, 2);
+					if (count($header) < 2) // ignore invalid headers
+						return $len;
+
+					$name = strtolower(trim($header[0]));
+					if (!array_key_exists($name, $headers))
+						$headers[$name] = [trim($header[1])];
+					else
+						$headers[$name][] = trim($header[1]);
+
+					return $len;
+				}
+			);
+
+			$response = curl_exec($curl);			
+			$err = curl_error($curl);
+			$resposta = json_decode($response);
+			curl_close($curl);
+			
+			$array = $this->arrayCastRecursive($resposta);
+            $data ['profile'] = $array["data"];
+		
+			
+		}else{
+			$data ['profile'] = $profile['response']['data'];
+		}			
+		
         $data ['inscritos'] = $count;
         $profile = $retorno;
         $language_user = $language['response'];
         $data ['idiomas'] = $language_user['data'];
-        $data ['profile'] = $profile['response']['data'];
+        
         $data ['relationships'] = $profile['response']['relationships'];
         $data ['included'] = $profile['response']['included'];
 //        print_r($data['jobs']);
@@ -694,6 +750,122 @@ class Perfil_user extends Follows
         $resp['err'] = $err;
         return $resp;
 
+    }
+	
+	
+	 public function editarEmpresa()
+    {
+
+        $name = $this->input->post('name');
+        $email = $this->input->post('email');
+        $image = 'data:image/png;base64,' . base64_encode($this->input->post('file'));
+       
+        //$retorno = $region->sign_in('ingressoscaldas@gmail.com','icnTDC');
+
+        $retorno = $this->update_empresa($name, $email, $image);
+        /*
+         * Erro no curl
+         */
+        if (isset($retorno["err"]) && !empty($retorno["err"])) {
+            $data['alert'] =
+                [
+                    'type' => 'erro',
+                    'message' => 'Problemas no servidor. Entrar contato com a equipe de ti.'
+                ];
+            $this->session->set_flashdata('alert', $data['alert']);
+            redirect('Perfil_user');
+        }
+
+        /*
+         * erro de login e senha
+         */
+        if (isset(json_decode($retorno["response"])->errors[0])) {
+            $data['alert'] =
+                [
+                    'type' => 'erro',
+                    'message' => 'Erro ao editar empresa'
+                ];
+            $this->session->set_flashdata('alert', $data['alert']);
+            redirect('Perfil_user');
+        } else {
+
+            $data['alert'] =
+                [
+                    'type' => 'sucesso',
+                    'message' => 'Empresa editado com sucesso.'
+                ];
+
+            $this->session->set_flashdata('alert', $data['alert']);
+//                $this->session->set_userdata('logado', $userAPI);
+            redirect('Perfil_user');
+
+
+        }
+        $data['view'] = 'forms/perfil_user';
+        $this->load->view('template_admin/core', $data);
+//        }
+
+    }
+	
+	
+	private function update_empresa($name, $email, $image)
+    {
+        $aut_code = $this->session->userdata('verify')['auth_token'];
+        $company_id= $this->session->userdata('logado')['id'];
+
+//        print_r($id_user);
+//        die;
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/admin/companies/$company_id",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "PUT",
+            CURLOPT_POSTFIELDS => "{\n  \"data\": {\n   \"type\": \"companies\",\n   \"id\" : \"$company_id\",
+            \n    \"attributes\": {\n      \"name\": \"$name\",\n      \"email\": \"$email\",
+            \n      \"image\": \"$image\"\n    }\n  }\n}",
+            CURLOPT_HTTPHEADER => array(
+                "accept: application/vnd.api+json",
+                "cache-control: no-cache",
+                "content-type: application/vnd.api+json",
+                "postman-token: e76d2ba7-3a09-53a2-46d3-fa4215dd792a",
+                "x-auth-token: $aut_code"
+            ),
+        ));
+        $headers = [];
+        curl_setopt($curl, CURLOPT_HEADERFUNCTION,
+            function ($curl, $header) use (&$headers) {
+                $len = strlen($header);
+                $header = explode(':', $header, 2);
+                if (count($header) < 2) // ignore invalid headers
+                    return $len;
+
+                $name = strtolower(trim($header[0]));
+                if (!array_key_exists($name, $headers))
+                    $headers[$name] = [trim($header[1])];
+                else
+                    $headers[$name][] = trim($header[1]);
+
+                return $len;
+            }
+        );
+
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+        curl_close($curl);
+
+        $resp['response'] = $response;
+        $resp['headers'] = $headers;
+        $resp['err'] = $err;
+//        print_r($response);
+//        die;
+        return $resp;
     }
 
     public function arrayCastRecursive($array)
