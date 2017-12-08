@@ -8,6 +8,7 @@
 //print_r($included[0]['attributes']['email']);
 //print_r($profile);
 //var_dump($profile);
+//print_r($profile);
 ?>
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
@@ -130,8 +131,9 @@
                                     class="fa fa-pencil" data-toggle="modal" data-target="#myModal"></i>
                         </h4>
                     </div>
+
                     <div class=" text-center center-block">
-                        <img src="<?php echo base64_decode($profile['attributes']['image'])?>" width="15%" height="15%"
+                        <img src="<?php echo $profile['attributes']['image']?>" width="15%" height="15%"
                              class="img-circle">
                         <div class="row"><h4><strong><?php echo $profile['attributes']['name'] ?></strong></h4>
                         </div>

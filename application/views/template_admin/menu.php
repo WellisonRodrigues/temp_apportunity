@@ -51,13 +51,14 @@ print_r($this->session->userdata('logado')->id);
 
                             ?>
 
-                            <li><a href="<?php echo base_url('Painel_admin') ?>"><h4><strong><i
-                                                    class="fa fa-large fa-home"> Pagina Inicial</i></strong></h4>
+                            <li><a href="<?php echo base_url('Painel_admin') ?>"><h4><img
+                                                src="<?php echo base_url(IMAGES); ?>/logos/home.png"> Pagina
+                                        Inicial</h4>
                                 </a>
                             </li>
-                            <li><a href="<?php echo base_url('Vagas') ?>"><h4><strong><i
-                                                    class="fa fa-large fa-edit">
-                                                Vagas</i></strong></h4></a></li>
+                            <li><a href="<?php echo base_url('Vagas') ?>"><h4><img
+                                                src="<?php echo base_url(IMAGES); ?>/logos/vagas.png">
+                                        Vagas</h4></a></li>
 
                         <?php }
                         if ($this->session->userdata('logado')['type'] == 'companies') {
@@ -75,8 +76,9 @@ print_r($this->session->userdata('logado')->id);
                                                 Anuncios</i></strong></h4></a></li>
 
                         <?php } ?>
-                        <li><a href="<?php echo base_url('Follows/index') ?>"><h4><strong><i
-                                                class="fa fa-large fa-users"> Conexões</i></strong></h4></a></li>
+                        <li><a href="<?php echo base_url('Follows/index') ?>">
+                                <h4><img src="<?php echo base_url(IMAGES); ?>/logos/conexoes.png">Conexões
+                                </h4></a></li>
 
                         <li>
                             <div class="dropdown" style=" margin-top: 24px;">
@@ -100,7 +102,6 @@ print_r($this->session->userdata('logado')->id);
                                 </ul>
                             </div>
                         </li>
-
 
 
                         <!--                        <li><a href="#"><h4><strong><i class="fa fa-large fa-sign-out"> Sair</i></strong></h4></a></li>-->

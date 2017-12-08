@@ -6,11 +6,11 @@
  * Time: 21:55
  */
 
-echo 'ok';
+//echo 'ok';
 
-print_r($idprofile);
-print_r($dados);
-print_r($type);
+//print_r($idprofile);
+//print_r($dados);
+//print_r($type);
 
 if ($dados['data']['type'] == 'companies') {
 
@@ -21,7 +21,7 @@ if ($dados['data']['type'] == 'companies') {
             <div class="panel panel-default">
                 <div class="panel panel-heading">
                     <div class=" text-center center-block">
-                        <img src="<?php echo base_url(IMAGES); ?>/profile.jpg" width="15%" height="15%"
+                        <img src="<?php echo $dados['data']['attributes']['image'] ?>" width="15%" height="15%"
                              class="img-circle">
                         <div class="row"><h4><strong><?php echo $dados['data']['attributes']['name'] ?></strong></h4>
                         </div>
@@ -44,7 +44,7 @@ if ($dados['data']['type'] == 'companies') {
             <div class="panel panel-default">
                 <div class="panel panel-heading">
                     <div class=" text-center center-block">
-                        <img src="<?php echo base_url(IMAGES); ?>/profile.jpg" width="15%" height="15%"
+                        <img src="<?php echo $dados['data']['attributes']['image'] ?>" width="15%" height="15%"
                              class="img-circle">
                         <div class="row"><h4><strong><?php echo $dados['data']['attributes']['name'] ?></strong></h4>
                         </div>

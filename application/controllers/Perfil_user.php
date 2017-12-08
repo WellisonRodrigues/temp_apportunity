@@ -34,6 +34,7 @@ class Perfil_user extends Follows
         $follows = $this->get_follows();
 		$dadosLogado = $this->session->userdata('logado');
 		$company_id = $dadosLogado["id"];
+        $profile = $retorno;
 		
 	
         /*
@@ -109,7 +110,6 @@ class Perfil_user extends Follows
 		}			
 		
         $data ['inscritos'] = $count;
-        $profile = $retorno;
         $language_user = $language['response'];
         $data ['idiomas'] = $language_user['data'];
         
