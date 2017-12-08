@@ -18,6 +18,7 @@ class Painel_admin extends Follows
         if (!$this->session->userdata("logado")) {
             redirect('sair');
         }
+        $this->output->enable_profiler(TRUE);
     }
 
     public function index()

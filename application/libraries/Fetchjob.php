@@ -2,17 +2,45 @@
 
 class Fetchjob
 {
-
     private $idjob;
     private $companyname;
     private $companyimage;
+    private $auth_token;
+    private $publishedat;
+    private $title;
+    private $description;
+    private $companytype;
+    private $companyid;
+
+
+    function setauthtoken($auth_token)
+    {
+        $this->auth_token = $auth_token;
+
+    }
+
+    function getauthtoken()
+    {
+        return $this->auth_token;
+    }
+
+    function getcompanytype()
+    {
+        return $this->companytype;
+    }
+
+    function getcompanyid()
+    {
+        return $this->companyid;
+    }
 
     function setidjob($idjob)
     {
         $this->idjob = $idjob;
 
+
         if ($idjob != null) {
-            $this->setjobattributes($idjob);
+//            $this->setjobattributes($idjob);
         }
     }
 
@@ -31,9 +59,24 @@ class Fetchjob
         return $this->companyimage;
     }
 
-    public function setjobattributes($idjob)
+    function getjobpublishedat()
     {
-        $aut_code = $this->session->userdata('verify')['auth_token'];
+        return $this->publishedat;
+    }
+
+    function getdescription()
+    {
+        return $this->description;
+    }
+
+    function gettitle()
+    {
+        return $this->title;
+    }
+
+    function setjobattributes($idjob, $auth)
+    {
+        $aut_code = $auth;
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
@@ -79,8 +122,14 @@ class Fetchjob
         $resp['response'] = $array;
         $resp['headers'] = $headers;
         $resp['err'] = $err;
-        $this->companyimage = $resp['response']['included']['attributes']['image'];
-        $this->companyname = $resp['response']['included']['attributes']['name'];
+        $this->companyimage = $resp['response']['included'][0]['attributes']['image'];
+        $this->companyname = $resp['response']['included'][0]['attributes']['name'];
+        $this->companytype = $resp['response']['included'][0]['type'];
+        $this->companyid = $resp['response']['included'][0]['id'];
+        $this->publishedat = $resp['response']['data']['attributes']['published-at'];
+        $this->title = $resp['response']['data']['attributes']['title'];
+        $this->description = $resp['response']['data']['attributes']['description'];
+
 
     }
 

@@ -14,41 +14,22 @@ class Vagas extends CI_Controller
         if (!$this->session->userdata("logado")) {
             redirect('sair');
         }
+        $this->output->enable_profiler(TRUE);
     }
 
     public function index()
     {
 
         $this->load->library('Fetchjob');
-        $this->fetchjob->setidjob(4);
-        echo $this->fetchjob->getidjob();
-//        echo $this->fetchjob->setjobattributes();
-//        print_r($this->fetchjob->getcompanyimage());
-//        print_r($this->fetchjob->getcompanyname());
-        die;
-
-        $retorno = $this->get_vagas_salvas();
-        $retorno_application = $this->get_vagas_application_salvas();
-//        $job_salvo = $this->get_job_salvo($idjob);
-        $saved_jobs ['vagas_salvas'] = $retorno['response']['data'];
-        foreach ($saved_jobs['vagas_salvas'] as $vaga_salva) {
-
-//            print_r($vaga_salva['relationships']['job']['data']['id']);
-
-            $job_salvo = $this->get_job_salvo($vaga_salva['relationships']['job']['data']['id']);
-            $jobs[] = $job_salvo['response'];
-//            print_r($jobs['jobs']['response']);
-        }
-//        die;
-        $data['jobs'] = $jobs;
-        $data['jobs_application'] = $retorno_application;
-//        $job_salvo = $this->get_job_salvo($idjob);
+        $saved_jobs = $this->get_saved_jobs();
+        $jobs_applications = $this->get_job_app_ws();
+        $data['jobs'] = $saved_jobs['response']['data'];
+        $data['jobs_application'] = $jobs_applications['response']['data'];
         $data['view'] = 'forms/vagas_list';
         $this->load->view('template_admin/core', $data);
     }
 
-
-    private function get_vagas_salvas()
+    private function get_saved_jobs()
     {
         $aut_code = $this->session->userdata('verify')['auth_token'];
         $curl = curl_init();
@@ -98,7 +79,7 @@ class Vagas extends CI_Controller
         return $resp;
     }
 
-    private function get_vagas_application_salvas()
+    private function get_job_app_ws()
     {
         $aut_code = $this->session->userdata('verify')['auth_token'];
         $curl = curl_init();
@@ -150,75 +131,120 @@ class Vagas extends CI_Controller
 
     public function save_vagas()
     {
-        $idjob = $this->input->post('idjob');
-        $this->save_saved_jobs($idjob);
-
-
+        if ($this->input->post('idjob')) {
+            $idjob = $this->input->post('idjob');
+            if ($idjob) {
+                $this->save_saved_jobs($idjob);
+            }
+        }
     }
 
     private function save_saved_jobs($idjob)
     {
+        if ($idjob) {
+            if ($idjob > 0 && !empty($idjob)) {
+                $aut_code = $this->session->userdata('verify')['auth_token'];
+                $curl = curl_init();
 
-        if ($idjob > 0 && !empty($idjob)) {
-            $aut_code = $this->session->userdata('verify')['auth_token'];
-            $curl = curl_init();
+                curl_setopt_array($curl, array(
+                    CURLOPT_PORT => "3000",
+                    CURLOPT_URL => "http://34.229.150.76:3000/api/v1/jobs/4/saved_jobs",
+                    CURLOPT_RETURNTRANSFER => true,
+                    CURLOPT_ENCODING => "",
+                    CURLOPT_MAXREDIRS => 10,
+                    CURLOPT_TIMEOUT => 30,
+                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                    CURLOPT_CUSTOMREQUEST => "POST",
+                    CURLOPT_POSTFIELDS => "{\n  \"data\": {\n    \"type\": \"saved_jobs\",\n    \"relationships\": {\n      \"job\": {\n        \"data\": {\n          \"type\": \"jobs\",\n          \"id\": \"$idjob\"\n        }\n      }\n    }\n  }\n}",
+                    CURLOPT_HTTPHEADER => array(
+                        "accept: application/vnd.api+json",
+                        "cache-control: no-cache",
+                        "content-type: application/vnd.api+json",
+                        "postman-token: edfa54eb-1b43-24e9-f2f5-a59afc2e446d",
+                        "x-auth-token: $aut_code"
+                    ),
+                ));
 
-            curl_setopt_array($curl, array(
-                CURLOPT_PORT => "3000",
-                CURLOPT_URL => "http://34.229.150.76:3000/api/v1/jobs/4/saved_jobs",
-                CURLOPT_RETURNTRANSFER => true,
-                CURLOPT_ENCODING => "",
-                CURLOPT_MAXREDIRS => 10,
-                CURLOPT_TIMEOUT => 30,
-                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                CURLOPT_CUSTOMREQUEST => "POST",
-                CURLOPT_POSTFIELDS => "{\n  \"data\": {\n    \"type\": \"saved_jobs\",\n    \"relationships\": {\n      \"job\": {\n        \"data\": {\n          \"type\": \"jobs\",\n          \"id\": \"$idjob\"\n        }\n      }\n    }\n  }\n}",
-                CURLOPT_HTTPHEADER => array(
-                    "accept: application/vnd.api+json",
-                    "cache-control: no-cache",
-                    "content-type: application/vnd.api+json",
-                    "postman-token: edfa54eb-1b43-24e9-f2f5-a59afc2e446d",
-                    "x-auth-token: $aut_code"
-                ),
-            ));
+                $headers = [];
+                curl_setopt($curl, CURLOPT_HEADERFUNCTION,
+                    function ($curl, $header) use (&$headers) {
+                        $len = strlen($header);
+                        $header = explode(':', $header, 2);
+                        if (count($header) < 2) // ignore invalid headers
+                            return $len;
 
-            $headers = [];
-            curl_setopt($curl, CURLOPT_HEADERFUNCTION,
-                function ($curl, $header) use (&$headers) {
-                    $len = strlen($header);
-                    $header = explode(':', $header, 2);
-                    if (count($header) < 2) // ignore invalid headers
+                        $name = strtolower(trim($header[0]));
+                        if (!array_key_exists($name, $headers))
+                            $headers[$name] = [trim($header[1])];
+                        else
+                            $headers[$name][] = trim($header[1]);
+
                         return $len;
+                    }
+                );
 
-                    $name = strtolower(trim($header[0]));
-                    if (!array_key_exists($name, $headers))
-                        $headers[$name] = [trim($header[1])];
-                    else
-                        $headers[$name][] = trim($header[1]);
+                $response = curl_exec($curl);
+                $resposta = json_decode($response);
+                $err = curl_error($curl);
+                curl_close($curl);
+                $array = $this->arrayCastRecursive($resposta);
+                $resp['response'] = $array;
+                $resp['headers'] = $headers;
+                $resp['err'] = $err;
 
-                    return $len;
-                }
-            );
-
-            $response = curl_exec($curl);
-            $resposta = json_decode($response);
-            $err = curl_error($curl);
-            curl_close($curl);
-            $array = $this->arrayCastRecursive($resposta);
-            $resp['response'] = $array;
-            $resp['headers'] = $headers;
-            $resp['err'] = $err;
-
-        } else {
-            $resp['err'] = "Erro! Job não encontrado.";
+            } else {
+                $resp['err'] = "Erro! Job não encontrado.";
+            }
         }
-
-//      var_dump($resp);
     }
 
+    public function delete_saved_jobs($idjob)
+    {
 
-    public
-    function arrayCastRecursive($array)
+        if ($idjob) {
+            $this->delete_saved_jobs_ws($idjob);
+            redirect('Vagas/index');
+        }
+    }
+
+    private function delete_saved_jobs_ws($idjob)
+    {
+        if ($idjob) {
+            if ($idjob > 0 && !empty($idjob)) {
+                $aut_code = $this->session->userdata('verify')['auth_token'];
+                $curl = curl_init();
+
+                curl_setopt_array($curl, array(
+                    CURLOPT_PORT => "3000",
+                    CURLOPT_URL => "http://34.229.150.76:3000/api/v1/saved_jobs/$idjob",
+                    CURLOPT_RETURNTRANSFER => true,
+                    CURLOPT_ENCODING => "",
+                    CURLOPT_MAXREDIRS => 10,
+                    CURLOPT_TIMEOUT => 30,
+                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                    CURLOPT_CUSTOMREQUEST => "DELETE",
+                    CURLOPT_HTTPHEADER => array(
+                        "cache-control: no-cache",
+                        "postman-token: c28a74d7-211d-1872-5df5-3456ac0602c3",
+                        "x-auth-token: $aut_code"
+                    ),
+                ));
+
+                $response = curl_exec($curl);
+                $err = curl_error($curl);
+
+                curl_close($curl);
+
+                if ($err) {
+                    echo "cURL Error #:" . $err;
+                } else {
+                    echo $response;
+                }
+            }
+        }
+    }
+
+    public function arrayCastRecursive($array)
     {
         if (is_array($array)) {
             foreach ($array as $key => $value) {
@@ -236,63 +262,11 @@ class Vagas extends CI_Controller
         return $array;
     }
 
-    private
-    function get_job_salvo($idjob)
-    {
-        $aut_code = $this->session->userdata('verify')['auth_token'];
-        $curl = curl_init();
-
-        curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/jobs/$idjob",
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => "",
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 30,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => "GET",
-            CURLOPT_HTTPHEADER => array(
-                "accept: application/vnd.api+json",
-                "cache-control: no-cache",
-                "postman-token: 94c50fec-c163-3e33-fe9f-2211e7fe3711",
-                "x-auth-token: $aut_code"
-            ),
-        ));
-
-        $headers = [];
-        curl_setopt($curl, CURLOPT_HEADERFUNCTION,
-            function ($curl, $header) use (&$headers) {
-                $len = strlen($header);
-                $header = explode(':', $header, 2);
-                if (count($header) < 2) // ignore invalid headers
-                    return $len;
-
-                $name = strtolower(trim($header[0]));
-                if (!array_key_exists($name, $headers))
-                    $headers[$name] = [trim($header[1])];
-                else
-                    $headers[$name][] = trim($header[1]);
-
-                return $len;
-            }
-        );
-
-        $response = curl_exec($curl);
-        $resposta = json_decode($response);
-        $err = curl_error($curl);
-        curl_close($curl);
-        $array = $this->arrayCastRecursive($resposta);
-        $resp['response'] = $array;
-        $resp['headers'] = $headers;
-        $resp['err'] = $err;
-        return $resp;
-    }
-
-    public function save_job_application($idjob)
+    public function create_job_application($idjob)
     {
 
         if ($idjob != null) {
-            $retorno = $this->save_saved_jobs_application($idjob);
+            $retorno = $this->create_jobs_application_ws($idjob);
             if (isset($retorno["err"]) && !empty($retorno["err"])) {
                 $data['alert'] =
                     [
@@ -324,7 +298,7 @@ class Vagas extends CI_Controller
 
     }
 
-    private function save_saved_jobs_application($idjob)
+    private function create_jobs_application_ws($idjob)
     {
 
         if ($idjob > 0 && !empty($idjob)) {
