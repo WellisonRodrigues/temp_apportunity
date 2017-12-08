@@ -19,6 +19,13 @@ class Vagas extends CI_Controller
     public function index()
     {
 
+        $this->load->library('Fetchjob');
+        $this->fetchjob->setidjob(4);
+        echo $this->fetchjob->getidjob();
+//        echo $this->fetchjob->setjobattributes();
+//        print_r($this->fetchjob->getcompanyimage());
+//        print_r($this->fetchjob->getcompanyname());
+        die;
 
         $retorno = $this->get_vagas_salvas();
         $retorno_application = $this->get_vagas_application_salvas();
