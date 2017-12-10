@@ -22,7 +22,7 @@ class Vagas_companies extends CI_Controller
 
     public function index()
     {
-        $retorno = $this->get_vagas_salvas_company();
+        $retorno = $this->get_company_jobs();
         $jobs ['vagas_salvas'] = $retorno['response']['data'];
         foreach ($jobs['vagas_salvas'] as $vaga_salva) {
             if ($vaga_salva['relationships']['company']['data']['id'] == $this->session->userdata("logado")['id']) {
@@ -41,7 +41,7 @@ class Vagas_companies extends CI_Controller
         $description = $this->input->post('description');
         $exp_date = $this->input->post('exp_date');
         if ($this->input->post('create_job') == 'salvar') {
-            $retorno = $this->create_vagas($title, $description, $exp_date);
+            $retorno = $this->create_job_ws($title, $description, $exp_date);
             if (isset($retorno["err"]) && !empty($retorno["err"])) {
                 $data['alert'] =
                     [
@@ -76,7 +76,7 @@ class Vagas_companies extends CI_Controller
     public function delete_job($idjob)
     {
         if ($idjob != null) {
-            if ($this->delete_company_job_($idjob)) {
+            if ($this->delete_company_job_ws($idjob)) {
                 $data['alert'] =
                     [
                         'type' => 'sucesso',
@@ -97,7 +97,7 @@ class Vagas_companies extends CI_Controller
 
     }
 
-    private function delete_company_job_($idjob)
+    private function delete_company_job_ws($idjob)
     {
 
         if ($idjob != null) {
@@ -154,7 +154,7 @@ class Vagas_companies extends CI_Controller
         //echo json_encode($resp);
     }
 
-    private function get_vagas_salvas_company()
+    private function get_company_jobs()
     {
         $aut_code = $this->session->userdata('verify')['auth_token'];
         $curl = curl_init();
@@ -205,7 +205,7 @@ class Vagas_companies extends CI_Controller
         return $resp;
     }
 
-    private function create_vagas($title, $description, $exp_date)
+    private function create_job_ws($title, $description, $exp_date)
     {
         $aut_code = $this->session->userdata('verify')['auth_token'];
         $curl = curl_init();
@@ -301,7 +301,7 @@ class Vagas_companies extends CI_Controller
         $this->load->view('template_admin/core', $data);
     }
 
-    private function edit_vagas($title, $description, $exp_date, $idjob)
+    private function edit_job_ws($title, $description, $exp_date, $idjob)
     {
         $aut_code = $this->session->userdata('verify')['auth_token'];
         $curl = curl_init();

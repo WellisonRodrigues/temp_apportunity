@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6315125-2236-4753-8b25-d0ed219b9684" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session/ci_sessionb2c3h54vtldo6srlc96vmk0e8sr0o4c1" afterPath="$PROJECT_DIR$/session/ci_sessionb2c3h54vtldo6srlc96vmk0e8sr0o4c1" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Vagas_companies.php" afterPath="$PROJECT_DIR$/application/controllers/Vagas_companies.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session/ci_sessione5a74ctt7aeugq1pk04r42l5vu6f39cr" afterPath="$PROJECT_DIR$/session/ci_sessione5a74ctt7aeugq1pk04r42l5vu6f39cr" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,7 +61,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Vagas.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Vagas.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Vagas.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
@@ -125,6 +126,70 @@
                 <element signature="e#11803#12446#0#PHP" expanded="false" />
                 <element signature="e#11862#12432#1#PHP" expanded="false" />
                 <element signature="e#12792#12864#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Vagas_companies.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Vagas_companies.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="56" column="41" lean-forward="false" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+              <folding>
+                <element signature="e#7#91#0#PHP" expanded="false" />
+                <element signature="n#__construct#0;n#Vagas_companies#0;n#!!top" expanded="false" />
+                <element signature="e#219#301#0#PHP" expanded="false" />
+                <element signature="n#index#0;n#Vagas_companies#0;n#!!top" expanded="false" />
+                <element signature="e#509#740#0#PHP" expanded="false" />
+                <element signature="e#570#730#0#PHP" expanded="false" />
+                <element signature="e#1312#1712#0#PHP" expanded="false" />
+                <element signature="e#1422#1584#0#PHP" expanded="false" />
+                <element signature="e#2163#2295#0#PHP" expanded="false" />
+                <element signature="e#2649#3347#0#PHP" expanded="false" />
+                <element signature="e#2746#2880#0#PHP" expanded="false" />
+                <element signature="e#3019#3347#0#PHP" expanded="false" />
+                <element signature="e#3079#3209#0#PHP" expanded="false" />
+                <element signature="n#delete_company_job_ws#0;n#Vagas_companies#0;n#!!top" expanded="false" />
+                <element signature="e#3432#5380#0#PHP" expanded="false" />
+                <element signature="e#3573#4252#0#PHP" expanded="false" />
+                <element signature="e#3598#4251#0#PHP" expanded="false" />
+                <element signature="e#4044#4236#1#PHP" expanded="false" />
+                <element signature="e#4294#4937#0#PHP" expanded="false" />
+                <element signature="e#4353#4923#1#PHP" expanded="false" />
+                <element signature="e#5308#5380#0#PHP" expanded="false" />
+                <element signature="n#get_company_jobs#0;n#Vagas_companies#0;n#!!top" expanded="false" />
+                <element signature="e#5579#6192#0#PHP" expanded="false" />
+                <element signature="e#5604#6191#0#PHP" expanded="false" />
+                <element signature="e#6004#6180#1#PHP" expanded="false" />
+                <element signature="e#6226#6817#0#PHP" expanded="false" />
+                <element signature="e#6281#6807#1#PHP" expanded="false" />
+                <element signature="n#create_job_ws#0;n#Vagas_companies#0;n#!!top" expanded="false" />
+                <element signature="e#7332#8319#0#PHP" expanded="false" />
+                <element signature="e#7357#8318#0#PHP" expanded="false" />
+                <element signature="e#8021#8307#1#PHP" expanded="false" />
+                <element signature="e#8353#8944#0#PHP" expanded="false" />
+                <element signature="e#8408#8934#1#PHP" expanded="false" />
+                <element signature="n#edit_job#0;n#Vagas_companies#0;n#!!top" expanded="false" />
+                <element signature="e#9523#10839#0#PHP" expanded="false" />
+                <element signature="e#9708#10108#0#PHP" expanded="false" />
+                <element signature="e#9818#9980#0#PHP" expanded="false" />
+                <element signature="e#10121#10829#0#PHP" expanded="false" />
+                <element signature="e#10233#10370#0#PHP" expanded="false" />
+                <element signature="e#10499#10829#0#PHP" expanded="false" />
+                <element signature="e#10559#10691#0#PHP" expanded="false" />
+                <element signature="n#edit_job_ws#0;n#Vagas_companies#0;n#!!top" expanded="false" />
+                <element signature="e#11147#12152#0#PHP" expanded="false" />
+                <element signature="e#11172#12151#0#PHP" expanded="false" />
+                <element signature="e#11854#12140#1#PHP" expanded="false" />
+                <element signature="e#12186#12777#0#PHP" expanded="false" />
+                <element signature="e#12241#12767#1#PHP" expanded="false" />
+                <element signature="n#arrayCastRecursive#0;n#Vagas_companies#0;n#!!top" expanded="false" />
+                <element signature="e#13175#13544#0#PHP" expanded="false" />
+                <element signature="e#13211#13534#0#PHP" expanded="false" />
+                <element signature="e#13264#13375#0#PHP" expanded="false" />
+                <element signature="e#13392#13520#0#PHP" expanded="false" />
+                <element signature="e#13553#13657#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -296,7 +361,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sal</find>
       <find>ty</find>
       <find>cone</find>
       <find>h4</find>
@@ -326,6 +390,7 @@
       <find>incl</find>
       <find>libr</find>
       <find>ads</find>
+      <find>get_vagas_salvas_company</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -348,7 +413,6 @@
         <option value="$USER_HOME$/Downloads/caldasingressos/ingressoscaldas/application/controllers/Login.php" />
         <option value="$USER_HOME$/Downloads/caldasingressos/ingressoscaldas/application/config/config.php" />
         <option value="$PROJECT_DIR$/../ingressoscaldas/application/config/config.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Vagas_companies.php" />
         <option value="$PROJECT_DIR$/application/views/login_form.php" />
         <option value="$PROJECT_DIR$/application/views/recover_acc_form.php" />
         <option value="$PROJECT_DIR$/application/controllers/Language_users.php" />
@@ -385,6 +449,7 @@
         <option value="$PROJECT_DIR$/application/libraries/Fetchcompany.php" />
         <option value="$PROJECT_DIR$/application/controllers/Painel_admin.php" />
         <option value="$PROJECT_DIR$/application/views/home.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Vagas_companies.php" />
       </list>
     </option>
   </component>
@@ -624,12 +689,12 @@
       <workItem from="1510797898661" duration="70200000" />
       <workItem from="1511824751890" duration="2029000" />
       <workItem from="1512223646889" duration="43431000" />
-      <workItem from="1512784904709" duration="20114000" />
+      <workItem from="1512784904709" duration="20895000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="357964000" />
+    <option name="totallyTimeSpent" value="358745000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -791,58 +856,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Language_users.php" />
-    <entry file="file://$PROJECT_DIR$/application/controllers/Vagas_companies.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="42" column="7" lean-forward="false" selection-start-line="42" selection-start-column="7" selection-end-line="72" selection-end-column="56" />
-          <folding>
-            <element signature="e#7#91#0#PHP" expanded="false" />
-            <element signature="e#219#301#0#PHP" expanded="false" />
-            <element signature="n#index#0;n#Vagas_companies#0;n#!!top" expanded="false" />
-            <element signature="e#517#748#0#PHP" expanded="false" />
-            <element signature="e#578#738#0#PHP" expanded="false" />
-            <element signature="e#1319#1719#0#PHP" expanded="false" />
-            <element signature="e#1429#1591#0#PHP" expanded="false" />
-            <element signature="e#1844#1981#0#PHP" expanded="false" />
-            <element signature="e#3601#4254#0#PHP" expanded="false" />
-            <element signature="e#4047#4239#1#PHP" expanded="false" />
-            <element signature="e#4297#4940#0#PHP" expanded="false" />
-            <element signature="e#4356#4926#1#PHP" expanded="false" />
-            <element signature="n#get_vagas_salvas_company#0;n#Vagas_companies#0;n#!!top" expanded="false" />
-            <element signature="e#5590#6203#0#PHP" expanded="false" />
-            <element signature="e#5615#6202#0#PHP" expanded="false" />
-            <element signature="e#6015#6191#1#PHP" expanded="false" />
-            <element signature="e#6237#6828#0#PHP" expanded="false" />
-            <element signature="e#6292#6818#1#PHP" expanded="false" />
-            <element signature="e#7342#8329#0#PHP" expanded="false" />
-            <element signature="e#7367#8328#0#PHP" expanded="false" />
-            <element signature="e#8031#8317#1#PHP" expanded="false" />
-            <element signature="e#8363#8954#0#PHP" expanded="false" />
-            <element signature="e#8418#8944#1#PHP" expanded="false" />
-            <element signature="n#edit_job#0;n#Vagas_companies#0;n#!!top" expanded="false" />
-            <element signature="e#9533#10849#0#PHP" expanded="false" />
-            <element signature="e#9718#10118#0#PHP" expanded="false" />
-            <element signature="e#9828#9990#0#PHP" expanded="false" />
-            <element signature="e#10131#10839#0#PHP" expanded="false" />
-            <element signature="e#10243#10380#0#PHP" expanded="false" />
-            <element signature="e#10509#10839#0#PHP" expanded="false" />
-            <element signature="e#10569#10701#0#PHP" expanded="false" />
-            <element signature="n#edit_vagas#0;n#Vagas_companies#0;n#!!top" expanded="false" />
-            <element signature="e#11156#12161#0#PHP" expanded="false" />
-            <element signature="e#11181#12160#0#PHP" expanded="false" />
-            <element signature="e#11863#12149#1#PHP" expanded="false" />
-            <element signature="e#12195#12786#0#PHP" expanded="false" />
-            <element signature="e#12250#12776#1#PHP" expanded="false" />
-            <element signature="n#arrayCastRecursive#0;n#Vagas_companies#0;n#!!top" expanded="false" />
-            <element signature="e#13184#13553#0#PHP" expanded="false" />
-            <element signature="e#13220#13543#0#PHP" expanded="false" />
-            <element signature="e#13273#13384#0#PHP" expanded="false" />
-            <element signature="e#13401#13529#0#PHP" expanded="false" />
-            <element signature="e#13562#13666#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Jobs_application.php" />
     <entry file="file://$PROJECT_DIR$/application/views/forms/follow_users_list.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1591,6 +1604,68 @@
             <element signature="e#11803#12446#0#PHP" expanded="false" />
             <element signature="e#11862#12432#1#PHP" expanded="false" />
             <element signature="e#12792#12864#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Vagas_companies.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="56" column="41" lean-forward="false" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+          <folding>
+            <element signature="e#7#91#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#Vagas_companies#0;n#!!top" expanded="false" />
+            <element signature="e#219#301#0#PHP" expanded="false" />
+            <element signature="n#index#0;n#Vagas_companies#0;n#!!top" expanded="false" />
+            <element signature="e#509#740#0#PHP" expanded="false" />
+            <element signature="e#570#730#0#PHP" expanded="false" />
+            <element signature="e#1312#1712#0#PHP" expanded="false" />
+            <element signature="e#1422#1584#0#PHP" expanded="false" />
+            <element signature="e#2163#2295#0#PHP" expanded="false" />
+            <element signature="e#2649#3347#0#PHP" expanded="false" />
+            <element signature="e#2746#2880#0#PHP" expanded="false" />
+            <element signature="e#3019#3347#0#PHP" expanded="false" />
+            <element signature="e#3079#3209#0#PHP" expanded="false" />
+            <element signature="n#delete_company_job_ws#0;n#Vagas_companies#0;n#!!top" expanded="false" />
+            <element signature="e#3432#5380#0#PHP" expanded="false" />
+            <element signature="e#3573#4252#0#PHP" expanded="false" />
+            <element signature="e#3598#4251#0#PHP" expanded="false" />
+            <element signature="e#4044#4236#1#PHP" expanded="false" />
+            <element signature="e#4294#4937#0#PHP" expanded="false" />
+            <element signature="e#4353#4923#1#PHP" expanded="false" />
+            <element signature="e#5308#5380#0#PHP" expanded="false" />
+            <element signature="n#get_company_jobs#0;n#Vagas_companies#0;n#!!top" expanded="false" />
+            <element signature="e#5579#6192#0#PHP" expanded="false" />
+            <element signature="e#5604#6191#0#PHP" expanded="false" />
+            <element signature="e#6004#6180#1#PHP" expanded="false" />
+            <element signature="e#6226#6817#0#PHP" expanded="false" />
+            <element signature="e#6281#6807#1#PHP" expanded="false" />
+            <element signature="n#create_job_ws#0;n#Vagas_companies#0;n#!!top" expanded="false" />
+            <element signature="e#7332#8319#0#PHP" expanded="false" />
+            <element signature="e#7357#8318#0#PHP" expanded="false" />
+            <element signature="e#8021#8307#1#PHP" expanded="false" />
+            <element signature="e#8353#8944#0#PHP" expanded="false" />
+            <element signature="e#8408#8934#1#PHP" expanded="false" />
+            <element signature="n#edit_job#0;n#Vagas_companies#0;n#!!top" expanded="false" />
+            <element signature="e#9523#10839#0#PHP" expanded="false" />
+            <element signature="e#9708#10108#0#PHP" expanded="false" />
+            <element signature="e#9818#9980#0#PHP" expanded="false" />
+            <element signature="e#10121#10829#0#PHP" expanded="false" />
+            <element signature="e#10233#10370#0#PHP" expanded="false" />
+            <element signature="e#10499#10829#0#PHP" expanded="false" />
+            <element signature="e#10559#10691#0#PHP" expanded="false" />
+            <element signature="n#edit_job_ws#0;n#Vagas_companies#0;n#!!top" expanded="false" />
+            <element signature="e#11147#12152#0#PHP" expanded="false" />
+            <element signature="e#11172#12151#0#PHP" expanded="false" />
+            <element signature="e#11854#12140#1#PHP" expanded="false" />
+            <element signature="e#12186#12777#0#PHP" expanded="false" />
+            <element signature="e#12241#12767#1#PHP" expanded="false" />
+            <element signature="n#arrayCastRecursive#0;n#Vagas_companies#0;n#!!top" expanded="false" />
+            <element signature="e#13175#13544#0#PHP" expanded="false" />
+            <element signature="e#13211#13534#0#PHP" expanded="false" />
+            <element signature="e#13264#13375#0#PHP" expanded="false" />
+            <element signature="e#13392#13520#0#PHP" expanded="false" />
+            <element signature="e#13553#13657#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
