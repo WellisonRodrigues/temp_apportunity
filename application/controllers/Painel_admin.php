@@ -18,11 +18,14 @@ class Painel_admin extends Follows
         if (!$this->session->userdata("logado")) {
             redirect('sair');
         }
-        $this->output->enable_profiler(TRUE);
+//        $this->output->enable_profiler(TRUE);
+
     }
 
     public function index()
+
     {
+
         $retorno = $this->get_jobs();
         $retorno_ads = $this->get_ads();
         $retorno_profile = $this->get_profile_conect();
@@ -483,7 +486,6 @@ class Painel_admin extends Follows
 
     public function get_comments_job($idjob)
     {
-
         if ($idjob > 0 && !empty($idjob)) {
 
             $aut_code = $this->session->userdata('verify')['auth_token'];
@@ -541,6 +543,7 @@ class Painel_admin extends Follows
                     }
                 }
                 $data['comentarios'] = $array_comentarios;
+                $this->load->library('Fetchuser');
                 $this->load->view('forms/list_coments', $data);
             }
         } else {
