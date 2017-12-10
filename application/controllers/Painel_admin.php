@@ -25,6 +25,7 @@ class Painel_admin extends Follows
     public function index()
 
     {
+        $this->load->library('Fetchcompany');
 
         $retorno = $this->get_jobs();
         $retorno_ads = $this->get_ads();

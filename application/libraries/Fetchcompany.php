@@ -38,7 +38,7 @@ class Fetchcompany
 
     function getcompanyimage()
     {
-        return $this->comapanyname;
+        return $this->companyimage;
     }
 
 
@@ -91,8 +91,8 @@ class Fetchcompany
         $resp['response'] = $array;
         $resp['headers'] = $headers;
         $resp['err'] = $err;
-        $this->companyimage = $resp['response']['included'][0]['attributes']['image'];
-        $this->comapanyname = $resp['response']['included'][0]['attributes']['name'];
+        $this->companyimage = $resp['response']['data']['attributes']['image'];
+        $this->comapanyname = $resp['response']['data']['attributes']['name'];
 
     }
 

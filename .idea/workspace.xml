@@ -2,138 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6315125-2236-4753-8b25-d0ed219b9684" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/libraries/Fetchcompany.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session09em49lmn7nbqpnh92c9tq30s82j78n4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session0gfdfpvf7ghf68ob30um02uodutgqf4n" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session0q1h722jv82pojgpeaupt7o4u8rf3fu7" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session0tpu6hv54gu6vjlsc1ddvne08mvfhfho" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session0uj3uinjqtoqvqaj7p42j3vcsck2jec8" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session11r0onvigi2uikupcsvte6bjm98skaj7" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session12u716iju8pqheqbj05i3a030josu4oe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session1c62ab5fn92fm9liiu4dl7pno4585si7" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session1ieimsa0nrha1qpdlbv6d69dll71ldnh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session1m1ug53ukfl32fsmk9asjnsn6slbmm9i" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session2ndnveksm8tskrc5s01443tgucnc9l1i" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session2qgecmfm2mvjvcnp46m05summ35purpj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session2ugc9oeb6v7jkurn48nkfe21lr15icmv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session368ha486hfd2nkscacb2c8uop50tqv25" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session3nobd0k74k9aoehcp8mfr01snef0ru8n" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session4c7jucfn10rinr9ji7g1rlv1qee48rhk" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session4cko95ucrsklnt7qmk8oqbcetccf196s" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session4tpvhn9u7l2b5bemq4cir8huq6t7g26u" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session5dvjlfq6pr1ndgsjco683e300434troa" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session6dse2h98k6tsnmu4oraek07pi6q97022" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session6msrhnmnkn7dolmoq6iji0kmu19fqk4m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session6s9ej54kmtgcfk5merl3uu440rkd1dhe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session71lm181rt5uarnhdeuvqv5q5cvneq5ua" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session72at0aja41e3ne8idf49dgd5ukbju7qf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session79k5o0ki88fhav1cbtbifmb57pofpohq" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session7nt0h2e7k7idb51d8dhek1hf7ccjlofp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session8605717e27oibapfh4cncgrbu55ifgr1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session887r1tq6m4fg8vte643ckom58ldodj7k" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session889si8sgb44glqu55dajfb6ibf474stn" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session92aes6cjecm1f76o10shg6g2vjmip3eh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session9880avrl467dnh4v0sb58f45102cnlru" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session9go197ef5ucp2c6bkbta72od8t91g1vb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session9lcqhnc9iq7bipkjrknmkmlm97gam1pi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session9ns0mssq6pifn46m0nonb2msbtardvbi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session9q18l5ehb8lg7hj1nusoeafee3of1rke" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session9qdvhuoup5vtc4jhijc5n164gpjvn2un" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session9qnlbmdqtegmhd5cv8gv0gtf0lhgm8af" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessiona6l45ok4u84caauibntbvj58sg3259jb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionae9orm6tfngsn8v4357kauehinicmpmj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionaguo7u0cffejod69cnmh6qjr8986ramh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionaicj57lo1cmh008hfdk85seg5pr8n362" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionar49p1ir2uclko9svke6vnl4voigfhk7" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionavki6l89f1p8lcjsg27mkvh8cvu00sib" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionb1vjqjiqafdscq49q40nnipa3rle77gg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionb6ueec90ku4g6tpkof3h3n31ui5iucij" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionb6uk2muqc71j699kaohtqkii45k8usgm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionbemc0pdpjj7uct18828nhcf5nat2kf53" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionbhni7dvmbqjvakv6a34rd1p1r373r380" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionbnpr8b7difcpma6830kbrgcodqtbit4d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionbq13rq1i12rs8nk71h9l98q9odbfjdpb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionc0kn5rglhr8kbp2kolagjpqetr41cv8h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessioncrirgtc041eo30nnsml8geufg1j0t733" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessioncumbs7oovcit9v0vu7jg3126mt04r4po" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessiond8bngneh67opopi4amfhpb01en49tvkq" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessiondli60vo7nkhtqek5j2vc5h8os4q55isd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessiondmnfno7j0d44fpd8m7a0qhq07am7808b" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessiondt991r21guc5oos2c8lgcilgau6l1kul" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessione817irp7m5udgfl2bg0l4e7rkv7j8r4r" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionebaqduttkbu9h7suocilpienpqi14par" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionehlo6edlb3sv2dk2fqjg9ijtkei6vhq3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionf4tu5g14k37ak8ruv8g67ffogi0im8bk" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionfesgbl52l8lvcurvsilvdb0o01ggt4u8" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionfhsdsd32np0553fj8fcl7b0ee89bdftk" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessiongs335pnv94jd6faaf1o33psoqaemre08" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionhk1tpugb7bbalujepd3q0dvgj6ap7vsm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionhk6ceo7q5pu3e92tf256b2t5tp3nngdi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionhqquik78bmkbrklhb1q0sm0ktfpqecg9" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionihjau1dam3rn21edpnsva1t6mhnmt0bo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionio3929sot054t9g4ch24ksco7vg18c3m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionj6j1ukebkhsos8kh78p0ra5b2ulhqmg9" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionj8506o2vpm02e7d0g4aldm8c4jvbmsoa" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionjigimb5d3i40a96n6eaa37dotge77nos" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionjkbel3g1uask3lee5dkrm9a6lb1gk6hj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionjm8c4l8l6r0nu6kpi0i13u1e7s0903tm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionkbeq933e9o29j3tth1pa6pj4ci8hdaie" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionkdvnb441pm6jh44qsisea9mmudsptpd4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionki0nqiu7lal4onllsnk9h4jtcm1d08jq" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionkn0lo5bonftq4tkgvqe91vui8jko7fps" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionkpvboke4hce79hr7rvs50j3bn9hciuk1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionlc4dncog83sebop4imf45cee1el4771f" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionld6vbau3fvn9t89ih0agrtk6dt89aqdm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionlhm9lrhb64o4qp1a9n59kjaajt9g072c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionlj1lbua5vtv0gm3p7mjgf26rfjip1k1d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionllcsprafc7j9mvb2jp14jvera5qnq5d7" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionls5grnpf8t1biusvcshhropc9bqbcmuk" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionm0medmu09sdp7ds81faum55qt1hgn3kb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionm6g6jfd9vnvluv09ms0moj7j044365gu" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionmcr8jl3bttc2huhr00ip1ie1umhh0vg6" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionmhavfbsgbv4bn3vjilj1qtddaqtc4fp2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionmhtdj6n480d3v4oou9fis91djqdnjue3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionmmbv6qpq5hhl70d76bemiq03p7s7n8fi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionmn6ica44ea38n5i10vj815ik793qhbg9" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionn5hg54h9ggp4fp900g1avalvocvkf1so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionnt310p8nplnv0msfdal4nv4qgujom8tj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionnv4i8222aob5dhsnrpvknpncvmj6iu4u" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionok1560ku3v83nv36pmbojm7p0068dafg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionp1a4a1dmq8vusd6gqqh289sjpc5m9k43" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionp85nvu5oc5o38fqikp3jgiflmluhcto6" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionpmic4jd5m3b3ueqra8td1kru414osvq4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionpqoc1crhq5ebcri7dnmklffdrorq9401" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionq7va9rmqra51h7sgnob6qkq12ip8tamc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionq8pnjreg4jiidico35t7nu0vag7o74a5" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionqa0sasf6fincc3idipm71hkap4tn2veq" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionqasvjehq75ncr76f5u56sqmuu21q1nsa" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionqcl85b9v3vone7789hdc1d4g3pjka0p1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionqeummgut6ecf9n59hnnt6vhs94bq7a3h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionqu383e081ugejhg81ame0f4e0ipgfrnj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionr8klctlpb8hbbf98moh252kmn5kdedep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionri64ieguhfji6o96t8635h0uk0hkdhd4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionrtogej2s0h051km0cbj7k1aan99rp8ae" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessions9195ui2smhluv7s96u388mig534ouqm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionsqb5ku3v8fmq5907vb9ingoj4mk2svag" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessiont6cnfms0n7m35rnni1ppfaie00fp24um" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessiont9g7s2a2mmpefneuceg6f0nd3lmesf21" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessiontlk0n616lnkrptgm46mrgaokhuqjmma0" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionudcpq11oaidmpeafiail4la399ti7g3r" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionuqt6tktetf5cb2tq38vbt1gbs5tsn6s8" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionur9ke1gnivs0btsiskqhie8apcat9s7e" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionuv2f05g90nf1bbb7sata68dmmcstgcoa" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionuvdcsdq6e8duph2jpjejf6b28hdvh3qm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionv0iak07j7rvsgjg1i96vbgg2gff2cf82" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionv11qclbtfgnjemnehdpm1lctmlcv9chs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionv5p3ouu0ae4k7n6hpns2vbuptcn25cr9" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionvciti6tegjgjfn91ed434johqakdthvv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionvfdfs3t0foe8cdqgoiv5l1bc0gj9v337" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionvib7g1nm3bet7h6p5b8jj8gqvqjuvsv3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionvof7b5v4a59vhffurg0mc9p73aahcg8j" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionvtbf1r66m7o9uk9hjuhtmgfo8l093f3u" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Painel_admin.php" afterPath="$PROJECT_DIR$/application/controllers/Painel_admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/Fetchcompany.php" afterPath="$PROJECT_DIR$/application/libraries/Fetchcompany.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/forms/list_coments.php" afterPath="$PROJECT_DIR$/application/views/forms/list_coments.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/home.php" afterPath="$PROJECT_DIR$/application/views/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session/ci_sessiondrmf1rqkbfgeopb1ge5kcsurvv8scbic" afterPath="$PROJECT_DIR$/session/ci_sessiondrmf1rqkbfgeopb1ge5kcsurvv8scbic" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -148,14 +22,45 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="home.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="117" column="66" lean-forward="false" selection-start-line="117" selection-start-column="66" selection-end-line="117" selection-end-column="66" />
+            <state relative-caret-position="331">
+              <caret line="249" column="0" lean-forward="true" selection-start-line="145" selection-start-column="6" selection-end-line="249" selection-end-column="0" />
               <folding>
-                <element signature="e#3403#5973#0#PHP" expanded="false" />
-                <element signature="e#9284#11838#0#PHP" expanded="false" />
+                <marker date="1512941429932" expanded="true" signature="9613:10213" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="9657:10213" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="9707:9811" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="9856:10114" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="9967:10087" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="10159:10213" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="10647:10693" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="10747:10792" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="11280:11400" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="11347:11400" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="15450:16046" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="15494:16046" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="15544:15644" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="15689:15947" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="15800:15920" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="15992:16046" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="16476:16518" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="16572:16613" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="17047:17384" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="17110:17384" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="17217:17384" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="17473:17576" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="17688:17838" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="17772:17838" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="17857:17954" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="18327:19104" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="18390:18417" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="18467:19081" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="18521:18657" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="18706:19054" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="18822:18902" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="19172:19238" ph="..." />
+                <marker date="1512941429932" expanded="true" signature="19216:19238" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -164,8 +69,8 @@
       <file leaf-file-name="list_coments.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/forms/list_coments.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="12" selection-end-column="5" />
+            <state relative-caret-position="136">
+              <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="12" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -174,17 +79,17 @@
       <file leaf-file-name="Fetchcompany.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/libraries/Fetchcompany.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="292">
+              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding>
                 <element signature="e#1474#2065#0#PHP" expanded="false" />
                 <element signature="e#1529#2055#1#PHP" expanded="false" />
                 <element signature="n#arrayCastRecursive#0;n#Fetchcompany#0;n#!!top" expanded="false" />
-                <element signature="e#2603#2972#0#PHP" expanded="false" />
-                <element signature="e#2639#2962#0#PHP" expanded="false" />
-                <element signature="e#2692#2803#0#PHP" expanded="false" />
-                <element signature="e#2820#2948#0#PHP" expanded="false" />
-                <element signature="e#2981#3085#0#PHP" expanded="false" />
+                <element signature="e#2589#2958#0#PHP" expanded="false" />
+                <element signature="e#2625#2948#0#PHP" expanded="false" />
+                <element signature="e#2678#2789#0#PHP" expanded="false" />
+                <element signature="e#2806#2934#0#PHP" expanded="false" />
+                <element signature="e#2967#3071#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -219,90 +124,98 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Painel_admin.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Painel_admin.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/Painel_admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+            <state relative-caret-position="57">
+              <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
               <folding>
                 <element signature="e#72#156#0#PHP" expanded="false" />
+                <element signature="n#__construct#0;n#Painel_admin#0;n#!!top" expanded="false" />
                 <element signature="e#303#385#0#PHP" expanded="false" />
-                <element signature="e#778#816#0#PHP" expanded="false" />
-                <element signature="e#1425#1637#0#PHP" expanded="false" />
-                <element signature="e#1552#1627#0#PHP" expanded="false" />
-                <element signature="e#2439#3052#0#PHP" expanded="false" />
-                <element signature="e#2464#3051#0#PHP" expanded="false" />
-                <element signature="e#2864#3040#1#PHP" expanded="false" />
-                <element signature="e#3086#3677#0#PHP" expanded="false" />
-                <element signature="e#3141#3667#1#PHP" expanded="false" />
+                <element signature="n#index#0;n#Painel_admin#0;n#!!top" expanded="false" />
+                <element signature="e#824#862#0#PHP" expanded="false" />
+                <element signature="e#871#1233#0#PHP" expanded="false" />
+                <element signature="e#973#1123#0#PHP" expanded="false" />
+                <element signature="e#1471#1683#0#PHP" expanded="false" />
+                <element signature="e#1598#1673#0#PHP" expanded="false" />
+                <element signature="n#get_jobs#0;n#Painel_admin#0;n#!!top" expanded="false" />
+                <element signature="e#2485#3098#0#PHP" expanded="false" />
+                <element signature="e#2510#3097#0#PHP" expanded="false" />
+                <element signature="e#2910#3086#1#PHP" expanded="false" />
+                <element signature="e#3132#3723#0#PHP" expanded="false" />
+                <element signature="e#3187#3713#1#PHP" expanded="false" />
                 <element signature="n#get_ads#0;n#Painel_admin#0;n#!!top" expanded="false" />
-                <element signature="e#4154#4766#0#PHP" expanded="false" />
-                <element signature="e#4179#4765#0#PHP" expanded="false" />
-                <element signature="e#4578#4754#1#PHP" expanded="false" />
-                <element signature="e#4800#5391#0#PHP" expanded="false" />
-                <element signature="e#4855#5381#1#PHP" expanded="false" />
+                <element signature="e#4200#4812#0#PHP" expanded="false" />
+                <element signature="e#4225#4811#0#PHP" expanded="false" />
+                <element signature="e#4624#4800#1#PHP" expanded="false" />
+                <element signature="e#4846#5437#0#PHP" expanded="false" />
+                <element signature="e#4901#5427#1#PHP" expanded="false" />
                 <element signature="n#get_profile_conect#0;n#Painel_admin#0;n#!!top" expanded="false" />
-                <element signature="e#5936#6822#0#PHP" expanded="false" />
-                <element signature="e#5961#6821#0#PHP" expanded="false" />
-                <element signature="e#6582#6810#1#PHP" expanded="false" />
-                <element signature="e#6856#7447#0#PHP" expanded="false" />
-                <element signature="e#6911#7437#1#PHP" expanded="false" />
+                <element signature="e#5982#6868#0#PHP" expanded="false" />
+                <element signature="e#6007#6867#0#PHP" expanded="false" />
+                <element signature="e#6628#6856#1#PHP" expanded="false" />
+                <element signature="e#6902#7493#0#PHP" expanded="false" />
+                <element signature="e#6957#7483#1#PHP" expanded="false" />
                 <element signature="n#get_profile_language#0;n#Painel_admin#0;n#!!top" expanded="false" />
-                <element signature="e#7997#8675#0#PHP" expanded="false" />
-                <element signature="e#8022#8674#0#PHP" expanded="false" />
-                <element signature="e#8435#8663#1#PHP" expanded="false" />
-                <element signature="e#8710#9301#0#PHP" expanded="false" />
-                <element signature="e#8765#9291#1#PHP" expanded="false" />
+                <element signature="e#8043#8721#0#PHP" expanded="false" />
+                <element signature="e#8068#8720#0#PHP" expanded="false" />
+                <element signature="e#8481#8709#1#PHP" expanded="false" />
+                <element signature="e#8756#9347#0#PHP" expanded="false" />
+                <element signature="e#8811#9337#1#PHP" expanded="false" />
                 <element signature="n#arrayCastRecursive#0;n#Painel_admin#0;n#!!top" expanded="false" />
-                <element signature="e#9694#10063#0#PHP" expanded="false" />
-                <element signature="e#9730#10053#0#PHP" expanded="false" />
-                <element signature="e#9783#9894#0#PHP" expanded="false" />
-                <element signature="e#9911#10039#0#PHP" expanded="false" />
-                <element signature="e#10072#10176#0#PHP" expanded="false" />
+                <element signature="e#9740#10109#0#PHP" expanded="false" />
+                <element signature="e#9776#10099#0#PHP" expanded="false" />
+                <element signature="e#9829#9940#0#PHP" expanded="false" />
+                <element signature="e#9957#10085#0#PHP" expanded="false" />
+                <element signature="e#10118#10222#0#PHP" expanded="false" />
                 <element signature="n#like_list_job#0;n#Painel_admin#0;n#!!top" expanded="false" />
-                <element signature="e#10263#12506#0#PHP" expanded="false" />
-                <element signature="e#10732#11058#0#PHP" expanded="false" />
-                <element signature="e#10771#11057#0#PHP" expanded="false" />
-                <element signature="e#11100#11743#0#PHP" expanded="false" />
-                <element signature="e#11159#11729#1#PHP" expanded="false" />
-                <element signature="e#11977#12401#0#PHP" expanded="false" />
-                <element signature="e#12021#12387#0#PHP" expanded="false" />
-                <element signature="e#12067#12369#0#PHP" expanded="false" />
-                <element signature="e#12122#12347#0#PHP" expanded="false" />
-                <element signature="e#12434#12506#0#PHP" expanded="false" />
+                <element signature="e#10309#12552#0#PHP" expanded="false" />
+                <element signature="e#10778#11104#0#PHP" expanded="false" />
+                <element signature="e#10817#11103#0#PHP" expanded="false" />
+                <element signature="e#11146#11789#0#PHP" expanded="false" />
+                <element signature="e#11205#11775#1#PHP" expanded="false" />
+                <element signature="e#12023#12447#0#PHP" expanded="false" />
+                <element signature="e#12067#12433#0#PHP" expanded="false" />
+                <element signature="e#12113#12415#0#PHP" expanded="false" />
+                <element signature="e#12168#12393#0#PHP" expanded="false" />
+                <element signature="e#12480#12552#0#PHP" expanded="false" />
                 <element signature="n#like_job#0;n#Painel_admin#0;n#!!top" expanded="false" />
-                <element signature="e#12650#14956#0#PHP" expanded="false" />
-                <element signature="e#12806#13853#0#PHP" expanded="false" />
-                <element signature="e#12831#13852#0#PHP" expanded="false" />
-                <element signature="e#13527#13837#1#PHP" expanded="false" />
-                <element signature="e#13895#14538#0#PHP" expanded="false" />
-                <element signature="e#13954#14524#1#PHP" expanded="false" />
-                <element signature="e#14884#14956#0#PHP" expanded="false" />
+                <element signature="e#12696#15002#0#PHP" expanded="false" />
+                <element signature="e#12852#13899#0#PHP" expanded="false" />
+                <element signature="e#12877#13898#0#PHP" expanded="false" />
+                <element signature="e#13573#13883#1#PHP" expanded="false" />
+                <element signature="e#13941#14584#0#PHP" expanded="false" />
+                <element signature="e#14000#14570#1#PHP" expanded="false" />
+                <element signature="e#14930#15002#0#PHP" expanded="false" />
                 <element signature="n#dislike_job#0;n#Painel_admin#0;n#!!top" expanded="false" />
-                <element signature="e#15166#17107#0#PHP" expanded="false" />
-                <element signature="e#15323#16004#0#PHP" expanded="false" />
-                <element signature="e#15348#16003#0#PHP" expanded="false" />
-                <element signature="e#15796#15988#1#PHP" expanded="false" />
-                <element signature="e#16046#16689#0#PHP" expanded="false" />
-                <element signature="e#16105#16675#1#PHP" expanded="false" />
-                <element signature="e#17035#17107#0#PHP" expanded="false" />
-                <element signature="e#17464#18149#0#PHP" expanded="false" />
-                <element signature="e#17489#18148#0#PHP" expanded="false" />
-                <element signature="e#17941#18133#1#PHP" expanded="false" />
-                <element signature="e#18190#18833#0#PHP" expanded="false" />
-                <element signature="e#18249#18819#1#PHP" expanded="false" />
-                <element signature="e#19109#19732#0#PHP" expanded="false" />
-                <element signature="e#19231#19544#0#PHP" expanded="false" />
-                <element signature="e#19291#19526#0#PHP" expanded="false" />
-                <element signature="e#19743#19815#0#PHP" expanded="false" />
+                <element signature="e#15212#17153#0#PHP" expanded="false" />
+                <element signature="e#15369#16050#0#PHP" expanded="false" />
+                <element signature="e#15394#16049#0#PHP" expanded="false" />
+                <element signature="e#15842#16034#1#PHP" expanded="false" />
+                <element signature="e#16092#16735#0#PHP" expanded="false" />
+                <element signature="e#16151#16721#1#PHP" expanded="false" />
+                <element signature="e#17081#17153#0#PHP" expanded="false" />
+                <element signature="n#get_comments_job#0;n#Painel_admin#0;n#!!top" expanded="false" />
+                <element signature="e#17256#19861#0#PHP" expanded="false" />
+                <element signature="e#17510#18195#0#PHP" expanded="false" />
+                <element signature="e#17535#18194#0#PHP" expanded="false" />
+                <element signature="e#17987#18179#1#PHP" expanded="false" />
+                <element signature="e#18236#18879#0#PHP" expanded="false" />
+                <element signature="e#18295#18865#1#PHP" expanded="false" />
+                <element signature="e#19155#19778#0#PHP" expanded="false" />
+                <element signature="e#19254#19778#0#PHP" expanded="false" />
+                <element signature="e#19277#19590#0#PHP" expanded="false" />
+                <element signature="e#19337#19572#0#PHP" expanded="false" />
+                <element signature="e#19789#19861#0#PHP" expanded="false" />
                 <element signature="n#insert_comments_job#0;n#Painel_admin#0;n#!!top" expanded="false" />
-                <element signature="e#19994#22460#0#PHP" expanded="false" />
-                <element signature="e#20266#21439#0#PHP" expanded="false" />
-                <element signature="e#20291#21438#0#PHP" expanded="false" />
-                <element signature="e#21113#21423#1#PHP" expanded="false" />
-                <element signature="e#21482#22125#0#PHP" expanded="false" />
-                <element signature="e#21541#22111#1#PHP" expanded="false" />
-                <element signature="e#22388#22460#0#PHP" expanded="false" />
+                <element signature="e#20040#22506#0#PHP" expanded="false" />
+                <element signature="e#20312#21485#0#PHP" expanded="false" />
+                <element signature="e#20337#21484#0#PHP" expanded="false" />
+                <element signature="e#21159#21469#1#PHP" expanded="false" />
+                <element signature="e#21528#22171#0#PHP" expanded="false" />
+                <element signature="e#21587#22157#1#PHP" expanded="false" />
+                <element signature="e#22434#22506#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -319,7 +232,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.navbar-right{</find>
       <find>sal</find>
       <find>ty</find>
       <find>cone</find>
@@ -346,9 +258,10 @@
       <find>sess</find>
       <find>sess_regenerate_destroy</find>
       <find>ima</find>
-      <find>libr</find>
       <find>ads</find>
       <find>image</find>
+      <find>libr</find>
+      <find>incl</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -393,7 +306,6 @@
         <option value="$PROJECT_DIR$/application/views/forms/jobs_application.php" />
         <option value="$PROJECT_DIR$/application/views/forms/vagas_list.php" />
         <option value="$PROJECT_DIR$/application/controllers/Vagas.php" />
-        <option value="$PROJECT_DIR$/application/views/forms/list_coments.php" />
         <option value="$PROJECT_DIR$/application/libraries/Fetchuser.php" />
         <option value="$PROJECT_DIR$/application/views/template_admin/menu.php" />
         <option value="$PROJECT_DIR$/application/views/forms/companies_vagas_list.php" />
@@ -405,9 +317,10 @@
         <option value="$PROJECT_DIR$/application/views/forms/conexoes_list.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/controllers/Login.php" />
+        <option value="$PROJECT_DIR$/application/views/forms/list_coments.php" />
         <option value="$PROJECT_DIR$/application/libraries/Fetchcompany.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Painel_admin.php" />
         <option value="$PROJECT_DIR$/application/views/home.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Painel_admin.php" />
       </list>
     </option>
   </component>
@@ -647,12 +560,12 @@
       <workItem from="1510797898661" duration="70200000" />
       <workItem from="1511824751890" duration="2029000" />
       <workItem from="1512223646889" duration="43431000" />
-      <workItem from="1512784904709" duration="16788000" />
+      <workItem from="1512784904709" duration="19090000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="354638000" />
+    <option name="totallyTimeSpent" value="356940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1460,123 +1373,162 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/forms/list_coments.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="12" selection-end-column="5" />
+        <state relative-caret-position="136">
+          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="12" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Painel_admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="e#72#156#0#PHP" expanded="false" />
-            <element signature="e#303#385#0#PHP" expanded="false" />
-            <element signature="e#778#816#0#PHP" expanded="false" />
-            <element signature="e#1425#1637#0#PHP" expanded="false" />
-            <element signature="e#1552#1627#0#PHP" expanded="false" />
-            <element signature="e#2439#3052#0#PHP" expanded="false" />
-            <element signature="e#2464#3051#0#PHP" expanded="false" />
-            <element signature="e#2864#3040#1#PHP" expanded="false" />
-            <element signature="e#3086#3677#0#PHP" expanded="false" />
-            <element signature="e#3141#3667#1#PHP" expanded="false" />
-            <element signature="n#get_ads#0;n#Painel_admin#0;n#!!top" expanded="false" />
-            <element signature="e#4154#4766#0#PHP" expanded="false" />
-            <element signature="e#4179#4765#0#PHP" expanded="false" />
-            <element signature="e#4578#4754#1#PHP" expanded="false" />
-            <element signature="e#4800#5391#0#PHP" expanded="false" />
-            <element signature="e#4855#5381#1#PHP" expanded="false" />
-            <element signature="n#get_profile_conect#0;n#Painel_admin#0;n#!!top" expanded="false" />
-            <element signature="e#5936#6822#0#PHP" expanded="false" />
-            <element signature="e#5961#6821#0#PHP" expanded="false" />
-            <element signature="e#6582#6810#1#PHP" expanded="false" />
-            <element signature="e#6856#7447#0#PHP" expanded="false" />
-            <element signature="e#6911#7437#1#PHP" expanded="false" />
-            <element signature="n#get_profile_language#0;n#Painel_admin#0;n#!!top" expanded="false" />
-            <element signature="e#7997#8675#0#PHP" expanded="false" />
-            <element signature="e#8022#8674#0#PHP" expanded="false" />
-            <element signature="e#8435#8663#1#PHP" expanded="false" />
-            <element signature="e#8710#9301#0#PHP" expanded="false" />
-            <element signature="e#8765#9291#1#PHP" expanded="false" />
-            <element signature="n#arrayCastRecursive#0;n#Painel_admin#0;n#!!top" expanded="false" />
-            <element signature="e#9694#10063#0#PHP" expanded="false" />
-            <element signature="e#9730#10053#0#PHP" expanded="false" />
-            <element signature="e#9783#9894#0#PHP" expanded="false" />
-            <element signature="e#9911#10039#0#PHP" expanded="false" />
-            <element signature="e#10072#10176#0#PHP" expanded="false" />
-            <element signature="n#like_list_job#0;n#Painel_admin#0;n#!!top" expanded="false" />
-            <element signature="e#10263#12506#0#PHP" expanded="false" />
-            <element signature="e#10732#11058#0#PHP" expanded="false" />
-            <element signature="e#10771#11057#0#PHP" expanded="false" />
-            <element signature="e#11100#11743#0#PHP" expanded="false" />
-            <element signature="e#11159#11729#1#PHP" expanded="false" />
-            <element signature="e#11977#12401#0#PHP" expanded="false" />
-            <element signature="e#12021#12387#0#PHP" expanded="false" />
-            <element signature="e#12067#12369#0#PHP" expanded="false" />
-            <element signature="e#12122#12347#0#PHP" expanded="false" />
-            <element signature="e#12434#12506#0#PHP" expanded="false" />
-            <element signature="n#like_job#0;n#Painel_admin#0;n#!!top" expanded="false" />
-            <element signature="e#12650#14956#0#PHP" expanded="false" />
-            <element signature="e#12806#13853#0#PHP" expanded="false" />
-            <element signature="e#12831#13852#0#PHP" expanded="false" />
-            <element signature="e#13527#13837#1#PHP" expanded="false" />
-            <element signature="e#13895#14538#0#PHP" expanded="false" />
-            <element signature="e#13954#14524#1#PHP" expanded="false" />
-            <element signature="e#14884#14956#0#PHP" expanded="false" />
-            <element signature="n#dislike_job#0;n#Painel_admin#0;n#!!top" expanded="false" />
-            <element signature="e#15166#17107#0#PHP" expanded="false" />
-            <element signature="e#15323#16004#0#PHP" expanded="false" />
-            <element signature="e#15348#16003#0#PHP" expanded="false" />
-            <element signature="e#15796#15988#1#PHP" expanded="false" />
-            <element signature="e#16046#16689#0#PHP" expanded="false" />
-            <element signature="e#16105#16675#1#PHP" expanded="false" />
-            <element signature="e#17035#17107#0#PHP" expanded="false" />
-            <element signature="e#17464#18149#0#PHP" expanded="false" />
-            <element signature="e#17489#18148#0#PHP" expanded="false" />
-            <element signature="e#17941#18133#1#PHP" expanded="false" />
-            <element signature="e#18190#18833#0#PHP" expanded="false" />
-            <element signature="e#18249#18819#1#PHP" expanded="false" />
-            <element signature="e#19109#19732#0#PHP" expanded="false" />
-            <element signature="e#19231#19544#0#PHP" expanded="false" />
-            <element signature="e#19291#19526#0#PHP" expanded="false" />
-            <element signature="e#19743#19815#0#PHP" expanded="false" />
-            <element signature="n#insert_comments_job#0;n#Painel_admin#0;n#!!top" expanded="false" />
-            <element signature="e#19994#22460#0#PHP" expanded="false" />
-            <element signature="e#20266#21439#0#PHP" expanded="false" />
-            <element signature="e#20291#21438#0#PHP" expanded="false" />
-            <element signature="e#21113#21423#1#PHP" expanded="false" />
-            <element signature="e#21482#22125#0#PHP" expanded="false" />
-            <element signature="e#21541#22111#1#PHP" expanded="false" />
-            <element signature="e#22388#22460#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/libraries/Fetchcompany.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="292">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
             <element signature="e#1474#2065#0#PHP" expanded="false" />
             <element signature="e#1529#2055#1#PHP" expanded="false" />
             <element signature="n#arrayCastRecursive#0;n#Fetchcompany#0;n#!!top" expanded="false" />
-            <element signature="e#2603#2972#0#PHP" expanded="false" />
-            <element signature="e#2639#2962#0#PHP" expanded="false" />
-            <element signature="e#2692#2803#0#PHP" expanded="false" />
-            <element signature="e#2820#2948#0#PHP" expanded="false" />
-            <element signature="e#2981#3085#0#PHP" expanded="false" />
+            <element signature="e#2589#2958#0#PHP" expanded="false" />
+            <element signature="e#2625#2948#0#PHP" expanded="false" />
+            <element signature="e#2678#2789#0#PHP" expanded="false" />
+            <element signature="e#2806#2934#0#PHP" expanded="false" />
+            <element signature="e#2967#3071#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="117" column="66" lean-forward="false" selection-start-line="117" selection-start-column="66" selection-end-line="117" selection-end-column="66" />
+        <state relative-caret-position="331">
+          <caret line="249" column="0" lean-forward="true" selection-start-line="145" selection-start-column="6" selection-end-line="249" selection-end-column="0" />
           <folding>
-            <element signature="e#3403#5973#0#PHP" expanded="false" />
-            <element signature="e#9284#11838#0#PHP" expanded="false" />
+            <marker date="1512941429932" expanded="true" signature="9613:10213" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="9657:10213" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="9707:9811" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="9856:10114" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="9967:10087" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="10159:10213" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="10647:10693" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="10747:10792" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="11280:11400" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="11347:11400" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="15450:16046" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="15494:16046" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="15544:15644" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="15689:15947" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="15800:15920" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="15992:16046" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="16476:16518" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="16572:16613" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="17047:17384" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="17110:17384" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="17217:17384" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="17473:17576" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="17688:17838" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="17772:17838" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="17857:17954" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="18327:19104" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="18390:18417" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="18467:19081" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="18521:18657" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="18706:19054" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="18822:18902" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="19172:19238" ph="..." />
+            <marker date="1512941429932" expanded="true" signature="19216:19238" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Painel_admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+          <folding>
+            <element signature="e#72#156#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#Painel_admin#0;n#!!top" expanded="false" />
+            <element signature="e#303#385#0#PHP" expanded="false" />
+            <element signature="n#index#0;n#Painel_admin#0;n#!!top" expanded="false" />
+            <element signature="e#824#862#0#PHP" expanded="false" />
+            <element signature="e#871#1233#0#PHP" expanded="false" />
+            <element signature="e#973#1123#0#PHP" expanded="false" />
+            <element signature="e#1471#1683#0#PHP" expanded="false" />
+            <element signature="e#1598#1673#0#PHP" expanded="false" />
+            <element signature="n#get_jobs#0;n#Painel_admin#0;n#!!top" expanded="false" />
+            <element signature="e#2485#3098#0#PHP" expanded="false" />
+            <element signature="e#2510#3097#0#PHP" expanded="false" />
+            <element signature="e#2910#3086#1#PHP" expanded="false" />
+            <element signature="e#3132#3723#0#PHP" expanded="false" />
+            <element signature="e#3187#3713#1#PHP" expanded="false" />
+            <element signature="n#get_ads#0;n#Painel_admin#0;n#!!top" expanded="false" />
+            <element signature="e#4200#4812#0#PHP" expanded="false" />
+            <element signature="e#4225#4811#0#PHP" expanded="false" />
+            <element signature="e#4624#4800#1#PHP" expanded="false" />
+            <element signature="e#4846#5437#0#PHP" expanded="false" />
+            <element signature="e#4901#5427#1#PHP" expanded="false" />
+            <element signature="n#get_profile_conect#0;n#Painel_admin#0;n#!!top" expanded="false" />
+            <element signature="e#5982#6868#0#PHP" expanded="false" />
+            <element signature="e#6007#6867#0#PHP" expanded="false" />
+            <element signature="e#6628#6856#1#PHP" expanded="false" />
+            <element signature="e#6902#7493#0#PHP" expanded="false" />
+            <element signature="e#6957#7483#1#PHP" expanded="false" />
+            <element signature="n#get_profile_language#0;n#Painel_admin#0;n#!!top" expanded="false" />
+            <element signature="e#8043#8721#0#PHP" expanded="false" />
+            <element signature="e#8068#8720#0#PHP" expanded="false" />
+            <element signature="e#8481#8709#1#PHP" expanded="false" />
+            <element signature="e#8756#9347#0#PHP" expanded="false" />
+            <element signature="e#8811#9337#1#PHP" expanded="false" />
+            <element signature="n#arrayCastRecursive#0;n#Painel_admin#0;n#!!top" expanded="false" />
+            <element signature="e#9740#10109#0#PHP" expanded="false" />
+            <element signature="e#9776#10099#0#PHP" expanded="false" />
+            <element signature="e#9829#9940#0#PHP" expanded="false" />
+            <element signature="e#9957#10085#0#PHP" expanded="false" />
+            <element signature="e#10118#10222#0#PHP" expanded="false" />
+            <element signature="n#like_list_job#0;n#Painel_admin#0;n#!!top" expanded="false" />
+            <element signature="e#10309#12552#0#PHP" expanded="false" />
+            <element signature="e#10778#11104#0#PHP" expanded="false" />
+            <element signature="e#10817#11103#0#PHP" expanded="false" />
+            <element signature="e#11146#11789#0#PHP" expanded="false" />
+            <element signature="e#11205#11775#1#PHP" expanded="false" />
+            <element signature="e#12023#12447#0#PHP" expanded="false" />
+            <element signature="e#12067#12433#0#PHP" expanded="false" />
+            <element signature="e#12113#12415#0#PHP" expanded="false" />
+            <element signature="e#12168#12393#0#PHP" expanded="false" />
+            <element signature="e#12480#12552#0#PHP" expanded="false" />
+            <element signature="n#like_job#0;n#Painel_admin#0;n#!!top" expanded="false" />
+            <element signature="e#12696#15002#0#PHP" expanded="false" />
+            <element signature="e#12852#13899#0#PHP" expanded="false" />
+            <element signature="e#12877#13898#0#PHP" expanded="false" />
+            <element signature="e#13573#13883#1#PHP" expanded="false" />
+            <element signature="e#13941#14584#0#PHP" expanded="false" />
+            <element signature="e#14000#14570#1#PHP" expanded="false" />
+            <element signature="e#14930#15002#0#PHP" expanded="false" />
+            <element signature="n#dislike_job#0;n#Painel_admin#0;n#!!top" expanded="false" />
+            <element signature="e#15212#17153#0#PHP" expanded="false" />
+            <element signature="e#15369#16050#0#PHP" expanded="false" />
+            <element signature="e#15394#16049#0#PHP" expanded="false" />
+            <element signature="e#15842#16034#1#PHP" expanded="false" />
+            <element signature="e#16092#16735#0#PHP" expanded="false" />
+            <element signature="e#16151#16721#1#PHP" expanded="false" />
+            <element signature="e#17081#17153#0#PHP" expanded="false" />
+            <element signature="n#get_comments_job#0;n#Painel_admin#0;n#!!top" expanded="false" />
+            <element signature="e#17256#19861#0#PHP" expanded="false" />
+            <element signature="e#17510#18195#0#PHP" expanded="false" />
+            <element signature="e#17535#18194#0#PHP" expanded="false" />
+            <element signature="e#17987#18179#1#PHP" expanded="false" />
+            <element signature="e#18236#18879#0#PHP" expanded="false" />
+            <element signature="e#18295#18865#1#PHP" expanded="false" />
+            <element signature="e#19155#19778#0#PHP" expanded="false" />
+            <element signature="e#19254#19778#0#PHP" expanded="false" />
+            <element signature="e#19277#19590#0#PHP" expanded="false" />
+            <element signature="e#19337#19572#0#PHP" expanded="false" />
+            <element signature="e#19789#19861#0#PHP" expanded="false" />
+            <element signature="n#insert_comments_job#0;n#Painel_admin#0;n#!!top" expanded="false" />
+            <element signature="e#20040#22506#0#PHP" expanded="false" />
+            <element signature="e#20312#21485#0#PHP" expanded="false" />
+            <element signature="e#20337#21484#0#PHP" expanded="false" />
+            <element signature="e#21159#21469#1#PHP" expanded="false" />
+            <element signature="e#21528#22171#0#PHP" expanded="false" />
+            <element signature="e#21587#22157#1#PHP" expanded="false" />
+            <element signature="e#22434#22506#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -1,5 +1,5 @@
 <?php
-$this->load->library('Fetchuser');
+//$this->load->library('Fetchuser');
 $this->fetchuser->setauthtoken($this->session->userdata('verify')['auth_token']);
 
 foreach ($comentarios as $comentario) {
