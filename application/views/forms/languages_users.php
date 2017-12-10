@@ -55,17 +55,24 @@
     <br>
     <hr>
     <div class="text-right">
-        <h4><i class="fa fa-plus" data-toggle="modal" data-target="#new_languages"></i></h4>
+        <button type="button" class="btn btn-primary small"><i class="fa fa-plus" data-toggle="modal"
+                                                           data-target="#new_languages"></i></button>
     </div>
     <?php foreach ($idiomas as $idioma) { ?>
-        <div class="row"><h4><strong>Conheçimento do
+        <div class="row">
+            <h4><strong>Conheçimento do
                     Idioma <?php echo $idioma['attributes']['name'] ?>
-                    <?php echo anchor('Perfil_user/delete_idioma/' . $idioma['id'],
-                        '<i style="text-decoration: none;color: darkred" class="fa fa-trash"/> </i>') ?>
+                    <button type="button" class="btn btn-primary small"><i style="text-decoration: none;color: white"
+                                                                           class="fa fa-pencil" data-toggle="modal"
+                                                                           data-target=".edit_languages<?php echo $idioma['id'] ?>"></i>
+                    </button>
+                    <button type="button"
+                            class="btn btn-danger small"> <?php echo anchor('Perfil_user/delete_idioma/' . $idioma['id'],
+                            '<i style="text-decoration: none;color: white" class="fa fa-trash"/> </i>') ?></button>
 
-                    <i class="fa fa-edit" data-toggle="modal"
-                       data-target=".edit_languages<?php echo $idioma['id'] ?>"></i>
-                </strong></h4></div>
+
+                </strong></h4>
+        </div>
         Level : <?php echo $idioma['attributes']['level'] ?><br>
 
         <div class="modal fade edit_languages<?php echo $idioma['id'] ?>" tabindex="-1" role="dialog"

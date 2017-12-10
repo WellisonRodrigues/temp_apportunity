@@ -125,7 +125,7 @@
         if ($this->session->userdata('logado')['type'] == 'users') {
             ?>
             <div class="panel panel-default">
-                <div class="panel panel-heading">
+                <div class="panel-heading">
                     <div class="text-right">
                         <h4><i
                                     class="fa fa-pencil" data-toggle="modal" data-target="#myModal"></i>
@@ -141,12 +141,12 @@
                         <?php echo $profile['attributes']['region'] ?><br>
                         <div class="row"><?php echo $inscritos; ?> Inscritos</div>
                         <br>
-                        <div class="row">
-                            <?php echo anchor('perfil_user/editar', 'Tornar empresa', 'type="button" class="btn btn-primary"') ?>
-                        </div>
+<!--                        <div class="row">-->
+<!--                            --><?php //echo anchor('perfil_user/editar', 'Tornar empresa', 'type="button" class="btn btn-primary"') ?>
+<!--                        </div>-->
                     </div>
                 </div>
-                <div class="panel panel-body">
+                <div class="panel-body">
                     <?php $this->load->view('forms/languages_users') ?>
                 </div>
             </div>
