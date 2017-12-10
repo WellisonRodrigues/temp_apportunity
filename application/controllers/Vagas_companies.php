@@ -269,7 +269,7 @@ class Vagas_companies extends CI_Controller
         $exp_date = $this->input->post('exp_date');
         $idjob = $this->input->post('idjob');
         if ($this->input->post('edit_job') == 'salvar' and $this->input->post('idjob') != null) {
-            $retorno = $this->edit_vagas($title, $description, $exp_date, $idjob);
+            $retorno = $this->edit_job_ws($title, $description, $exp_date, $idjob);
             if (isset($retorno["err"]) && !empty($retorno["err"])) {
                 $data['alert'] =
                     [
@@ -358,8 +358,7 @@ class Vagas_companies extends CI_Controller
     }
 
 
-    public
-    function arrayCastRecursive($array)
+    public function arrayCastRecursive($array)
     {
         if (is_array($array)) {
             foreach ($array as $key => $value) {

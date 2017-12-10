@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1512949054;alert|a:2:{s:4:"type";s:7:"sucesso";s:7:"message";s:28:"Usuário logado com sucesso.";}__ci_vars|a:1:{s:5:"alert";s:3:"old";}logado|a:5:{s:2:"id";s:2:"19";s:4:"type";s:5:"users";s:6:"status";s:5:"basic";s:5:"email";s:13:"joao@joao.com";s:4:"name";N;}verify|a:1:{s:10:"auth_token";s:20:"R3WFtrC6yEtJjPJe2ckC";}
