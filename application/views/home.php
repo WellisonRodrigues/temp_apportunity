@@ -76,12 +76,12 @@ if ($image_my) {
                     <a href="" class="pull-left">
                         <img alt="image" src="<?php echo $image_final_ads ?>">
                     </a>
-                    <div class="pull-right">
-                        <button class="btn btn-primary small salvar_vaga" data-idjob="<?php echo $id_job; ?>">
-                            <i class="fa fa-edit <?php echo $id_job; ?>"></i> Salvar
-
-                        </button>
-                    </div>
+<!--                    <div class="pull-right">-->
+<!--                        <button class="btn btn-primary small salvar_vaga" data-idjob="--><?php //echo $id_job; ?><!--">-->
+<!--                            <i class="fa fa-edit --><?php //echo $id_job; ?><!--"></i> Salvar-->
+<!---->
+<!--                        </button>-->
+<!--                    </div>-->
                     <div class="media-body">
                         <a href="<?php echo base_url('Profiles/index/' . $id . '/' . $type) ?>">
                             <?php
