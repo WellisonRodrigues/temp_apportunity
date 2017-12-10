@@ -20,8 +20,8 @@
     <article>
         <div class="text-right">
             <p>
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#create_job">
-                    Publicar nova vaga <i class="fa fa-plus"></i>
+                <button type="button" class="btn btn-primary btn-small" data-toggle="modal" data-target="#create_job">
+                    Nova Vaga <i class="fa fa-plus"></i>
                 </button>
             </p>
         </div>
@@ -86,12 +86,18 @@
                     <a href="" class="pull-left">
                         <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a1.jpg">
                     </a>
-                    <div class="text-right">
+                    <div class="pull-right">
                         <strong>
-                            <i style="text-decoration: none;color: darkgreen" class="fa fa-edit" data-toggle="modal"
-                               data-target=".edit_job<?php echo $job_salvo['id'] ?>">Editar</i> 
-							<?php echo anchor('Vagas_companies/delete_job/' . $job_salvo['id'],'<i style="text-decoration: none;color: darkred" class="fa fa-trash"/>Excluir</i>',array('onclick' => "return confirm('Deseja realmente excluir ?')"))?>
-
+                            <button type="button"
+                                    class="btn btn-primary small" data-toggle="modal"
+                                    data-target=".edit_job<?php echo $job_salvo['id'] ?>"><i class="fa fa-edit"></i>
+                            </button>
+                            <button type="button"
+                                    class="btn btn-danger small" data-toggle="modal"
+                                    data-target=".edit_job<?php echo $job_salvo['id'] ?>">
+                                <?php echo anchor('Vagas_companies/delete_job/' . $job_salvo['id'], '<i class="fa fa-trash">
+                            </i>', array('onclick' => "return confirm('Deseja realmente excluir ?')")) ?>
+                            </button>
                         </strong>
                     </div>
 
@@ -121,7 +127,8 @@
             </div>
 
             <!-- Modal -->
-            <div class="modal fade edit_job<?php echo $job_salvo['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            <div class="modal fade edit_job<?php echo $job_salvo['id'] ?>" tabindex="-1" role="dialog"
+                 aria-labelledby="myModalLabel"
                  aria-hidden="true"
                  style="display: none;">
                 <?php echo form_open('Vagas_companies/edit_job', ['role' => 'form']);
@@ -187,12 +194,12 @@
     </article>
 </div>
 <script>
-function ConfirmDialog() {
-  var x=confirm("Are you sure to delete record?")
-  if (x) {
-    return true;
-  } else {
-    return false;
-  }
-}
+    function ConfirmDialog() {
+        var x = confirm("Are you sure to delete record?")
+        if (x) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 </script

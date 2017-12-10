@@ -24,9 +24,18 @@ print_r($this->session->userdata('logado')->id);
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+                    <?php if ($this->session->userdata('logado')['type'] == 'users') {
+
+                        $base_url = base_url('Painel_admin');
+
+                    } else {
+
+                        $base_url = base_url('Vagas_companies');;
+
+                    } ?>
                     <div class="metade-collor">
                         <div class="col-md-offset-3">
-                            <a class="navbar-brand" href="<?php echo base_url('Painel_admin') ?>">
+                            <a class="navbar-brand" href="<?php echo $base_url ?>">
                                 <img rel="icon"
                                      src="<?php echo base_url(IMAGES); ?>/pessoinha-50px.png"/></a>
                         </div>
