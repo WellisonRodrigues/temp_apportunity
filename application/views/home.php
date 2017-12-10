@@ -91,7 +91,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </a>
                     <div class="pull-right">
                         <button class="btn btn-primary small salvar_vaga" data-idjob="<?php echo $id_job; ?>">
-                            <i class="fa fa-edit <?php echo $id_job; ?>"></i> Salvar
+                            <i class="fa fa-save <?php echo $id_job; ?>"></i> Salvar
 
                         </button>
                     </div>

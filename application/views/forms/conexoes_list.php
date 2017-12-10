@@ -13,7 +13,7 @@
         <div class="col-md-8 col-md-offset-2 col-sm-offset-1 col-sm-10">
 
             <div class="panel panel-default">
-                <div class="panel panel-heading">
+                <div class="panel-heading">
                     <div class="row">
                         <div class="col-md-6 text-center">
                             <h3><a href="#tab_seguindo" data-toggle="tab"
@@ -25,7 +25,7 @@
                     </div>
                 </div>
 
-                <div class="panel panel-body">
+                <div class="panel-body">
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab_seguindo">
                             <div class="text-left">
