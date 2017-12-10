@@ -52,6 +52,85 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <?php
         //        $cont = 0;
         //        print_r($jobs->data);
+        foreach ($ads as $ads_row) {
+            $cont++;
+            $id_job = $ads_row["id"];
+            //$this->CI->like_list_job($id_job);
+            $curtiuJob = $funcao->like_list_job($id_job);
+            if ($curtiuJob != 0) {
+                $classJob = "dislike";
+                $corJob = "#FF5209";
+            } else {
+                $classJob = "curtir";
+                $corJob = "#1A4266";
+            }
+
+            //            $comentarios = $funcao->get_comments_job($id_job);
+            //r_dump($comentarios);
+            ///                            print_r($job['relationships']['company']['data']['id']);
+            foreach ($includes as $include) {
+                if ($include['id'] == $ads_row['relationships']['company']['data']['id']) {
+                    $name = $include['attributes']['name'];
+                    $image = $include['attributes']['image'];
+                    $type = $include['type'];
+                    $url = $include['attributes']['img']['url'];
+                    $id = $include['id'];
+                    if ($image) {
+                        $image_final = $image;
+                    } else {
+                        $image_final = 'data:image/png;base64,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
+';
+                    }
+                }
+            }
+            ?>
+            <div class="social-feed-box">
+                <div class="social-avatar">
+                    <a href="" class="pull-left">
+                        <img alt="image" src="<?php echo $image_final ?>">
+                    </a>
+                    <div class="pull-right">
+                        <button class="btn btn-primary small salvar_vaga" data-idjob="<?php echo $id_job; ?>">
+                            <i class="fa fa-edit <?php echo $id_job; ?>"></i> Salvar
+
+                        </button>
+                    </div>
+                    <div class="media-body">
+                        <a href="<?php echo base_url('Profiles/index/' . $id . '/' . $type) ?>">
+                            <?php
+                            echo $name;
+                            ?>
+
+                        </a>
+                        <small class="text-muted"><?php echo date('d \of M', strtotime($ads_row['attributes']['published-at'])) ?>
+                        </small>
+                    </div>
+                </div>
+                <div class="social-body">
+                    <h4> <?php echo $ads_row['attributes']['title'] ?></h4>
+                    <p>
+                        <?php echo $ads_row['attributes']['description'] ?>
+                        <br>
+                    </p>
+                    <!--                    <small class="text-muted">Vaga expira-->
+                    <!--                        em: --><?php //echo date('d/m/Y H:i:s', strtotime($job['attributes']['exp-date'])) ?>
+                    <!--                    </small>-->
+                    <?php if ($ads_row['attributes']['image']['url']) { ?>
+                        <div class="row box-footer">
+                            <div class="col-md-offset-1 col-md-6">
+                                <?php echo $ads_row['attributes']['image'] ?>
+                            </div>
+
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
+            <?php
+        } ?>
+
+        <?php
+        //        $cont = 0;
+        //        print_r($jobs->data);
         foreach ($jobs as $job) {
             $cont++;
             $id_job = $job["id"];
@@ -129,102 +208,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <h4 class="coment" data-idjob="<?php echo $id_job; ?>"
                                 data-status="<?php echo $response['status'] ?>"><img
                                         src="<?php echo base_url(IMAGES); ?>/logos/comentar.png">
-                            </h4>
-                            <!--                    <button class="btn btn-white btn-xs"><i class="fa fa-share"></i></button>-->
-                        </div>
-                        <!--                </div>-->
-                    </div>
-                </div>
-                <div class="social-footer content <?php echo $id_job; ?>">
-                    <div id="resultado<?php echo $id_job; ?>">
-                    </div>
-
-                    <div class="social-comment">
-                        <a href="" class="pull-left">
-                            <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a3.jpg">
-                        </a>
-                        <div class="media-body">
-                            <textarea class="form-control comentario_<?php echo $id_job; ?>" name="insertComments"
-                                      placeholder="Write comment..."></textarea>
-                            <input type="button" class="comentar" data-idjob="<?php echo $id_job; ?>" value="Comentar"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <?php
-        } ?>
-        <?php
-        //        $cont = 0;
-        //        print_r($jobs->data);
-        foreach ($ads as $ads_row) {
-            $cont++;
-            $id_job = $ads_row["id"];
-            //$this->CI->like_list_job($id_job);
-            $curtiuJob = $funcao->like_list_job($id_job);
-            if ($curtiuJob != 0) {
-                $classJob = "dislike";
-                $corJob = "#FF5209";
-            } else {
-                $classJob = "curtir";
-                $corJob = "#1A4266";
-            }
-
-//            $comentarios = $funcao->get_comments_job($id_job);
-            //r_dump($comentarios);
-            ///                            print_r($job['relationships']['company']['data']['id']);
-            foreach ($includes as $include) {
-                if ($include['id'] == $ads_row['relationships']['company']['data']['id']) {
-                    $name = $include['attributes']['name'];
-                    $type = $include['type'];
-                    $url = $include['attributes']['img']['url'];
-                    $id = $include['id'];
-                }
-            }
-            ?>
-            <div class="social-feed-box">
-                <div class="social-avatar">
-                    <a href="" class="pull-left">
-                        <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a1.jpg">
-                    </a>
-                    <div class="pull-right">
-                        <button class="btn btn-primary small salvar_vaga" data-idjob="<?php echo $id_job; ?>">
-                            <i class="fa fa-edit <?php echo $id_job; ?>"></i> Salvar
-
-                        </button>
-                    </div>
-                    <div class="media-body">
-                        <a href="<?php echo base_url('Profiles/index/' . $id . '/' . $type) ?>">
-                            <?php
-                            echo $name;
-                            ?>
-
-                        </a>
-                        <small class="text-muted"><?php echo date('d \of M', strtotime($ads_row['attributes']['published-at'])) ?>
-                        </small>
-                    </div>
-                </div>
-                <div class="social-body">
-                    <h4> <?php echo $ads_row['attributes']['title'] ?></h4>
-                    <p>
-                        <?php echo $ads_row['attributes']['description'] ?>
-                        <br>
-                    </p>
-                    <!--                    <small class="text-muted">Vaga expira-->
-                    <!--                        em: --><?php //echo date('d/m/Y H:i:s', strtotime($job['attributes']['exp-date'])) ?>
-                    <!--                    </small>-->
-                    <hr>
-                    <div class="row box-footer">
-                        <div class="col-md-offset-1 col-md-6">
-                            <h4 class="curtir <?php echo $id_job; ?>" data-idjob="<?php echo $id_job; ?>"
-                                data-idlike="<?php echo $curtiuJob ?>" data-type="<?php echo $classJob; ?>"
-                                data-tipo="<?php echo $ads['type']; ?>">
-                                <i class="fa fa-heart <?php echo $id_job; ?>"
-                                   style="color:<?php echo $corJob; ?>"></i> Gostei
-                            </h4>
-                        </div>
-                        <div class="col-md-5">
-                            <h4 class="coment" data-idjob="<?php echo $id_job; ?>"
-                                data-status="<?php echo $response['status'] ?>"><i class="fa fa-comment-o"></i> Comentar
                             </h4>
                             <!--                    <button class="btn btn-white btn-xs"><i class="fa fa-share"></i></button>-->
                         </div>

@@ -19,7 +19,7 @@ class Painel_admin extends Follows
             redirect('sair');
         }
 //        $this->output->enable_profiler(TRUE);
-
+//        $this->load->library('Fetchcompany');
     }
 
     public function index()
