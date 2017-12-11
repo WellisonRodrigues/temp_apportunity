@@ -25,6 +25,8 @@ class Painel_admin extends Follows
     public function index()
 
     {
+                $this->output->enable_profiler(TRUE);
+
         $this->load->library('Fetchcompany');
 
         $retorno = $this->get_jobs();

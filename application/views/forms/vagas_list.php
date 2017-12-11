@@ -23,6 +23,7 @@ $this->fetchjob->setauthtoken($this->session->userdata('verify')['auth_token']);
                 foreach ($jobs as $job_salvo) {
 
                     $idjob = $job_salvo['relationships']['job']['data']['id'];
+                    $id_saved_job = $job_salvo['id'];
 
                     $this->fetchjob->setidjob($idjob);
 
@@ -43,7 +44,7 @@ $this->fetchjob->setauthtoken($this->session->userdata('verify')['auth_token']);
 
                                 </a>
                                 <div class="pull-right">
-                                    <?php echo anchor('vagas/delete_saved_jobs/' . $idjob,
+                                    <?php echo anchor('vagas/delete_saved_jobs/' . $id_saved_job,
                                         '<button class="btn btn-danger small">Excluir</button>') ?>
                                     <?php echo anchor('vagas/create_job_application/' . $idjob,
                                         '<button class="btn btn-primary small">Candidatar-se</button>') ?>
@@ -81,7 +82,8 @@ $this->fetchjob->setauthtoken($this->session->userdata('verify')['auth_token']);
             if ($jobs_application) {
                 foreach ($jobs_application as $job) {
                     $idjob = $job['relationships']['job']['data']['id'];
-
+                    $id_job_application = $job['id'];
+//                    print_r($job['relationships']);
                     $this->fetchjob->setidjob($idjob);
 
                     $this->fetchjob->setjobattributes($this->fetchjob->getidjob(), $this->fetchjob->getauthtoken());
@@ -101,7 +103,7 @@ $this->fetchjob->setauthtoken($this->session->userdata('verify')['auth_token']);
 
                                 </a>
                                 <div class="pull-right">
-                                    <?php echo anchor('vagas/save_job_application/' . $idjob,
+                                    <?php echo anchor('vagas/delete_jobs_application/' . $id_job_application,
                                         '<button class="btn btn-danger small">Excluir</button>') ?>
                                 </div>
                                 <!--                            <div class="text-right">-->

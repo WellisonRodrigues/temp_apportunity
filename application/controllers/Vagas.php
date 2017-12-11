@@ -244,6 +244,52 @@ class Vagas extends CI_Controller
         }
     }
 
+    public function delete_jobs_application($idjob)
+    {
+
+        if ($idjob) {
+            $this->delete_jobs_application_ws($idjob);
+            redirect('Vagas/index');
+        }
+    }
+
+    private function delete_jobs_application_ws($idjob)
+    {
+        if ($idjob) {
+            if ($idjob > 0 && !empty($idjob)) {
+                $aut_code = $this->session->userdata('verify')['auth_token'];
+                $curl = curl_init();
+
+                curl_setopt_array($curl, array(
+                    CURLOPT_PORT => "3000",
+                    CURLOPT_URL => "http://34.229.150.76:3000/api/v1/job_applications/$idjob",
+                    CURLOPT_RETURNTRANSFER => true,
+                    CURLOPT_ENCODING => "",
+                    CURLOPT_MAXREDIRS => 10,
+                    CURLOPT_TIMEOUT => 30,
+                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                    CURLOPT_CUSTOMREQUEST => "DELETE",
+                    CURLOPT_HTTPHEADER => array(
+                        "cache-control: no-cache",
+                        "postman-token: 99669bb3-e015-c71e-2c2d-71ac9ff2f92e",
+                        "x-auth-token: $aut_code"
+                    ),
+                ));
+
+                $response = curl_exec($curl);
+                $err = curl_error($curl);
+
+                curl_close($curl);
+
+                if ($err) {
+                    echo "cURL Error #:" . $err;
+                } else {
+                    echo $response;
+                }
+            }
+        }
+    }
+
     public function arrayCastRecursive($array)
     {
         if (is_array($array)) {
