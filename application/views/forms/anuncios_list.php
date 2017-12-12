@@ -84,7 +84,7 @@
                         <button type="button"
                                 class="btn btn-danger small remover" data-toggle="modal" data-codigo="<?php echo $id ?>"
                                 data-target=".edit_job<?php echo $id ?>">
-                            <?php echo anchor('Vagas_companies/delete_job/'.$id.'' . $job_salvo['id'], '<i class="fa fa-trash">
+                            <?php echo anchor('Anuncios/deletar/'.$id.'' . $job_salvo['id'], '<i class="fa fa-trash">
                             </i>') ?>
                         </button>
                     </strong>
@@ -118,6 +118,56 @@
 
             </div>
         </div>
+		
+		
+		<!-- Modal -->
+            <div class="modal fade edit_job<?php echo $anuncio['id'] ?>" tabindex="-1" role="dialog"
+                 aria-labelledby="myModalLabel"
+                 aria-hidden="true"
+                 style="display: none;">
+                <?php echo form_open('Anuncios/anuncios_edit', ['role' => 'form']);
+                ?>
+                <div class="modal-dialog">
+
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="myModalLabel">Nova Vaga</h4>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="form-group">
+								<label>Imagem (JPG)</label>
+								<input class="form-control" type="file" name="file" autofocus
+									   value="" autocomplete="off"
+								>
+							</div>
+
+							<div class="form-group">
+								<label>Titulo</label>
+								<input class="form-control" placeholder="Titulo" type="text" name="title" autofocus
+									   value="<?php echo $anuncio['attributes']['title'] ?>" autocomplete="off"
+									   required>
+							</div>
+							<div class="form-group">
+								<label>Descrição</label>
+								<textarea class="form-control" placeholder="Descricao" name="description" autofocus
+										  autocomplete="off"
+										  required><?php echo $anuncio['attributes']['description'] ?></textarea>
+							</div>
+                            <input type="hidden" name="idjob" value="<?php echo $anuncio['id'] ?>">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                            <input type="submit" class="btn btn-primary" name="edit_job"
+                                   value="salvar">
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <?php echo form_close() ?>
+                <!-- /.modal-dialog -->
+            </div>
 
         <!---->
         <!--    <div class="tab-content">-->
