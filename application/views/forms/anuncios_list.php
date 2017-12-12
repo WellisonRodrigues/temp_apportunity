@@ -155,11 +155,11 @@
 										  autocomplete="off"
 										  required><?php echo $anuncio['attributes']['description'] ?></textarea>
 							</div>
-                            <input type="hidden" name="idjob" value="<?php echo $anuncio['id'] ?>">
+                            <input type="hidden" name="id_anuncio" value="<?php echo $anuncio['id'] ?>">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                            <input type="submit" class="btn btn-primary" name="edit_job"
+                            <input type="submit" class="btn btn-primary" name="edit_anuncio"
                                    value="salvar">
                         </div>
                     </div>

@@ -209,9 +209,102 @@ class Anuncios extends CI_Controller
     public function anuncios_edit()
     {
 
-        $data['view'] = 'forms/anuncios_edit';
-        $this->load->view('template_admin/core', $data);
+        $title = $this->input->post('title');
+        $description = $this->input->post('description');
+        $id_anuncio = $this->input->post('id_anuncio');
+        if($this->input->post('file') != null){
+            $image = 'data:image/png;base64,' . base64_encode($this->input->post('file'));
+            $image_post = ',
+            \n      \"image\": \"'.$image.'\"';
+        }
 
+        $aut_code = $this->session->userdata('verify')['auth_token'];
+
+        if ($this->input->post('edit_anuncio') == 'salvar' and $this->input->post('id_anuncio') != null) {
+
+            $curl = curl_init();
+            curl_setopt_array($curl, array(
+                CURLOPT_PORT => "3000",
+                CURLOPT_URL => "http://34.229.150.76:3000/api/v1/ads/$id_anuncio",
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => "",
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 30,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => "PUT",
+                CURLOPT_POSTFIELDS => "{\n  \"data\": {\n   \"type\": \"ads\", \n   \"id\": \"$id_anuncio\", 
+            \n   \"attributes\": {
+            \n      \"title\": \"$title\",
+            \n      \"description\": \"$description\"
+            $image_post
+                }
+            \n  }\n}",
+
+                CURLOPT_HTTPHEADER => array(
+                    "accept: application/vnd.api+json",
+                    "cache-control: no-cache",
+                    "content-type: application/vnd.api+json",
+                    "postman-token: e76d2ba7-3a09-53a2-46d3-fa4215dd792a",
+                    "x-auth-token: $aut_code"
+                ),
+            ));
+            $headers = [];
+            curl_setopt($curl, CURLOPT_HEADERFUNCTION,
+                function ($curl, $header) use (&$headers) {
+                    $len = strlen($header);
+                    $header = explode(':', $header, 2);
+                    if (count($header) < 2) // ignore invalid headers
+                        return $len;
+
+                    $name = strtolower(trim($header[0]));
+                    if (!array_key_exists($name, $headers))
+                        $headers[$name] = [trim($header[1])];
+                    else
+                        $headers[$name][] = trim($header[1]);
+
+                    return $len;
+                }
+            );
+
+            $response = curl_exec($curl);
+            $err = curl_error($curl);
+            curl_close($curl);
+
+            $array = $this->arrayCastRecursive($response);
+            $retorno['response'] = $array;
+            $retorno['headers'] = $headers;
+            $retorno['err'] = $err;
+
+            if (isset($retorno["err"]) && !empty($retorno["err"])) {
+                $data['alert'] =
+                    [
+                        'type' => 'erro',
+                        'message' => 'Problemas no servidor. Entrar contato com a equipe de ti.'
+                    ];
+                $this->session->set_flashdata('alert', $data['alert']);
+                redirect('Anuncios');
+            }
+            if (isset(json_decode($retorno["response"])->errors[0])) {
+                $data['alert'] =
+                    [
+                        'type' => 'erro',
+                        'message' => 'Erro ao criar publicação de Vaga'
+                    ];
+                $this->session->set_flashdata('alert', $data['alert']);
+                redirect('Anuncios');
+            } else {
+                $data['alert'] =
+                    [
+                        'type' => 'sucesso',
+                        'message' => 'Anuncio alterado com sucesso.'
+                    ];
+                $this->session->set_flashdata('alert', $data['alert']);
+                redirect('Anuncios/index');
+            }
+
+        }
+
+        redirect('Anuncios/index');
     }
 
     public function arrayCastRecursive($array)
