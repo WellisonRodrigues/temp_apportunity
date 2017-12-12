@@ -68,7 +68,7 @@
     <!--    <i class="fa fa-plus" data-toggle="modal" data-target="#myModal"> Cadastrar Anuncio</i>-->
     <?php
     foreach ($anuncios as $anuncio) {
-        //var_dump($anuncio);
+      //  var_dump($anuncio);
         ?>
         <div class="social-feed-box">
             <div class="social-avatar">
@@ -106,6 +106,7 @@
                     <?php echo $anuncio["attributes"]["description"] ?>
                     <br>
                 </p>
+				
                 <hr>
                 <img src="<?php echo $anuncio["attributes"]["image"]['url'] ?>" height="80px"
                      alt="<?php echo $anuncio["attributes"]["title"] ?>"/>

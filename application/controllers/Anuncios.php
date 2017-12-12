@@ -26,7 +26,9 @@ class Anuncios extends CI_Controller
     public function anuncios_list()
     {
         $aut_code = $this->session->userdata('verify')['auth_token'];
-        $type = $this->session->userdata("logado")->type;
+        $type = $this->session->userdata("logado")["type"];
+        $id_company = $this->session->userdata("logado")["id"];
+		
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
@@ -75,8 +77,14 @@ class Anuncios extends CI_Controller
         $resp['response'] = $array;
         $resp['headers'] = $headers;
         $resp['err'] = $err;
-        $data["anuncios"] =  $array["data"];
-
+		$anuncios = array();
+		foreach($array["data"] as $v1){
+			if($v1["relationships"]["company"]["data"]["id"] == $id_company){
+				$anuncios[] =  $v1;
+			}
+		}
+        
+		$data["anuncios"] = $anuncios;
         $data['view'] = 'forms/anuncios_list';
         $this->load->view('template_admin/core', $data);
 
