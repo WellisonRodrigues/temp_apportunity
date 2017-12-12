@@ -68,9 +68,9 @@
     <!--    <i class="fa fa-plus" data-toggle="modal" data-target="#myModal"> Cadastrar Anuncio</i>-->
     <?php
     foreach ($anuncios as $anuncio) {
-      //  var_dump($anuncio);
+        $id  = $anuncio["id"];
         ?>
-        <div class="social-feed-box">
+        <div class="social-feed-box" id="idanuncio_<?php echo $id; ?>">
             <div class="social-avatar">
                 <a href="" class="pull-left">
                     <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a1.jpg">
@@ -79,13 +79,13 @@
                     <strong>
                         <button type="button"
                                 class="btn btn-primary small" data-toggle="modal"
-                                data-target=".edit_job<?php echo $job_salvo['id'] ?>"><i class="fa fa-edit"></i>
+                                data-target=".edit_job<?php echo $id ?>"><i class="fa fa-edit"></i>
                         </button>
                         <button type="button"
-                                class="btn btn-danger small" data-toggle="modal"
-                                data-target=".edit_job<?php echo $job_salvo['id'] ?>">
-                            <?php echo anchor('Vagas_companies/delete_job/' . $job_salvo['id'], '<i class="fa fa-trash">
-                            </i>', array('onclick' => "return confirm('Deseja realmente excluir ?')")) ?>
+                                class="btn btn-danger small remover" data-toggle="modal" data-codigo="<?php echo $id ?>"
+                                data-target=".edit_job<?php echo $id ?>">
+                            <?php echo anchor('Vagas_companies/delete_job/'.$id.'' . $job_salvo['id'], '<i class="fa fa-trash">
+                            </i>') ?>
                         </button>
                     </strong>
                 </div>
@@ -157,8 +157,8 @@
             $('.remover').bind('click', function () {
                 if (confirm("Deseja realmente exlcuir?")) {
                     //$(".fa-heart-o").css("color", "red");
-                    var idanuncio = $(this).attr('href');
-                    $('tr#' + idanuncio).remove();
+                    var idanuncio = $(this).data('codigo');
+                    $('#idanuncio_' + idanuncio).remove();
                     $.post('Anuncios/deletar', {idanuncio: idanuncio}, function (data) {
                     }, 'json');
                     return false;
