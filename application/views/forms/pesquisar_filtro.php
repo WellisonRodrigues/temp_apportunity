@@ -9,7 +9,7 @@ echo base_url();
 ?>
 <div class="col-md-8 col-md-offset-2 col-sm-offset-1 col-sm-10">
     <div class="row">
-        <?php echo form_open('Pesquisar/listar', array('id'=>'formulario','method'=>'post','role' => 'form'));
+        <?php echo form_open('Pesquisar/listar', array('id' => 'formulario', 'method' => 'post', 'role' => 'form'));
         ?>
         <div class="col-lg-6">
             <div class="form-group">
@@ -22,8 +22,9 @@ echo base_url();
         </div>
         <div class="col-lg-6">
             <div class="input-group">
-                <input type="text" class="form-control" id="regiao" name="regiao" placeholder="Região (São Paulo, Belo Horizonte , Rio de Janeiro)">
-                    <span class="input-group-btn">
+                <input type="text" class="form-control" id="regiao" name="regiao"
+                       placeholder="Região (São Paulo, Belo Horizonte , Rio de Janeiro)">
+                <span class="input-group-btn">
                         <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
                   </span>
             </div><!-- /input-group -->
@@ -32,15 +33,24 @@ echo base_url();
     </div><!-- /.row -->
 
     <div class="row">
-        <div class="social-feed-box">
-            <div class="social-avatar">
-                <a href="" class="pull-left">
-                    <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a1.jpg">
-                </a>
-                <div class="media-body">
-                    <a href="#">
-                        NOME
-                    </a>
+        <div class="col-md-12">
+            <div class="panel panel-body">
+                    <div class="col-md-3">
+                        <div class="jumbotron">
+                            <div class="text-center">
+                                <img src="<?php echo base_url(IMAGES); ?>/profile.jpg"
+                                     class="img-circle"
+                                     width="50%"
+                                     height="50%"><br>
+                                <b> <?php echo $follow['attributes']['name'] ?><br>
+                                    <?php echo $follow['attributes']['age'] ?> Anos</b><br>
+                                <button type="button" onclick="<?php echo $status ?>(<?php echo $follow['id'] ?>)"
+                                        class="<?php echo $class ?> <?php echo $status ?>">
+                                    <?php echo $status ?>
+                                </button>
+
+                            </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -48,13 +58,13 @@ echo base_url();
 </div>
 <script>
     $(function () {
-        $("form#formulario").submit(function(e) {
+        $("form#formulario").submit(function (e) {
             var type = $("#type").val();
             var regiao = $("#regiao").val();
-            $.post('<?php echo base_url()?>Pesquisar/listar', {regiao:regiao,type:type},function(data){
-            })
+            $.post('<?php echo base_url()?>Pesquisar/listar', {regiao: regiao, type: type}, function (data) {
+            });
             return false;
         })
     })
 </script>
-</div>
+<!--</div>-->
