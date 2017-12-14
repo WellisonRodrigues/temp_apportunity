@@ -11,6 +11,7 @@ class Pesquisar extends CI_Controller
 
     public function index()
     {
+        echo $aut_code = $this->session->userdata('verify')['auth_token'];
         $data['view'] = 'forms/pesquisar_filtro';
         $this->load->view('template_admin/core', $data);
     }
@@ -27,20 +28,17 @@ class Pesquisar extends CI_Controller
         }
 
         if (isset($retorno["err"]) && !empty($retorno["err"])) {
-            $data['alert'] =
-                [
-                    'type' => 'erro',
-                    'message' => 'Problemas no servidor. Entrar contato com a equipe de ti.'
-                ];
+            $data['alert'] = [
+                 'type' => 'erro',
+                 'message' => 'Problemas no servidor. Entrar contato com a equipe de ti.'
+            ];
+
             $this->session->set_flashdata('alert', $data['alert']);
-            //redirect('Perfil_user');
         }
-        print_r($retorno["response"]);
-        if (!empty($retorno['response']['data'])) {
-            echo json_encode($retorno['response']['data']);
-        }
-        /*$data['view'] = 'forms/pesquisar_filtro';
-        $this->load->view('template_admin/core', $data);*/
+
+        $data['view'] = 'forms/pesquisar_filtro';
+        $data['response'] = $retorno['response']['data'];
+        $this->load->view('template_admin/core',$data);
 
     }
 

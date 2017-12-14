@@ -5,7 +5,6 @@
  * Date: 21/11/2017
  * Time: 00:01
  */
-echo base_url();
 ?>
 <div class="col-md-8 col-md-offset-2 col-sm-offset-1 col-sm-10">
     <div class="row">
@@ -35,28 +34,31 @@ echo base_url();
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-body">
-                    <div class="col-md-3">
-                        <div class="jumbotron">
-                            <div class="text-center">
-                                <img src="<?php echo base_url(IMAGES); ?>/profile.jpg"
-                                     class="img-circle"
-                                     width="50%"
-                                     height="50%"><br>
-                                <b> <?php echo $follow['attributes']['name'] ?><br>
-                                    <?php echo $follow['attributes']['age'] ?> Anos</b><br>
-                                <button type="button" onclick="<?php echo $status ?>(<?php echo $follow['id'] ?>)"
-                                        class="<?php echo $class ?> <?php echo $status ?>">
-                                    <?php echo $status ?>
-                                </button>
-
-                            </div>
+                <?php print_r($response); ?>
+                <?php foreach ($response as $item){?>
+                <div class="col-md-3">
+                    <div class="jumbotron">
+                        <div class="text-center">
+                            <img src="<?php echo base_url(IMAGES); ?>/profile.jpg"
+                                 class="img-circle"
+                                 width="50%"
+                                 height="50%"><br>
+                            <b> <?php echo $follow['attributes']['name'] ?><br>
+                                <?php echo $follow['attributes']['age'] ?> Anos</b><br>
+                            <button type="button" onclick="<?php echo $status ?>(<?php echo $follow['id'] ?>)"
+                                    class="<?php echo $class ?> <?php echo $status ?>">
+                                <?php echo $status ?>
+                            </button>
+                        </div>
                     </div>
                 </div>
+                <?php } ?>
             </div>
         </div>
     </div>
 </div>
 <script>
+    /*
     $(function () {
         $("form#formulario").submit(function (e) {
             var type = $("#type").val();
@@ -65,6 +67,6 @@ echo base_url();
             });
             return false;
         })
-    })
+    })*/
 </script>
 <!--</div>-->
