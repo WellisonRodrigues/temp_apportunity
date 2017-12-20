@@ -34,21 +34,19 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-body">
-                <?php print_r($response); ?>
-                <?php foreach ($response as $item){?>
+                <?php foreach ($response["included"] as $item){?>
                 <div class="col-md-3">
                     <div class="jumbotron">
                         <div class="text-center">
-                            <img src="<?php echo base_url(IMAGES); ?>/profile.jpg"
+                            <img src="<?php echo $item['attributes']['image'] ?>"
                                  class="img-circle"
                                  width="50%"
                                  height="50%"><br>
-                            <b> <?php echo $follow['attributes']['name'] ?><br>
-                                <?php echo $follow['attributes']['age'] ?> Anos</b><br>
-                            <button type="button" onclick="<?php echo $status ?>(<?php echo $follow['id'] ?>)"
-                                    class="<?php echo $class ?> <?php echo $status ?>">
-                                <?php echo $status ?>
-                            </button>
+                            <b> <?php echo ucfirst($item['attributes']['name']) ?><br>
+                                <?php echo $item['attributes']['region'] ?><br>
+                                <?php echo ucfirst($item['attributes']['carrer']) ?><br>
+                                <?php echo $item['attributes']['age'] ?> Anos</b><br>
+                            <button type="button">Seguir</button>
                         </div>
                     </div>
                 </div>

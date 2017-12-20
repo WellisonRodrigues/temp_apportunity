@@ -37,7 +37,7 @@ class Pesquisar extends CI_Controller
         }
 
         $data['view'] = 'forms/pesquisar_filtro';
-        $data['response'] = $retorno['response']['data'];
+        $data['response'] = $retorno['response'];
         $this->load->view('template_admin/core',$data);
 
     }
