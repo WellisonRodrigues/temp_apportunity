@@ -178,13 +178,16 @@ if ($image_my) {
                         <?php echo $job['attributes']['description'] ?>
                         <br>
                     </p>
+					<p>
+						<?php echo $funcao->quantidade_curtidas_jobs($id_job); ?> gostaram dessa publicação.
+					</p>
                     <!--                    <small class="text-muted">Vaga expira-->
                     <!--                        em: --><?php //echo date('d/m/Y H:i:s', strtotime($job['attributes']['exp-date'])) ?>
                     <!--                    </small>-->
                     <hr>
                     <div class="row box-footer">
                         <div class="col-md-offset-1 col-md-6">
-                            <h4 class="curtir <?php echo $id_job; ?>" data-idjob="<?php echo $id_job; ?>"
+						    <h4 class="curtir <?php echo $id_job; ?>" data-idjob="<?php echo $id_job; ?>"
                                 data-idlike="<?php echo $curtiuJob ?>" data-type="<?php echo $classJob; ?>"
                                 data-tipo="<?php echo $job['type']; ?>">
                                 <img class="curtir <?php echo $id_job; ?>"
