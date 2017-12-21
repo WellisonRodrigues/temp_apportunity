@@ -428,7 +428,26 @@ class Follows extends CI_Controller
 
 
     }
-    public function arrayCastRecursive($array)
+    
+	
+	public function follow(){
+		
+        $aut_code = $this->session->userdata('verify')['auth_token'];
+		$id_follow = $this->input->post('id_follow');
+		
+		$retorno = $this->create_follows_ws($id_follow);
+		var_dump($retorno);
+	}	
+	
+	public function unfollow(){
+		
+        $aut_code = $this->session->userdata('verify')['auth_token'];
+		$id_seguir = $this->input->post('id');
+
+	}
+	
+	
+	public function arrayCastRecursive($array)
     {
         if (is_array($array)) {
             foreach ($array as $key => $value) {
