@@ -46,7 +46,7 @@
                                 <?php echo $item['attributes']['region'] ?><br>
                                 <?php echo ucfirst($item['attributes']['carrer']) ?><br>
                                 <?php echo $item['attributes']['age'] ?> Anos</b><br>
-                            <button type="button">Seguir</button>
+                            <button type="button" data-codigo="<?php echo $item['id'] ?>" class="btnseguir">Seguir</button>
                         </div>
                     </div>
                 </div>
@@ -56,15 +56,22 @@
     </div>
 </div>
 <script>
-    /*
+    
     $(function () {
-        $("form#formulario").submit(function (e) {
-            var type = $("#type").val();
-            var regiao = $("#regiao").val();
-            $.post('<?php echo base_url()?>Pesquisar/listar', {regiao: regiao, type: type}, function (data) {
+		$(".btnseguir").on('click',function(){
+			var id_follow = $(this).data("codigo");
+			alert(id_follow);
+			$.post('<?php echo base_url()?>Follows/follow', {id_follow: id_follow}, function (data) {
+				
             });
-            return false;
-        })
-    })*/
+		})
+		$(".btnunfollow").on('click',function(){
+			var id_follow = $(this).data("codigo");
+			alert(id_follow);
+			$.post('<?php echo base_url()?>Follows/unfollow', {id_follow: id_follow}, function (data) {
+				
+            });
+		})
+    })
 </script>
 <!--</div>-->
