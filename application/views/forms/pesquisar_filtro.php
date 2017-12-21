@@ -34,22 +34,29 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-body">
-                <?php foreach ($response["included"] as $item){?>
-                <div class="col-md-3">
-                    <div class="jumbotron">
-                        <div class="text-center">
-                            <img src="<?php echo $item['attributes']['image'] ?>"
-                                 class="img-circle"
-                                 width="50%"
-                                 height="50%"><br>
-                            <b> <?php echo ucfirst($item['attributes']['name']) ?><br>
-                                <?php echo $item['attributes']['region'] ?><br>
-                                <?php echo ucfirst($item['attributes']['carrer']) ?><br>
-                                <?php echo $item['attributes']['age'] ?> Anos</b><br>
-                            <button type="button">Seguir</button>
+                <?php foreach ($response["included"] as $item) {
+                    if ($item['type'] == 'profiles') {
+                        $type = 'users';
+                    } else {
+                        $type = 'companies';
+                    }
+                    ?>
+                    <div class="col-md-3">
+                        <div class="jumbotron">
+                            <div class="text-center">
+                                <img src="<?php echo $item['attributes']['image'] ?>"
+                                     class="img-circle"
+                                     width="50%"
+                                     height="50%"><br>
+                                <b> <?php echo anchor('Profiles/index/' . $item['id'] . '/' . $type, ucfirst($item['attributes']['name'])) ?>
+                                    <br>
+                                    <?php echo $item['attributes']['region'] ?><br>
+                                    <?php echo ucfirst($item['attributes']['carrer']) ?><br>
+                                    <?php echo $item['attributes']['age'] ?> Anos</b><br>
+                                <button type="button">Seguir</button>
+                            </div>
                         </div>
                     </div>
-                </div>
                 <?php } ?>
             </div>
         </div>
@@ -57,14 +64,14 @@
 </div>
 <script>
     /*
-    $(function () {
-        $("form#formulario").submit(function (e) {
-            var type = $("#type").val();
-            var regiao = $("#regiao").val();
-            $.post('<?php echo base_url()?>Pesquisar/listar', {regiao: regiao, type: type}, function (data) {
-            });
-            return false;
-        })
-    })*/
+     $(function () {
+     $("form#formulario").submit(function (e) {
+     var type = $("#type").val();
+     var regiao = $("#regiao").val();
+     $.post('Pesquisar/listar', {regiao: regiao, type: type}, function (data) {
+     });
+     return false;
+     })
+     })*/
 </script>
 <!--</div>-->

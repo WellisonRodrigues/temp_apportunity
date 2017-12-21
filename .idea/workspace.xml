@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c6315125-2236-4753-8b25-d0ed219b9684" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Mensagens.php" afterPath="$PROJECT_DIR$/application/controllers/Mensagens.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/forms/pesquisar_filtro.php" afterPath="$PROJECT_DIR$/application/views/forms/pesquisar_filtro.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/forms/profiles.php" afterPath="$PROJECT_DIR$/application/views/forms/profiles.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session/ci_session9tgj8h7daoea1reqstenlkqlk3ts2aj5" afterPath="$PROJECT_DIR$/session/ci_session9tgj8h7daoea1reqstenlkqlk3ts2aj5" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session/ci_sessionufem6gh6dn95k8vesnkorfjoienc21l5" afterPath="$PROJECT_DIR$/session/ci_sessionufem6gh6dn95k8vesnkorfjoienc21l5" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -176,8 +176,8 @@
       <file leaf-file-name="Profiles.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Profiles.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-25">
-              <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+            <state relative-caret-position="162">
+              <caret line="22" column="28" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="28" />
               <folding>
                 <element signature="e#7#91#0#PHP" expanded="false" />
                 <element signature="e#591#1267#0#PHP" expanded="false" />
@@ -199,8 +199,8 @@
       <file leaf-file-name="profiles.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/forms/profiles.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="36" column="19" lean-forward="false" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+            <state relative-caret-position="275">
+              <caret line="62" column="22" lean-forward="true" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -209,9 +209,12 @@
       <file leaf-file-name="pesquisar_filtro.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/forms/pesquisar_filtro.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="59" column="19" lean-forward="false" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
-              <folding />
+            <state relative-caret-position="339">
+              <caret line="50" column="69" lean-forward="false" selection-start-line="50" selection-start-column="69" selection-end-line="50" selection-end-column="69" />
+              <folding>
+                <marker date="1513815705465" expanded="true" signature="2774:2805" ph="/*...*/" />
+                <marker date="1513815705465" expanded="true" signature="2774:2930" ph="/*...*/" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -323,8 +326,8 @@
         <option value="$PROJECT_DIR$/application/controllers/Vagas.php" />
         <option value="$PROJECT_DIR$/application/views/forms/vagas_list.php" />
         <option value="$PROJECT_DIR$/application/views/home.php" />
-        <option value="$PROJECT_DIR$/application/views/forms/pesquisar_filtro.php" />
         <option value="$PROJECT_DIR$/application/controllers/Mensagens.php" />
+        <option value="$PROJECT_DIR$/application/views/forms/pesquisar_filtro.php" />
         <option value="$PROJECT_DIR$/application/views/forms/profiles.php" />
       </list>
     </option>
@@ -607,15 +610,15 @@
       <workItem from="1512223646889" duration="43431000" />
       <workItem from="1512784904709" duration="26868000" />
       <workItem from="1513209599956" duration="1212000" />
-      <workItem from="1513725757745" duration="3566000" />
+      <workItem from="1513725757745" duration="7027000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="369496000" />
+    <option name="totallyTimeSpent" value="372957000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18594436" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1452,14 +1455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/forms/pesquisar_filtro.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="59" column="19" lean-forward="false" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Mensagens.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1506,10 +1501,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/forms/pesquisar_filtro.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="50" column="69" lean-forward="false" selection-start-line="50" selection-start-column="69" selection-end-line="50" selection-end-column="69" />
+          <folding>
+            <marker date="1513815705465" expanded="true" signature="2774:2805" ph="/*...*/" />
+            <marker date="1513815705465" expanded="true" signature="2774:2930" ph="/*...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Profiles.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25">
-          <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+        <state relative-caret-position="162">
+          <caret line="22" column="28" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="28" />
           <folding>
             <element signature="e#7#91#0#PHP" expanded="false" />
             <element signature="e#591#1267#0#PHP" expanded="false" />
@@ -1529,8 +1535,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/forms/profiles.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="36" column="19" lean-forward="false" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+        <state relative-caret-position="275">
+          <caret line="62" column="22" lean-forward="true" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
           <folding />
         </state>
       </provider>
