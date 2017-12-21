@@ -34,44 +34,51 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-body">
-                <?php foreach ($response["included"] as $item){?>
-                <div class="col-md-3">
-                    <div class="jumbotron">
-                        <div class="text-center">
-                            <img src="<?php echo $item['attributes']['image'] ?>"
-                                 class="img-circle"
-                                 width="50%"
-                                 height="50%"><br>
-                            <b> <?php echo ucfirst($item['attributes']['name']) ?><br>
+                <?php foreach ($response["included"] as $item) {
+                    if ($item['type'] == 'profiles') {
+                        $type = 'users';
+                    } else {
+                        $type = 'companies';
+                    }
+                    ?>
+                    <div class="col-md-3">
+                        <div class="jumbotron">
+                            <div class="text-center">
+                                <img src="<?php echo $item['attributes']['image'] ?>"
+                                     class="img-circle"
+                                     width="50%"
+                                     height="50%"><br>
+                                <b> <?php echo anchor('Profiles/index/' . $item['id'] . '/' . $type, ucfirst($item['attributes']['name'])) ?></b>
+                                <br>
                                 <?php echo $item['attributes']['region'] ?><br>
                                 <?php echo ucfirst($item['attributes']['carrer']) ?><br>
                                 <?php echo $item['attributes']['age'] ?> Anos</b><br>
-                            <button type="button" data-codigo="<?php echo $item['id'] ?>" class="btnseguir">Seguir</button>
+                                <button type="button">Seguir</button>
+                            </div>
                         </div>
                     </div>
-                </div>
                 <?php } ?>
             </div>
         </div>
     </div>
 </div>
 <script>
-    
+
     $(function () {
-		$(".btnseguir").on('click',function(){
-			var id_follow = $(this).data("codigo");
-			alert(id_follow);
-			$.post('<?php echo base_url()?>Follows/follow', {id_follow: id_follow}, function (data) {
-				
+        $(".btnseguir").on('click', function () {
+            var id_follow = $(this).data("codigo");
+            alert(id_follow);
+            $.post('<?php echo base_url()?>Follows/follow', {id_follow: id_follow}, function (data) {
+
             });
-		})
-		$(".btnunfollow").on('click',function(){
-			var id_follow = $(this).data("codigo");
-			alert(id_follow);
-			$.post('<?php echo base_url()?>Follows/unfollow', {id_follow: id_follow}, function (data) {
-				
+        });
+        $(".btnunfollow").on('click', function () {
+            var id_follow = $(this).data("codigo");
+            alert(id_follow);
+            $.post('<?php echo base_url()?>Follows/unfollow', {id_follow: id_follow}, function (data) {
+
             });
-		})
+        })
     })
 </script>
 <!--</div>-->
