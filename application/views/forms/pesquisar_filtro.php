@@ -53,7 +53,22 @@
                                 <?php echo $item['attributes']['region'] ?><br>
                                 <?php echo ucfirst($item['attributes']['carrer']) ?><br>
                                 <?php echo $item['attributes']['age'] ?> Anos</b><br>
-                                <button type="button">Seguir</button>
+                                <button type="button" class="btn-primary" data-iduser="<?php echo $item['id'] ?>"
+                                        id="<?php echo $item['id'] ?>">Seguir
+                                </button>
+                                <script>
+                                    $(document).ready(function () {
+                                        $("#<?php echo $item['id']?>").bind('click', function () {
+                                            var iduser = "<?php echo $item['id']?>";
+                                            $.post('<?php echo base_url()?>Follows/follow', {iduser: iduser}, function (data) {
+                                                return data;
+                                            });
+
+                                        });
+                                    });
+
+                                </script>
+
                             </div>
                         </div>
                     </div>
@@ -65,13 +80,8 @@
 <script>
 
     $(function () {
-        $(".btnseguir").on('click', function () {
-            var id_follow = $(this).data("codigo");
-            alert(id_follow);
-            $.post('<?php echo base_url()?>Follows/follow', {id_follow: id_follow}, function (data) {
 
-            });
-        });
+
         $(".btnunfollow").on('click', function () {
             var id_follow = $(this).data("codigo");
             alert(id_follow);

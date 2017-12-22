@@ -56,19 +56,17 @@ if ($dados['data']['type'] == 'companies') {
                     </div>
                     <div class="row"><h4><strong><?php echo $dados['data']['attributes']['region'] ?></strong></h4>
                     </div>
-                    <br>
                     <?php echo anchor('perfil_user/editar', 'Enviar mensagem', 'type="button" class="btn btn-primary"') ?>
-
-                    <?php echo anchor('perfil_user/editar', 'Seguir', 'type="button" class="btn btn-primary"') ?>
                 </div>
             </div>
             <div class="panel-body">
+                <!--                <div class="text-left col-sm-offset-10">-->
+                <!--                    -->
+                <?php //echo anchor('perfil_user/editar', '<img src="' . base_url(IMAGES) . '/logos/conexoes.png' . '">Seguir', 'type="button" class="btn btn-primary"') ?><!--</div>-->
                 <div class="row text-center">
-                    <label class="label">Sobre</label>
-                    <div class="row"><h4>Email: <strong><?php echo $dados['data']['attributes']['email'] ?></strong></h4>
-                        <br>
-                        <div class="row"><h4>Idade: <strong><?php echo $dados['data']['attributes']['age'] ?></strong>
-                            </h4>
+                    <div class="row"><h3>Sobre</h3></div>
+                    <div class="row">Email: <strong><?php echo $dados['data']['attributes']['email'] ?></strong>
+                        <div class="row">Idade: <strong><?php echo $dados['data']['attributes']['age'] ?></strong>
                         </div>
                     </div>
                 </div>

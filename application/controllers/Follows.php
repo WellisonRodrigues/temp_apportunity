@@ -15,6 +15,7 @@ class Follows extends CI_Controller
         if (!$this->session->userdata("logado")) {
             redirect('sair');
         }
+
     }
 
     public function index()
@@ -256,7 +257,7 @@ class Follows extends CI_Controller
 
     }
 
-    public function get_users_list($id_user,$status)
+    public function get_users_list($id_user, $status)
     {
         $retorno_follows = $this->get_follows_ws($id_user);
         $data ['follows'] = $retorno_follows;
@@ -318,7 +319,8 @@ class Follows extends CI_Controller
 
     }
 
-    function seguir(){
+    function seguir()
+    {
 
         $aut_code = $this->session->userdata('verify')['auth_token'];
         $id_seguir = $this->input->post('id');
@@ -372,10 +374,10 @@ class Follows extends CI_Controller
         var_dump($resp);
 
 
-
     }
 
-    function seguindo(){
+    function seguindo()
+    {
 
         $aut_code = $this->session->userdata('verify')['auth_token'];
         $id_seguir = $this->input->post('id');
@@ -426,28 +428,31 @@ class Follows extends CI_Controller
         var_dump($resp);
 
 
+    }
+
+
+    public function follow()
+    {
+        //carregando a library
+        $this->load->library('Follows');
+        $iduser = 10;
+        $aut_code = $this->session->userdata('verify')['auth_token'];
+        print_r($iduser);
+        print_r($aut_code);
+        $this->Follows->create_follow($iduser, $aut_code);
 
     }
-    
-	
-	public function follow(){
-		
-        $aut_code = $this->session->userdata('verify')['auth_token'];
-		$id_follow = $this->input->post('id_follow');
-		
-		$retorno = $this->create_follows_ws($id_follow);
-		var_dump($retorno);
-	}	
-	
-	public function unfollow(){
-		
-        $aut_code = $this->session->userdata('verify')['auth_token'];
-		$id_seguir = $this->input->post('id');
 
-	}
-	
-	
-	public function arrayCastRecursive($array)
+    public function unfollow()
+    {
+
+        $aut_code = $this->session->userdata('verify')['auth_token'];
+        $id_seguir = $this->input->post('id');
+
+    }
+
+
+    public function arrayCastRecursive($array)
     {
         if (is_array($array)) {
             foreach ($array as $key => $value) {

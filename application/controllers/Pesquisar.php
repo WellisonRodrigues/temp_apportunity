@@ -8,6 +8,15 @@
  */
 class Pesquisar extends CI_Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+        if (!$this->session->userdata("logado")) {
+            redirect('sair');
+            $this->load->helper('url');
+        }
+
+    }
 
     public function index()
     {
@@ -29,8 +38,8 @@ class Pesquisar extends CI_Controller
 
         if (isset($retorno["err"]) && !empty($retorno["err"])) {
             $data['alert'] = [
-                 'type' => 'erro',
-                 'message' => 'Problemas no servidor. Entrar contato com a equipe de ti.'
+                'type' => 'erro',
+                'message' => 'Problemas no servidor. Entrar contato com a equipe de ti.'
             ];
 
             $this->session->set_flashdata('alert', $data['alert']);
@@ -38,7 +47,7 @@ class Pesquisar extends CI_Controller
 
         $data['view'] = 'forms/pesquisar_filtro';
         $data['response'] = $retorno['response'];
-        $this->load->view('template_admin/core',$data);
+        $this->load->view('template_admin/core', $data);
 
     }
 
