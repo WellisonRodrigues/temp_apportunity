@@ -2,10 +2,20 @@
 
 class Fetchuser
 {
+
     private $iduser;
     private $username;
     private $userimage;
     private $auth_token;
+    private $status;
+
+
+    public function __construct()
+    {
+        $this->CI =& get_instance();
+        $this->CI->load->library('Geturl');
+
+    }
 
     function setauthtoken($auth_token)
     {
@@ -29,6 +39,16 @@ class Fetchuser
     {
         return $this->iduser;
     }
+ function setuserstatus($status)
+    {
+        $this->status = $status;
+
+    }
+
+    function getuserstatus()
+    {
+        return $this->status;
+    }
 
 
     function getusername()
@@ -45,16 +65,19 @@ class Fetchuser
     function setuserattributes($iduser, $auth)
     {
         $aut_code = $auth;
-
+        $this->url = $this->CI->geturl->get_url();
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/admin/users/$iduser",
+//            CURLOPT_PORT => "3000",
+
+            CURLOPT_URL => "$this->url/api/v1/admin/users/$iduser",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
             CURLOPT_TIMEOUT => 30,
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => array(

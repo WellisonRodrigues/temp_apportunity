@@ -7,6 +7,13 @@ class Fetchcompany
     private $companyimage;
     private $auth_token;
 
+    public function __construct()
+    {
+        $this->CI =& get_instance();
+        $this->CI->load->library('Geturl');
+
+    }
+
     function setauthtoken($auth_token)
     {
         $this->auth_token = $auth_token;
@@ -47,13 +54,15 @@ class Fetchcompany
         $aut_code = $auth;
 
         $curl = curl_init();
-
+        $this->url = $this->CI->geturl->get_url();
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/admin/companies/$idcompany",
+//            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "$this->url/api/v1/admin/companies/$idcompany",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "GET",

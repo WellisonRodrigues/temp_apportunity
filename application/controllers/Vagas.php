@@ -15,6 +15,8 @@ class Vagas extends CI_Controller
             redirect('sair');
         }
         $this->output->enable_profiler(TRUE);
+        $this->load->library('Geturl');
+        $this->url = $this->geturl->get_url();
     }
 
     public function index()
@@ -35,11 +37,13 @@ class Vagas extends CI_Controller
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/users/saved_jobs",
+//            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "$this->url/api/v1/users/saved_jobs",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "GET",
@@ -85,11 +89,13 @@ class Vagas extends CI_Controller
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/jobs/2/job_applications",
+//            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "$this->url/api/v1/jobs/2/job_applications",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "GET",
@@ -147,11 +153,13 @@ class Vagas extends CI_Controller
                 $curl = curl_init();
 
                 curl_setopt_array($curl, array(
-                    CURLOPT_PORT => "3000",
-                    CURLOPT_URL => "http://34.229.150.76:3000/api/v1/jobs/4/saved_jobs",
+//                    CURLOPT_PORT => "3000",
+                    CURLOPT_URL => "$this->url/api/v1/jobs/4/saved_jobs",
                     CURLOPT_RETURNTRANSFER => true,
                     CURLOPT_ENCODING => "",
                     CURLOPT_MAXREDIRS => 10,
+                    CURLOPT_SSL_VERIFYPEER => 0,
+                    CURLOPT_SSL_VERIFYHOST => 0,
                     CURLOPT_TIMEOUT => 30,
                     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                     CURLOPT_CUSTOMREQUEST => "POST",
@@ -210,16 +218,18 @@ class Vagas extends CI_Controller
     private function delete_saved_jobs_ws($idjob)
     {
         if ($idjob) {
-            if ($idjob > 0 && !empty($idjob)) {
+//            if ($idjob > 0 && !empty($idjob)) {
                 $aut_code = $this->session->userdata('verify')['auth_token'];
                 $curl = curl_init();
 
                 curl_setopt_array($curl, array(
-                    CURLOPT_PORT => "3000",
-                    CURLOPT_URL => "http://34.229.150.76:3000/api/v1/saved_jobs/$idjob",
+//                    CURLOPT_PORT => "3000",
+                    CURLOPT_URL => "$this->url/api/v1/saved_jobs/$idjob",
                     CURLOPT_RETURNTRANSFER => true,
                     CURLOPT_ENCODING => "",
                     CURLOPT_MAXREDIRS => 10,
+                    CURLOPT_SSL_VERIFYPEER => 0,
+                    CURLOPT_SSL_VERIFYHOST => 0,
                     CURLOPT_TIMEOUT => 30,
                     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                     CURLOPT_CUSTOMREQUEST => "DELETE",
@@ -240,7 +250,7 @@ class Vagas extends CI_Controller
                 } else {
                     echo $response;
                 }
-            }
+//            }
         }
     }
 
@@ -261,12 +271,14 @@ class Vagas extends CI_Controller
                 $curl = curl_init();
 
                 curl_setopt_array($curl, array(
-                    CURLOPT_PORT => "3000",
-                    CURLOPT_URL => "http://34.229.150.76:3000/api/v1/job_applications/$idjob",
+//                    CURLOPT_PORT => "3000",
+                    CURLOPT_URL => "$this->url/api/v1/job_applications/$idjob",
                     CURLOPT_RETURNTRANSFER => true,
                     CURLOPT_ENCODING => "",
                     CURLOPT_MAXREDIRS => 10,
                     CURLOPT_TIMEOUT => 30,
+                    CURLOPT_SSL_VERIFYPEER => 0,
+                    CURLOPT_SSL_VERIFYHOST => 0,
                     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                     CURLOPT_CUSTOMREQUEST => "DELETE",
                     CURLOPT_HTTPHEADER => array(
@@ -352,11 +364,13 @@ class Vagas extends CI_Controller
             $curl = curl_init();
 
             curl_setopt_array($curl, array(
-                CURLOPT_PORT => "3000",
-                CURLOPT_URL => "http://34.229.150.76:3000/api/v1/jobs/$idjob/job_applications",
+//                CURLOPT_PORT => "3000",
+                CURLOPT_URL => "$this->url/api/v1/jobs/$idjob/job_applications",
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => "",
                 CURLOPT_MAXREDIRS => 10,
+                CURLOPT_SSL_VERIFYPEER => 0,
+                CURLOPT_SSL_VERIFYHOST => 0,
                 CURLOPT_TIMEOUT => 30,
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                 CURLOPT_CUSTOMREQUEST => "POST",

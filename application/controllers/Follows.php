@@ -8,6 +8,7 @@
  */
 class Follows extends CI_Controller
 {
+    private $url;
 
     public function __construct()
     {
@@ -15,81 +16,69 @@ class Follows extends CI_Controller
         if (!$this->session->userdata("logado")) {
             redirect('sair');
         }
+        $this->load->library('Geturl');
+//        $this->load->library('Getuser');
+        $this->url = $this->geturl->get_url();
+        $this->load->library('Fetchuser');
 
     }
+
 
     public function index()
     {
-
-        $this->get_conexao();
-    }
-
-    public function get_conexao()
-    {
-//        $retorno = $this->get_profile_conect();
-//        $language = $this->get_profile_language();
-//        $follows = $this->get_follows();
-//
-//        /*
-//         * Erro no curl
-//         */
-//        if (isset($retorno["err"]) && !empty($retorno["err"])) {
-//            $data['alert'] =
-//                [
-//                    'type' => 'erro',
-//                    'message' => 'Problemas no servidor. Entrar contato com a equipe de ti.'
-//                ];
-//            $this->session->set_flashdata('alert', $data['alert']);
-//            redirect('Login');
-//        }
-//        $count = 0;
-//        foreach ($follows['response']['data'] as $follow) {
-//            $inscritos = $follow['relationships']['followed'];
-//            foreach ($inscritos as $inscrito) {
-//                $count++;
-//            }
-//        }
-//
-//        $data ['inscritos'] = $count;
-//        $profile = $retorno;
-//        $language_user = $language['response'];
-//        $data ['idiomas'] = $language_user['data'];
-//        $data ['profile'] = $profile['response']['data'];
-//        $data ['relationships'] = $profile['response']['relationships'];
-//        $data ['included'] = $profile['response']['included'];
-////        print_r($data['jobs']);
-////        die;
         $retorno_follows = $this->get_follows();
         $follows = $retorno_follows;
-        $count_followed = 0;
-        $count_follower = 0;
+        $count_seguidores = 0;
+        $count_seguindo = 0;
 
 //        print_r($this->session->userdata("logado"));
         foreach ($follows['response']['data'] as $follow) {
-            $seguindo = $follow['relationships']['follower'];
-            $seguindo_list = $follow['relationships']['followed'];
-            foreach ($seguindo as $seguindo_o) {
-                if ($seguindo_o['id'] == $this->session->userdata("logado")['id']) {
-                    foreach ($seguindo_list as $seguindo_list_o) {
-                        $count_follower++;
-                        $seguindo_os[] = $seguindo_list_o['id'];
-                    }
-                } else {
-                    $inscritos = $follow['relationships']['followed'];
-                    foreach ($inscritos as $inscrito) {
 
-                        $count_followed++;
-                        $seguidor[] = $inscrito['id'];
+//            print_r($follow);
 
-                    }
+            $follwers = $follow['relationships']['follower'];
+            $follweds = $follow['relationships']['followed'];
+//            print_r($follwed);
+
+//            $seguindo_list = $follow['relationships']['followed'];
+            foreach ($follwers as $follwer) {
+                if ($follwer['id'] != $this->session->userdata("logado")['id']) {
+                    $seguidor[] = $follwer['id'];
+                    $count_seguidores++;
+
                 }
+
+            }
+            foreach ($follweds as $follwed) {
+                if ($follwed['id'] != $this->session->userdata("logado")['id']) {
+                    $seguindo[] = $follwed['id'];
+                    $count_seguindo++;
+                }
+//                if ($seguindo_o['id'] == $this->session->userdata("logado")['id']) {
+//                    foreach ($seguindo_list as $seguindo_list_o) {
+//                        $count_follower++;
+//                        $seguindo_os[] = $seguindo_list_o['id'];
+//                    }
+//                } else {
+//                    $inscritos = $follow['relationships']['followed'];
+//                    foreach ($inscritos as $inscrito) {
+//
+//                        $count_followed++;
+//                        $seguidor[] = $inscrito['id'];
+//
+//                    }
+//                }
             }
         }
 
-        $data ['followers'] = $seguindo_os;
+
+//        die;
+        $data ['followers'] = $seguindo;
         $data ['followed'] = $seguidor;
-        $data ['inscritos'] = $count_followed;
-        $data ['seguindo'] = $count_follower;
+
+
+        $data ['quant_seguidores'] = $count_seguidores;
+        $data ['quant_seguindo'] = $count_seguindo;
         $data['view'] = 'forms/conexoes_list';
         $this->load->view('template_admin/core', $data);
 
@@ -99,14 +88,15 @@ class Follows extends CI_Controller
     {
 
         $aut_code = $this->session->userdata('verify')['auth_token'];
-//    $type = $this->session->userdata("logado")->type;
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/users/follows",
+//            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "$this->url/api/v1/users/follows",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "GET",
@@ -148,306 +138,17 @@ class Follows extends CI_Controller
 
     }
 
-    public function create_follows()
+    public function get_users_list($iduser, $status)
     {
 
-        $aut_code = $this->session->userdata('verify')['auth_token'];
-//    $type = $this->session->userdata("logado")->type;
-        $curl = curl_init();
-        curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/users/follows",
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => "",
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 30,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => "GET",
-            CURLOPT_HTTPHEADER => array(
-                "accept: application/vnd.api+json",
-                "cache-control: no-cache",
-                "postman-token: de96bd2e-2ecb-1bf6-1ab5-4b757b2e977b",
-                "x-auth-token: $aut_code"
-            ),
-        ));
-
-        $headers = [];
-        curl_setopt($curl, CURLOPT_HEADERFUNCTION,
-            function ($curl, $header) use (&$headers) {
-                $len = strlen($header);
-                $header = explode(':', $header, 2);
-                if (count($header) < 2) // ignore invalid headers
-                    return $len;
-
-                $name = strtolower(trim($header[0]));
-                if (!array_key_exists($name, $headers))
-                    $headers[$name] = [trim($header[1])];
-                else
-                    $headers[$name][] = trim($header[1]);
-
-                return $len;
-            }
-        );
-
-        $response = curl_exec($curl);
-        $resposta = json_decode($response);
-        $err = curl_error($curl);
-        curl_close($curl);
-        $array = $this->arrayCastRecursive($resposta);
-        $resp['response'] = $array;
-        $resp['headers'] = $headers;
-        $resp['err'] = $err;
-        return $resp;
-
-    }
-
-    private function create_follows_ws($id_follow)
-    {
-        $aut_code = $this->session->userdata('verify')['auth_token'];
-//    $type = $this->session->userdata("logado")->type;
-        $curl = curl_init();
-        curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/users/follows",
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => "",
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 30,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => "POST",
-            CURLOPT_POSTFIELDS => "{\r\n  \"data\": {\r\n    \"type\": \"follows\",
-            \r\n    \"relationships\": {\r\n        \"followed\": {\r\n        \"data\": {\r\n          \"type\": \"users\",
-            \r\n          \"id\": \"$id_follow\"\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
-            CURLOPT_HTTPHEADER => array(
-                "accept: application/vnd.api+json",
-                "cache-control: no-cache",
-                "content-type: application/vnd.api+json",
-                "postman-token: 4c5852d3-b688-5226-5204-64670b8ebd77",
-                "x-auth-token: $aut_code"
-            ),
-        ));
-
-        $headers = [];
-        curl_setopt($curl, CURLOPT_HEADERFUNCTION,
-            function ($curl, $header) use (&$headers) {
-                $len = strlen($header);
-                $header = explode(':', $header, 2);
-                if (count($header) < 2) // ignore invalid headers
-                    return $len;
-
-                $name = strtolower(trim($header[0]));
-                if (!array_key_exists($name, $headers))
-                    $headers[$name] = [trim($header[1])];
-                else
-                    $headers[$name][] = trim($header[1]);
-
-                return $len;
-            }
-        );
-
-        $response = curl_exec($curl);
-        $resposta = json_decode($response);
-        $err = curl_error($curl);
-        curl_close($curl);
-        $array = $this->arrayCastRecursive($resposta);
-        $resp['response'] = $array;
-        $resp['headers'] = $headers;
-        $resp['err'] = $err;
-        return $resp;
-
-    }
-
-    public function get_users_list($id_user, $status)
-    {
-        $retorno_follows = $this->get_follows_ws($id_user);
-        $data ['follows'] = $retorno_follows;
-        $data ['status'] = $status;
+        $this->fetchuser->setauthtoken($this->session->userdata('verify')['auth_token']);
+        $id = $iduser;
+        $this->fetchuser->setiduser($id);
+        $data['status'] = $status;
+        $this->fetchuser->setuserattributes($id, $this->fetchuser->getauthtoken());
+//        $data ['status'] = $status;
+        $data ['iduser'] = $id;
         $this->load->view('forms/follow_users_list', $data);
-
-    }
-
-    public function get_follows_ws($id_user)
-    {
-
-        $aut_code = $this->session->userdata('verify')['auth_token'];
-//    $type = $this->session->userdata("logado")->type;
-        $curl = curl_init();
-        curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/admin/users/$id_user",
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => "",
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 30,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => "GET",
-            CURLOPT_HTTPHEADER => array(
-                "accept: application/vnd.api+json",
-                "cache-control: no-cache",
-                "postman-token: 07656c20-984a-544b-0d7a-7a5f3bda92cf",
-                "x-auth-token: $aut_code"
-            ),
-        ));
-
-        $headers = [];
-        curl_setopt($curl, CURLOPT_HEADERFUNCTION,
-            function ($curl, $header) use (&$headers) {
-                $len = strlen($header);
-                $header = explode(':', $header, 2);
-                if (count($header) < 2) // ignore invalid headers
-                    return $len;
-
-                $name = strtolower(trim($header[0]));
-                if (!array_key_exists($name, $headers))
-                    $headers[$name] = [trim($header[1])];
-                else
-                    $headers[$name][] = trim($header[1]);
-
-                return $len;
-            }
-        );
-
-        $response = curl_exec($curl);
-        $resposta = json_decode($response);
-        $err = curl_error($curl);
-        curl_close($curl);
-        $array = $this->arrayCastRecursive($resposta);
-        $resp['response'] = $array;
-        $resp['headers'] = $headers;
-        $resp['err'] = $err;
-        return $resp;
-
-    }
-
-    function seguir()
-    {
-
-        $aut_code = $this->session->userdata('verify')['auth_token'];
-        $id_seguir = $this->input->post('id');
-
-        $curl = curl_init();
-        curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/users/follows",
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => "",
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 30,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => "POST",
-            CURLOPT_POSTFIELDS => "{\r\n  \"data\": {\r\n    \"type\": \"follows\",\r\n    \"relationships\": {\r\n        \"followed\": {\r\n        \"data\": {\r\n          \"type\": \"users\",\r\n          \"id\": \"$id_seguir\"\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
-            CURLOPT_HTTPHEADER => array(
-                "accept: application/vnd.api+json",
-                "cache-control: no-cache",
-                "content-type: application/vnd.api+json",
-                "postman-token: d9dcab3a-4a79-c78f-12e6-d6ab280fb5ca",
-                "x-auth-token: $aut_code"
-            ),
-        ));
-
-        $headers = [];
-        curl_setopt($curl, CURLOPT_HEADERFUNCTION,
-            function ($curl, $header) use (&$headers) {
-                $len = strlen($header);
-                $header = explode(':', $header, 2);
-                if (count($header) < 2) // ignore invalid headers
-                    return $len;
-
-                $name = strtolower(trim($header[0]));
-                if (!array_key_exists($name, $headers))
-                    $headers[$name] = [trim($header[1])];
-                else
-                    $headers[$name][] = trim($header[1]);
-
-                return $len;
-            }
-        );
-
-        $response = curl_exec($curl);
-        $resposta = json_decode($response);
-        $err = curl_error($curl);
-        curl_close($curl);
-        $array = $this->arrayCastRecursive($resposta);
-        $resp['response'] = $array;
-        $resp['headers'] = $headers;
-        $resp['err'] = $err;
-        var_dump($resp);
-
-
-    }
-
-    function seguindo()
-    {
-
-        $aut_code = $this->session->userdata('verify')['auth_token'];
-        $id_seguir = $this->input->post('id');
-
-        $curl = curl_init();
-        curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/users/follows/$id_seguir",
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => "",
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 30,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => "DELETE",
-            CURLOPT_HTTPHEADER => array(
-                "cache-control: no-cache",
-                "postman-token: 1a0626b8-0433-1acb-b051-b470417d415e",
-                "x-auth-token: RpATNsy4-P1dfud59Btx"
-            ),
-        ));
-
-        $headers = [];
-        curl_setopt($curl, CURLOPT_HEADERFUNCTION,
-            function ($curl, $header) use (&$headers) {
-                $len = strlen($header);
-                $header = explode(':', $header, 2);
-                if (count($header) < 2) // ignore invalid headers
-                    return $len;
-
-                $name = strtolower(trim($header[0]));
-                if (!array_key_exists($name, $headers))
-                    $headers[$name] = [trim($header[1])];
-                else
-                    $headers[$name][] = trim($header[1]);
-
-                return $len;
-            }
-        );
-
-        $response = curl_exec($curl);
-        $resposta = json_decode($response);
-        $err = curl_error($curl);
-        curl_close($curl);
-        $array = $this->arrayCastRecursive($resposta);
-        $resp['response'] = $array;
-        $resp['headers'] = $headers;
-        $resp['err'] = $err;
-        var_dump($resp);
-
-
-    }
-
-
-    public function follow()
-    {
-        //carregando a library
-        $this->load->library('Follows');
-        $iduser = 10;
-        $aut_code = $this->session->userdata('verify')['auth_token'];
-        print_r($iduser);
-        print_r($aut_code);
-        $this->Follows->create_follow($iduser, $aut_code);
-
-    }
-
-    public function unfollow()
-    {
-
-        $aut_code = $this->session->userdata('verify')['auth_token'];
-        $id_seguir = $this->input->post('id');
 
     }
 

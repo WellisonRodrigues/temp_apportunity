@@ -12,6 +12,12 @@ class Fetchjob
     private $companytype;
     private $companyid;
 
+    public function __construct()
+    {
+        $this->CI =& get_instance();
+        $this->CI->load->library('Geturl');
+
+    }
 
     function setauthtoken($auth_token)
     {
@@ -78,14 +84,17 @@ class Fetchjob
     {
         $aut_code = $auth;
         $curl = curl_init();
+        $this->url = $this->CI->geturl->get_url();
 
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/jobs/$idjob",
+//            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "$this->url/api/v1/jobs/$idjob",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
             CURLOPT_TIMEOUT => 30,
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => array(

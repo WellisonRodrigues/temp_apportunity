@@ -8,6 +8,7 @@
  */
 class Mensagens extends CI_Controller
 {
+    private $url;
 
     public function __construct()
     {
@@ -17,6 +18,9 @@ class Mensagens extends CI_Controller
         }
 
         $this->load->library('Fetchuser');
+        $this->load->library('Fetchcompany');
+        $this->load->library('Geturl');
+        $this->url = $this->geturl->get_url();
     }
 
     public function index()
@@ -27,13 +31,30 @@ class Mensagens extends CI_Controller
 
     public function chat_list()
     {
+
         $return = $this->chat_list_ws();
-        $type = $this->session->userdata("logado")->type;
-        $curl = curl_init();
+//        $type = $this->session->userdata("logado")->type;
+//        $curl = curl_init();
 
         $data['return'] = $return['response'];
         $data['view'] = 'forms/mensagens_list';
         $this->load->view('template_admin/core', $data);
+
+
+    }
+
+    public function msg_list($idchat)
+    {
+//        print_r($idchat);
+        $return = $this->mensagem_list_ws($idchat);
+//        print_r($return);
+//        die;
+//        $type = $this->session->userdata("logado")->type;
+//        $curl = curl_init();
+
+        $data['return'] = $return['response'];
+//        $data['view'] = 'forms/mensagens_list';
+        $this->load->view('forms/div_mensagens_list', $data);
 
 
     }
@@ -44,11 +65,13 @@ class Mensagens extends CI_Controller
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/chats",
+//            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "$this->url/api/v1/chats",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "GET",
@@ -146,23 +169,25 @@ class Mensagens extends CI_Controller
         return $resp;
     }
 
-    private function mensagem_list_ws()
+    private function mensagem_list_ws($idchat)
     {
         $aut_code = $this->session->userdata('verify')['auth_token'];
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/chats",
+//            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "$this->url/api/v1/chats/$idchat/messages",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_MAXREDIRS => 10,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => array(
                 "cache-control: no-cache",
-                "postman-token: c11dbbc8-4b62-80a1-56de-46751a6780a8",
+                "postman-token: 97a8ce5f-c55b-a6c7-e941-4434db7b83eb",
                 "x-auth-token: $aut_code"
             ),
         ));

@@ -3,13 +3,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller
 {
+    private $url;
+
     public function __construct()
     {
         parent::__construct();
 
 
 //        $this->output->enable_profiler(TRUE);
-
+        $this->load->library('Geturl');
+        $this->url = $this->geturl->get_url();
     }
 
     public function index()
@@ -86,6 +89,8 @@ class Login extends CI_Controller
                 $this->session->set_userdata('verify', $verify);
 
                 if ($this->session->userdata("logado")['type'] == 'users') {
+//                    echo 'ok';
+//                    die;
                     redirect('Painel_admin');
                 } else {
 
@@ -182,9 +187,11 @@ class Login extends CI_Controller
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/auth/sign_in",
+//            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "$this->url/auth/sign_in",
             CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
             CURLOPT_TIMEOUT => 30,
@@ -240,11 +247,13 @@ class Login extends CI_Controller
         $curl = curl_init();
         if ($name != false) {
             curl_setopt_array($curl, array(
-                CURLOPT_PORT => "3000",
-                CURLOPT_URL => "http://34.229.150.76:3000/auth",
+//                CURLOPT_PORT => "3000",
+                CURLOPT_URL => "$this->url/auth",
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => "",
                 CURLOPT_MAXREDIRS => 10,
+                CURLOPT_SSL_VERIFYPEER => 0,
+                CURLOPT_SSL_VERIFYHOST => 0,
                 CURLOPT_TIMEOUT => 30,
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                 CURLOPT_CUSTOMREQUEST => "POST",
@@ -258,11 +267,13 @@ class Login extends CI_Controller
             ));
         } else {
             curl_setopt_array($curl, array(
-                CURLOPT_PORT => "3000",
-                CURLOPT_URL => "http://34.229.150.76:3000/auth",
+//                CURLOPT_PORT => "3000",
+                CURLOPT_URL => "$this->url/auth",
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => "",
                 CURLOPT_MAXREDIRS => 10,
+                CURLOPT_SSL_VERIFYPEER => 0,
+                CURLOPT_SSL_VERIFYHOST => 0,
                 CURLOPT_TIMEOUT => 30,
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                 CURLOPT_CUSTOMREQUEST => "POST",

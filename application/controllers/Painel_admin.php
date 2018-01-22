@@ -12,12 +12,21 @@ require_once('Follows.php');
 
 class Painel_admin extends Follows
 {
+    private $url;
+
     public function __construct()
     {
         parent::__construct();
         if (!$this->session->userdata("logado")) {
             redirect('sair');
         }
+
+//        print_r($url);
+
+
+        $this->load->library('Geturl');
+        $this->url = $this->geturl->get_url();
+
 //        $this->output->enable_profiler(TRUE);
 //        $this->load->library('Fetchcompany');
     }
@@ -25,10 +34,11 @@ class Painel_admin extends Follows
     public function index()
 
     {
-                $this->output->enable_profiler(TRUE);
+
+//        print_r($this->url);
+        $this->output->enable_profiler(TRUE);
 
         $this->load->library('Fetchcompany');
-
         $retorno = $this->get_jobs();
         $retorno_ads = $this->get_ads();
         $retorno_profile = $this->get_profile_conect();
@@ -69,12 +79,12 @@ class Painel_admin extends Follows
         $data ['jobs'] = $jobs['response']['data'];
         $data ['ads'] = $retorno_ads['response']['data'];
         $data ['includes'] = $jobs['response']['included'];
-	
+
         $data['view'] = 'home';
         $data['response'] = $response;
 
 //        print_r($response);
-		
+
         $data['funcao'] = $this;
 
         $this->load->view('template_admin/core', $data);
@@ -84,14 +94,19 @@ class Painel_admin extends Follows
     private function get_jobs()
     {
         $aut_code = $this->session->userdata('verify')['auth_token'];
+        $url = $this->url . '/api/v1/jobs';
+//        print_r($url);
+//        die;
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/jobs",
+//            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "$this->url/api/v1/jobs",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "GET",
@@ -137,12 +152,15 @@ class Painel_admin extends Follows
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/ads",
+//            CURLOPT_PORT => "3000",
+
+            CURLOPT_URL => "$this->url/api/v1/ads",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
             CURLOPT_TIMEOUT => 30,
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => array(
@@ -186,12 +204,15 @@ class Painel_admin extends Follows
         $aut_code = $this->session->userdata('verify')['auth_token'];
         $type = $this->session->userdata("logado")->type;
         $curl = curl_init();
+//        $url = $this->url . '/api/v1/profile';
 
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/profile",
+//            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "$this->url/api/v1/profile",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_MAXREDIRS => 10,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
@@ -315,8 +336,10 @@ class Painel_admin extends Follows
             $iduser = $usuario["id"];
             $curl = curl_init();
 
-            curl_setopt($curl, CURLOPT_URL, "http://34.229.150.76:3000/api/v1/jobs/$idjob/likes");
+            curl_setopt($curl, CURLOPT_URL, "$this->url/api/v1/jobs/$idjob/likes");
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
             curl_setopt($curl, CURLOPT_HEADER, FALSE);
             curl_setopt($curl, CURLOPT_HTTPHEADER, array(
                 "accept: application/vnd.api+json",
@@ -376,11 +399,13 @@ class Painel_admin extends Follows
             $curl = curl_init();
 
             curl_setopt_array($curl, array(
-                CURLOPT_PORT => "3000",
-                CURLOPT_URL => "http://34.229.150.76:3000/api/v1/jobs/$idjob/likes",
+//                CURLOPT_PORT => "3000",
+                CURLOPT_URL => "$this->url/api/v1/jobs/$idjob/likes",
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => "",
                 CURLOPT_MAXREDIRS => 10,
+                CURLOPT_SSL_VERIFYPEER => 0,
+                CURLOPT_SSL_VERIFYHOST => 0,
                 CURLOPT_TIMEOUT => 30,
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                 CURLOPT_CUSTOMREQUEST => "POST",
@@ -438,7 +463,7 @@ class Painel_admin extends Follows
             $aut_code = $this->session->userdata('verify')['auth_token'];
             $curl = curl_init();
             curl_setopt_array($curl, array(
-                CURLOPT_PORT => "3000",
+//                CURLOPT_PORT => "3000",
                 CURLOPT_URL => "http://34.229.150.76:3000/api/v1/likes/$idlike",
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => "",
@@ -497,11 +522,13 @@ class Painel_admin extends Follows
             $curl = curl_init();
 
             curl_setopt_array($curl, array(
-                CURLOPT_PORT => "3000",
-                CURLOPT_URL => "http://34.229.150.76:3000/api/v1/jobs/$idjob/comments",
+//                CURLOPT_PORT => "3000",
+                CURLOPT_URL => "$this->url/api/v1/jobs/$idjob/comments",
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => "",
                 CURLOPT_MAXREDIRS => 10,
+                CURLOPT_SSL_VERIFYPEER => 0,
+                CURLOPT_SSL_VERIFYHOST => 0,
                 CURLOPT_TIMEOUT => 30,
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                 CURLOPT_CUSTOMREQUEST => "GET",
@@ -555,19 +582,23 @@ class Painel_admin extends Follows
 
         return $resp;
     }
-	
-	public function quantidade_curtidas_jobs($idjob){
-		
-		$total=0;
-		
-		if ($idjob > 0 && !empty($idjob)) {
+
+    public function quantidade_curtidas_jobs($idjob)
+    {
+
+        $total = 0;
+
+        if ($idjob > 0 && !empty($idjob)) {
             $aut_code = $this->session->userdata('verify')['auth_token'];
             $usuario = $this->session->userdata('logado');
             $iduser = $usuario["id"];
             $curl = curl_init();
 
-            curl_setopt($curl, CURLOPT_URL, "http://34.229.150.76:3000/api/v1/jobs/$idjob/likes");
+            curl_setopt($curl, CURLOPT_URL, "$this->url/api/v1/jobs/$idjob/likes");
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
+            curl_setopt($curl, CURLOPT_HEADER, FALSE);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
             curl_setopt($curl, CURLOPT_HEADER, FALSE);
             curl_setopt($curl, CURLOPT_HTTPHEADER, array(
                 "accept: application/vnd.api+json",
@@ -600,21 +631,21 @@ class Painel_admin extends Follows
             $err = curl_error($curl);
             curl_close($curl);
             $array = $this->arrayCastRecursive($resposta);
-			
-			
+
+
             foreach ($array as $jobs) {
                 foreach ($jobs as $job) {
                     if ($job["type"] == "likes") {
-						if ($job["relationships"]["job"]["data"]["id"] == $idjob){
-							$total++;
-						}
+                        if ($job["relationships"]["job"]["data"]["id"] == $idjob) {
+                            $total++;
+                        }
                     }
                 }
             }
         }
-		return $total;	
-	}
-	
+        return $total;
+    }
+
     public function insert_comments_job()
     {
         $idjob = $this->input->post('idjob');
@@ -627,10 +658,12 @@ class Painel_admin extends Follows
             $curl = curl_init();
 
             curl_setopt_array($curl, array(
-                CURLOPT_PORT => "3000",
-                CURLOPT_URL => "http://34.229.150.76:3000/api/v1/jobs/$idjob/comments",
+//                CURLOPT_PORT => "3000",
+                CURLOPT_URL => "$this->url/api/v1/jobs/$idjob/comments",
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => "",
+                CURLOPT_SSL_VERIFYPEER => 0,
+                CURLOPT_SSL_VERIFYHOST => 0,
                 CURLOPT_MAXREDIRS => 10,
                 CURLOPT_TIMEOUT => 30,
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
