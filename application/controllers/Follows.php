@@ -27,21 +27,28 @@ class Follows extends CI_Controller
         $follows = $retorno_follows;
         $count_followers = 0;
         $count_followeds = 0;
-        foreach ($follows['response']['data'] as $row) {
 
-        }
         foreach ($follows['response']['data'] as $row) {
-
+//
+//            print_r($row);
+//            echo '<br>';
             $follwers = $row['relationships']['follower'];
             $follweds = $row['relationships']['followed'];
 
+
+//            print_r($follweds);
+//            die;
             //lista de seguidores
             foreach ($follwers as $follower) {
 
                 if ($follwers['data']['id'] != $this->session->userdata("logado")['id']) {
                     $id_follow = $row['id'];
                     $array_follower[$id_follow] = $follower;
+//                    echo "<br>";
+//                    print_r($array_follower);
+
                     $count_followers++;
+
                 }
             }
             //lista de seguidos
@@ -50,10 +57,22 @@ class Follows extends CI_Controller
                 if ($follweds['data']['id'] != $this->session->userdata("logado")['id']) {
                     $id_follow = $row['id'];
                     $array_followed[$id_follow] = $followed;
+//                    echo "<br>";
+//                    print_r($array_followed);
+//                    echo "<br>";
                     $count_followeds++;
                 }
+//                $id_rows = $row;
             }
+//            if ($row['relationships']['follower']['data']['id'] == $this->session->userdata("logado")['id']) {
+//
+//                $array_followed_teste[$id_follow] = $followed;
+//                print_r($array_followed_teste);
+//            }
+
         }
+
+
         if ($count_followers >= $count_followers) {
 
             foreach ($array_follower as $followers) {
@@ -77,6 +96,7 @@ class Follows extends CI_Controller
         }
         $data ['followers'] = $array_follower;
         $data ['followed'] = $array_followed;
+//        $data['id'] = $follows['response']['data'];
         $data['followed_follower'] = $segue_seguido;
         $data ['quant_seguidores'] = $count_followers;
         $data ['quant_seguindo'] = $count_followeds;
@@ -85,18 +105,28 @@ class Follows extends CI_Controller
 
     }
 
-    public function follows_funtion()
+    public
+    function follows_funtion()
     {
+//        print_r($this->input->post());
+//        die;
         if ($this->input->post()) {
             if ($this->input->post('funcao') == 'Seguindo') {
-                if ($this->delete_follow_ws($this->input->post('idfollow'))) {
-                    echo 'delete follow';
+                $retorno_follows = $this->get_follows();
+                foreach ($retorno_follows['response']['data'] as $follows) {
+                    if ($follows['relationships']['followed']['data']['id'] == $this->input->post('iduser')) {
+                        if ($this->delete_follow_ws($follows['id'])) {
+                            print_r($follows['id']);    
+                        }
+
+                    }
                 }
+
             }
             if ($this->input->post('funcao') == 'Seguir') {
 
                 if ($this->create_follow_ws($this->input->post('iduser'))) {
-                    echo 'create follow';
+                    print_r($this->input->post());
                 }
             }
 
@@ -159,7 +189,8 @@ class Follows extends CI_Controller
 
     }
 
-    private function delete_follow_ws($idfollow)
+    private
+    function delete_follow_ws($idfollow)
     {
         $aut_code = $this->session->userdata('verify')['auth_token'];
         if ($idfollow) {
@@ -195,7 +226,8 @@ class Follows extends CI_Controller
         }
     }
 
-    private function create_follow_ws($id)
+    private
+    function create_follow_ws($id)
     {
 
         $aut_code = $this->session->userdata('verify')['auth_token'];
