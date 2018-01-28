@@ -116,7 +116,7 @@ class Follows extends CI_Controller
                 foreach ($retorno_follows['response']['data'] as $follows) {
                     if ($follows['relationships']['followed']['data']['id'] == $this->input->post('iduser')) {
                         if ($this->delete_follow_ws($follows['id'])) {
-                            print_r($follows['id']);    
+//                            print_r($follows['id']);
                         }
 
                     }
@@ -126,7 +126,7 @@ class Follows extends CI_Controller
             if ($this->input->post('funcao') == 'Seguir') {
 
                 if ($this->create_follow_ws($this->input->post('iduser'))) {
-                    print_r($this->input->post());
+//                    print_r($this->input->post());
                 }
             }
 
