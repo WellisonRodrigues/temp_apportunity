@@ -9,12 +9,15 @@
 class Anuncios extends CI_Controller
 {
 
+    private $url;
     public function __construct()
     {
         parent::__construct();
         if (!$this->session->userdata("logado")) {
             redirect('sair');
         }
+        $this->load->library('Geturl');
+        $this->url = $this->geturl->get_url();
     }
 
     public function index()
@@ -32,11 +35,13 @@ class Anuncios extends CI_Controller
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/ads",
+//            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "$this->url/api/v1/ads",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "GET",
@@ -102,11 +107,13 @@ class Anuncios extends CI_Controller
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/ads",
+//            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "$this->url/api/v1/ads",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "POST",
@@ -162,11 +169,13 @@ class Anuncios extends CI_Controller
             $aut_code = $this->session->userdata('verify')['auth_token'];
             $curl = curl_init();
             curl_setopt_array($curl, array(
-                CURLOPT_PORT => "3000",
-                CURLOPT_URL => "http://34.229.150.76:3000/api/v1/ads/$idanuncio",
+//                CURLOPT_PORT => "3000",
+                CURLOPT_URL => "$this->url/api/v1/ads/$idanuncio",
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => "",
                 CURLOPT_MAXREDIRS => 10,
+                CURLOPT_SSL_VERIFYPEER => 0,
+                CURLOPT_SSL_VERIFYHOST => 0,
                 CURLOPT_TIMEOUT => 30,
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                 CURLOPT_CUSTOMREQUEST => "DELETE",
@@ -224,11 +233,13 @@ class Anuncios extends CI_Controller
 
             $curl = curl_init();
             curl_setopt_array($curl, array(
-                CURLOPT_PORT => "3000",
-                CURLOPT_URL => "http://34.229.150.76:3000/api/v1/ads/$id_anuncio",
+//                CURLOPT_PORT => "3000",
+                CURLOPT_URL => "$this->url/api/v1/ads/$id_anuncio",
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => "",
                 CURLOPT_MAXREDIRS => 10,
+                CURLOPT_SSL_VERIFYPEER => 0,
+                CURLOPT_SSL_VERIFYHOST => 0,
                 CURLOPT_TIMEOUT => 30,
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                 CURLOPT_CUSTOMREQUEST => "PUT",

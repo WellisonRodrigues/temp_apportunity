@@ -826,11 +826,13 @@ class Perfil_user extends Follows
 
         $name = $this->input->post('name');
         $email = $this->input->post('email');
+        $region = $this->input->post('region');
+        $about = $this->input->post('about');
         $image = 'data:image/png;base64,' . base64_encode($this->input->post('file'));
 
         //$retorno = $region->sign_in('ingressoscaldas@gmail.com','icnTDC');
 
-        $retorno = $this->update_empresa($name, $email, $image);
+        $retorno = $this->update_empresa($name, $email, $image, $region, $about);
         /*
          * Erro no curl
          */
@@ -876,7 +878,7 @@ class Perfil_user extends Follows
     }
 
 
-    private function update_empresa($name, $email, $image)
+    private function update_empresa($name, $email, $image, $region, $about)
     {
         $aut_code = $this->session->userdata('verify')['auth_token'];
         $company_id = $this->session->userdata('logado')['id'];
@@ -887,17 +889,17 @@ class Perfil_user extends Follows
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/admin/companies/$company_id",
+//            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "$this->url/api/v1/admin/companies/$company_id",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
             CURLOPT_TIMEOUT => 30,
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "PUT",
-            CURLOPT_POSTFIELDS => "{\n  \"data\": {\n   \"type\": \"companies\",\n   \"id\" : \"$company_id\",
-            \n    \"attributes\": {\n      \"name\": \"$name\",\n      \"email\": \"$email\",
-            \n      \"image\": \"$image\"\n    }\n  }\n}",
+            CURLOPT_POSTFIELDS => "{\n  \"data\": {\n    \"type\": \"companies\",\n    \"id\": \"$company_id\",\n    \"attributes\": {\n      \"name\": \"$name\",\n      \"image\": \"$image\",\n      \"region\":\"$region\",\n      \"about\":\"$about\"\n    }\n  }\n}",
             CURLOPT_HTTPHEADER => array(
                 "accept: application/vnd.api+json",
                 "cache-control: no-cache",

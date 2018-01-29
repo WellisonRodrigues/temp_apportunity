@@ -14,7 +14,7 @@ class Vagas extends CI_Controller
         if (!$this->session->userdata("logado")) {
             redirect('sair');
         }
-        $this->output->enable_profiler(TRUE);
+//        $this->output->enable_profiler(TRUE);
         $this->load->library('Geturl');
         $this->url = $this->geturl->get_url();
     }
