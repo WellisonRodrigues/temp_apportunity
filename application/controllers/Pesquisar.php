@@ -8,6 +8,8 @@
  */
 class Pesquisar extends CI_Controller
 {
+    private $url;
+
     public function __construct()
     {
         parent::__construct();
@@ -15,6 +17,8 @@ class Pesquisar extends CI_Controller
             redirect('sair');
             $this->load->helper('url');
         }
+        $this->load->library('Geturl');
+        $this->url = $this->geturl->get_url();
 
     }
 
@@ -56,11 +60,13 @@ class Pesquisar extends CI_Controller
         $aut_code = $this->session->userdata('verify')['auth_token'];
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => 'http://34.229.150.76:3000/api/v1/users?filter[region]={' . urlencode($regiao) . '}',
+//            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "$this->url/api/v1/users?filter[region]={' . urlencode($regiao) . '}",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "GET",
@@ -105,11 +111,13 @@ class Pesquisar extends CI_Controller
         $aut_code = $this->session->userdata('verify')['auth_token'];
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => 'http://34.229.150.76:3000/api/v1/companies?filter[region]={' . urlencode($regiao) . '}',
+//            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "$this->url/api/v1/companies?filter[region]={' . urlencode($regiao) . '}",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "GET",

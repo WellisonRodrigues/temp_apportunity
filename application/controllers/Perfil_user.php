@@ -10,6 +10,8 @@ require_once('Follows.php');
 
 class Perfil_user extends Follows
 {
+    private $url;
+
     public function __construct()
     {
         parent::__construct();
@@ -29,16 +31,16 @@ class Perfil_user extends Follows
     }
 
     public function get_profile()
-    {	
-		$aut_code = $this->session->userdata('verify')['auth_token'];
+    {
+        $aut_code = $this->session->userdata('verify')['auth_token'];
         $retorno = $this->get_profile_conect();
         $language = $this->get_profile_language();
         $follows = $this->get_follows();
-		$dadosLogado = $this->session->userdata('logado');
-		$company_id = $dadosLogado["id"];
+        $dadosLogado = $this->session->userdata('logado');
+        $company_id = $dadosLogado["id"];
         $profile = $retorno;
-		
-	
+
+
         /*
          * Erro no curl
          */
@@ -58,63 +60,65 @@ class Perfil_user extends Follows
                 $count++;
             }
         }
-		
-		
-		if($this->session->userdata('logado')['type'] == 'companies'){
-			
-			$curl = curl_init();
 
-			curl_setopt_array($curl, array(
-				CURLOPT_PORT => "3000",
-				CURLOPT_URL => "http://34.229.150.76:3000/api/v1/admin/companies/$company_id",
-				CURLOPT_RETURNTRANSFER => true,
-				CURLOPT_ENCODING => "",
-				CURLOPT_MAXREDIRS => 10,
-				CURLOPT_TIMEOUT => 30,
-				CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-				CURLOPT_HTTPHEADER => array(
-					"accept: application/vnd.api+json",
-					"cache-control: no-cache",
-					"content-type: application/vnd.api+json",
-					"postman-token: e76d2ba7-3a09-53a2-46d3-fa4215dd792a",
-					"x-auth-token: $aut_code"
-				),
-			));
-			$headers = [];
-			curl_setopt($curl, CURLOPT_HEADERFUNCTION,
-				function ($curl, $header) use (&$headers) {
-					$len = strlen($header);
-					$header = explode(':', $header, 2);
-					if (count($header) < 2) // ignore invalid headers
-						return $len;
 
-					$name = strtolower(trim($header[0]));
-					if (!array_key_exists($name, $headers))
-						$headers[$name] = [trim($header[1])];
-					else
-						$headers[$name][] = trim($header[1]);
+        if ($this->session->userdata('logado')['type'] == 'companies') {
 
-					return $len;
-				}
-			);
+            $curl = curl_init();
 
-			$response = curl_exec($curl);			
-			$err = curl_error($curl);
-			$resposta = json_decode($response);
-			curl_close($curl);
-			
-			$array = $this->arrayCastRecursive($resposta);
+            curl_setopt_array($curl, array(
+//                CURLOPT_PORT => "3000",
+                CURLOPT_URL => "$this->url/api/v1/admin/companies/$company_id",
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => "",
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_SSL_VERIFYPEER => 0,
+                CURLOPT_SSL_VERIFYHOST => 0,
+                CURLOPT_TIMEOUT => 30,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_HTTPHEADER => array(
+                    "accept: application/vnd.api+json",
+                    "cache-control: no-cache",
+                    "content-type: application/vnd.api+json",
+                    "postman-token: e76d2ba7-3a09-53a2-46d3-fa4215dd792a",
+                    "x-auth-token: $aut_code"
+                ),
+            ));
+            $headers = [];
+            curl_setopt($curl, CURLOPT_HEADERFUNCTION,
+                function ($curl, $header) use (&$headers) {
+                    $len = strlen($header);
+                    $header = explode(':', $header, 2);
+                    if (count($header) < 2) // ignore invalid headers
+                        return $len;
+
+                    $name = strtolower(trim($header[0]));
+                    if (!array_key_exists($name, $headers))
+                        $headers[$name] = [trim($header[1])];
+                    else
+                        $headers[$name][] = trim($header[1]);
+
+                    return $len;
+                }
+            );
+
+            $response = curl_exec($curl);
+            $err = curl_error($curl);
+            $resposta = json_decode($response);
+            curl_close($curl);
+
+            $array = $this->arrayCastRecursive($resposta);
             $data ['profile'] = $array["data"];
-		
-			
-		}else{
-			$data ['profile'] = $profile['response']['data'];
-		}			
-		
+
+
+        } else {
+            $data ['profile'] = $profile['response']['data'];
+        }
+
         $data ['inscritos'] = $count;
         $language_user = $language['response'];
         $data ['idiomas'] = $language_user['data'];
-        
+
         $data ['relationships'] = $profile['response']['relationships'];
         $data ['included'] = $profile['response']['included'];
 //        print_r($data['jobs']);
@@ -127,16 +131,33 @@ class Perfil_user extends Follows
 
     public function editar()
     {
+//        echo '<pre>';
+//        print_r($this->input->post());
 
         $name = $this->input->post('name_user');
         $age = $this->input->post('age');
-        $image = 'data:image/png;base64,' . base64_encode($this->input->post('file'));
+        if ($this->input->post('new_image') != '') {
+            $stringimg = $this->input->post('new_image');
+            $image_final = preg_replace('/\s+/', '', $stringimg);
+
+        } else {
+            $image_final = $this->input->post('image_atual');
+        }
+        if ($this->input->post('new_document') != '') {
+            $pdf_final = $this->input->post('new_document');
+//            $pdf_final = str_replace('\'', '', $string);
+
+
+        } else {
+            $pdf_final = $this->input->post('document_atual');
+        }
+
         $carrer = $this->input->post('carrer');
         $region = $this->input->post('region');
-        $pdf = 'data:application/pdf;base64,' . base64_encode($this->input->post('pdf'));
+//        print_r($image);
         //$retorno = $region->sign_in('ingressoscaldas@gmail.com','icnTDC');
 
-        $retorno = $this->update_user($name, $age, $carrer, $region, $pdf, $image);
+        $retorno = $this->update_user($name, $age, $carrer, $region, $pdf_final, $image_final);
         /*
          * Erro no curl
          */
@@ -160,6 +181,8 @@ class Perfil_user extends Follows
                     'message' => 'Erro ao editar usuario'
                 ];
             $this->session->set_flashdata('alert', $data['alert']);
+//            echo '<pre>';
+//            print_r($retorno);
             redirect('Perfil_user');
         } else {
 
@@ -352,6 +375,16 @@ class Perfil_user extends Follows
     {
         $aut_code = $this->session->userdata('verify')['auth_token'];
         $id_user = $this->session->userdata('logado')['id'];
+        $obj['data'] = array('type' => 'profiles', 'id' => $id_user,
+            'attributes' => array(
+                'name' => $name, 'carrer' => $carrer, 'region' => $region, 'age' => $age,
+                'image' => $image,
+                'document' => $pdf
+
+            ));
+        $json = json_encode($obj);
+//        die;
+
 
 //        print_r($id_user);
 //        die;
@@ -359,27 +392,50 @@ class Perfil_user extends Follows
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/profile",
+            CURLOPT_URL => "$this->url/api/v1/profile",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "PUT",
-            CURLOPT_POSTFIELDS => "{\n  \"data\": {\n   \"type\": \"profiles\",\n   \"id\" : \"$id_user\",
-            \n    \"attributes\": {\n      \"name\": \"$name\",\n      \"region\": \"$region\",
-            \n      \"age\": \"$age\",\n      \"carrer\": \"$carrer\",
-            \n      \"image\": \"$image\",
-            \n      \"document\": \"$pdf\"\n    }\n  }\n}",
+            CURLOPT_POSTFIELDS => $json,
             CURLOPT_HTTPHEADER => array(
                 "accept: application/vnd.api+json",
                 "cache-control: no-cache",
                 "content-type: application/vnd.api+json",
-                "postman-token: e76d2ba7-3a09-53a2-46d3-fa4215dd792a",
+                "postman-token: 6e30e7d6-d708-5bd3-6fa6-42ea912f6268",
                 "x-auth-token: $aut_code"
             ),
         ));
+
+        //
+//        curl_setopt_array($curl, array(
+////            CURLOPT_PORT => "3000",
+//            CURLOPT_URL => "$this->url/api/v1/profile",
+//            CURLOPT_RETURNTRANSFER => true,
+//            CURLOPT_ENCODING => "",
+//            CURLOPT_MAXREDIRS => 10,
+//            CURLOPT_SSL_VERIFYPEER => 0,
+//            CURLOPT_SSL_VERIFYHOST => 0,
+//            CURLOPT_TIMEOUT => 30,
+//            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+//            CURLOPT_CUSTOMREQUEST => "PUT",
+//            CURLOPT_POSTFIELDS => "{\n  \"data\": {\n   \"type\": \"profiles\",\n   \"id\" : \"$id_user\",
+//            \n    \"attributes\": {\n      \"name\": \"$name\",\n      \"region\": \"$region\",
+//            \n      \"age\": \"$age\",\n      \"carrer\": \"$carrer\",
+//            \n      \"image\": \"$image\",
+//            \n      \"document\": \"$pdf\"\n    }\n  }\n}",
+//            CURLOPT_HTTPHEADER => array(
+//                "accept: application/vnd.api+json",
+//                "cache-control: no-cache",
+//                "content-type: application/vnd.api+json",
+//                "postman-token: e76d2ba7-3a09-53a2-46d3-fa4215dd792a",
+//                "x-auth-token: $aut_code"
+//            ),
+//        ));
         $headers = [];
         curl_setopt($curl, CURLOPT_HEADERFUNCTION,
             function ($curl, $header) use (&$headers) {
@@ -528,18 +584,20 @@ class Perfil_user extends Follows
         $this->load->view('template_admin/core', $data);
     }
 
-    private function edit_language_ws($name,$level, $id_idioma)
+    private function edit_language_ws($name, $level, $id_idioma)
     {
         $aut_code = $this->session->userdata('verify')['auth_token'];
         $curl = curl_init();
 
 
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/profile/languages/$id_idioma",
+//            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "$this->url/api/v1/profile/languages/$id_idioma",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "PUT",
@@ -652,11 +710,13 @@ class Perfil_user extends Follows
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/profile/languages",
+//            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "$this->url/api/v1/profile/languages",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "GET",
@@ -706,11 +766,13 @@ class Perfil_user extends Follows
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "http://34.229.150.76:3000/api/v1/profile/languages",
+//            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "$this->url/api/v1/profile/languages",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "POST",
@@ -755,15 +817,15 @@ class Perfil_user extends Follows
         return $resp;
 
     }
-	
-	
-	 public function editarEmpresa()
+
+
+    public function editarEmpresa()
     {
 
         $name = $this->input->post('name');
         $email = $this->input->post('email');
         $image = 'data:image/png;base64,' . base64_encode($this->input->post('file'));
-       
+
         //$retorno = $region->sign_in('ingressoscaldas@gmail.com','icnTDC');
 
         $retorno = $this->update_empresa($name, $email, $image);
@@ -810,12 +872,12 @@ class Perfil_user extends Follows
 //        }
 
     }
-	
-	
-	private function update_empresa($name, $email, $image)
+
+
+    private function update_empresa($name, $email, $image)
     {
         $aut_code = $this->session->userdata('verify')['auth_token'];
-        $company_id= $this->session->userdata('logado')['id'];
+        $company_id = $this->session->userdata('logado')['id'];
 
 //        print_r($id_user);
 //        die;

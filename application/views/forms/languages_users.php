@@ -55,23 +55,32 @@
     <br>
     <hr>
     <div class="text-right">
-        <button type="button" class="btn btn-primary small"><i class="fa fa-plus" data-toggle="modal"
-                                                           data-target="#new_languages"></i></button>
+        <button type="button" class="btn btn-primary small" data-toggle="modal"
+                data-target="#new_languages"><i class="fa fa-plus"></i></button>
     </div>
     <?php foreach ($idiomas as $idioma) { ?>
         <div class="row">
-            <h4><strong>Conheçimento do
-                    Idioma <?php echo $idioma['attributes']['name'] ?>
-                    <button type="button" class="btn btn-primary small"><i style="text-decoration: none;color: white"
-                                                                           class="fa fa-pencil" data-toggle="modal"
-                                                                           data-target=".edit_languages<?php echo $idioma['id'] ?>"></i>
-                    </button>
-                    <button type="button"
-                            class="btn btn-danger small"> <?php echo anchor('Perfil_user/delete_idioma/' . $idioma['id'],
-                            '<i style="text-decoration: none;color: white" class="fa fa-trash"/> </i>') ?></button>
+            <div class="col-md-6 col-md-offset-2">
+                <div class="text-right">
+                    <h4><strong>Conheçimento do
+                            Idioma <?php echo $idioma['attributes']['name'] ?>
+                        </strong></h4>
+                </div>
+            </div>
+            <div class="col-md-2">
+
+                <button type="button" class="btn btn-primary"><i
+                            style="text-decoration: none;color: white"
+                            class="fa fa-pencil" data-toggle="modal"
+                            data-target=".edit_languages<?php echo $idioma['id'] ?>"></i>
+                </button>
+                <button type="button"
+                        class="btn btn-danger"> <?php echo anchor('Perfil_user/delete_idioma/' . $idioma['id'],
+                        '<i
+                            style="text-decoration: none;color: white" class="fa fa-trash"> </i>') ?></button>
 
 
-                </strong></h4>
+            </div>
         </div>
         Level : <?php echo $idioma['attributes']['level'] ?><br>
 

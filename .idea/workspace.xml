@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c6315125-2236-4753-8b25-d0ed219b9684" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/forms/conexoes_list.php" afterPath="$PROJECT_DIR$/application/views/forms/conexoes_list.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Perfil_user.php" afterPath="$PROJECT_DIR$/application/controllers/Perfil_user.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Pesquisar.php" afterPath="$PROJECT_DIR$/application/controllers/Pesquisar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/forms/languages_users.php" afterPath="$PROJECT_DIR$/application/views/forms/languages_users.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/forms/perfil_user.php" afterPath="$PROJECT_DIR$/application/views/forms/perfil_user.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session/ci_sessionnocn1emcvqgffqb9nhb0v2d2sng0figj" afterPath="$PROJECT_DIR$/session/ci_sessionnocn1emcvqgffqb9nhb0v2d2sng0figj" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,14 +22,13 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Follows.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Follows.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Follows.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="110" column="40" lean-forward="true" selection-start-line="110" selection-start-column="40" selection-end-line="110" selection-end-column="40" />
+            <state relative-caret-position="340">
+              <caret line="148" column="12" lean-forward="false" selection-start-line="148" selection-start-column="12" selection-end-line="149" selection-end-column="40" />
               <folding>
                 <element signature="e#7#91#0#PHP" expanded="false" />
-                <element signature="n#__construct#0;n#Follows#0;n#!!top" expanded="false" />
                 <element signature="e#228#310#0#PHP" expanded="false" />
                 <element signature="n#index#0;n#Follows#0;n#!!top" expanded="false" />
                 <element signature="e#637#2113#0#PHP" expanded="false" />
@@ -46,10 +49,6 @@
                 <element signature="e#3672#3799#0#PHP" expanded="false" />
                 <element signature="e#3868#4078#0#PHP" expanded="false" />
                 <element signature="e#3933#4064#0#PHP" expanded="false" />
-                <element signature="n#get_follows#0;n#Follows#0;n#!!top" expanded="false" />
-                <element signature="e#4250#4993#0#PHP" expanded="false" />
-                <element signature="e#4275#4992#0#PHP" expanded="false" />
-                <element signature="e#4753#4981#1#PHP" expanded="false" />
                 <element signature="e#5027#5618#0#PHP" expanded="false" />
                 <element signature="e#5082#5608#1#PHP" expanded="false" />
                 <element signature="n#delete_follow_ws#0;n#Follows#0;n#!!top" expanded="false" />
@@ -76,11 +75,166 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Pesquisar.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Pesquisar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1243">
+              <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Perfil_user.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Perfil_user.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="591">
+              <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+              <folding>
+                <element signature="e#7#91#0#PHP" expanded="false" />
+                <element signature="e#256#379#0#PHP" expanded="false" />
+                <element signature="n#index#0;n#Perfil_user#0;n#!!top" expanded="false" />
+                <element signature="e#936#974#0#PHP" expanded="false" />
+                <element signature="e#983#1345#0#PHP" expanded="false" />
+                <element signature="e#1085#1235#0#PHP" expanded="false" />
+                <element signature="e#1374#1586#0#PHP" expanded="false" />
+                <element signature="e#1501#1576#0#PHP" expanded="false" />
+                <element signature="e#1597#3592#0#PHP" expanded="false" />
+                <element signature="e#1709#2548#0#PHP" expanded="false" />
+                <element signature="e#1734#2547#0#PHP" expanded="false" />
+                <element signature="e#2222#2532#1#PHP" expanded="false" />
+                <element signature="e#2589#3232#0#PHP" expanded="false" />
+                <element signature="e#2648#3218#1#PHP" expanded="false" />
+                <element signature="e#3514#3592#0#PHP" expanded="false" />
+                <element signature="e#5062#5100#0#PHP" expanded="false" />
+                <element signature="e#5487#5534#0#PHP" expanded="false" />
+                <element signature="n#create_idiomas#0;n#Perfil_user#0;n#!!top" expanded="false" />
+                <element signature="e#6715#6753#0#PHP" expanded="false" />
+                <element signature="e#6762#7130#0#PHP" expanded="false" />
+                <element signature="e#6864#7014#0#PHP" expanded="false" />
+                <element signature="e#7140#7187#0#PHP" expanded="false" />
+                <element signature="e#7196#7894#0#PHP" expanded="false" />
+                <element signature="e#7300#7415#0#PHP" expanded="false" />
+                <element signature="e#7532#7894#0#PHP" expanded="false" />
+                <element signature="e#7585#7707#0#PHP" expanded="false" />
+                <element signature="n#editar_skills#0;n#Perfil_user#0;n#!!top" expanded="false" />
+                <element signature="e#8404#8442#0#PHP" expanded="false" />
+                <element signature="e#8451#8819#0#PHP" expanded="false" />
+                <element signature="e#8553#8703#0#PHP" expanded="false" />
+                <element signature="e#8829#8876#0#PHP" expanded="false" />
+                <element signature="e#8885#9585#0#PHP" expanded="false" />
+                <element signature="e#8989#9104#0#PHP" expanded="false" />
+                <element signature="e#9221#9585#0#PHP" expanded="false" />
+                <element signature="e#9274#9398#0#PHP" expanded="false" />
+                <element signature="n#get_profile_conect#0;n#Perfil_user#0;n#!!top" expanded="false" />
+                <element signature="e#9922#10862#0#PHP" expanded="false" />
+                <element signature="e#9947#10861#0#PHP" expanded="false" />
+                <element signature="e#10622#10850#1#PHP" expanded="false" />
+                <element signature="e#10896#11487#0#PHP" expanded="false" />
+                <element signature="e#10951#11477#1#PHP" expanded="false" />
+                <element signature="e#14523#15114#0#PHP" expanded="false" />
+                <element signature="e#14578#15104#1#PHP" expanded="false" />
+                <element signature="n#delete_idioma#0;n#Perfil_user#0;n#!!top" expanded="false" />
+                <element signature="e#15455#16182#0#PHP" expanded="false" />
+                <element signature="e#15492#16172#0#PHP" expanded="false" />
+                <element signature="e#15587#15723#0#PHP" expanded="false" />
+                <element signature="e#15852#16172#0#PHP" expanded="false" />
+                <element signature="e#15912#16044#0#PHP" expanded="false" />
+                <element signature="n#delete_idioma_ws#0;n#Perfil_user#0;n#!!top" expanded="false" />
+                <element signature="e#16255#18224#0#PHP" expanded="false" />
+                <element signature="e#16399#17094#0#PHP" expanded="false" />
+                <element signature="e#16424#17093#0#PHP" expanded="false" />
+                <element signature="e#16886#17078#1#PHP" expanded="false" />
+                <element signature="e#17135#17778#0#PHP" expanded="false" />
+                <element signature="e#17194#17764#1#PHP" expanded="false" />
+                <element signature="e#18149#18224#0#PHP" expanded="false" />
+                <element signature="n#edit_language#0;n#Perfil_user#0;n#!!top" expanded="false" />
+                <element signature="e#18455#19742#0#PHP" expanded="false" />
+                <element signature="e#18627#19027#0#PHP" expanded="false" />
+                <element signature="e#18737#18899#0#PHP" expanded="false" />
+                <element signature="e#19040#19732#0#PHP" expanded="false" />
+                <element signature="e#19152#19280#0#PHP" expanded="false" />
+                <element signature="e#19409#19732#0#PHP" expanded="false" />
+                <element signature="e#19469#19604#0#PHP" expanded="false" />
+                <element signature="n#edit_language_ws#0;n#Perfil_user#0;n#!!top" expanded="false" />
+                <element signature="e#20041#21091#0#PHP" expanded="false" />
+                <element signature="e#20066#21090#0#PHP" expanded="false" />
+                <element signature="e#20793#21079#1#PHP" expanded="false" />
+                <element signature="e#21125#21716#0#PHP" expanded="false" />
+                <element signature="e#21180#21706#1#PHP" expanded="false" />
+                <element signature="n#update_skills#0;n#Perfil_user#0;n#!!top" expanded="false" />
+                <element signature="e#22336#23352#0#PHP" expanded="false" />
+                <element signature="e#22361#23351#0#PHP" expanded="false" />
+                <element signature="e#23054#23340#1#PHP" expanded="false" />
+                <element signature="e#23385#23976#0#PHP" expanded="false" />
+                <element signature="e#23440#23966#1#PHP" expanded="false" />
+                <element signature="n#get_profile_language#0;n#Perfil_user#0;n#!!top" expanded="false" />
+                <element signature="e#24476#25223#0#PHP" expanded="false" />
+                <element signature="e#24501#25222#0#PHP" expanded="false" />
+                <element signature="e#24983#25211#1#PHP" expanded="false" />
+                <element signature="e#25258#25849#0#PHP" expanded="false" />
+                <element signature="e#25313#25839#1#PHP" expanded="false" />
+                <element signature="n#create_languages#0;n#Perfil_user#0;n#!!top" expanded="false" />
+                <element signature="e#26409#27407#0#PHP" expanded="false" />
+                <element signature="e#26434#27406#0#PHP" expanded="false" />
+                <element signature="e#27109#27395#1#PHP" expanded="false" />
+                <element signature="e#27442#28033#0#PHP" expanded="false" />
+                <element signature="e#27497#28023#1#PHP" expanded="false" />
+                <element signature="n#editarEmpresa#0;n#Perfil_user#0;n#!!top" expanded="false" />
+                <element signature="e#28739#28777#0#PHP" expanded="false" />
+                <element signature="e#28786#29154#0#PHP" expanded="false" />
+                <element signature="e#28888#29038#0#PHP" expanded="false" />
+                <element signature="e#29164#29211#0#PHP" expanded="false" />
+                <element signature="e#29220#29920#0#PHP" expanded="false" />
+                <element signature="e#29324#29439#0#PHP" expanded="false" />
+                <element signature="e#29556#29920#0#PHP" expanded="false" />
+                <element signature="e#29609#29733#0#PHP" expanded="false" />
+                <element signature="n#update_empresa#0;n#Perfil_user#0;n#!!top" expanded="false" />
+                <element signature="e#30327#31337#0#PHP" expanded="false" />
+                <element signature="e#30352#31336#0#PHP" expanded="false" />
+                <element signature="e#31039#31325#1#PHP" expanded="false" />
+                <element signature="e#31370#31961#0#PHP" expanded="false" />
+                <element signature="e#31425#31951#1#PHP" expanded="false" />
+                <element signature="n#arrayCastRecursive#0;n#Perfil_user#0;n#!!top" expanded="false" />
+                <element signature="e#32304#32673#0#PHP" expanded="false" />
+                <element signature="e#32340#32663#0#PHP" expanded="false" />
+                <element signature="e#32393#32504#0#PHP" expanded="false" />
+                <element signature="e#32521#32649#0#PHP" expanded="false" />
+                <element signature="e#32682#32786#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="perfil_user.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/forms/perfil_user.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="431">
+              <caret line="211" column="24" lean-forward="false" selection-start-line="211" selection-start-column="24" selection-end-line="211" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="languages_users.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/forms/languages_users.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1207">
+              <caret line="76" column="37" lean-forward="true" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="37" />
+              <folding>
+                <element signature="n#style#0;n#i#0;n#button#0;n#div#1;n#div#2;n#div#1;n#!!top" expanded="true" />
+                <marker date="1517170615224" expanded="true" signature="3182:3278" ph="..." />
+                <marker date="1517170615224" expanded="true" signature="3218:3252" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="conexoes_list.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/forms/conexoes_list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1311">
-              <caret line="251" column="110" lean-forward="false" selection-start-line="251" selection-start-column="110" selection-end-line="251" selection-end-column="110" />
+            <state relative-caret-position="128">
+              <caret line="225" column="0" lean-forward="false" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="112" />
               <folding>
                 <marker date="1517166330742" expanded="true" signature="7066:7616" ph="..." />
                 <marker date="1517166330742" expanded="true" signature="8358:8447" ph="{...}" />
@@ -101,7 +255,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>na</find>
       <find>auth</find>
       <find>save</find>
       <find>comentarios</find>
@@ -131,6 +284,7 @@
       <find>pri</find>
       <find>br</find>
       <find>print</find>
+      <find>docu</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -162,20 +316,16 @@
         <option value="$PROJECT_DIR$/application/views/forms/jobs_application.php" />
         <option value="$PROJECT_DIR$/application/views/forms/companies_vagas_list.php" />
         <option value="$PROJECT_DIR$/application/views/forms/anuncios_list.php" />
-        <option value="$PROJECT_DIR$/application/views/forms/languages_users.php" />
-        <option value="$PROJECT_DIR$/application/views/forms/perfil_user.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/views/forms/list_coments.php" />
         <option value="$PROJECT_DIR$/application/controllers/Vagas_companies.php" />
         <option value="$PROJECT_DIR$/application/views/forms/vagas_list.php" />
         <option value="$PROJECT_DIR$/application/views/forms/profiles.php" />
         <option value="$PROJECT_DIR$/application/controllers/Profiles.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Pesquisar.php" />
         <option value="$PROJECT_DIR$/application/views/forms/pesquisar_filtro.php" />
         <option value="$PROJECT_DIR$/application/views/home.php" />
         <option value="$PROJECT_DIR$/system/core/Controller.php" />
         <option value="$PROJECT_DIR$/application/libraries/Geturl.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Perfil_user.php" />
         <option value="$PROJECT_DIR$/application/libraries/Fetchjob.php" />
         <option value="$PROJECT_DIR$/application/controllers/Vagas.php" />
         <option value="$PROJECT_DIR$/application/views/template_admin/menu.php" />
@@ -190,6 +340,10 @@
         <option value="$PROJECT_DIR$/application/views/forms/follow_users_list.php" />
         <option value="$PROJECT_DIR$/application/views/forms/conexoes_list.php" />
         <option value="$PROJECT_DIR$/application/controllers/Follows.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Pesquisar.php" />
+        <option value="$PROJECT_DIR$/application/views/forms/languages_users.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Perfil_user.php" />
+        <option value="$PROJECT_DIR$/application/views/forms/perfil_user.php" />
       </list>
     </option>
   </component>
@@ -230,114 +384,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="apportunity" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apportunity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apportunity" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apportunity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apportunity" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apportunity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apportunity" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forms" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apportunity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apportunity" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libraries" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apportunity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apportunity" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apportunity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apportunity" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -493,7 +539,7 @@
       <workItem from="1513725757745" duration="15101000" />
       <workItem from="1515537915370" duration="626000" />
       <workItem from="1516231052575" duration="90171000" />
-      <workItem from="1516836833747" duration="26967000" />
+      <workItem from="1516836833747" duration="48956000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://bitbucket.org/Wellison244/apportunity&#10;&#10;# Conflicts:&#10;#&#9;application/views/forms/pesquisar_filtro.php&#10;">
       <created>1513896285933</created>
@@ -520,7 +566,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="498795000" />
+    <option name="totallyTimeSpent" value="520784000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -546,6 +592,27 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18008785" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -685,13 +752,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/forms/languages_users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Sair.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -779,16 +839,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Pesquisar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" column="9" lean-forward="false" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding>
-            <element signature="e#211#333#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/core/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -802,127 +852,6 @@
         <state relative-caret-position="238">
           <caret line="14" column="64" lean-forward="false" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Perfil_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="21" selection-end-column="46" />
-          <folding>
-            <element signature="e#7#91#0#PHP" expanded="false" />
-            <element signature="n#index#0;n#Perfil_user#0;n#!!top" expanded="false" />
-            <element signature="e#903#941#0#PHP" expanded="false" />
-            <element signature="e#950#1312#0#PHP" expanded="false" />
-            <element signature="e#1052#1202#0#PHP" expanded="false" />
-            <element signature="e#1341#1553#0#PHP" expanded="false" />
-            <element signature="e#1468#1543#0#PHP" expanded="false" />
-            <element signature="e#1997#2220#1#PHP" expanded="false" />
-            <element signature="e#2250#2701#0#PHP" expanded="false" />
-            <element signature="e#2297#2696#1#PHP" expanded="false" />
-            <element signature="e#2942#3004#0#PHP" expanded="false" />
-            <element signature="n#editar#0;n#Perfil_user#0;n#!!top" expanded="false" />
-            <element signature="e#4024#4062#0#PHP" expanded="false" />
-            <element signature="e#4071#4439#0#PHP" expanded="false" />
-            <element signature="e#4173#4323#0#PHP" expanded="false" />
-            <element signature="e#4449#4496#0#PHP" expanded="false" />
-            <element signature="e#4505#5205#0#PHP" expanded="false" />
-            <element signature="e#4609#4724#0#PHP" expanded="false" />
-            <element signature="e#4841#5205#0#PHP" expanded="false" />
-            <element signature="e#4894#5018#0#PHP" expanded="false" />
-            <element signature="n#create_idiomas#0;n#Perfil_user#0;n#!!top" expanded="false" />
-            <element signature="e#5616#5654#0#PHP" expanded="false" />
-            <element signature="e#5663#6031#0#PHP" expanded="false" />
-            <element signature="e#5765#5915#0#PHP" expanded="false" />
-            <element signature="e#6041#6088#0#PHP" expanded="false" />
-            <element signature="e#6097#6795#0#PHP" expanded="false" />
-            <element signature="e#6201#6316#0#PHP" expanded="false" />
-            <element signature="e#6433#6795#0#PHP" expanded="false" />
-            <element signature="e#6486#6608#0#PHP" expanded="false" />
-            <element signature="n#editar_skills#0;n#Perfil_user#0;n#!!top" expanded="false" />
-            <element signature="e#7305#7343#0#PHP" expanded="false" />
-            <element signature="e#7352#7720#0#PHP" expanded="false" />
-            <element signature="e#7454#7604#0#PHP" expanded="false" />
-            <element signature="e#7730#7777#0#PHP" expanded="false" />
-            <element signature="e#7786#8486#0#PHP" expanded="false" />
-            <element signature="e#7890#8005#0#PHP" expanded="false" />
-            <element signature="e#8122#8486#0#PHP" expanded="false" />
-            <element signature="e#8175#8299#0#PHP" expanded="false" />
-            <element signature="e#9523#9751#1#PHP" expanded="false" />
-            <element signature="n#update_user#0;n#Perfil_user#0;n#!!top" expanded="false" />
-            <element signature="e#11019#12122#0#PHP" expanded="false" />
-            <element signature="e#11044#12121#0#PHP" expanded="false" />
-            <element signature="e#11824#12110#1#PHP" expanded="false" />
-            <element signature="e#12155#12746#0#PHP" expanded="false" />
-            <element signature="e#12210#12736#1#PHP" expanded="false" />
-            <element signature="n#delete_idioma#0;n#Perfil_user#0;n#!!top" expanded="false" />
-            <element signature="e#13087#13814#0#PHP" expanded="false" />
-            <element signature="e#13124#13804#0#PHP" expanded="false" />
-            <element signature="e#13219#13355#0#PHP" expanded="false" />
-            <element signature="e#13484#13804#0#PHP" expanded="false" />
-            <element signature="e#13544#13676#0#PHP" expanded="false" />
-            <element signature="n#delete_idioma_ws#0;n#Perfil_user#0;n#!!top" expanded="false" />
-            <element signature="e#13887#15856#0#PHP" expanded="false" />
-            <element signature="e#14031#14726#0#PHP" expanded="false" />
-            <element signature="e#14056#14725#0#PHP" expanded="false" />
-            <element signature="e#14518#14710#1#PHP" expanded="false" />
-            <element signature="e#14767#15410#0#PHP" expanded="false" />
-            <element signature="e#14826#15396#1#PHP" expanded="false" />
-            <element signature="e#15781#15856#0#PHP" expanded="false" />
-            <element signature="n#edit_language#0;n#Perfil_user#0;n#!!top" expanded="false" />
-            <element signature="e#16087#17374#0#PHP" expanded="false" />
-            <element signature="e#16259#16659#0#PHP" expanded="false" />
-            <element signature="e#16369#16531#0#PHP" expanded="false" />
-            <element signature="e#16672#17364#0#PHP" expanded="false" />
-            <element signature="e#16784#16912#0#PHP" expanded="false" />
-            <element signature="e#17041#17364#0#PHP" expanded="false" />
-            <element signature="e#17101#17236#0#PHP" expanded="false" />
-            <element signature="n#edit_language_ws#0;n#Perfil_user#0;n#!!top" expanded="false" />
-            <element signature="e#17672#18653#0#PHP" expanded="false" />
-            <element signature="e#17697#18652#0#PHP" expanded="false" />
-            <element signature="e#18355#18641#1#PHP" expanded="false" />
-            <element signature="e#18687#19278#0#PHP" expanded="false" />
-            <element signature="e#18742#19268#1#PHP" expanded="false" />
-            <element signature="n#update_skills#0;n#Perfil_user#0;n#!!top" expanded="false" />
-            <element signature="e#19898#20914#0#PHP" expanded="false" />
-            <element signature="e#19923#20913#0#PHP" expanded="false" />
-            <element signature="e#20616#20902#1#PHP" expanded="false" />
-            <element signature="e#20947#21538#0#PHP" expanded="false" />
-            <element signature="e#21002#21528#1#PHP" expanded="false" />
-            <element signature="n#get_profile_language#0;n#Perfil_user#0;n#!!top" expanded="false" />
-            <element signature="e#22038#22716#0#PHP" expanded="false" />
-            <element signature="e#22063#22715#0#PHP" expanded="false" />
-            <element signature="e#22476#22704#1#PHP" expanded="false" />
-            <element signature="e#22751#23342#0#PHP" expanded="false" />
-            <element signature="e#22806#23332#1#PHP" expanded="false" />
-            <element signature="n#create_languages#0;n#Perfil_user#0;n#!!top" expanded="false" />
-            <element signature="e#23902#24831#0#PHP" expanded="false" />
-            <element signature="e#23927#24830#0#PHP" expanded="false" />
-            <element signature="e#24533#24819#1#PHP" expanded="false" />
-            <element signature="e#24866#25457#0#PHP" expanded="false" />
-            <element signature="e#24921#25447#1#PHP" expanded="false" />
-            <element signature="n#editarEmpresa#0;n#Perfil_user#0;n#!!top" expanded="false" />
-            <element signature="e#26170#26208#0#PHP" expanded="false" />
-            <element signature="e#26217#26585#0#PHP" expanded="false" />
-            <element signature="e#26319#26469#0#PHP" expanded="false" />
-            <element signature="e#26595#26642#0#PHP" expanded="false" />
-            <element signature="e#26651#27351#0#PHP" expanded="false" />
-            <element signature="e#26755#26870#0#PHP" expanded="false" />
-            <element signature="e#26987#27351#0#PHP" expanded="false" />
-            <element signature="e#27040#27164#0#PHP" expanded="false" />
-            <element signature="n#update_empresa#0;n#Perfil_user#0;n#!!top" expanded="false" />
-            <element signature="e#27756#28766#0#PHP" expanded="false" />
-            <element signature="e#27781#28765#0#PHP" expanded="false" />
-            <element signature="e#28468#28754#1#PHP" expanded="false" />
-            <element signature="e#28799#29390#0#PHP" expanded="false" />
-            <element signature="e#28854#29380#1#PHP" expanded="false" />
-            <element signature="n#arrayCastRecursive#0;n#Perfil_user#0;n#!!top" expanded="false" />
-            <element signature="e#29733#30102#0#PHP" expanded="false" />
-            <element signature="e#29769#30092#0#PHP" expanded="false" />
-            <element signature="e#29822#29933#0#PHP" expanded="false" />
-            <element signature="e#29950#30078#0#PHP" expanded="false" />
-            <element signature="e#30111#30215#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1021,14 +950,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/forms/perfil_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="932">
-          <caret line="155" column="10" lean-forward="true" selection-start-line="155" selection-start-column="10" selection-end-line="155" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1142,29 +1063,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Profiles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="82" column="78" lean-forward="false" selection-start-line="82" selection-start-column="78" selection-end-line="82" selection-end-column="78" />
-          <folding>
-            <element signature="e#7#91#0#PHP" expanded="false" />
-            <element signature="e#652#1328#0#PHP" expanded="false" />
-            <element signature="e#677#1327#0#PHP" expanded="false" />
-            <element signature="e#1088#1316#1#PHP" expanded="false" />
-            <element signature="e#1362#1953#0#PHP" expanded="false" />
-            <element signature="e#1417#1943#1#PHP" expanded="false" />
-            <element signature="e#3216#3807#0#PHP" expanded="false" />
-            <element signature="e#3271#3797#1#PHP" expanded="false" />
-            <element signature="n#arrayCastRecursive#0;n#Profiles#0;n#!!top" expanded="false" />
-            <element signature="e#4200#4569#0#PHP" expanded="false" />
-            <element signature="e#4236#4559#0#PHP" expanded="false" />
-            <element signature="e#4289#4400#0#PHP" expanded="false" />
-            <element signature="e#4417#4545#0#PHP" expanded="false" />
-            <element signature="e#4578#4682#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/forms/profiles.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -1246,16 +1144,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/forms/follow_users_list.php" />
-    <entry file="file://$PROJECT_DIR$/application/views/forms/pesquisar_filtro.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="116" />
-          <folding>
-            <marker date="1513903718875" expanded="true" signature="3600:3603" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5151">
@@ -1369,25 +1257,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/forms/conexoes_list.php">
+    <entry file="file://$PROJECT_DIR$/application/views/forms/pesquisar_filtro.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1311">
-          <caret line="251" column="110" lean-forward="false" selection-start-line="251" selection-start-column="110" selection-end-line="251" selection-end-column="110" />
+        <state relative-caret-position="-143">
+          <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
           <folding>
-            <marker date="1517166330742" expanded="true" signature="7066:7616" ph="..." />
-            <marker date="1517166330742" expanded="true" signature="8358:8447" ph="{...}" />
-            <marker date="1517166330742" expanded="true" signature="16064:16642" ph="..." />
+            <marker date="1513903718875" expanded="true" signature="3600:3603" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Follows.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="110" column="40" lean-forward="true" selection-start-line="110" selection-start-column="40" selection-end-line="110" selection-end-column="40" />
+        <state relative-caret-position="340">
+          <caret line="148" column="12" lean-forward="false" selection-start-line="148" selection-start-column="12" selection-end-line="149" selection-end-column="40" />
           <folding>
             <element signature="e#7#91#0#PHP" expanded="false" />
-            <element signature="n#__construct#0;n#Follows#0;n#!!top" expanded="false" />
             <element signature="e#228#310#0#PHP" expanded="false" />
             <element signature="n#index#0;n#Follows#0;n#!!top" expanded="false" />
             <element signature="e#637#2113#0#PHP" expanded="false" />
@@ -1408,10 +1293,6 @@
             <element signature="e#3672#3799#0#PHP" expanded="false" />
             <element signature="e#3868#4078#0#PHP" expanded="false" />
             <element signature="e#3933#4064#0#PHP" expanded="false" />
-            <element signature="n#get_follows#0;n#Follows#0;n#!!top" expanded="false" />
-            <element signature="e#4250#4993#0#PHP" expanded="false" />
-            <element signature="e#4275#4992#0#PHP" expanded="false" />
-            <element signature="e#4753#4981#1#PHP" expanded="false" />
             <element signature="e#5027#5618#0#PHP" expanded="false" />
             <element signature="e#5082#5608#1#PHP" expanded="false" />
             <element signature="n#delete_follow_ws#0;n#Follows#0;n#!!top" expanded="false" />
@@ -1434,6 +1315,185 @@
             <element signature="e#9599#9727#0#PHP" expanded="false" />
             <element signature="e#9760#9864#0#PHP" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Profiles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="28" column="39" lean-forward="true" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+          <folding>
+            <element signature="e#7#91#0#PHP" expanded="false" />
+            <element signature="e#1088#1316#1#PHP" expanded="false" />
+            <element signature="e#1417#1943#1#PHP" expanded="false" />
+            <element signature="e#3216#3807#0#PHP" expanded="false" />
+            <element signature="e#3271#3797#1#PHP" expanded="false" />
+            <element signature="n#arrayCastRecursive#0;n#Profiles#0;n#!!top" expanded="false" />
+            <element signature="e#4200#4569#0#PHP" expanded="false" />
+            <element signature="e#4236#4559#0#PHP" expanded="false" />
+            <element signature="e#4289#4400#0#PHP" expanded="false" />
+            <element signature="e#4417#4545#0#PHP" expanded="false" />
+            <element signature="e#4578#4682#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Pesquisar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1243">
+          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/forms/languages_users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="76" column="37" lean-forward="true" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#button#0;n#div#1;n#div#2;n#div#1;n#!!top" expanded="true" />
+            <marker date="1517170615224" expanded="true" signature="3182:3278" ph="..." />
+            <marker date="1517170615224" expanded="true" signature="3218:3252" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/forms/conexoes_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="225" column="0" lean-forward="false" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="112" />
+          <folding>
+            <marker date="1517166330742" expanded="true" signature="7066:7616" ph="..." />
+            <marker date="1517166330742" expanded="true" signature="8358:8447" ph="{...}" />
+            <marker date="1517166330742" expanded="true" signature="16064:16642" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Perfil_user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#91#0#PHP" expanded="false" />
+            <element signature="e#256#379#0#PHP" expanded="false" />
+            <element signature="n#index#0;n#Perfil_user#0;n#!!top" expanded="false" />
+            <element signature="e#936#974#0#PHP" expanded="false" />
+            <element signature="e#983#1345#0#PHP" expanded="false" />
+            <element signature="e#1085#1235#0#PHP" expanded="false" />
+            <element signature="e#1374#1586#0#PHP" expanded="false" />
+            <element signature="e#1501#1576#0#PHP" expanded="false" />
+            <element signature="e#1597#3592#0#PHP" expanded="false" />
+            <element signature="e#1709#2548#0#PHP" expanded="false" />
+            <element signature="e#1734#2547#0#PHP" expanded="false" />
+            <element signature="e#2222#2532#1#PHP" expanded="false" />
+            <element signature="e#2589#3232#0#PHP" expanded="false" />
+            <element signature="e#2648#3218#1#PHP" expanded="false" />
+            <element signature="e#3514#3592#0#PHP" expanded="false" />
+            <element signature="e#5062#5100#0#PHP" expanded="false" />
+            <element signature="e#5487#5534#0#PHP" expanded="false" />
+            <element signature="n#create_idiomas#0;n#Perfil_user#0;n#!!top" expanded="false" />
+            <element signature="e#6715#6753#0#PHP" expanded="false" />
+            <element signature="e#6762#7130#0#PHP" expanded="false" />
+            <element signature="e#6864#7014#0#PHP" expanded="false" />
+            <element signature="e#7140#7187#0#PHP" expanded="false" />
+            <element signature="e#7196#7894#0#PHP" expanded="false" />
+            <element signature="e#7300#7415#0#PHP" expanded="false" />
+            <element signature="e#7532#7894#0#PHP" expanded="false" />
+            <element signature="e#7585#7707#0#PHP" expanded="false" />
+            <element signature="n#editar_skills#0;n#Perfil_user#0;n#!!top" expanded="false" />
+            <element signature="e#8404#8442#0#PHP" expanded="false" />
+            <element signature="e#8451#8819#0#PHP" expanded="false" />
+            <element signature="e#8553#8703#0#PHP" expanded="false" />
+            <element signature="e#8829#8876#0#PHP" expanded="false" />
+            <element signature="e#8885#9585#0#PHP" expanded="false" />
+            <element signature="e#8989#9104#0#PHP" expanded="false" />
+            <element signature="e#9221#9585#0#PHP" expanded="false" />
+            <element signature="e#9274#9398#0#PHP" expanded="false" />
+            <element signature="n#get_profile_conect#0;n#Perfil_user#0;n#!!top" expanded="false" />
+            <element signature="e#9922#10862#0#PHP" expanded="false" />
+            <element signature="e#9947#10861#0#PHP" expanded="false" />
+            <element signature="e#10622#10850#1#PHP" expanded="false" />
+            <element signature="e#10896#11487#0#PHP" expanded="false" />
+            <element signature="e#10951#11477#1#PHP" expanded="false" />
+            <element signature="e#14523#15114#0#PHP" expanded="false" />
+            <element signature="e#14578#15104#1#PHP" expanded="false" />
+            <element signature="n#delete_idioma#0;n#Perfil_user#0;n#!!top" expanded="false" />
+            <element signature="e#15455#16182#0#PHP" expanded="false" />
+            <element signature="e#15492#16172#0#PHP" expanded="false" />
+            <element signature="e#15587#15723#0#PHP" expanded="false" />
+            <element signature="e#15852#16172#0#PHP" expanded="false" />
+            <element signature="e#15912#16044#0#PHP" expanded="false" />
+            <element signature="n#delete_idioma_ws#0;n#Perfil_user#0;n#!!top" expanded="false" />
+            <element signature="e#16255#18224#0#PHP" expanded="false" />
+            <element signature="e#16399#17094#0#PHP" expanded="false" />
+            <element signature="e#16424#17093#0#PHP" expanded="false" />
+            <element signature="e#16886#17078#1#PHP" expanded="false" />
+            <element signature="e#17135#17778#0#PHP" expanded="false" />
+            <element signature="e#17194#17764#1#PHP" expanded="false" />
+            <element signature="e#18149#18224#0#PHP" expanded="false" />
+            <element signature="n#edit_language#0;n#Perfil_user#0;n#!!top" expanded="false" />
+            <element signature="e#18455#19742#0#PHP" expanded="false" />
+            <element signature="e#18627#19027#0#PHP" expanded="false" />
+            <element signature="e#18737#18899#0#PHP" expanded="false" />
+            <element signature="e#19040#19732#0#PHP" expanded="false" />
+            <element signature="e#19152#19280#0#PHP" expanded="false" />
+            <element signature="e#19409#19732#0#PHP" expanded="false" />
+            <element signature="e#19469#19604#0#PHP" expanded="false" />
+            <element signature="n#edit_language_ws#0;n#Perfil_user#0;n#!!top" expanded="false" />
+            <element signature="e#20041#21091#0#PHP" expanded="false" />
+            <element signature="e#20066#21090#0#PHP" expanded="false" />
+            <element signature="e#20793#21079#1#PHP" expanded="false" />
+            <element signature="e#21125#21716#0#PHP" expanded="false" />
+            <element signature="e#21180#21706#1#PHP" expanded="false" />
+            <element signature="n#update_skills#0;n#Perfil_user#0;n#!!top" expanded="false" />
+            <element signature="e#22336#23352#0#PHP" expanded="false" />
+            <element signature="e#22361#23351#0#PHP" expanded="false" />
+            <element signature="e#23054#23340#1#PHP" expanded="false" />
+            <element signature="e#23385#23976#0#PHP" expanded="false" />
+            <element signature="e#23440#23966#1#PHP" expanded="false" />
+            <element signature="n#get_profile_language#0;n#Perfil_user#0;n#!!top" expanded="false" />
+            <element signature="e#24476#25223#0#PHP" expanded="false" />
+            <element signature="e#24501#25222#0#PHP" expanded="false" />
+            <element signature="e#24983#25211#1#PHP" expanded="false" />
+            <element signature="e#25258#25849#0#PHP" expanded="false" />
+            <element signature="e#25313#25839#1#PHP" expanded="false" />
+            <element signature="n#create_languages#0;n#Perfil_user#0;n#!!top" expanded="false" />
+            <element signature="e#26409#27407#0#PHP" expanded="false" />
+            <element signature="e#26434#27406#0#PHP" expanded="false" />
+            <element signature="e#27109#27395#1#PHP" expanded="false" />
+            <element signature="e#27442#28033#0#PHP" expanded="false" />
+            <element signature="e#27497#28023#1#PHP" expanded="false" />
+            <element signature="n#editarEmpresa#0;n#Perfil_user#0;n#!!top" expanded="false" />
+            <element signature="e#28739#28777#0#PHP" expanded="false" />
+            <element signature="e#28786#29154#0#PHP" expanded="false" />
+            <element signature="e#28888#29038#0#PHP" expanded="false" />
+            <element signature="e#29164#29211#0#PHP" expanded="false" />
+            <element signature="e#29220#29920#0#PHP" expanded="false" />
+            <element signature="e#29324#29439#0#PHP" expanded="false" />
+            <element signature="e#29556#29920#0#PHP" expanded="false" />
+            <element signature="e#29609#29733#0#PHP" expanded="false" />
+            <element signature="n#update_empresa#0;n#Perfil_user#0;n#!!top" expanded="false" />
+            <element signature="e#30327#31337#0#PHP" expanded="false" />
+            <element signature="e#30352#31336#0#PHP" expanded="false" />
+            <element signature="e#31039#31325#1#PHP" expanded="false" />
+            <element signature="e#31370#31961#0#PHP" expanded="false" />
+            <element signature="e#31425#31951#1#PHP" expanded="false" />
+            <element signature="n#arrayCastRecursive#0;n#Perfil_user#0;n#!!top" expanded="false" />
+            <element signature="e#32304#32673#0#PHP" expanded="false" />
+            <element signature="e#32340#32663#0#PHP" expanded="false" />
+            <element signature="e#32393#32504#0#PHP" expanded="false" />
+            <element signature="e#32521#32649#0#PHP" expanded="false" />
+            <element signature="e#32682#32786#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/forms/perfil_user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="211" column="24" lean-forward="false" selection-start-line="211" selection-start-column="24" selection-end-line="211" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
