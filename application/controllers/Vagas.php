@@ -8,6 +8,8 @@
  */
 class Vagas extends CI_Controller
 {
+    private $url;
+
     public function __construct()
     {
         parent::__construct();
@@ -219,37 +221,37 @@ class Vagas extends CI_Controller
     {
         if ($idjob) {
 //            if ($idjob > 0 && !empty($idjob)) {
-                $aut_code = $this->session->userdata('verify')['auth_token'];
-                $curl = curl_init();
+            $aut_code = $this->session->userdata('verify')['auth_token'];
+            $curl = curl_init();
 
-                curl_setopt_array($curl, array(
+            curl_setopt_array($curl, array(
 //                    CURLOPT_PORT => "3000",
-                    CURLOPT_URL => "$this->url/api/v1/saved_jobs/$idjob",
-                    CURLOPT_RETURNTRANSFER => true,
-                    CURLOPT_ENCODING => "",
-                    CURLOPT_MAXREDIRS => 10,
-                    CURLOPT_SSL_VERIFYPEER => 0,
-                    CURLOPT_SSL_VERIFYHOST => 0,
-                    CURLOPT_TIMEOUT => 30,
-                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                    CURLOPT_CUSTOMREQUEST => "DELETE",
-                    CURLOPT_HTTPHEADER => array(
-                        "cache-control: no-cache",
-                        "postman-token: c28a74d7-211d-1872-5df5-3456ac0602c3",
-                        "x-auth-token: $aut_code"
-                    ),
-                ));
+                CURLOPT_URL => "$this->url/api/v1/saved_jobs/$idjob",
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => "",
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_SSL_VERIFYPEER => 0,
+                CURLOPT_SSL_VERIFYHOST => 0,
+                CURLOPT_TIMEOUT => 30,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => "DELETE",
+                CURLOPT_HTTPHEADER => array(
+                    "cache-control: no-cache",
+                    "postman-token: c28a74d7-211d-1872-5df5-3456ac0602c3",
+                    "x-auth-token: $aut_code"
+                ),
+            ));
 
-                $response = curl_exec($curl);
-                $err = curl_error($curl);
+            $response = curl_exec($curl);
+            $err = curl_error($curl);
 
-                curl_close($curl);
+            curl_close($curl);
 
-                if ($err) {
-                    echo "cURL Error #:" . $err;
-                } else {
-                    echo $response;
-                }
+            if ($err) {
+                echo "cURL Error #:" . $err;
+            } else {
+                echo $response;
+            }
 //            }
         }
     }
