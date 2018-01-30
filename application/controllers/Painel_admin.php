@@ -36,7 +36,7 @@ class Painel_admin extends Follows
     {
 
 //        print_r($this->url);
-        $this->output->enable_profiler(TRUE);
+//        $this->output->enable_profiler(TRUE);
 
         $this->load->library('Fetchcompany');
         $retorno = $this->get_jobs();
