@@ -91,27 +91,29 @@ print_r($this->session->userdata('logado')->id);
                                 </h4></a></li>
 
                         <li>
-
-                            <div class="dropdown" style=" margin-top: 24px;">
-                                <a href="#" data-toggle="dropdown"><i class="fa fa-bars" aria-hidden="true"
-                                                                      style="font-size: 20px;color: #fff;"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="<?php echo base_url('Mensagens') ?>"><h4><strong><i
-                                                            class="fa fa-large fa-paper-plane"> Mensagens</i></strong>
-                                            </h4>
-                                        </a>
-                                    </li>
-                                    <li><a href="<?php echo base_url('Pesquisar') ?>"><h4><strong><i
-                                                            class="fa fa-large fa-search">
-                                                        Pesquisar</i></strong></h4></a></li>
-                                    <li><a href="<?php echo base_url('Perfil_user') ?>"><h4><strong><i
-                                                            class="fa fa-large fa-user">
-                                                        Perfil</i></strong></h4></a></li>
-                                    <li>  <?php
-                                        echo anchor('Sair', '<b><h4><strong><i class="fa fa-large fa-sign-out"> Sair</i></strong></h4></b>')
-                                        ?></li>
-                                </ul>
-                            </div>
+                            <a href="#">
+                                <div class="dropdown" style="">
+                                    <a href="#" data-toggle="dropdown"><i class="fa fa-bars" aria-hidden="true"
+                                                                          style="font-size: 30px;color: whitesmoke;"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="<?php echo base_url('Mensagens') ?>"><h4><strong><i
+                                                                class="fa fa-large fa-paper-plane">
+                                                            Mensagens</i></strong>
+                                                </h4>
+                                            </a>
+                                        </li>
+                                        <li><a href="<?php echo base_url('Pesquisar') ?>"><h4><strong><i
+                                                                class="fa fa-large fa-search">
+                                                            Pesquisar</i></strong></h4></a></li>
+                                        <li><a href="<?php echo base_url('Perfil_user') ?>"><h4><strong><i
+                                                                class="fa fa-large fa-user">
+                                                            Perfil</i></strong></h4></a></li>
+                                        <li>  <?php
+                                            echo anchor('Sair', '<b><h4><strong><i class="fa fa-large fa-sign-out"> Sair</i></strong></h4></b>')
+                                            ?></li>
+                                    </ul>
+                                </div>
+                            </a>
                         </li>
 
 

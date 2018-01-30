@@ -2,83 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6315125-2236-4753-8b25-d0ed219b9684" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session09jnj1os83numqesb0hb7euc6u2utv4q" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session0cqdvkqm95i3nd3pvs2q1e8i7auctgm8" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session0jo3etp1vpc6jmp67qmuvs24rsomdlss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session1fk6pe20gdbf6q0fm7t69uj3m7c76vdu" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session2sierheph6661tl6bvib7s3d95poh0at" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session2th3pbbh9ukp3niusvlsq3rtulkrlofc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session2vk6f34t0lv03lg2dnhet4gkd8nuts19" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session31qvl7fb2t4t8pd34pkacq65lh5kr722" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session3o54tsl2cfqn6jifrglkgtu99frv8v4j" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session3oum6d8lsnbp48kc2i06fiti3mqa3351" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session3qcr2prfppogpl3rbfs2nu719frm0cea" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session4pg50mmfjsddbmodgr5qi7p93u5ut9s5" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session4qltclgp9mb1qjagjeloh100kaq00bc1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session5b4ii9j69ncjbooiras0ikginarg1k3f" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session5bf6bh4d0oot78ms53t1tfd57hm6cv2v" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session5cm8j8nlu6crp8n1ta6mkb0j8aha02tb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session5ft630n3383am78s0pcdejss3seqbeaa" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session5kpuhcohenvoc4usggahdcflrg8odi9v" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session5o4q2q19sjei6lva1drflkvq54fkf8ja" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session613vuopjlqci9m6nd4bas1trb49qrj0n" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session6sc4p5f0q6nvaggtemhrpoai712chs1d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session71ismqr37cbdj0s85flh6h101v5pi3rh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session82cbpsusgkunu11ia2t3q74h7m25jvd9" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session880j5hek9l40jlqodibrdrdaapip7aj1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session8aqglqg4kn84soemsv7fdndabdq9ck93" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session8jgnq6jdqlij08nredbdgki6l793vunr" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session8vgq1p843tnec9g8kn37h12ifrfiogld" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session95oq6735h0umhpv6v2lm5t97kgjvlh0d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session9bvim8s6rhpuahl3bfjf1t64k9dgpc83" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_session9sib0ng3sgj48gunnbeg990fs01o2kml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionb1is8di91ojse6jbcm1mt5c9vnog3cgn" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessioncsuc3rvkoq98gv0u36tmu4n6pke2rvs6" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessioncvelp7j3e94kf7rl1sbbbrj1a6fuq7d8" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessiondh8j5a2odb2ctg41je4v8boe9li1m8q1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessiondsugf6i1o2pvcvhf47u57t7c7bqi6at0" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessione0uf07evghva7sj25u9nfeamg1ovq6vj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessioneahb0rd6d0u3p7ad8g2r9p2ghb4hma2p" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionelb4kqejo979v5dq93cop0kovp29l0lr" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionfg1oi29sbflkre7bm7dnpjnhmet8omvr" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessiong0jun0g0k0j9k4i119a6lbprocvpviq8" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessiongs1u1ul884j7dnimm05nsuoj9lauea92" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionke04aua1f5qumgkknd2ebikergnheku7" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionkhe71t1rhn0mjvobh5h1c2ejncnbho6u" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionktblknfbps558iilqluakh8ujfvojfp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionld14l3df68abttnp0gr8hjf5qfemie31" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionljbg0nqignvs5jit2416ir5k2f179c80" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionlqvtmcjdlb46kvkv9a12sr72lpgt30ng" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionlr3bqm3vlre3brambubfmea81n6qmrkp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionlvtpd6imgruplendat2uj0i02dkrh3f3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionmg2jg5nblrm7a4og6rmcfo0sbafjv3d2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionnekr2mikvpmgt9a2hp7uoe28qhlhhp7o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionnlq5897ppn5dbh3smf4ntick86c6prs1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionnocn1emcvqgffqb9nhb0v2d2sng0figj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessiono5f6of6fo0vm1f7ct88cbfj7b1418oph" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionppv8vq8cfomph4lelnqjmjtm8vrhn2be" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionq2qrd0s1psojgfjnairmnpj4qr3aru0p" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionq7o8vdtq4dcmsbae7v87vjbnes4n022h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionqpb4au3r170d6igvhp51poa8ovqs6d92" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionrci08lhp0bsk7mscqg629feb9ivkjqn6" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionrdqlt9i650bk7ich9huf4ptd215t2gg9" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessiont1ftck2nilc5os5e9hdkhkv7hjrqfdta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessiontc27gtqci4pcin62caoadv47m2ad0ha0" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionthbrj4bbvr59f9b6m0ijghm6ceg11bi8" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionts8uo69q3e6ab17ktbb25lfself1po1u" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionu99bpshfim7odgqo94mfe4hgeffb74fs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionudccp200jgr0csjoca6hba264ksg2bpb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionudlusn5h2pvpapk570ee18m1g7tli6ut" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionuiu2fst2sgis59iokoun2k6h27c4hqim" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionv0unbmftdq302a9lf2i3h7fmm388t89h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionv10nfhqk4f0ghn7iaorvp2pr6tcn051k" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionv2tvss4gte7rs27mumq8js71c8d0loa3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionv4ummpj6jj75r8lovpjbc05v64hjh0a6" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionvh8rtvmqlprsc9q5c60hc22voj2mf8au" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionvpe1v041abg3r9avp0rb967v95m9vhtq" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/session/ci_sessionvrti5g65p4jflhbud52hipq2be7d26nc" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Painel_admin.php" afterPath="$PROJECT_DIR$/application/controllers/Painel_admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/template_admin/menu.php" afterPath="$PROJECT_DIR$/application/views/template_admin/menu.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arquivos/resources/vendor/bootstrap/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/arquivos/resources/vendor/bootstrap/css/bootstrap.min.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -352,9 +277,11 @@
       <file leaf-file-name="menu.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/template_admin/menu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="97" column="56" lean-forward="false" selection-start-line="97" selection-start-column="43" selection-end-line="97" selection-end-column="56" />
-              <folding />
+            <state relative-caret-position="172">
+              <caret line="96" column="62" lean-forward="true" selection-start-line="96" selection-start-column="62" selection-end-line="96" selection-end-column="62" />
+              <folding>
+                <element signature="n#style#0;n#i#0;n#a#0;n#div#0;n#a#0;n#li#6;n#ul#0;n#div#1;n#div#0;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -372,8 +299,8 @@
       <file leaf-file-name="bootstrap.min.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/arquivos/resources/vendor/bootstrap/css/bootstrap.min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="4" column="70562" lean-forward="false" selection-start-line="4" selection-start-column="70562" selection-end-line="4" selection-end-column="70562" />
+            <state relative-caret-position="17">
+              <caret line="4" column="55232" lean-forward="false" selection-start-line="4" selection-start-column="55232" selection-end-line="4" selection-end-column="55232" />
               <folding />
             </state>
           </provider>
@@ -432,9 +359,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>penc</find>
-      <find>novo</find>
-      <find>getuser</find>
       <find>torn</find>
       <find>sobre</find>
       <find>salvar</find>
@@ -460,8 +384,11 @@
       <find>this-&gt;output-&gt;enable_profiler(TRUE);</find>
       <find>hov</find>
       <find>nav</find>
-      <find>navbar</find>
       <find>nav&gt;li&gt;a</find>
+      <find>avbar-nav&gt;li&gt;a</find>
+      <find>sty</find>
+      <find>navbar</find>
+      <find>.dropdown-menu</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -510,7 +437,6 @@
         <option value="$PROJECT_DIR$/application/controllers/Pesquisar.php" />
         <option value="$PROJECT_DIR$/application/views/forms/languages_users.php" />
         <option value="$PROJECT_DIR$/application/controllers/Vagas_companies.php" />
-        <option value="$PROJECT_DIR$/application/views/template_admin/menu.php" />
         <option value="$PROJECT_DIR$/application/controllers/Anuncios.php" />
         <option value="$PROJECT_DIR$/application/controllers/Vagas.php" />
         <option value="$PROJECT_DIR$/application/controllers/Profiles.php" />
@@ -520,6 +446,7 @@
         <option value="$PROJECT_DIR$/application/views/forms/perfil_user.php" />
         <option value="$PROJECT_DIR$/application/controllers/Painel_admin.php" />
         <option value="$PROJECT_DIR$/arquivos/resources/css/sb-admin-2.css" />
+        <option value="$PROJECT_DIR$/application/views/template_admin/menu.php" />
         <option value="$PROJECT_DIR$/arquivos/resources/vendor/bootstrap/css/bootstrap.min.css" />
       </list>
     </option>
@@ -788,7 +715,7 @@
       <workItem from="1513725757745" duration="15101000" />
       <workItem from="1515537915370" duration="626000" />
       <workItem from="1516231052575" duration="90171000" />
-      <workItem from="1516836833747" duration="59761000" />
+      <workItem from="1516836833747" duration="61301000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://bitbucket.org/Wellison244/apportunity&#10;&#10;# Conflicts:&#10;#&#9;application/views/forms/pesquisar_filtro.php&#10;">
       <created>1513896285933</created>
@@ -815,7 +742,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="531589000" />
+    <option name="totallyTimeSpent" value="533129000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1713,9 +1640,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/template_admin/menu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="97" column="56" lean-forward="false" selection-start-line="97" selection-start-column="43" selection-end-line="97" selection-end-column="56" />
-          <folding />
+        <state relative-caret-position="172">
+          <caret line="96" column="62" lean-forward="true" selection-start-line="96" selection-start-column="62" selection-end-line="96" selection-end-column="62" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#a#0;n#div#0;n#a#0;n#li#6;n#ul#0;n#div#1;n#div#0;n#nav#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1729,8 +1658,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/arquivos/resources/vendor/bootstrap/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="4" column="70562" lean-forward="false" selection-start-line="4" selection-start-column="70562" selection-end-line="4" selection-end-column="70562" />
+        <state relative-caret-position="17">
+          <caret line="4" column="55232" lean-forward="false" selection-start-line="4" selection-start-column="55232" selection-end-line="4" selection-end-column="55232" />
           <folding />
         </state>
       </provider>
