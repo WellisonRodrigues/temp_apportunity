@@ -83,9 +83,6 @@
             ?>
             <div class="social-feed-box">
                 <div class="social-avatar">
-                    <a href="" class="pull-left">
-                        <img alt="image" src="http://webapplayers.com/inspinia_admin-v2.5/img/a1.jpg">
-                    </a>
                     <div class="pull-right">
                         <strong>
                             <button type="button"

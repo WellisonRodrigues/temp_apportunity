@@ -828,11 +828,17 @@ class Perfil_user extends Follows
         $email = $this->input->post('email');
         $region = $this->input->post('region');
         $about = $this->input->post('about');
-        $image = 'data:image/png;base64,' . base64_encode($this->input->post('file'));
+//        $image = 'data:image/png;base64,' . base64_encode($this->input->post('file'));
+        if ($this->input->post('new_image3') != '') {
+            $stringimg = $this->input->post('new_image3');
+            $image_final = preg_replace('/\s+/', '', $stringimg);
 
+        } else {
+            $image_final = $this->input->post('image_atual3');
+        }
         //$retorno = $region->sign_in('ingressoscaldas@gmail.com','icnTDC');
 
-        $retorno = $this->update_empresa($name, $email, $image, $region, $about);
+        $retorno = $this->update_empresa($name, $email, $image_final, $region, $about);
         /*
          * Erro no curl
          */
@@ -856,7 +862,8 @@ class Perfil_user extends Follows
                     'message' => 'Erro ao editar empresa'
                 ];
             $this->session->set_flashdata('alert', $data['alert']);
-            redirect('Perfil_user');
+            print_r($retorno);
+//            redirect('Perfil_user');
         } else {
 
             $data['alert'] =
@@ -885,7 +892,12 @@ class Perfil_user extends Follows
 
 //        print_r($id_user);
 //        die;
+        $obj['data'] = array('type' => 'companies', 'id' => $company_id,
+            'attributes' => array(
+                'name' => $name, 'image' => $image, 'region' => $region, 'about' => $about,
 
+            ));
+        $json = json_encode($obj);
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
@@ -899,7 +911,7 @@ class Perfil_user extends Follows
             CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "PUT",
-            CURLOPT_POSTFIELDS => "{\n  \"data\": {\n    \"type\": \"companies\",\n    \"id\": \"$company_id\",\n    \"attributes\": {\n      \"name\": \"$name\",\n      \"image\": \"$image\",\n      \"region\":\"$region\",\n      \"about\":\"$about\"\n    }\n  }\n}",
+            CURLOPT_POSTFIELDS => $json,
             CURLOPT_HTTPHEADER => array(
                 "accept: application/vnd.api+json",
                 "cache-control: no-cache",
