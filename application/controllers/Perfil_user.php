@@ -35,6 +35,7 @@ class Perfil_user extends Follows
         $aut_code = $this->session->userdata('verify')['auth_token'];
         $retorno = $this->get_profile_conect();
         $language = $this->get_profile_language();
+        $skills = $this->get_profile_skills();
         $follows = $this->get_follows();
         $dadosLogado = $this->session->userdata('logado');
         $company_id = $dadosLogado["id"];
@@ -118,6 +119,9 @@ class Perfil_user extends Follows
         $data ['inscritos'] = $count;
         $language_user = $language['response'];
         $data ['idiomas'] = $language_user['data'];
+
+        $skills_user = $skills['response'];
+        $data ['habilidades'] = $skills_user['data'];
 
         $data ['relationships'] = $profile['response']['relationships'];
         $data ['included'] = $profile['response']['included'];
@@ -553,6 +557,7 @@ class Perfil_user extends Follows
         $name = $this->input->post('name');
         $level = $this->input->post('level');
         $id_idioma = $this->input->post('id');
+
         if ($this->input->post('editar') == 'Editar' and $this->input->post('id') != null) {
             $retorno = $this->edit_language_ws($name, $level, $id_idioma);
             if (isset($retorno["err"]) && !empty($retorno["err"])) {
@@ -582,6 +587,7 @@ class Perfil_user extends Follows
                 redirect('Perfil_user');
             }
         }
+        redirect('Perfil_user');
         $data['view'] = 'forms/companies_vagas_list';
         $this->load->view('template_admin/core', $data);
     }
@@ -949,6 +955,357 @@ class Perfil_user extends Follows
 //        die;
         return $resp;
     }
+
+
+    private function get_profile_skills()
+    {
+        $aut_code = $this->session->userdata('verify')['auth_token'];
+//        $type = $this->session->userdata("logado")->type;
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+//            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "$this->url/api/v1/profile/skills",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_SSL_VERIFYHOST => 0,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET",
+            CURLOPT_HTTPHEADER => array(
+                "accept: application/vnd.api+json",
+                "cache-control: no-cache",
+                "postman-token: c8ded2be-172d-f095-775f-3cfda71520cf",
+                "x-auth-token: $aut_code"
+            ),
+        ));
+
+
+        $headers = [];
+        curl_setopt($curl, CURLOPT_HEADERFUNCTION,
+            function ($curl, $header) use (&$headers) {
+                $len = strlen($header);
+                $header = explode(':', $header, 2);
+                if (count($header) < 2) // ignore invalid headers
+                    return $len;
+
+                $name = strtolower(trim($header[0]));
+                if (!array_key_exists($name, $headers))
+                    $headers[$name] = [trim($header[1])];
+                else
+                    $headers[$name][] = trim($header[1]);
+
+                return $len;
+            }
+        );
+
+        $response = curl_exec($curl);
+        $resposta = json_decode($response);
+        $err = curl_error($curl);
+        curl_close($curl);
+        $array = $this->arrayCastRecursive($resposta);
+        $resp['response'] = $array;
+        $resp['headers'] = $headers;
+        $resp['err'] = $err;
+        return $resp;
+    }
+
+    public function create_habilidades()
+    {
+
+        $name = $this->input->post('name_habilidades');
+        $level = $this->input->post('level');
+
+        //$retorno = $region->sign_in('ingressoscaldas@gmail.com','icnTDC');
+
+        $retorno = $this->create_skills($name, $level);
+        /*
+         * Erro no curl
+         */
+        if (isset($retorno["err"]) && !empty($retorno["err"])) {
+            $data['alert'] =
+                [
+                    'type' => 'erro',
+                    'message' => 'Problemas no servidor. Entrar contato com a equipe de ti.'
+                ];
+            $this->session->set_flashdata('alert', $data['alert']);
+            redirect('Perfil_user');
+        }
+
+        /*
+         * erro de login e senha
+         */
+        if (isset(json_decode($retorno["response"])->errors[0])) {
+            $data['alert'] =
+                [
+                    'type' => 'erro',
+                    'message' => 'Erro ao criar o idioma'
+                ];
+            $this->session->set_flashdata('alert', $data['alert']);
+            redirect('Perfil_user');
+        } else {
+
+            $data['alert'] =
+                [
+                    'type' => 'sucesso',
+                    'message' => 'Habilidade criado com sucesso.'
+                ];
+
+            $this->session->set_flashdata('alert', $data['alert']);
+//                $this->session->set_userdata('logado', $userAPI);
+            redirect('Perfil_user');
+
+
+        }
+        $data['view'] = 'forms/perfil_user';
+        $this->load->view('template_admin/core', $data);
+//        }
+
+
+    }
+
+
+    private function create_skills($name, $level)
+    {
+
+        $aut_code = $this->session->userdata('verify')['auth_token'];
+//        $type = $this->session->userdata("logado")->type;
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+//            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "$this->url/api/v1/profile/skills",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_SSL_VERIFYHOST => 0,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "POST",
+            CURLOPT_POSTFIELDS => "{\n  \"data\": {\n    \"type\": \"skills\",\n  
+              \"attributes\": {\n      \"name\": \"$name\",\n      \"level\": \"$level\"\n    }\n  }\n}",
+            CURLOPT_HTTPHEADER => array(
+                "accept: application/vnd.api+json",
+                "cache-control: no-cache",
+                "content-type: application/vnd.api+json",
+                "postman-token: d9dcab3a-4a79-c78f-12e6-d6ab280fb5ca",
+                "x-auth-token: $aut_code"
+            ),
+        ));
+
+
+        $headers = [];
+        curl_setopt($curl, CURLOPT_HEADERFUNCTION,
+            function ($curl, $header) use (&$headers) {
+                $len = strlen($header);
+                $header = explode(':', $header, 2);
+                if (count($header) < 2) // ignore invalid headers
+                    return $len;
+
+                $name = strtolower(trim($header[0]));
+                if (!array_key_exists($name, $headers))
+                    $headers[$name] = [trim($header[1])];
+                else
+                    $headers[$name][] = trim($header[1]);
+
+                return $len;
+            }
+        );
+
+        $response = curl_exec($curl);
+        $resposta = json_decode($response);
+        $err = curl_error($curl);
+        curl_close($curl);
+        $array = $this->arrayCastRecursive($resposta);
+        $resp['response'] = $array;
+        $resp['headers'] = $headers;
+        $resp['err'] = $err;
+        return $resp;
+
+    }
+
+    public function edit_habilidade()
+    {
+        $name = $this->input->post('name');
+        $level = $this->input->post('level');
+        $id_habilidade = $this->input->post('id');
+
+        if ($this->input->post('editar') == 'Editar' and $this->input->post('id') != null) {
+            $retorno = $this->edit_habilidade_ws($name, $level, $id_habilidade);
+            if (isset($retorno["err"]) && !empty($retorno["err"])) {
+                $data['alert'] =
+                    [
+                        'type' => 'erro',
+                        'message' => 'Problemas no servidor. Entrar contato com a equipe de ti.'
+                    ];
+                $this->session->set_flashdata('alert', $data['alert']);
+                redirect('Perfil_user');
+            }
+            if (isset(json_decode($retorno["response"])->errors[0])) {
+                $data['alert'] =
+                    [
+                        'type' => 'erro',
+                        'message' => 'Erro ao editar o habilidade'
+                    ];
+                $this->session->set_flashdata('alert', $data['alert']);
+                redirect('Perfil_user');
+            } else {
+                $data['alert'] =
+                    [
+                        'type' => 'sucesso',
+                        'message' => 'Habilidade editado com sucesso.'
+                    ];
+                $this->session->set_flashdata('alert', $data['alert']);
+                redirect('Perfil_user');
+            }
+        }
+        $data['view'] = 'forms/perfil_user';
+        $this->load->view('template_admin/core', $data);
+    }
+
+    private function edit_habilidade_ws($name, $level, $id_habilidade)
+    {
+        $aut_code = $this->session->userdata('verify')['auth_token'];
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+//            CURLOPT_PORT => "3000",
+            CURLOPT_URL => "$this->url/api/v1/profile/skills/$id_habilidade",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_SSL_VERIFYHOST => 0,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "PUT",
+            CURLOPT_POSTFIELDS => "{\n  \"data\": {\n    \"type\": \"skills\",
+            \n    \"id\": \"$id_habilidade\",\n    \"attributes\": {\n      \"name\": \"$name\",
+            \n      \"level\": \"$level\"\n    }\n  }\n}",
+            CURLOPT_HTTPHEADER => array(
+                "accept: application/vnd.api+json",
+                "cache-control: no-cache",
+                "content-type: application/vnd.api+json",
+                "postman-token: 715f831f-0763-71c0-2d08-2ee05dfed8a4",
+                "x-auth-token: $aut_code"
+            ),
+        ));
+
+        $headers = [];
+        curl_setopt($curl, CURLOPT_HEADERFUNCTION,
+            function ($curl, $header) use (&$headers) {
+                $len = strlen($header);
+                $header = explode(':', $header, 2);
+                if (count($header) < 2) // ignore invalid headers
+                    return $len;
+
+                $name = strtolower(trim($header[0]));
+                if (!array_key_exists($name, $headers))
+                    $headers[$name] = [trim($header[1])];
+                else
+                    $headers[$name][] = trim($header[1]);
+
+                return $len;
+            }
+        );
+
+        $response = curl_exec($curl);
+        $resposta = json_decode($response);
+        $err = curl_error($curl);
+        curl_close($curl);
+        $array = $this->arrayCastRecursive($resposta);
+        $resp['response'] = $array;
+        $resp['headers'] = $headers;
+        $resp['err'] = $err;
+        return $resp;
+    }
+
+
+    public function delete_habilidade($idhabilidade)
+    {
+        if ($idhabilidade != null) {
+            if ($this->delete_habilidade_ws($idhabilidade)) {
+                $data['alert'] =
+                    [
+                        'type' => 'sucesso',
+                        'message' => 'Habilidade deletado com sucesso.'
+                    ];
+                $this->session->set_flashdata('alert', $data['alert']);
+                redirect('Perfil_user');
+            } else {
+                $data['alert'] =
+                    [
+                        'type' => 'error',
+                        'message' => 'Falha ao deletar o Habilidade.'
+                    ];
+                $this->session->set_flashdata('alert', $data['alert']);
+                redirect('Perfil_user');
+            }
+        }
+
+    }
+
+    private function delete_habilidade_ws($idhabilidade)
+    {
+
+        if ($idhabilidade != null) {
+            $aut_code = $this->session->userdata('verify')['auth_token'];
+            $curl = curl_init();
+            curl_setopt_array($curl, array(
+//                CURLOPT_PORT => "3000",
+                CURLOPT_URL => "$this->url/api/v1/profile/skills/$idhabilidade",
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => "",
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_SSL_VERIFYPEER => 0,
+                CURLOPT_SSL_VERIFYHOST => 0,
+                CURLOPT_TIMEOUT => 30,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => "DELETE",
+                CURLOPT_HTTPHEADER => array(
+                    "cache-control: no-cache",
+                    "postman-token: d5f30dbf-1d1a-7ab9-3259-a497909e74a9",
+                    "x-auth-token: $aut_code"
+                ),
+            ));
+            $headers = [];
+            curl_setopt($curl, CURLOPT_HEADERFUNCTION,
+                function ($curl, $header) use (&$headers) {
+                    $len = strlen($header);
+                    $header = explode(':', $header, 2);
+                    if (count($header) < 2) // ignore invalid headers
+                        return $len;
+
+                    $name = strtolower(trim($header[0]));
+                    if (!array_key_exists($name, $headers))
+                        $headers[$name] = [trim($header[1])];
+                    else
+                        $headers[$name][] = trim($header[1]);
+
+                    return $len;
+                }
+            );
+
+            $response = curl_exec($curl);
+            $resposta = json_decode($response);
+            $err = curl_error($curl);
+            curl_close($curl);
+            $array = $this->arrayCastRecursive($resposta);
+            $resp['response'] = $array;
+            $resp['headers'] = $headers;
+            $resp['err'] = $err;
+
+            return true;
+        } else {
+            $resp['err'] = "Erro! Habilidade não encontrado.";
+        }
+
+        //echo json_encode($resp);
+    }
+
 
     public function arrayCastRecursive($array)
     {
