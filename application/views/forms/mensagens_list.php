@@ -96,8 +96,8 @@
                 ?>
                 <div class="media conversation">
                     <a class="pull-left" href="#">
-                        <img class="img-circle" data-src="holder.js/64x64" alt="64x64"
-                             style="width: 50px; height: 50px;"
+                        <img class="img-circle"
+                             style="width: 30px; height: 30px;"
                              src="<?php echo $image_final ?>">
                     </a>
                     <div class="media-body">
@@ -116,8 +116,8 @@
             ?>
                 <script>
                     $(document).ready(function () {
+                        var idchat = '<?php echo $idchat?>';
                         $('.<?php echo $idchat?>').bind('click', function () {
-                            var idchat = '<?php echo $idchat?>';
                             $.get("<?php echo base_url('Mensagens/msg_list/')?>" + idchat,
 
                                 function (resultado) {
@@ -125,13 +125,13 @@
                                 }
                             );
                         });
-
+                        $('#tela_msg').load("<?php echo base_url('Mensagens/msg_list/')?>" + idchat);
                     });
                 </script>
                 <?php
             } ?>
         </div>
-        <div id="tela_msg"
+        <div id="tela_msg"></div>
     </div>
 </div>
 <!--</div>-->

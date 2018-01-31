@@ -50,15 +50,6 @@ $this->fetchjob->setauthtoken($this->session->userdata('verify')['auth_token']);
                                         '<button class="btn btn-danger small"><i class="fa fa-trash"></i></button>') ?>
 
                                 </div>
-                                <script>
-
-                                    $('.btn-danger').bind('click',function () {
-
-                                        confirm('Deseja mesmo excluir?');
-
-                                    });
-
-                                </script>
                                 <!--                            <div class="text-right">-->
                                 <!--                                --><?php //echo anchor('vagas/save_job_application/' . $job_salvo['data']['id'],
                                 //                                    '<p class="btn btn-primary"/>Candidatar-se</p>') ?>
@@ -114,7 +105,7 @@ $this->fetchjob->setauthtoken($this->session->userdata('verify')['auth_token']);
                                 </a>
                                 <div class="pull-right">
                                     <?php echo anchor('vagas/delete_jobs_application/' . $id_job_application,
-                                        '<button class="btn btn-danger small">Excluir</button>') ?>
+                                        '<button class="btn btn-danger small"><i class="fa fa-trash"></i></button>') ?>
                                 </div>
                                 <!--                            <div class="text-right">-->
                                 <!--                                --><?php //echo anchor('vagas/save_job_application/' . $job_salvo['data']['id'],
@@ -144,6 +135,21 @@ $this->fetchjob->setauthtoken($this->session->userdata('verify')['auth_token']);
                 <?php }
             } ?>
         </div>
+        <script>
+
+            $('.btn-danger').bind('click', function () {
+
+                var comf = confirm('Deseja mesmo excluir?');
+
+                if (comf == true) {
+
+                } else {
+                    event.preventDefault();
+                }
+
+            });
+
+        </script>
     </div>
     <div class="clearfix"></div>
 </div>

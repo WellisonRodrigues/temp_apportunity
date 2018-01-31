@@ -16,6 +16,7 @@ class Mensagens extends CI_Controller
         if (!$this->session->userdata("logado")) {
             redirect('sair');
         }
+        print_r($this->session->userdata());
 
         $this->load->library('Fetchuser');
         $this->load->library('Fetchcompany');

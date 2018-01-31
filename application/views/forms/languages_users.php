@@ -278,3 +278,18 @@
 
     <?php } ?>
 </div>
+<script>
+
+    $('.btn-danger').bind('click', function () {
+
+        var comf = confirm('Deseja mesmo excluir?');
+
+        if (comf == true) {
+
+        } else {
+            event.preventDefault();
+        }
+
+    });
+
+</script>
