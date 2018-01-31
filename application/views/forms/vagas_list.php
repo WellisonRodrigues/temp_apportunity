@@ -44,11 +44,21 @@ $this->fetchjob->setauthtoken($this->session->userdata('verify')['auth_token']);
 
                                 </a>
                                 <div class="pull-right">
-                                    <?php echo anchor('vagas/delete_saved_jobs/' . $id_saved_job,
-                                        '<button class="btn btn-danger small">Excluir</button>') ?>
                                     <?php echo anchor('vagas/create_job_application/' . $idjob,
-                                        '<button class="btn btn-primary small">Candidatar-se</button>') ?>
+                                        '<button class="btn btn-primary small">Candidatar</button>') ?>
+                                    <?php echo anchor('vagas/delete_saved_jobs/' . $id_saved_job,
+                                        '<button class="btn btn-danger small"><i class="fa fa-trash"></i></button>') ?>
+
                                 </div>
+                                <script>
+
+                                    $('.btn-danger').bind('click',function () {
+
+                                        confirm('Deseja mesmo excluir?');
+
+                                    });
+
+                                </script>
                                 <!--                            <div class="text-right">-->
                                 <!--                                --><?php //echo anchor('vagas/save_job_application/' . $job_salvo['data']['id'],
                                 //                                    '<p class="btn btn-primary"/>Candidatar-se</p>') ?>

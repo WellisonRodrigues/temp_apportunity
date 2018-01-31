@@ -190,7 +190,7 @@
                     </div>
 
                     <div class=" text-center center-block">
-                        <img src="<?php echo $image_final ?>" width="150px" height="150px"
+                        <img src="<?php echo $image_final ?>" width="120px" height="120px"
                              class="img-circle">
                         <div class="row"><h4><strong><?php echo $return_name ?></strong></h4>
                         </div>

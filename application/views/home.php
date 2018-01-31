@@ -21,26 +21,27 @@ if ($image_my) {
 
         <div class="panel panel-body">
             <div class="text-center center-block">
-                <img src="<?php echo $image_final_my ?>" width="30%" height="30%"
+                <img src="<?php echo $image_final_my ?>" width="120px" height="120px"
                      class="img-circle">
             </div>
+            <br/>
             <div class="text-center">
                 <strong><?php echo $profile['attributes']['name'] ?></strong><br>
                 <?php echo $profile['attributes']['region'] ?><br>
                 <?php echo $inscritos; ?> Inscritos<br></div>
             <div class="text-center">
-                <br> <?php echo anchor('Perfil_user/get_profile', 'EDITAR PERFIL', 'type="button" class="btn btn-primary"') ?>
+                <br> <?php echo anchor('Perfil_user/get_profile', 'Editar Perfil', 'type="button" class="btn btn-primary"') ?>
                 <hr>
                 <div class="text-left">
                     <div class="row">Sobre</strong></div>
                     <p class="text-muted">Email : <?php echo $included[0]['attributes']['email'] ?> <br>
                         Idade : <?php echo $profile['attributes']['age'] ?></p>
                     <hr>
-                    Habilitação <br>
-                    <p class="text-muted"> Motorista, Empilhadeira</p>
-                    <!--                    Vagas em Interesse<br>-->
-                    <!--                    <p class="text-muted">-->
-                    <?php //echo $profile['attributes']['carrer'] ?><!--</p><br>-->
+<!--                    Habilitação <br>-->
+<!--                    <p class="text-muted"> Motorista, Empilhadeira</p>-->
+                                        Vagas em Interesse<br>
+                                        <p class="text-muted">
+                    <?php echo $profile['attributes']['carrer'] ?></p><br>
                     <hr>
                     <?php foreach ($idiomas as $idioma) { ?>
                         Conheçimento do
@@ -76,12 +77,13 @@ if ($image_my) {
                     <a href="" class="pull-left">
                         <img alt="image" src="<?php echo $image_final_ads ?>">
                     </a>
-<!--                    <div class="pull-right">-->
-<!--                        <button class="btn btn-primary small salvar_vaga" data-idjob="--><?php //echo $id_job; ?><!--">-->
-<!--                            <i class="fa fa-edit --><?php //echo $id_job; ?><!--"></i> Salvar-->
-<!---->
-<!--                        </button>-->
-<!--                    </div>-->
+                    <!--                    <div class="pull-right">-->
+                    <!--                        <button class="btn btn-primary small salvar_vaga" data-idjob="-->
+                    <?php //echo $id_job; ?><!--">-->
+                    <!--                            <i class="fa fa-edit --><?php //echo $id_job; ?><!--"></i> Salvar-->
+                    <!---->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
                     <div class="media-body">
                         <a href="<?php echo base_url('Profiles/index/' . $id . '/' . $type) ?>">
                             <?php
@@ -178,16 +180,16 @@ if ($image_my) {
                         <?php echo $job['attributes']['description'] ?>
                         <br>
                     </p>
-					<p>
-						<?php echo $funcao->quantidade_curtidas_jobs($id_job); ?> gostaram dessa publicação.
-					</p>
+                    <p>
+                        <?php echo $funcao->quantidade_curtidas_jobs($id_job); ?> gostaram dessa publicação.
+                    </p>
                     <!--                    <small class="text-muted">Vaga expira-->
                     <!--                        em: --><?php //echo date('d/m/Y H:i:s', strtotime($job['attributes']['exp-date'])) ?>
                     <!--                    </small>-->
                     <hr>
                     <div class="row box-footer">
                         <div class="col-md-offset-1 col-md-6">
-						    <h4 class="curtir <?php echo $id_job; ?>" data-idjob="<?php echo $id_job; ?>"
+                            <h4 class="curtir <?php echo $id_job; ?>" data-idjob="<?php echo $id_job; ?>"
                                 data-idlike="<?php echo $curtiuJob ?>" data-type="<?php echo $classJob; ?>"
                                 data-tipo="<?php echo $job['type']; ?>">
                                 <img class="curtir <?php echo $id_job; ?>"
