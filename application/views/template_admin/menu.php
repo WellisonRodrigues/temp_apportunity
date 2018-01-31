@@ -68,33 +68,41 @@ print_r($this->session->userdata('logado')->id);
                             <li><a href="<?php echo base_url('Vagas') ?>"><h4><img
                                                 src="<?php echo base_url(IMAGES); ?>/logos/vagas.png">
                                         Vagas</h4></a></li>
+                            <li><a href="<?php echo base_url('Follows/index') ?>">
+                                    <h4><img src="<?php echo base_url(IMAGES); ?>/logos/conexoes.png">Conexões
+                                    </h4></a></li>
 
                         <?php }
 
                         if ($this->session->userdata('logado')['type'] == 'companies') {
                             ?>
-                            <li><a href="<?php echo base_url('Mensagens') ?>"><h4><strong><i
-                                                    class="fa fa-large fa-paper-plane"> Mensagens</i></strong></h4>
+                            <li><a href="<?php echo base_url('Mensagens') ?>">
+                                    <h4><strong><i
+                                                    class="fa fa-large fa-paper-plane"
+                                                    style="font-size: 20px;color: white; margin-top: 8px"> Mensagens</i></strong>
+                                    </h4>
                                 </a>
                             </li>
 
-                            <li><a href="<?php echo base_url('Vagas_companies') ?>"><h4><strong><i
-                                                    class="fa fa-large fa-edit">
+                            <li><a href="<?php echo base_url('Vagas_companies') ?>">
+                                    <h4><strong><i
+                                                    class="fa fa-large fa-edit"
+                                                    style="font-size: 20px;color: white; margin-top: 8px">
                                                 Vagas publicadas</i></strong></h4></a></li>
                             <li><a href="<?php echo base_url('Anuncios') ?>"><h4><strong><i
+                                                    style="font-size: 20px;color: white;margin-top: 8px"
                                                     class="fa fa-large fa-edit">
-                                                Anuncios</i></strong></h4></a></li>
+                                                Anuncios</i></strong></h4>
+                                </a></li>
 
                         <?php } ?>
-                        <li><a href="<?php echo base_url('Follows/index') ?>">
-                                <h4><img src="<?php echo base_url(IMAGES); ?>/logos/conexoes.png">Conexões
-                                </h4></a></li>
+
 
                         <li>
                             <a href="#">
                                 <div class="dropdown" style="">
                                     <a href="#" data-toggle="dropdown"><i class="fa fa-bars" aria-hidden="true"
-                                                                          style="font-size: 30px;color: whitesmoke;"></i></a>
+                                                                          style="font-size: 30px;color: white;"></i></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="<?php echo base_url('Mensagens') ?>"><h4><strong><i
                                                                 class="fa fa-large fa-paper-plane">
