@@ -10,12 +10,13 @@
 //print_r($this->fetchuser->getauthtoken());
 ?>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
 <!--<div class="col-md-6 col-md-offset-3 col-sm-offset-1 col-sm-10">-->
 <!--    <h1>Mensagens</h1>-->
 <!--    <hr>-->
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <link href="<?php echo base_url(CSS); ?>/chat.css" rel="stylesheet">
+<script src="https://js.pusher.com/4.1/pusher.min.js"></script>
 <div class="container-fluid">
     <div class="row">
         <!--            <div class="col-lg-3">-->
@@ -104,6 +105,9 @@
                         <!--                            <br>-->
                         <h5 class="media-heading  btn <?php echo $idchat ?> btn-default btn-lg"><?php echo $name ?>
                             <small class="fa fa-large fa-paper-plane"></small>
+                            <input type="hidden" id="<?php echo $idchat ?>" value="<?php echo $idchat ?>">
+                            <input type="hidden" id="<?php echo $retorno['attributes']['channel-name'] ?>"
+                                   value="<?php echo $retorno['attributes']['channel-name'] ?>">
                         </h5>
                         <!--                            <small>Hello</small>-->
 
@@ -116,16 +120,18 @@
             ?>
                 <script>
                     $(document).ready(function () {
-                        var idchat = '<?php echo $idchat?>';
                         $('.<?php echo $idchat?>').bind('click', function () {
-                            $.get("<?php echo base_url('Mensagens/msg_list/')?>" + idchat,
+                            var idchat = $('#<?php echo $idchat?>').val();
+                            var chanel = $('#<?php echo $retorno['attributes']['channel-name']?>').val();
+                            alert(chanel);
+                            $.get("<?php echo base_url('Mensagens/msg_list/')?>" + idchat +'/' + chanel,
 
                                 function (resultado) {
                                     $("#tela_msg").html(resultado);
                                 }
                             );
                         });
-                        $('#tela_msg').load("<?php echo base_url('Mensagens/msg_list/')?>" + idchat);
+//                        $('#tela_msg').load("<?php //echo base_url('Mensagens/msg_list/')?>//" + idchat);
                     });
                 </script>
                 <?php

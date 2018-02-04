@@ -47,6 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!--[if lt IE 9]>
     <script src="<?php echo base_url(VENDOR); ?>/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="<?php echo base_url(VENDOR); ?>/respond.js/1.4.2/respond.min.js"></script>
+
     <![endif]-->
 
 </head>

@@ -16,12 +16,13 @@ class Mensagens extends CI_Controller
         if (!$this->session->userdata("logado")) {
             redirect('sair');
         }
-        print_r($this->session->userdata());
+//        print_r($this->session->userdata());
 
         $this->load->library('Fetchuser');
         $this->load->library('Fetchcompany');
         $this->load->library('Geturl');
         $this->url = $this->geturl->get_url();
+
     }
 
     public function index()
@@ -44,17 +45,15 @@ class Mensagens extends CI_Controller
 
     }
 
-    public function msg_list($idchat)
+    public function msg_list($idchat = null, $chanel = null)
     {
-//        print_r($idchat);
+
         $return = $this->mensagem_list_ws($idchat);
-//        print_r($return);
-//        die;
-//        $type = $this->session->userdata("logado")->type;
-//        $curl = curl_init();
 
         $data['return'] = $return['response'];
-//        $data['view'] = 'forms/mensagens_list';
+        $data['chanel_name'] = $chanel;
+        $data['idchat'] = $idchat;
+
         $this->load->view('forms/div_mensagens_list', $data);
 
 
