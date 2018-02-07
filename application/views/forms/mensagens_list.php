@@ -85,15 +85,15 @@
                 ?>
                 <div class="media conversation">
                     <a class="pull-left" href="#">
-                        <img class="img-circle"
-                             style="width: 30px; height: 30px;"
+                        <img class="img-circle"  alt="64x64"
+                             style="width: 50px; height: 50px;"
                              src="<?php echo $image_final ?>">
                     </a>
                     <div class="media-body">
                         <!--                            <br>-->
                         <h5 class="media-heading  btn <?php echo $idchat ?> btn-default btn-lg"><?php echo $name ?>
                             <small class="fa fa-large fa-paper-plane"></small>
-                            <input type="hidden" class="<?php echo $idchat ?>" value="<?php echo $idchat ?>"/>
+                            <input type="hidden" id="<?php echo $idchat ?>" value="<?php echo $idchat ?>"/>
                             <input type="hidden" id="<?php echo $retorno['attributes']['channel-name'] ?>"
                                    value="<?php echo $retorno['attributes']['channel-name'] ?>"/>
                         </h5>

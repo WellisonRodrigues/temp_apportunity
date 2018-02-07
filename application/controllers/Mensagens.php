@@ -140,7 +140,7 @@ class Mensagens extends CI_Controller
                         'type' => 'error',
                         'message' => 'Falha ao deletar'
                     ];
-                $this->session->set_flashdata('alert', $data['alert']);
+//                $this->session->set_flashdata('alert', $data['alert']);
                 redirect('Messagens');
             }
         }
