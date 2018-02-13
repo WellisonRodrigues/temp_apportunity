@@ -34,7 +34,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 ?>
                                 <div class="form-group">
                                     <label for="sel1">Eu sou:</label>
-                                    <select class="form-control" id="sel1" name="type_login" onchange="yesnoCheck(this);">
+                                    <select class="form-control" id="sel1" name="type_login"
+                                            onchange="yesnoCheck(this);">
                                         <option id="companies" value="companies">Empresa</option>
                                         <option id="users" value="users">Pessoa Fisica</option>
                                     </select>
@@ -62,7 +63,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     ou acesse com as redes sociais
                                     <br/>
                                     <br/>
-                                    <a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a>
+                                    <i class="btn btn-social-icon btn-facebook" type="button" onclick="login()"><i
+                                                class="fa fa-facebook"></i></i>
                                     <a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
                                     <a class="btn btn-social-icon btn-google-plus"><i class="fa fa-google-plus"></i></a>
 
@@ -75,7 +77,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 ?>
                                 <div class="form-group">
                                     <label for="sel1">Eu sou:</label>
-                                    <select class="form-control" id="sel1" name="type" onchange="yesnoCheck(this);">
+                                    <select class="form-control" id="sel2" name="type" onchange="yesnoCheck(this);">
                                         <option id="companies" value="companies">Empresa</option>
                                         <option id="users" value="users">Pessoa Fisica</option>
                                     </select>
@@ -84,8 +86,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <div class="form-group">
                                         <input class="form-control" placeholder="Nome" type="text" name="nome"
                                                autofocus
-                                                autocomplete="off"
-                                               >
+                                               autocomplete="off"
+                                        >
                                     </div>
                                 </div>
                                 <script>
@@ -134,3 +136,43 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </div>
 </div>
+<script>
+    var access_tocken = {userID: "", accessToken: ""};
+    function login() {
+
+        FB.login(function (response) {
+                if (response.status == "connected") {
+                    access_tocken.accessToken = response.authResponse.accessToken;
+                    FB.api('/me', function (userData) {
+                        console.log(userData);
+                        alert(response.authResponse.accessToken);
+                    })
+                }
+            }
+            ,
+            {
+                scope: 'public_profile'
+            }
+        );
+    }
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '1555941247820803',
+            autoLogAppEvents: true,
+            xfbml: true,
+            version: 'v2.11'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+</script>

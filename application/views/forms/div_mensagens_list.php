@@ -86,13 +86,13 @@
 
         Pusher.logToConsole = true;
 
-        var pusher = new Pusher('18ce9b3cf233d1eb0916', {
+        var pusher = new Pusher('75268b95e33032ccbe11', {
             cluster: 'us2',
             encrypted: true
         });
 
-        var channel = pusher.subscribe('my-channel');
-        channel.bind('my-event', function (data) {
+        var channel = pusher.subscribe('<?php echo $chanel_name?>');
+        channel.bind('newMessage', function (data) {
             $(".msg-wrap").append('<div class="media msg message"><a class="pull-left" href="#">' +
                 '<img class="media-object" data-src="holder.js/64x64" alt="64x64"style="width: 32px; height: 32px;"' +
                 'src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQ' +

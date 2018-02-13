@@ -24,13 +24,14 @@ class Pesquisar extends CI_Controller
 
     public function index()
     {
-        echo $aut_code = $this->session->userdata('verify')['auth_token'];
+//        echo $aut_code = $this->session->userdata('verify')['auth_token'];
         $data['view'] = 'forms/pesquisar_filtro';
         $this->load->view('template_admin/core', $data);
     }
 
     public function listar()
     {
+        
         $type = $this->input->post('type');
         $regiao = $this->input->post('regiao');
 
@@ -39,6 +40,9 @@ class Pesquisar extends CI_Controller
         } elseif ($type == 'companies') {
             $retorno = $this->listar_ws_companies($regiao);
         }
+
+//        print_r($this->input->post());
+//        print_r($retorno);
 
         if (isset($retorno["err"]) && !empty($retorno["err"])) {
             $data['alert'] = [
@@ -60,8 +64,7 @@ class Pesquisar extends CI_Controller
         $aut_code = $this->session->userdata('verify')['auth_token'];
         $curl = curl_init();
         curl_setopt_array($curl, array(
-//            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "$this->url/api/v1/users?filter[region]={' . urlencode($regiao) . '}",
+            CURLOPT_URL => "$this->url/api/v1/users?filter%5Bregion%5D=%7B$regiao%7D",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
@@ -71,11 +74,28 @@ class Pesquisar extends CI_Controller
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => array(
-                "accept: application/vnd.api+json",
                 "cache-control: no-cache",
-                "postman-token: c8ded2be-172d-f095-775f-3cfda71520cf",
+                "postman-token: a1bf8aa1-8b88-bada-389f-fde1564e11b3",
                 "x-auth-token: $aut_code"
             ),
+//        ));
+//        curl_setopt_array($curl, array(
+////            CURLOPT_PORT => "3000",
+//            CURLOPT_URL => "$this->url/api/v1/users?filter[region]={'$regiao'}",
+//            CURLOPT_RETURNTRANSFER => true,
+//            CURLOPT_ENCODING => "",
+//            CURLOPT_MAXREDIRS => 10,
+//            CURLOPT_SSL_VERIFYPEER => 0,
+//            CURLOPT_SSL_VERIFYHOST => 0,
+//            CURLOPT_TIMEOUT => 30,
+//            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+//            CURLOPT_CUSTOMREQUEST => "GET",
+//            CURLOPT_HTTPHEADER => array(
+//                "accept: application/vnd.api+json",
+//                "cache-control: no-cache",
+//                "postman-token: c8ded2be-172d-f095-775f-3cfda71520cf",
+//                "x-auth-token: $aut_code"
+//            ),
         ));
 
         $headers = [];
@@ -111,8 +131,7 @@ class Pesquisar extends CI_Controller
         $aut_code = $this->session->userdata('verify')['auth_token'];
         $curl = curl_init();
         curl_setopt_array($curl, array(
-//            CURLOPT_PORT => "3000",
-            CURLOPT_URL => "$this->url/api/v1/companies?filter[region]={' . urlencode($regiao) . '}",
+            CURLOPT_URL => "$this->url/api/v1/companies?filter%5Bregion%5D=%7B$regiao%7D",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
@@ -122,12 +141,29 @@ class Pesquisar extends CI_Controller
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => array(
-                "accept: application/vnd.api+json",
                 "cache-control: no-cache",
-                "postman-token: c8ded2be-172d-f095-775f-3cfda71520cf",
-                "x-auth-token: $aut_code"
+                "postman-token: 9e059a5f-a7cf-f4e1-8fcf-c28e4ba5efdb",
+                "x-auth-token: JCBMLf8nXo4GQsZuoc_9"
             ),
         ));
+//        curl_setopt_array($curl, array(
+////            CURLOPT_PORT => "3000",
+//            CURLOPT_URL => "$this->url/api/v1/companies?filter%5Bregion%5D=%7B$regiao%7D",
+//            CURLOPT_RETURNTRANSFER => true,
+//            CURLOPT_ENCODING => "",
+//            CURLOPT_MAXREDIRS => 10,
+//            CURLOPT_SSL_VERIFYPEER => 0,
+//            CURLOPT_SSL_VERIFYHOST => 0,
+//            CURLOPT_TIMEOUT => 30,
+//            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+//            CURLOPT_CUSTOMREQUEST => "GET",
+//            CURLOPT_HTTPHEADER => array(
+//                "accept: application/vnd.api+json",
+//                "cache-control: no-cache",
+//                "postman-token: c8ded2be-172d-f095-775f-3cfda71520cf",
+//                "x-auth-token: $aut_code"
+//            ),
+//        ));
 
         $headers = [];
         curl_setopt($curl, CURLOPT_HEADERFUNCTION,
