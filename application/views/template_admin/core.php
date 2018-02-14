@@ -11,6 +11,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <meta name="description" content="">
     <meta name="author" content="">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="167299201924-6acptbl2k12p2h6luigh5jsjqocf11nk.apps.googleusercontent.com">
     <link rel="icon" type="image/png" href="<?php echo base_url(IMAGES); ?>/logos/logo.png"/>
 
     <title><?php

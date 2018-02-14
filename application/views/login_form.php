@@ -65,8 +65,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <br/>
                                     <i class="btn btn-social-icon btn-facebook" type="button" onclick="login()"><i
                                                 class="fa fa-facebook"></i></i>
-                                    <a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
-                                    <a class="btn btn-social-icon btn-google-plus"><i class="fa fa-google-plus"></i></a>
+                                    <a class="btn btn-social-icon btn-twitter" type="button" onclick="twitter()"><i
+                                                class="fa fa-twitter"></i></a>
+                                    <a class="btn btn-social-icon btn-google-plus"><i
+                                                class="g-signin2" data-onsuccess="onSignIn"></i></a>
 
                                 </div>
                                 <?php echo form_close(); ?>
@@ -137,14 +139,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 </div>
 <script>
-    var access_tocken = {userID: "", accessToken: ""};
-    function login() {
 
+    function twitter() {
+        $.get("https://api.twitter.com/1.1/account/settings.json", function (data) {
+//            $(".result").html(data);
+            alert("Load was performed.");
+        });
+    }
+    window.fbAsyncInit = function () {
+        FB.init({appId: '1555941247820803', cookie: true, xfbml: true, oauth: true});
+
+        // *** here is my code ***
+        if (typeof facebookInit == 'function') {
+            facebookInit();
+        }
+    };
+
+    (function (d) {
+        var js, id = 'facebook-jssdk';
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement('script');
+        js.id = id;
+        js.async = true;
+        js.src = "//connect.facebook.net/en_US/all.js";
+        d.getElementsByTagName('head')[0].appendChild(js);
+    }(document));
+
+
+    function login() {
+        var access_tocken = {userID: "", accessToken: ""};
         FB.login(function (response) {
                 if (response.status == "connected") {
                     access_tocken.accessToken = response.authResponse.accessToken;
                     FB.api('/me', function (userData) {
-                        console.log(userData);
+//                        console.log(userData);
                         alert(response.authResponse.accessToken);
                     })
                 }
@@ -155,24 +185,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             }
         );
     }
-    window.fbAsyncInit = function () {
-        FB.init({
-            appId: '1555941247820803',
-            autoLogAppEvents: true,
-            xfbml: true,
-            version: 'v2.11'
-        });
-    };
 
-    (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {
-            return;
-        }
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+    //    window.fbAsyncInit = function () {
+    //        FB.init({
+    //            appId: '1555941247820803',
+    //            autoLogAppEvents: true,
+    //            xfbml: true,
+    //            version: 'v2.11'
+    //        });
+    //    };
+    //
+    //    (function (d, s, id) {
+    //        var js, fjs = d.getElementsByTagName(s)[0];
+    //        if (d.getElementById(id)) {
+    //            return;
+    //        }
+    //        js = d.createElement(s);
+    //        js.id = id;
+    //        js.src = "https://connect.facebook.net/en_US/sdk.js";
+    //        fjs.parentNode.insertBefore(js, fjs);
+    //    }(document, 'script', 'facebook-jssdk'));
 
+    function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        var id_token = googleUser.getAuthResponse().id_token;
+        alert(id_token);
+
+    }
+
+
+    //    if (auth2.isSignedIn.get()) {
+    //        var profile = auth2.currentUser.get().getBasicProfile();
+    //        console.log('ID: ' + profile.getId());
+    //        console.log('Full Name: ' + profile.getName());
+    //        console.log('Given Name: ' + profile.getGivenName());
+    //        console.log('Family Name: ' + profile.getFamilyName());
+    //        console.log('Image URL: ' + profile.getImageUrl());
+    //        console.log('Email: ' + profile.getEmail());
+    //    }
 </script>
