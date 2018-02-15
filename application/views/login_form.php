@@ -141,11 +141,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script>
 
     function twitter() {
-        $.get("https://api.twitter.com/1.1/account/settings.json", function (data) {
-//            $(".result").html(data);
-            alert("Load was performed.");
+        $.getJSON("http://api.twitter.com/1/statuses/home_timeline.json?callback=?", function (json) {
+            console.log(json);
         });
     }
+    
     window.fbAsyncInit = function () {
         FB.init({appId: '1555941247820803', cookie: true, xfbml: true, oauth: true});
 

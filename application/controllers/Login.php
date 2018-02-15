@@ -1,5 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+require "vendor/autoload.php";
+
+use Abraham\TwitterOAuth\TwitterOAuth;
 
 class Login extends CI_Controller
 {
@@ -17,11 +20,17 @@ class Login extends CI_Controller
 
     public function index()
     {
+
         $this->entrar();
+
     }
+
 
     public function entrar()
     {
+        $connection = $this->getConnectionWithAccessToken("yg8eI3lxHaj2fho0H4rCfR2Lb", "TLILIbQtMENAiuXDxld26XBbAjHZ1EczIwbLI3blNrE20a4tkO");
+        $content = $connection->get("statuses/home_timeline");
+        print_r($content);
         if ($this->input->post('login') == 'Entrar') {
 
 
@@ -104,6 +113,13 @@ class Login extends CI_Controller
         $data['view'] = 'login_form';
         $data['default_template'] = false;
         $this->load->view('template_admin/core', $data);
+
+    }
+
+    function getConnectionWithAccessToken($oauth_token, $oauth_token_secret)
+    {
+        $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $oauth_token, $oauth_token_secret);
+        return $connection;
 
     }
 

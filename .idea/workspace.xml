@@ -2,10 +2,109 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6315125-2236-4753-8b25-d0ed219b9684" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/apportunity.iml" afterPath="$PROJECT_DIR$/.idea/apportunity.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/Facebook.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/Google.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Authentication/AccessToken.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Authentication/AccessTokenMetadata.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Authentication/OAuth2Client.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Exceptions/FacebookAuthenticationException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Exceptions/FacebookAuthorizationException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Exceptions/FacebookClientException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Exceptions/FacebookOtherException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Exceptions/FacebookResponseException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Exceptions/FacebookResumableUploadException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Exceptions/FacebookSDKException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Exceptions/FacebookServerException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Exceptions/FacebookThrottleException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Facebook.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/FacebookApp.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/FacebookBatchRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/FacebookBatchResponse.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/FacebookClient.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/FacebookRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/FacebookResponse.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/FileUpload/FacebookFile.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/FileUpload/FacebookResumableUploader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/FileUpload/FacebookTransferChunk.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/FileUpload/FacebookVideo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/FileUpload/Mimetypes.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/Birthday.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/Collection.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphAchievement.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphAlbum.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphApplication.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphCoverPhoto.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphEdge.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphEvent.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphGroup.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphList.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphLocation.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphNode.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphNodeFactory.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphObject.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphObjectFactory.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphPage.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphPicture.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphSessionInfo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphUser.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Helpers/FacebookCanvasHelper.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Helpers/FacebookJavaScriptHelper.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Helpers/FacebookPageTabHelper.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Helpers/FacebookRedirectLoginHelper.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Helpers/FacebookSignedRequestFromInputHelper.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Http/GraphRawResponse.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Http/RequestBodyInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Http/RequestBodyMultipart.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Http/RequestBodyUrlEncoded.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/HttpClients/FacebookCurl.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/HttpClients/FacebookCurlHttpClient.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/HttpClients/FacebookGuzzleHttpClient.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/HttpClients/FacebookHttpClientInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/HttpClients/FacebookStream.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/HttpClients/FacebookStreamHttpClient.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/HttpClients/HttpClientsFactory.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/HttpClients/certs/DigiCertHighAssuranceEVRootCA.pem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/PersistentData/FacebookMemoryPersistentDataHandler.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/PersistentData/FacebookSessionPersistentDataHandler.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/PersistentData/PersistentDataFactory.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/PersistentData/PersistentDataInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/PseudoRandomString/McryptPseudoRandomStringGenerator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/PseudoRandomString/OpenSslPseudoRandomStringGenerator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/PseudoRandomString/PseudoRandomStringGeneratorFactory.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/PseudoRandomString/PseudoRandomStringGeneratorInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/PseudoRandomString/PseudoRandomStringGeneratorTrait.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/PseudoRandomString/RandomBytesPseudoRandomStringGenerator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/PseudoRandomString/UrandomPseudoRandomStringGenerator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/SignedRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Url/FacebookUrlDetectionHandler.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Url/FacebookUrlManipulator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Url/UrlDetectionInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/autoload.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/polyfills.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/AccessToken/Revoke.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/AccessToken/Verify.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/AuthHandler/AuthHandlerFactory.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/AuthHandler/Guzzle5AuthHandler.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/AuthHandler/Guzzle6AuthHandler.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Client.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Collection.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Exception.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Http/Batch.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Http/MediaFileUpload.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Http/REST.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Model.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Service.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Service/Exception.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Service/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Service/Resource.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Task/Exception.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Task/Retryable.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Task/Runner.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Utils/UriTemplate.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/autoload.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Login.php" afterPath="$PROJECT_DIR$/application/controllers/Login.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/login_form.php" afterPath="$PROJECT_DIR$/application/views/login_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/template_admin/core.php" afterPath="$PROJECT_DIR$/application/views/template_admin/core.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,11 +122,10 @@
       <file leaf-file-name="Mensagens.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Mensagens.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="53" column="26" lean-forward="false" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="26" />
+            <state relative-caret-position="253">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
                 <element signature="e#7#91#0#PHP" expanded="false" />
-                <element signature="n#__construct#0;n#Mensagens#0;n#!!top" expanded="false" />
                 <element signature="e#230#312#0#PHP" expanded="false" />
                 <element signature="n#index#0;n#Mensagens#0;n#!!top" expanded="false" />
                 <element signature="n#chat_list#0;n#Mensagens#0;n#!!top" expanded="false" />
@@ -70,22 +168,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pesquisar_filtro.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/forms/pesquisar_filtro.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6">
-              <caret line="97" column="79" lean-forward="false" selection-start-line="97" selection-start-column="79" selection-end-line="97" selection-end-column="79" />
-              <folding>
-                <marker date="1518137134099" expanded="true" signature="12671:12674" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Perfil_user.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Perfil_user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
+            <state relative-caret-position="833">
               <caret line="1066" column="5" lean-forward="false" selection-start-line="1066" selection-start-column="5" selection-end-line="1066" selection-end-column="5" />
               <folding>
                 <element signature="e#7#91#0#PHP" expanded="false" />
@@ -276,31 +362,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Profiles.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Profiles.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="53" column="40" lean-forward="false" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
-              <folding>
-                <element signature="e#7#91#0#PHP" expanded="false" />
-                <element signature="e#1802#2328#1#PHP" expanded="false" />
-                <element signature="e#3601#4192#0#PHP" expanded="false" />
-                <element signature="e#3656#4182#1#PHP" expanded="false" />
-                <element signature="n#arrayCastRecursive#0;n#Profiles#0;n#!!top" expanded="false" />
-                <element signature="e#4585#4954#0#PHP" expanded="false" />
-                <element signature="e#4621#4944#0#PHP" expanded="false" />
-                <element signature="e#4674#4785#0#PHP" expanded="false" />
-                <element signature="e#4802#4930#0#PHP" expanded="false" />
-                <element signature="e#4963#5067#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="div_mensagens_list.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/forms/div_mensagens_list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-504">
+            <state relative-caret-position="663">
               <caret line="44" column="30" lean-forward="false" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
               <folding>
                 <element signature="e#6#90#0#PHP" expanded="true" />
@@ -313,11 +378,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Login.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/Login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="30" column="138" lean-forward="false" selection-start-line="30" selection-start-column="138" selection-end-line="30" selection-end-column="138" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="autoload.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="497" column="32" lean-forward="false" selection-start-line="497" selection-start-column="29" selection-end-line="497" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -336,8 +421,8 @@
       <file leaf-file-name="core.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/template_admin/core.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="14" column="104" lean-forward="true" selection-start-line="14" selection-start-column="104" selection-end-line="14" selection-end-column="104" />
+            <state relative-caret-position="238">
+              <caret line="14" column="104" lean-forward="false" selection-start-line="14" selection-start-column="104" selection-end-line="14" selection-end-column="104" />
               <folding>
                 <element signature="e#2655#2874#0#PHP" expanded="true" />
               </folding>
@@ -348,18 +433,19 @@
       <file leaf-file-name="profiles.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/forms/profiles.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
+            <state relative-caret-position="1513">
               <caret line="94" column="10" lean-forward="false" selection-start-line="94" selection-start-column="10" selection-end-line="94" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login_form.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login_form.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/login_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="143" column="15" lean-forward="false" selection-start-line="143" selection-start-column="15" selection-end-line="143" selection-end-column="15" />
+            <state relative-caret-position="17">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <caret line="34" column="12" lean-forward="false" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -377,8 +463,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sty</find>
-      <find>navbar</find>
       <find>.dropdown-menu</find>
       <find>image</find>
       <find>.navbar-form</find>
@@ -407,6 +491,8 @@
       <find>face</find>
       <find>onl</find>
       <find>sel</find>
+      <find>erro</find>
+      <find>php</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -426,7 +512,6 @@
         <option value="$PROJECT_DIR$/application/libraries/Fetchjob.php" />
         <option value="$PROJECT_DIR$/application/libraries/Fetchcompany.php" />
         <option value="$PROJECT_DIR$/application/libraries/Follows.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Login.php" />
         <option value="$PROJECT_DIR$/application/libraries/Fetchuser.php" />
         <option value="$PROJECT_DIR$/application/views/forms/follow_users_list.php" />
         <option value="$PROJECT_DIR$/application/controllers/Follows.php" />
@@ -451,7 +536,6 @@
         <option value="$PROJECT_DIR$/../blog/post.php" />
         <option value="$PROJECT_DIR$/application/views/forms/test_pusher.php" />
         <option value="$PROJECT_DIR$/application/views/forms/test_pusher.html" />
-        <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/controllers/Teste_pusher.php" />
         <option value="$PROJECT_DIR$/application/views/texte.html" />
         <option value="$PROJECT_DIR$/application/views/home.php" />
@@ -466,6 +550,8 @@
         <option value="$PROJECT_DIR$/application/views/forms/div_mensagens_list.php" />
         <option value="$PROJECT_DIR$/application/views/template_admin/core.php" />
         <option value="$PROJECT_DIR$/application/views/login_form.php" />
+        <option value="$PROJECT_DIR$/application/config/config.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Login.php" />
       </list>
     </option>
   </component>
@@ -497,8 +583,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -521,6 +607,20 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apportunity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apportunity" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="application" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -539,47 +639,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apportunity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apportunity" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forms" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apportunity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apportunity" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="libraries" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -589,8 +649,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="co&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/core.php&#10;pes&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/forms/pesquisar_filtro.php&#10;css&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/css/chat.css&#10;h&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/home.php&#10;COR&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/core.php&#10;men&#9;null&#9;null&#10;anun&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/controllers/Anuncios.php&#10;pai&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/controllers/Painel_admin.php&#10;hom&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/home.php&#10;create_job_application&#9;null&#9;null&#10;vaga&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/forms/vagas_list.php&#10;me&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/menu.php&#10;min&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/vendor/bootstrap/css/bootstrap.min.css&#10;perfil&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/forms/perfil_user.php&#10;menu&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/menu.php&#10;fe&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/libraries/Fetchuser.php&#10;CI_CON&#9;null&#9;null&#10;CI_co&#9;null&#9;null&#10;pe&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/controllers/Pesquisar.php&#10;fol&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/controllers/Follows.php&#10;come&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/forms/list_coments.php&#10;ho&#9;FILE&#9;file://C:/Users/Wellison/Downloads/caldasingressos/ingressoscaldas/application/views/home.php&#10;fee&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/css/feed.css&#10;core&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/core.php&#10;cs&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/css/feed.css&#10;lo&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/login_form.php&#10;m&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/menus/menu_superior.php&#10;cor&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/core.php&#10;sb&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/css/sb-admin-2.css&#10;boots&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/vendor/bootstrap/css/bootstrap.css&#10;bootstrap.mi&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/vendor/bootstrap/css/bootstrap.min.css&#10;bootstrap.&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/vendor/bootstrap/css/bootstrap.css&#10;bo&#9;FILE&#9;file://C:/inetpub/wwwroot/ingressoscaldas/arquivos/resources/vendor/bootstrap-social/bootstrap-social.css&#10;sb-ad&#9;FILE&#9;file://C:/inetpub/wwwroot/ingressoscaldas/arquivos/resources/css/sb-admin-2.css&#10;log&#9;null&#9;null" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../twitter" />
+    <property name="SearchEverywhereHistoryKey" value="conf&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/config/config.php&#10;co&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/core.php&#10;pes&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/forms/pesquisar_filtro.php&#10;css&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/css/chat.css&#10;h&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/home.php&#10;COR&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/core.php&#10;men&#9;null&#9;null&#10;anun&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/controllers/Anuncios.php&#10;pai&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/controllers/Painel_admin.php&#10;hom&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/home.php&#10;create_job_application&#9;null&#9;null&#10;vaga&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/forms/vagas_list.php&#10;me&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/menu.php&#10;min&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/vendor/bootstrap/css/bootstrap.min.css&#10;perfil&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/forms/perfil_user.php&#10;menu&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/menu.php&#10;fe&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/libraries/Fetchuser.php&#10;CI_CON&#9;null&#9;null&#10;CI_co&#9;null&#9;null&#10;pe&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/controllers/Pesquisar.php&#10;fol&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/controllers/Follows.php&#10;come&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/forms/list_coments.php&#10;ho&#9;FILE&#9;file://C:/Users/Wellison/Downloads/caldasingressos/ingressoscaldas/application/views/home.php&#10;fee&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/css/feed.css&#10;core&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/core.php&#10;cs&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/css/feed.css&#10;lo&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/login_form.php&#10;m&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/menus/menu_superior.php&#10;cor&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/core.php&#10;sb&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/css/sb-admin-2.css&#10;boots&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/vendor/bootstrap/css/bootstrap.css&#10;bootstrap.mi&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/vendor/bootstrap/css/bootstrap.min.css&#10;bootstrap.&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/vendor/bootstrap/css/bootstrap.css&#10;bo&#9;FILE&#9;file://C:/inetpub/wwwroot/ingressoscaldas/arquivos/resources/vendor/bootstrap-social/bootstrap-social.css&#10;sb-ad&#9;FILE&#9;file://C:/inetpub/wwwroot/ingressoscaldas/arquivos/resources/css/sb-admin-2.css&#10;log&#9;null&#9;null" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
@@ -740,7 +800,9 @@
       <workItem from="1516231052575" duration="90171000" />
       <workItem from="1516836833747" duration="61888000" />
       <workItem from="1517350580698" duration="53376000" />
-      <workItem from="1517958381345" duration="42799000" />
+      <workItem from="1517958381345" duration="44848000" />
+      <workItem from="1518659286743" duration="879000" />
+      <workItem from="1518661094544" duration="3066000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://bitbucket.org/Wellison244/apportunity&#10;&#10;# Conflicts:&#10;#&#9;application/views/forms/pesquisar_filtro.php&#10;">
       <created>1513896285933</created>
@@ -767,10 +829,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="629891000" />
+    <option name="totallyTimeSpent" value="635885000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27086383" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -824,12 +886,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/application/libraries/Facebook.php</url>
-          <line>26</line>
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="1" />
     </breakpoint-manager>
     <watches-manager />
@@ -839,7 +895,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="4" column="69728" lean-forward="true" selection-start-line="4" selection-start-column="69728" selection-end-line="4" selection-end-column="69728" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -847,12 +902,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="547">
           <caret line="294" column="9" lean-forward="false" selection-start-line="294" selection-start-column="9" selection-end-line="294" selection-end-column="9" />
-          <folding>
-            <marker date="1517361794610" expanded="true" signature="5413:5509" ph="..." />
-            <marker date="1517361794610" expanded="false" signature="5449:5483" ph="..." />
-            <marker date="1517361794610" expanded="true" signature="9967:10063" ph="..." />
-            <marker date="1517361794610" expanded="true" signature="10003:10037" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -860,11 +909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="137" column="3" lean-forward="true" selection-start-line="137" selection-start-column="3" selection-end-line="151" selection-end-column="17" />
-          <folding>
-            <marker date="1517361148047" expanded="true" signature="10679:10745" ph="..." />
-            <marker date="1517361148047" expanded="true" signature="11368:11686" ph="..." />
-            <marker date="1517361148047" expanded="true" signature="11488:11650" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -872,7 +916,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2514">
           <caret line="241" column="44" lean-forward="false" selection-start-line="241" selection-start-column="44" selection-end-line="241" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -880,12 +923,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-271">
           <caret line="118" column="18" lean-forward="true" selection-start-line="118" selection-start-column="18" selection-end-line="118" selection-end-column="18" />
-          <folding>
-            <marker date="1513205140704" expanded="true" signature="3914:3947" ph="..." />
-            <marker date="1513205140704" expanded="true" signature="3960:3993" ph="..." />
-            <marker date="1513205140704" expanded="false" signature="6618:6632" ph="..." />
-            <marker date="1513205140704" expanded="false" signature="6871:6901" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -893,7 +930,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
           <caret line="107" column="80" lean-forward="false" selection-start-line="107" selection-start-column="80" selection-end-line="107" selection-end-column="80" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -901,7 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="84" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="84" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -909,7 +944,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -954,50 +988,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="148" column="12" lean-forward="false" selection-start-line="148" selection-start-column="12" selection-end-line="149" selection-end-column="40" />
-          <folding>
-            <element signature="e#7#91#0#PHP" expanded="false" />
-            <element signature="e#228#310#0#PHP" expanded="false" />
-            <element signature="n#index#0;n#Follows#0;n#!!top" expanded="false" />
-            <element signature="e#637#2113#0#PHP" expanded="false" />
-            <element signature="e#964#1353#0#PHP" expanded="false" />
-            <element signature="e#1016#1339#0#PHP" expanded="false" />
-            <element signature="e#1398#1855#0#PHP" expanded="false" />
-            <element signature="e#1450#1806#0#PHP" expanded="false" />
-            <element signature="e#1856#1968#0#PHP" expanded="false" />
-            <element signature="e#2124#2780#0#PHP" expanded="false" />
-            <element signature="e#2181#2460#0#PHP" expanded="false" />
-            <element signature="e#2239#2446#0#PHP" expanded="false" />
-            <element signature="e#2301#2427#0#PHP" expanded="false" />
-            <element signature="e#2471#2780#0#PHP" expanded="false" />
-            <element signature="e#2490#2769#0#PHP" expanded="false" />
-            <element signature="e#2548#2755#0#PHP" expanded="false" />
-            <element signature="e#2611#2737#0#PHP" expanded="false" />
-            <element signature="e#3557#3822#0#PHP" expanded="false" />
-            <element signature="e#3672#3799#0#PHP" expanded="false" />
-            <element signature="e#3868#4078#0#PHP" expanded="false" />
-            <element signature="e#3933#4064#0#PHP" expanded="false" />
-            <element signature="e#5027#5618#0#PHP" expanded="false" />
-            <element signature="e#5082#5608#1#PHP" expanded="false" />
-            <element signature="n#delete_follow_ws#0;n#Follows#0;n#!!top" expanded="false" />
-            <element signature="e#6088#7181#0#PHP" expanded="false" />
-            <element signature="e#6151#6877#0#PHP" expanded="false" />
-            <element signature="e#6176#6876#0#PHP" expanded="false" />
-            <element signature="e#6669#6861#1#PHP" expanded="false" />
-            <element signature="e#7031#7154#0#PHP" expanded="false" />
-            <element signature="e#7102#7154#0#PHP" expanded="false" />
-            <element signature="n#create_follow_ws#0;n#Follows#0;n#!!top" expanded="false" />
-            <element signature="e#7350#8360#0#PHP" expanded="false" />
-            <element signature="e#7375#8359#0#PHP" expanded="false" />
-            <element signature="e#8062#8348#1#PHP" expanded="false" />
-            <element signature="e#8393#8984#0#PHP" expanded="false" />
-            <element signature="e#8448#8974#1#PHP" expanded="false" />
-            <element signature="n#arrayCastRecursive#0;n#Follows#0;n#!!top" expanded="false" />
-            <element signature="e#9382#9751#0#PHP" expanded="false" />
-            <element signature="e#9418#9741#0#PHP" expanded="false" />
-            <element signature="e#9471#9582#0#PHP" expanded="false" />
-            <element signature="e#9599#9727#0#PHP" expanded="false" />
-            <element signature="e#9760#9864#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1005,100 +995,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="66" column="61" lean-forward="false" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
-          <folding>
-            <element signature="e#72#156#0#PHP" expanded="false" />
-            <element signature="e#322#404#0#PHP" expanded="false" />
-            <element signature="e#1039#1077#0#PHP" expanded="false" />
-            <element signature="e#1086#1448#0#PHP" expanded="false" />
-            <element signature="e#1188#1338#0#PHP" expanded="false" />
-            <element signature="n#get_jobs#0;n#Painel_admin#0;n#!!top" expanded="false" />
-            <element signature="e#2784#3466#0#PHP" expanded="false" />
-            <element signature="e#2809#3465#0#PHP" expanded="false" />
-            <element signature="e#3278#3454#1#PHP" expanded="false" />
-            <element signature="e#3500#4091#0#PHP" expanded="false" />
-            <element signature="e#3555#4081#1#PHP" expanded="false" />
-            <element signature="n#get_ads#0;n#Painel_admin#0;n#!!top" expanded="false" />
-            <element signature="e#4568#5250#0#PHP" expanded="false" />
-            <element signature="e#4593#5249#0#PHP" expanded="false" />
-            <element signature="e#5062#5238#1#PHP" expanded="false" />
-            <element signature="e#5284#5875#0#PHP" expanded="false" />
-            <element signature="e#5339#5865#1#PHP" expanded="false" />
-            <element signature="n#get_profile_conect#0;n#Painel_admin#0;n#!!top" expanded="false" />
-            <element signature="e#6469#7424#0#PHP" expanded="false" />
-            <element signature="e#6494#7423#0#PHP" expanded="false" />
-            <element signature="e#7184#7412#1#PHP" expanded="false" />
-            <element signature="e#7458#8049#0#PHP" expanded="false" />
-            <element signature="e#7513#8039#1#PHP" expanded="false" />
-            <element signature="n#get_profile_language#0;n#Painel_admin#0;n#!!top" expanded="false" />
-            <element signature="e#8599#9277#0#PHP" expanded="false" />
-            <element signature="e#8624#9276#0#PHP" expanded="false" />
-            <element signature="e#9037#9265#1#PHP" expanded="false" />
-            <element signature="e#9312#9903#0#PHP" expanded="false" />
-            <element signature="e#9367#9893#1#PHP" expanded="false" />
-            <element signature="n#arrayCastRecursive#0;n#Painel_admin#0;n#!!top" expanded="false" />
-            <element signature="e#10296#10665#0#PHP" expanded="false" />
-            <element signature="e#10332#10655#0#PHP" expanded="false" />
-            <element signature="e#10385#10496#0#PHP" expanded="false" />
-            <element signature="e#10513#10641#0#PHP" expanded="false" />
-            <element signature="e#10674#10778#0#PHP" expanded="false" />
-            <element signature="n#like_list_job#0;n#Painel_admin#0;n#!!top" expanded="false" />
-            <element signature="e#10865#13211#0#PHP" expanded="false" />
-            <element signature="e#11437#11763#0#PHP" expanded="false" />
-            <element signature="e#11476#11762#0#PHP" expanded="false" />
-            <element signature="e#11805#12448#0#PHP" expanded="false" />
-            <element signature="e#11864#12434#1#PHP" expanded="false" />
-            <element signature="e#12682#13106#0#PHP" expanded="false" />
-            <element signature="e#12726#13092#0#PHP" expanded="false" />
-            <element signature="e#12772#13074#0#PHP" expanded="false" />
-            <element signature="e#12827#13052#0#PHP" expanded="false" />
-            <element signature="e#13139#13211#0#PHP" expanded="false" />
-            <element signature="n#like_job#0;n#Painel_admin#0;n#!!top" expanded="false" />
-            <element signature="e#13355#15738#0#PHP" expanded="false" />
-            <element signature="e#13511#14635#0#PHP" expanded="false" />
-            <element signature="e#13536#14634#0#PHP" expanded="false" />
-            <element signature="e#14309#14619#1#PHP" expanded="false" />
-            <element signature="e#14677#15320#0#PHP" expanded="false" />
-            <element signature="e#14736#15306#1#PHP" expanded="false" />
-            <element signature="e#15666#15738#0#PHP" expanded="false" />
-            <element signature="n#dislike_job#0;n#Painel_admin#0;n#!!top" expanded="false" />
-            <element signature="e#15948#17891#0#PHP" expanded="false" />
-            <element signature="e#16105#16788#0#PHP" expanded="false" />
-            <element signature="e#16130#16787#0#PHP" expanded="false" />
-            <element signature="e#16580#16772#1#PHP" expanded="false" />
-            <element signature="e#16830#17473#0#PHP" expanded="false" />
-            <element signature="e#16889#17459#1#PHP" expanded="false" />
-            <element signature="e#17819#17891#0#PHP" expanded="false" />
-            <element signature="n#get_comments_job#0;n#Painel_admin#0;n#!!top" expanded="false" />
-            <element signature="e#17994#20676#0#PHP" expanded="false" />
-            <element signature="e#18248#19010#0#PHP" expanded="false" />
-            <element signature="e#18273#19009#0#PHP" expanded="false" />
-            <element signature="e#18802#18994#1#PHP" expanded="false" />
-            <element signature="e#19051#19694#0#PHP" expanded="false" />
-            <element signature="e#19110#19680#1#PHP" expanded="false" />
-            <element signature="e#19970#20593#0#PHP" expanded="false" />
-            <element signature="e#20069#20593#0#PHP" expanded="false" />
-            <element signature="e#20092#20405#0#PHP" expanded="false" />
-            <element signature="e#20152#20387#0#PHP" expanded="false" />
-            <element signature="e#20604#20676#0#PHP" expanded="false" />
-            <element signature="n#quantidade_curtidas_jobs#0;n#Painel_admin#0;n#!!top" expanded="false" />
-            <element signature="e#20796#23001#0#PHP" expanded="false" />
-            <element signature="e#21423#21749#0#PHP" expanded="false" />
-            <element signature="e#21462#21748#0#PHP" expanded="false" />
-            <element signature="e#21791#22434#0#PHP" expanded="false" />
-            <element signature="e#21850#22420#1#PHP" expanded="false" />
-            <element signature="e#22669#22991#0#PHP" expanded="false" />
-            <element signature="e#22713#22977#0#PHP" expanded="false" />
-            <element signature="e#22759#22959#0#PHP" expanded="false" />
-            <element signature="e#22814#22937#0#PHP" expanded="false" />
-            <element signature="n#insert_comments_job#0;n#Painel_admin#0;n#!!top" expanded="false" />
-            <element signature="e#23180#25723#0#PHP" expanded="false" />
-            <element signature="e#23452#24702#0#PHP" expanded="false" />
-            <element signature="e#23477#24701#0#PHP" expanded="false" />
-            <element signature="e#24376#24686#1#PHP" expanded="false" />
-            <element signature="e#24745#25388#0#PHP" expanded="false" />
-            <element signature="e#24804#25374#1#PHP" expanded="false" />
-            <element signature="e#25651#25723#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1106,15 +1002,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1123,13 +1010,11 @@
     <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php" />
     <entry file="file://$PROJECT_DIR$/composer.json" />
     <entry file="file://$PROJECT_DIR$/composer.lock" />
-    <entry file="file://$PROJECT_DIR$/vendor/autoload.php" />
     <entry file="file://$PROJECT_DIR$/vendor/pusher/pusher-php-server/src/Pusher.php" />
     <entry file="file://$PROJECT_DIR$/application/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1137,7 +1022,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="11" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="19" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1145,7 +1029,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="371">
           <caret line="295" column="80" lean-forward="true" selection-start-line="295" selection-start-column="80" selection-end-line="295" selection-end-column="80" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1153,7 +1036,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
           <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1161,11 +1043,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="30" column="69" lean-forward="false" selection-start-line="30" selection-start-column="69" selection-end-line="30" selection-end-column="69" />
-          <folding>
-            <element signature="e#6#90#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#src#0;n#img#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1173,11 +1050,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1173">
           <caret line="87" column="60" lean-forward="false" selection-start-line="87" selection-start-column="60" selection-end-line="87" selection-end-column="60" />
-          <folding>
-            <element signature="e#6#90#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1185,7 +1057,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="829">
           <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1193,7 +1064,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1404">
           <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1201,13 +1071,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="33" column="8" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/forms/pesquisar_filtro.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
+        <state relative-caret-position="1564">
           <caret line="97" column="79" lean-forward="false" selection-start-line="97" selection-start-column="79" selection-end-line="97" selection-end-column="79" />
           <folding>
             <marker date="1518137134099" expanded="true" signature="12671:12674" ph="{...}" />
@@ -1217,7 +1086,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Profiles.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
+        <state relative-caret-position="816">
           <caret line="53" column="40" lean-forward="false" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
           <folding>
             <element signature="e#7#91#0#PHP" expanded="false" />
@@ -1236,7 +1105,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Perfil_user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
+        <state relative-caret-position="833">
           <caret line="1066" column="5" lean-forward="false" selection-start-line="1066" selection-start-column="5" selection-end-line="1066" selection-end-column="5" />
           <folding>
             <element signature="e#7#91#0#PHP" expanded="false" />
@@ -1426,13 +1295,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/recover_acc_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/forms/div_mensagens_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="44" column="30" lean-forward="false" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
+          <folding>
+            <element signature="e#6#90#0#PHP" expanded="true" />
+            <marker date="1518140332715" expanded="true" signature="3925:4556" ph="{...}" />
+            <marker date="1518140332715" expanded="true" signature="4771:4787" ph="{...}" />
+            <marker date="1518140332715" expanded="true" signature="4961:4987" ph="..." />
+            <marker date="1518140332715" expanded="true" signature="5014:6209" ph="data:" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/forms/profiles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1513">
+          <caret line="94" column="10" lean-forward="false" selection-start-line="94" selection-start-column="10" selection-end-line="94" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/template_admin/core.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="104" lean-forward="false" selection-start-line="14" selection-start-column="104" selection-end-line="14" selection-end-column="104" />
+          <folding>
+            <element signature="e#2655#2874#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/login_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <caret line="34" column="12" lean-forward="false" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Mensagens.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="53" column="26" lean-forward="false" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="26" />
+        <state relative-caret-position="253">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
             <element signature="e#7#91#0#PHP" expanded="false" />
-            <element signature="n#__construct#0;n#Mensagens#0;n#!!top" expanded="false" />
             <element signature="e#230#312#0#PHP" expanded="false" />
             <element signature="n#index#0;n#Mensagens#0;n#!!top" expanded="false" />
             <element signature="n#chat_list#0;n#Mensagens#0;n#!!top" expanded="false" />
@@ -1474,58 +1391,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/recover_acc_form.php">
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="184">
+          <caret line="497" column="32" lean-forward="false" selection-start-line="497" selection-start-column="29" selection-end-line="497" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/forms/div_mensagens_list.php">
+    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-504">
-          <caret line="44" column="30" lean-forward="false" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
-          <folding>
-            <element signature="e#6#90#0#PHP" expanded="true" />
-            <marker date="1518140332715" expanded="true" signature="3925:4556" ph="{...}" />
-            <marker date="1518140332715" expanded="true" signature="4771:4787" ph="{...}" />
-            <marker date="1518140332715" expanded="true" signature="4961:4987" ph="..." />
-            <marker date="1518140332715" expanded="true" signature="5014:6209" ph="data:" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/forms/profiles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="94" column="10" lean-forward="false" selection-start-line="94" selection-start-column="10" selection-end-line="94" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/template_admin/core.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="14" column="104" lean-forward="true" selection-start-line="14" selection-start-column="104" selection-end-line="14" selection-end-column="104" />
-          <folding>
-            <element signature="e#2655#2874#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/login_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="143" column="15" lean-forward="false" selection-start-line="143" selection-start-column="15" selection-end-line="143" selection-end-column="15" />
+        <state relative-caret-position="84">
+          <caret line="30" column="138" lean-forward="false" selection-start-line="30" selection-start-column="138" selection-end-line="30" selection-end-column="138" />
           <folding />
         </state>
       </provider>
