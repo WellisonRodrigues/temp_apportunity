@@ -2,109 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6315125-2236-4753-8b25-d0ed219b9684" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/Facebook.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/Google.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Authentication/AccessToken.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Authentication/AccessTokenMetadata.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Authentication/OAuth2Client.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Exceptions/FacebookAuthenticationException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Exceptions/FacebookAuthorizationException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Exceptions/FacebookClientException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Exceptions/FacebookOtherException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Exceptions/FacebookResponseException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Exceptions/FacebookResumableUploadException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Exceptions/FacebookSDKException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Exceptions/FacebookServerException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Exceptions/FacebookThrottleException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Facebook.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/FacebookApp.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/FacebookBatchRequest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/FacebookBatchResponse.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/FacebookClient.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/FacebookRequest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/FacebookResponse.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/FileUpload/FacebookFile.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/FileUpload/FacebookResumableUploader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/FileUpload/FacebookTransferChunk.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/FileUpload/FacebookVideo.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/FileUpload/Mimetypes.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/Birthday.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/Collection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphAchievement.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphAlbum.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphApplication.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphCoverPhoto.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphEdge.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphEvent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphGroup.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphList.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphLocation.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphNode.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphNodeFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphObject.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphObjectFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphPage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphPicture.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphSessionInfo.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/GraphNodes/GraphUser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Helpers/FacebookCanvasHelper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Helpers/FacebookJavaScriptHelper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Helpers/FacebookPageTabHelper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Helpers/FacebookRedirectLoginHelper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Helpers/FacebookSignedRequestFromInputHelper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Http/GraphRawResponse.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Http/RequestBodyInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Http/RequestBodyMultipart.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Http/RequestBodyUrlEncoded.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/HttpClients/FacebookCurl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/HttpClients/FacebookCurlHttpClient.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/HttpClients/FacebookGuzzleHttpClient.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/HttpClients/FacebookHttpClientInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/HttpClients/FacebookStream.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/HttpClients/FacebookStreamHttpClient.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/HttpClients/HttpClientsFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/HttpClients/certs/DigiCertHighAssuranceEVRootCA.pem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/PersistentData/FacebookMemoryPersistentDataHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/PersistentData/FacebookSessionPersistentDataHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/PersistentData/PersistentDataFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/PersistentData/PersistentDataInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/PseudoRandomString/McryptPseudoRandomStringGenerator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/PseudoRandomString/OpenSslPseudoRandomStringGenerator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/PseudoRandomString/PseudoRandomStringGeneratorFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/PseudoRandomString/PseudoRandomStringGeneratorInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/PseudoRandomString/PseudoRandomStringGeneratorTrait.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/PseudoRandomString/RandomBytesPseudoRandomStringGenerator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/PseudoRandomString/UrandomPseudoRandomStringGenerator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/SignedRequest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Url/FacebookUrlDetectionHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Url/FacebookUrlManipulator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/Url/UrlDetectionInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/autoload.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/facebook-php-sdk/polyfills.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/AccessToken/Revoke.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/AccessToken/Verify.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/AuthHandler/AuthHandlerFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/AuthHandler/Guzzle5AuthHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/AuthHandler/Guzzle6AuthHandler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Client.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Collection.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Exception.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Http/Batch.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Http/MediaFileUpload.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Http/REST.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Model.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Service.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Service/Exception.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Service/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Service/Resource.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Task/Exception.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Task/Retryable.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Task/Runner.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/Utils/UriTemplate.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/google/autoload.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Login.php" afterPath="$PROJECT_DIR$/application/controllers/Login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/login_form.php" afterPath="$PROJECT_DIR$/application/views/login_form.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/config.php" afterPath="$PROJECT_DIR$/application/config/config.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -378,7 +276,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Login.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="84">
@@ -398,11 +296,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="497" column="32" lean-forward="false" selection-start-line="497" selection-start-column="29" selection-end-line="497" selection-end-column="32" />
+            <state relative-caret-position="442">
+              <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -550,8 +448,8 @@
         <option value="$PROJECT_DIR$/application/views/forms/div_mensagens_list.php" />
         <option value="$PROJECT_DIR$/application/views/template_admin/core.php" />
         <option value="$PROJECT_DIR$/application/views/login_form.php" />
-        <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/controllers/Login.php" />
+        <option value="$PROJECT_DIR$/application/config/config.php" />
       </list>
     </option>
   </component>
@@ -650,7 +548,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../twitter" />
-    <property name="SearchEverywhereHistoryKey" value="conf&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/config/config.php&#10;co&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/core.php&#10;pes&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/forms/pesquisar_filtro.php&#10;css&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/css/chat.css&#10;h&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/home.php&#10;COR&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/core.php&#10;men&#9;null&#9;null&#10;anun&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/controllers/Anuncios.php&#10;pai&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/controllers/Painel_admin.php&#10;hom&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/home.php&#10;create_job_application&#9;null&#9;null&#10;vaga&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/forms/vagas_list.php&#10;me&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/menu.php&#10;min&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/vendor/bootstrap/css/bootstrap.min.css&#10;perfil&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/forms/perfil_user.php&#10;menu&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/menu.php&#10;fe&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/libraries/Fetchuser.php&#10;CI_CON&#9;null&#9;null&#10;CI_co&#9;null&#9;null&#10;pe&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/controllers/Pesquisar.php&#10;fol&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/controllers/Follows.php&#10;come&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/forms/list_coments.php&#10;ho&#9;FILE&#9;file://C:/Users/Wellison/Downloads/caldasingressos/ingressoscaldas/application/views/home.php&#10;fee&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/css/feed.css&#10;core&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/core.php&#10;cs&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/css/feed.css&#10;lo&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/login_form.php&#10;m&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/menus/menu_superior.php&#10;cor&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/core.php&#10;sb&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/css/sb-admin-2.css&#10;boots&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/vendor/bootstrap/css/bootstrap.css&#10;bootstrap.mi&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/vendor/bootstrap/css/bootstrap.min.css&#10;bootstrap.&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/vendor/bootstrap/css/bootstrap.css&#10;bo&#9;FILE&#9;file://C:/inetpub/wwwroot/ingressoscaldas/arquivos/resources/vendor/bootstrap-social/bootstrap-social.css&#10;sb-ad&#9;FILE&#9;file://C:/inetpub/wwwroot/ingressoscaldas/arquivos/resources/css/sb-admin-2.css&#10;log&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="con&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/config/config.php&#10;conf&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/config/config.php&#10;co&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/core.php&#10;pes&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/forms/pesquisar_filtro.php&#10;css&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/css/chat.css&#10;h&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/home.php&#10;COR&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/core.php&#10;men&#9;null&#9;null&#10;anun&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/controllers/Anuncios.php&#10;pai&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/controllers/Painel_admin.php&#10;hom&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/home.php&#10;create_job_application&#9;null&#9;null&#10;vaga&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/forms/vagas_list.php&#10;me&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/menu.php&#10;min&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/vendor/bootstrap/css/bootstrap.min.css&#10;perfil&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/forms/perfil_user.php&#10;menu&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/menu.php&#10;fe&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/libraries/Fetchuser.php&#10;CI_CON&#9;null&#9;null&#10;CI_co&#9;null&#9;null&#10;pe&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/controllers/Pesquisar.php&#10;fol&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/controllers/Follows.php&#10;come&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/forms/list_coments.php&#10;ho&#9;FILE&#9;file://C:/Users/Wellison/Downloads/caldasingressos/ingressoscaldas/application/views/home.php&#10;fee&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/css/feed.css&#10;core&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/core.php&#10;cs&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/css/feed.css&#10;lo&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/login_form.php&#10;m&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/menus/menu_superior.php&#10;cor&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/application/views/template_admin/core.php&#10;sb&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/css/sb-admin-2.css&#10;boots&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/vendor/bootstrap/css/bootstrap.css&#10;bootstrap.mi&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/vendor/bootstrap/css/bootstrap.min.css&#10;bootstrap.&#9;FILE&#9;file://C:/inetpub/wwwroot/apportunity/arquivos/resources/vendor/bootstrap/css/bootstrap.css&#10;bo&#9;FILE&#9;file://C:/inetpub/wwwroot/ingressoscaldas/arquivos/resources/vendor/bootstrap-social/bootstrap-social.css&#10;sb-ad&#9;FILE&#9;file://C:/inetpub/wwwroot/ingressoscaldas/arquivos/resources/css/sb-admin-2.css&#10;log&#9;null&#9;null" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
@@ -802,7 +700,7 @@
       <workItem from="1517350580698" duration="53376000" />
       <workItem from="1517958381345" duration="44848000" />
       <workItem from="1518659286743" duration="879000" />
-      <workItem from="1518661094544" duration="3066000" />
+      <workItem from="1518661094544" duration="3157000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://bitbucket.org/Wellison244/apportunity&#10;&#10;# Conflicts:&#10;#&#9;application/views/forms/pesquisar_filtro.php&#10;">
       <created>1513896285933</created>
@@ -829,7 +727,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="635885000" />
+    <option name="totallyTimeSpent" value="635976000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -1391,14 +1289,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="497" column="32" lean-forward="false" selection-start-line="497" selection-start-column="29" selection-end-line="497" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1411,6 +1301,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="30" column="138" lean-forward="false" selection-start-line="30" selection-start-column="138" selection-end-line="30" selection-end-column="138" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
           <folding />
         </state>
       </provider>
