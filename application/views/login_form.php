@@ -175,7 +175,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     access_tocken.accessToken = response.authResponse.accessToken;
                     FB.api('/me', function (userData) {
 //                        console.log(userData);
-                        alert(response.authResponse.accessToken);
+//                        alert(response.authResponse.accessToken);
                     })
                 }
             }
@@ -209,7 +209,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     function onSignIn(googleUser) {
         var profile = googleUser.getBasicProfile();
         var id_token = googleUser.getAuthResponse().id_token;
-        alert(id_token);
+//        alert(id_token);
 
     }
 

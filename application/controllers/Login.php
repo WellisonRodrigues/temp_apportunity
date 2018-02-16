@@ -28,9 +28,9 @@ class Login extends CI_Controller
 
     public function entrar()
     {
-        $connection = $this->getConnectionWithAccessToken("yg8eI3lxHaj2fho0H4rCfR2Lb", "TLILIbQtMENAiuXDxld26XBbAjHZ1EczIwbLI3blNrE20a4tkO");
+        $connection = $this->getConnectionWithAccessToken("739829059606175744-I8fIXnIfDfYuZpBeP7fNty7AmBGD4jE", "sba65g4rfqeM50QH4VvNpwmrBPrf2i0nLk0lhAlEwTsD5");
         $content = $connection->get("statuses/home_timeline");
-        print_r($content);
+//        print_r($content);
         if ($this->input->post('login') == 'Entrar') {
 
 
@@ -118,7 +118,9 @@ class Login extends CI_Controller
 
     function getConnectionWithAccessToken($oauth_token, $oauth_token_secret)
     {
-        $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $oauth_token, $oauth_token_secret);
+        $CONSUMER_KEY = 'IXg8E3sdGvSAquzhesaia597V';
+        $CONSUMER_SECRET = 'IOiScr8rCeqZCSFYuDAxSpFGl52PfaOS526jUiw8wUsx7hkMiw';
+        $connection = new TwitterOAuth($CONSUMER_KEY, $CONSUMER_SECRET, $oauth_token, $oauth_token_secret);
         return $connection;
 
     }

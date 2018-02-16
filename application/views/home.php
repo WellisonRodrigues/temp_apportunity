@@ -37,11 +37,11 @@ if ($image_my) {
                     <p class="text-muted">Email : <?php echo $included[0]['attributes']['email'] ?> <br>
                         Idade : <?php echo $profile['attributes']['age'] ?></p>
                     <hr>
-<!--                    Habilitação <br>-->
-<!--                    <p class="text-muted"> Motorista, Empilhadeira</p>-->
-                                        Vagas em Interesse<br>
-                                        <p class="text-muted">
-                    <?php echo $profile['attributes']['carrer'] ?></p><br>
+                    <!--                    Habilitação <br>-->
+                    <!--                    <p class="text-muted"> Motorista, Empilhadeira</p>-->
+                    Vagas em Interesse<br>
+                    <p class="text-muted">
+                        <?php echo $profile['attributes']['carrer'] ?></p><br>
                     <hr>
                     <?php foreach ($idiomas as $idioma) { ?>
                         Conheçimento do
@@ -180,7 +180,7 @@ if ($image_my) {
                         <?php echo $job['attributes']['description'] ?>
                         <br>
                     </p>
-                    <p>
+                    <p id="<? echo $id_job ?>">
                         <?php echo $funcao->quantidade_curtidas_jobs($id_job); ?> gostaram dessa publicação.
                     </p>
                     <!--                    <small class="text-muted">Vaga expira-->
@@ -244,14 +244,15 @@ if ($image_my) {
                              }*/
                         }, 'json');
                     } else {
-                        if (idlike > 0) {
-                            $('.' + idjob).attr("src", "<?php echo base_url(IMAGES); ?>/logos/gostei_azul.png");
-                            $(this).data('type', 'curtir');
-                            $(this).data('idlike', '0');
-                            $.post('Painel_admin/dislike_job', {idjob: idjob, idlike: idlike}, function (data) {
+//                        if (idlike > 0) {
 
-                            });
-                        }
+                        $('.' + idjob).attr("src", "<?php echo base_url(IMAGES); ?>/logos/gostei_azul.png");
+                        $(this).data('type', 'curtir');
+                        $(this).data('idlike', '0');
+                        $.post('Painel_admin/dislike_job', {idjob: idjob, idlike: idlike}, function (data) {
+
+                        });
+//                        }
                     }
                 });
 
